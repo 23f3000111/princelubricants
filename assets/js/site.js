@@ -30,6 +30,10 @@
   // Page scenes register here by name and run for each [data-scene="name"] element.
   const SCENES = {};
 
+  // Where enquiries go. Set formEndpoint to a form service URL and the forms post there;
+  // while it is empty they open a mail draft to the company inbox instead.
+  const SITE = { email: 'info@princelubricants.com', formEndpoint: '' };
+
   /* Double-click preview from disk: under file: a folder link opens a folder listing,
      so point it at that folder's index.html. Served, nothing changes. */
   function fileLinks() {
@@ -480,6 +484,48 @@
     })();
   };
 
+  /* Enquiry and application forms. The browser's own validation runs first: the submit
+     event only fires once every required field is filled. With an endpoint the form posts
+     there; without one it writes a link to a mail draft holding every filled field into
+     the status line and follows it, so the link stays there if no mail app answers.
+     Without JavaScript the form's own mailto: action does the same, more plainly. */
+  function forms() {
+    for (const form of $$('form[data-enquiry]')) {
+      const status = $('.form-status', form);
+      const button = $('[type="submit"]', form);
+      const say = (...parts) => { if (status) status.replaceChildren(...parts); };
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (SITE.formEndpoint) {
+          say('Sending…');
+          if (button) button.disabled = true;
+          try {
+            const res = await fetch(SITE.formEndpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            form.reset();
+            say('Thank you. Your message has been sent.');
+          } catch (err) {
+            say(`Sorry, the message could not be sent. Please email ${SITE.email}.`);
+          } finally {
+            if (button) button.disabled = false;
+          }
+          return;
+        }
+        const body = Array.from(new FormData(form))
+          .map(([name, value]) => [name, String(value).trim()])
+          .filter(([, value]) => value)
+          .map(([name, value]) => `${name}: ${value}`)
+          .join('\r\n');
+        const subject = form.dataset.subject || 'Website enquiry';
+        const draft = d.createElement('a');
+        draft.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        draft.textContent = 'open the draft';
+        say('Your email app is opening with the message ready to send. If nothing happens, ', draft, ` or write to ${SITE.email}.`);
+        draft.click();
+      });
+    }
+  }
+
   function scenes() {
     for (const el of $$('[data-scene]')) {
       const scene = SCENES[el.dataset.scene];
@@ -493,7 +539,7 @@
   }
 
   function init() {
-    [fileLinks, loaderOnce, navbar, progress, cursor, sideDots, backToTop, reveals, splitTitles, counters, parallax, tilt, scenes]
+    [fileLinks, loaderOnce, navbar, progress, cursor, sideDots, backToTop, reveals, splitTitles, counters, parallax, tilt, forms, scenes]
       .forEach(safely);
     html.classList.add('motion-ready');
     if (G) window.addEventListener('load', () => window.ScrollTrigger.refresh(), { once: true });

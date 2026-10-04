@@ -14,6 +14,12 @@ import os
 import sys
 
 
+class Server(http.server.ThreadingHTTPServer):
+    # A browser opens several connections at once. With the default backlog of 5,
+    # Windows refuses the overflow and an image can fail to load (ERR_CONNECTION_REFUSED).
+    request_queue_size = 64
+
+
 class NoStore(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header("Cache-Control", "no-store")
@@ -28,7 +34,7 @@ def main():
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     handler = functools.partial(NoStore, directory=root)
     print(f"Serving {root} at http://127.0.0.1:{port}/ (no-store)")
-    http.server.ThreadingHTTPServer(("127.0.0.1", port), handler).serve_forever()
+    Server(("127.0.0.1", port), handler).serve_forever()
 
 
 if __name__ == "__main__":

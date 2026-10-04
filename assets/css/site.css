@@ -671,6 +671,30 @@ a.tn:hover strong { text-shadow: 0 0 18px rgba(255, 215, 0, .6); }
 .ep.is-active .tp-icon { background: var(--gold); color: #000; border-color: var(--gold); }
 .ep.is-active .ep-num { color: var(--gold); }
 
+/* ---------- P-9 / P-10 pages ---------- */
+.page-hero--split { text-align: left; justify-content: flex-start; min-height: 86vh; padding-bottom: 70px; }
+.page-hero--split > .container { position: relative; z-index: 2; width: 100%; }
+.hero-ov--solid { background: radial-gradient(ellipse 70% 80% at 72% 45%, #15152b 0%, var(--d1) 62%), var(--d1); }
+.split-copy .sec-label { margin-bottom: 14px; }
+.page-title--left { text-align: left; font-size: clamp(40px, 5vw, 70px); margin-bottom: 0; }
+.breadcrumb--left { justify-content: flex-start; }
+.breadcrumb--left ol { justify-content: flex-start; }
+.split-copy .sec-sub { margin: 0 0 18px; }
+.hero-tagline { font-size: 15.5px; line-height: 1.8; color: var(--tb); margin-bottom: 34px; max-width: 52ch; }
+.hero-tagline strong { display: block; font-family: var(--fh); font-size: 18px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #fff; margin-bottom: 4px; }
+.ester-stage--hero { max-width: 500px; }
+.series-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.p-card--v { grid-template-columns: 1fr; grid-template-rows: 240px auto; min-height: 0; }
+.p-card--v .p-card-img::after { display: none; }
+.p-card--v .p-card-body { justify-content: flex-start; }
+.why-card--compact { padding: 32px 20px 28px; }
+.why-card--compact .why-icon { width: 54px; height: 54px; margin-bottom: 18px; }
+.why-card--compact .why-icon svg { width: 23px; height: 23px; }
+.why-card--compact h3 { font-size: 15px; line-height: 1.3; }
+.why-card--compact p { font-size: 13px; line-height: 1.7; }
+.ph--wide { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; text-align: center; padding: 30px 36px; }
+.ph--wide p { margin: 0 auto; }
+
 /* ---------- Typewriter title (index.html's, with the words in the HTML) ---------- */
 html.js:not(.reduced) [data-scene="typewriter"]:not(.tw-ready) { visibility: hidden; }
 html.js:not(.reduced):not(.motion-ready) [data-scene="typewriter"] { animation: failsafe-visible .01s linear 2.5s forwards; }
@@ -712,6 +736,7 @@ html.reduced .ticker-track { animation: none; }
 @media (max-width: 900px) {
   .about-grid, .tech-grid, .ester-cards, .prod-grid, .cta-grid, .story-grid, .two-col { grid-template-columns: 1fr; gap: 44px; }
   .chain { grid-template-columns: repeat(2, 1fr); row-gap: 56px; }
+  .series-grid { grid-template-columns: 1fr; }
   .ester-block { grid-template-columns: 1fr; gap: 40px; }
   .ester-block--flip .ester-visual { order: 0; }
   .ester-sticky { position: relative; top: 0; }

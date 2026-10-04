@@ -241,7 +241,7 @@
       Split.create(el, {
         type: 'lines',
         mask: 'lines',
-        linesClass: 'split-line',
+        linesClass: 'st-line',   // namespaced: a generic class name here once collided with a component
         autoSplit: true,
         onSplit(self) {
           el.classList.add('is-split');

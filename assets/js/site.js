@@ -209,7 +209,7 @@
   }
 
   function reveals() {
-    const els = $$('.rv, .rv-l, .rv-r, .rv-s, .rv-wipe');
+    const els = $$('.rv, .rv-l, .rv-r, .rv-s, .rv-wipe, [data-reveal]');
     if (reduced || !('IntersectionObserver' in window)) {
       els.forEach((el) => el.classList.add('vis'));
       return;
@@ -385,6 +385,18 @@
     } finally {
       ready();
     }
+  };
+
+  // Global Presence: the arcs draw out from Singapore and the markets light up once the
+  // map is a third of the way into view. The drawing itself is CSS (pathLength="1").
+  SCENES.worldMap = (wrap) => {
+    if (reduced || !('IntersectionObserver' in window)) { wrap.classList.add('map-on'); return; }
+    const io = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return;
+      wrap.classList.add('map-on');
+      io.disconnect();
+    }, { threshold: 0.3 });
+    io.observe(wrap);
   };
 
   // Gold dust rising through the hero, as in index.html, on one canvas.

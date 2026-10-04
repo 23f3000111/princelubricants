@@ -12,8 +12,11 @@
  *   assets/img/world-dots.svg      the dot field, land in grey and the 14 named markets in
  *                                  gold. Static, so it ships as an <img> and caches.
  *   assets/img/world-overlay.svg   the Singapore hub, one marker per market and an arc to
- *                                  each, with classes the page animates. Its contents are
- *                                  inlined into company/index.html, in the same viewBox.
+ *                                  each, with classes the page animates. The same SVG is
+ *                                  stamped into company/index.html between <!-- @map -->
+ *                                  markers, in the same viewBox as the dot field. Each arc
+ *                                  has pathLength="1", so CSS can draw it in without any
+ *                                  JavaScript measuring it.
  *
  * The frame is cropped to the five regions the client names (Europe, Africa, the Middle
  * East, Asia and Oceania) so the markets read at a useful size. The projection is
@@ -117,7 +120,7 @@ function main() {
 `;
 
   const [hx, hy] = project(HUB.at);
-  const arc = (m) => {
+  const arc = (m, k) => {
     const [x, y] = project(m.at);
     const dx = x - hx, dy = y - hy, d = Math.hypot(dx, dy);
     const lift = Math.min(0.3 * d, 120);
@@ -127,12 +130,12 @@ function main() {
     if (Math.abs(py) < 0.25 ? px * dx < 0 : py > 0) { px = -px; py = -py; }
     const cx = r1((hx + x) / 2 + px * lift);
     const cy = r1((hy + y) / 2 + py * lift);
-    return `<path class="map-arc" data-market="${m.id}" d="M${hx} ${hy}Q${cx} ${cy} ${x} ${y}"/>`;
+    return `<path class="map-arc" data-market="${m.id}" pathLength="1" style="--k:${k}" d="M${hx} ${hy}Q${cx} ${cy} ${x} ${y}"/>`;
   };
-  const marker = (m, cls) => {
+  const marker = (m, cls, k = 0) => {
     const [x, y] = project(m.at);
     const [lx, ly, anchor] = m.label;
-    return `<g class="${cls}" data-${cls === 'map-hub' ? 'hub' : 'market'}="${m.id}" transform="translate(${x} ${y})">` +
+    return `<g class="${cls}" data-${cls === 'map-hub' ? 'hub' : 'market'}="${m.id}" style="--k:${k}" transform="translate(${x} ${y})">` +
       `<circle class="map-ring" r="${cls === 'map-hub' ? 7 : 4}"/><circle class="map-dot" r="${cls === 'map-hub' ? 5 : 3}"/>` +
       `<text class="map-label" x="${lx}" y="${ly}" text-anchor="${anchor}">${m.name}</text></g>`;
   };
@@ -140,7 +143,7 @@ function main() {
   const overlay = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="map-overlay" role="img" aria-labelledby="map-title">
 <title id="map-title">PRINCE LUBRICANTS markets reached from Singapore: ${MARKETS.map((m) => m.name).join(', ')}</title>
 <g class="map-arcs">${MARKETS.map(arc).join('')}</g>
-<g class="map-markets">${MARKETS.map((m) => marker(m, 'map-market')).join('')}</g>
+<g class="map-markets">${MARKETS.map((m, k) => marker(m, 'map-market', k)).join('')}</g>
 ${marker(HUB, 'map-hub')}
 </svg>
 `;
@@ -148,6 +151,14 @@ ${marker(HUB, 'map-hub')}
   fs.mkdirSync(path.join(ROOT, 'assets/img'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'assets/img/world-dots.svg'), dots);
   fs.writeFileSync(path.join(ROOT, 'assets/img/world-overlay.svg'), overlay);
+
+  const page = path.join(ROOT, 'company/index.html');
+  if (fs.existsSync(page)) {
+    const html = fs.readFileSync(page, 'utf8');
+    const stamped = html.replace(/<!-- @map -->[\s\S]*?<!-- \/@map -->/, () => `<!-- @map -->\n${overlay.trim()}\n<!-- /@map -->`);
+    if (stamped !== html) fs.writeFileSync(page, stamped);
+    console.log(stamped.includes('class="map-overlay"') ? 'stamped company/index.html' : 'company/index.html has no <!-- @map --> markers');
+  }
   console.log(`viewBox 0 0 ${W} ${H}: ${landDots + marketDots} dots (${marketDots} in markets), ${MARKETS.length + 1} markers, ` +
     `world-dots.svg ${(Buffer.byteLength(dots) / 1024).toFixed(1)} KB, world-overlay.svg ${(Buffer.byteLength(overlay) / 1024).toFixed(1)} KB`);
 }

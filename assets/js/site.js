@@ -422,6 +422,19 @@
     activate(pillars[0]);
   };
 
+  // Products: the category chip of the section in view goes solid gold.
+  SCENES.catNav = (nav) => {
+    const links = $$('a[href^="#"]', nav);
+    const sections = links.map((a) => d.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        links.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === `#${e.target.id}`));
+      }
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach((s) => io.observe(s));
+  };
+
   // Gold dust rising through the hero, as in index.html, on one canvas.
   SCENES.particles = (canvas) => {
     if (reduced) return;

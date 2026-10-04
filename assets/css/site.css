@@ -695,6 +695,51 @@ a.tn:hover strong { text-shadow: 0 0 18px rgba(255, 215, 0, .6); }
 .ph--wide { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; text-align: center; padding: 30px 36px; }
 .ph--wide p { margin: 0 auto; }
 
+/* ---------- Products ---------- */
+.page-hero--mosaic { min-height: 74vh; }
+.mosaic { position: absolute; inset: -3%; display: grid; grid-template-columns: 1.25fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 6px; animation: mosaic-drift 26s ease-in-out infinite alternate; }
+.mosaic span { background-size: cover; background-position: center; background-repeat: no-repeat; }
+.mosaic span:first-child { grid-row: span 2; }
+@keyframes mosaic-drift { from { transform: scale(1.04) translate3d(0, 0, 0); } to { transform: scale(1.1) translate3d(-1.5%, -1%, 0); } }
+.hero-ov--deep { background: linear-gradient(160deg, rgba(6, 6, 17, .8) 0%, rgba(6, 6, 17, .86) 55%, rgba(6, 6, 17, .97) 100%); }
+html.reduced .mosaic { animation: none; }
+
+.cat-nav { position: sticky; top: 72px; z-index: 900; background: rgba(6, 6, 17, .94); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border-top: 1px solid rgba(255, 215, 0, .1); border-bottom: 1px solid rgba(255, 215, 0, .12); }
+.cat-nav ul { display: flex; justify-content: center; gap: 8px; padding: 12px 0; overflow-x: auto; }
+.cat-nav a { display: block; padding: 8px 18px; border-radius: 20px; white-space: nowrap; font-family: var(--fh); font-size: 12px; font-weight: 500; letter-spacing: 1.6px; text-transform: uppercase; color: var(--tl); border: 1px solid rgba(255, 215, 0, .2); background: rgba(255, 215, 0, .04); transition: background-color .3s, color .3s, border-color .3s; }
+.cat-nav a:hover { border-color: var(--gold); color: var(--gold); }
+.cat-nav a.is-active { background: var(--gold); border-color: var(--gold); color: #000; }
+.section--intro { padding: 90px 0; }
+.cat-section { scroll-margin-top: 140px; }
+.cat-section--flip .about-img-wrap { order: 2; }
+.cat-section:not([data-light]) .pillar { background: rgba(255, 215, 0, .05); }
+.cat-section:not([data-light]) .pillar:hover { background: rgba(255, 215, 0, .1); box-shadow: 4px 0 20px rgba(255, 215, 0, .12); }
+.cat-section:not([data-light]) .p-text h3 { color: #fff; }
+.cat-section .pillar { align-items: center; padding: 14px 18px; }
+.cat-section .p-text h3 { margin: 0; font-size: 15px; }
+.pillars--grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.series-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 26px 0 30px; }
+.series-label { font-family: var(--fh); font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--tm); }
+[data-light] .series-label { color: var(--tg); }
+.cat-section .btn-row { margin-top: 26px; }
+.series-tags + .btn-row { margin-top: 0; }
+.btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 14px 30px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .25); color: #000; font-family: var(--fh); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: border-color .3s, background-color .3s, transform .3s; }
+.btn-ghost:hover { border-color: #000; background: rgba(255, 215, 0, .25); transform: translateY(-3px); }
+.about-main--slot { height: 440px; }
+
+/* ---------- Motorsport ---------- */
+.page-sub { font-family: var(--fh); font-size: clamp(15px, 1.5vw, 20px); font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 30px; }
+.hero-stat { display: inline-flex; align-items: center; gap: 16px; padding: 12px 22px 12px 14px; border-radius: 60px; background: rgba(6, 6, 17, .6); border: 1px solid rgba(255, 215, 0, .3); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); text-align: left; }
+.hero-stat-num { display: grid; place-items: center; min-width: 64px; height: 64px; padding: 0 10px; border-radius: 40px; background: var(--gold); color: #000; font-family: var(--fh); font-size: 24px; font-weight: 700; }
+.hero-stat-text { font-size: 13px; color: var(--tb); line-height: 1.4; }
+.hero-stat-text b { display: block; font-family: var(--fh); font-size: 14px; font-weight: 600; letter-spacing: 2px; color: #fff; }
+.disc-num { display: block; font-family: var(--fh); font-size: 84px; font-weight: 700; line-height: .9; color: transparent; -webkit-text-stroke: 1.5px rgba(255, 215, 0, .55); margin-bottom: 4px; }
+[data-light] .disc-num { -webkit-text-stroke-color: rgba(184, 134, 11, .55); }
+.discipline .series-tags { margin: 6px 0 24px; }
+.discipline .ph { max-width: 520px; }
+.about-main--yellow { background: #fed917; }
+.about-main--yellow img { object-fit: contain; }
+
 /* ---------- Typewriter title (index.html's, with the words in the HTML) ---------- */
 html.js:not(.reduced) [data-scene="typewriter"]:not(.tw-ready) { visibility: hidden; }
 html.js:not(.reduced):not(.motion-ready) [data-scene="typewriter"] { animation: failsafe-visible .01s linear 2.5s forwards; }

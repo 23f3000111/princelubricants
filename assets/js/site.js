@@ -399,6 +399,29 @@
     io.observe(wrap);
   };
 
+  // Ester technologies: the sticky stage follows whichever pillar holds the viewport
+  // centre. Its state drives the molecule drawing; its caption names the pillar.
+  SCENES.esterScene = (block) => {
+    const stage = $('.ester-stage', block);
+    const caption = $('.ester-caption', block);
+    const pillars = $$('.ep', block);
+    if (!stage || !caption || !pillars.length) return;
+    const retrigger = (el, cls) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); };
+    const activate = (pillar) => {
+      if (pillar.classList.contains('is-active')) return;
+      pillars.forEach((p) => p.classList.toggle('is-active', p === pillar));
+      stage.dataset.state = pillar.dataset.state;
+      $('.ester-caption-num', caption).textContent = String(pillars.indexOf(pillar) + 1).padStart(2, '0');
+      $('.ester-caption-text', caption).textContent = $('h3', pillar).textContent;
+      if (!reduced) { retrigger(caption, 'swap'); retrigger(stage, 'pulse'); }
+    };
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) activate(e.target);
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    pillars.forEach((p) => io.observe(p));
+    activate(pillars[0]);
+  };
+
   // Gold dust rising through the hero, as in index.html, on one canvas.
   SCENES.particles = (canvas) => {
     if (reduced) return;

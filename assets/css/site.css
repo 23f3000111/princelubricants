@@ -53,7 +53,8 @@ main:focus { outline: none; }
 
 /* ---------- Utilities ---------- */
 .container { max-width: 1256px; margin: 0 auto; padding: 0 28px; }
-.section { position: relative; padding: 120px 0; overflow: hidden; }
+/* clip, not hidden: hidden makes the section a scroll container, which strands any sticky child */
+.section { position: relative; padding: 120px 0; overflow: hidden; overflow: clip; }
 .bg-light { background: var(--w); color: var(--td); }
 .bg-off { background: var(--ow); color: var(--td); }
 .bg-d2 { background: var(--d2); }
@@ -389,10 +390,10 @@ body[data-section="home"] .nav-link[data-nav="home"]::after { width: 70%; }
 .molecule .mol-surface { fill: none; stroke: var(--gold); stroke-opacity: .55; stroke-width: 1.2; }
 .molecule .mol-hatch, .molecule .mol-teeth { fill: none; stroke: #fff; stroke-opacity: .07; stroke-width: 1; }
 .molecule .mol-tail { fill: none; stroke: rgba(255, 255, 255, .38); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
-.molecule .mol-head { fill: url(#pl-head); filter: drop-shadow(0 0 5px rgba(255, 215, 0, .7)); }
+.molecule .mol-head { fill: url(#pl-head); filter: drop-shadow(0 0 var(--glow, 5px) rgba(255, 215, 0, .75)); transition: filter .8s var(--ease2); }
 .molecule .mol { transform-box: fill-box; transform-origin: 50% 100%; animation: mol-sway 5s ease-in-out infinite; animation-delay: calc(var(--i) * -.55s); }
-.molecule .mol-drift { animation: mol-drop 8s ease-in-out infinite; animation-delay: calc(var(--i) * -2.6s); opacity: 0; }
-@keyframes mol-sway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+.molecule .mol-drift { animation: mol-drop var(--drift, 8s) ease-in-out infinite; animation-delay: calc(var(--i) * -2.6s); opacity: 0; }
+@keyframes mol-sway { 0%, 100% { transform: rotate(calc(var(--sway, 6deg) * -1)); } 50% { transform: rotate(var(--sway, 6deg)); } }
 @keyframes mol-drop {
   0% { transform: translate(var(--x), 20px) rotate(170deg); opacity: 0; }
   15% { opacity: .9; }
@@ -622,6 +623,54 @@ html.js:not(.reduced):not(.motion-ready) .map-arc { animation: arc-draw .01s lin
 .band--tall .cta-box p + p { margin-top: 14px; }
 .band--tall .cta-box p { margin-bottom: 0; }
 
+/* ---------- Technology ---------- */
+[data-light] .tag { color: var(--gold-ink); background: var(--cream2); border-color: rgba(184, 134, 11, .35); }
+[data-light] .tag:hover { background: var(--cream3); border-color: var(--gold-text); }
+a.tn { display: block; color: inherit; }
+a.tn:hover strong { text-shadow: 0 0 18px rgba(255, 215, 0, .6); }
+.why-card--left { text-align: left; padding: 40px 34px 36px; }
+.why-card--left .why-icon { margin: 0 0 22px; }
+.why-card--left p { font-size: 13.8px; line-height: 1.8; }
+.why-step { position: absolute; top: 22px; right: 26px; font-family: var(--fh); font-size: 46px; font-weight: 700; line-height: 1; color: rgba(0, 0, 0, .05); transition: color .4s; }
+.why-card:hover .why-step { color: rgba(184, 134, 11, .22); }
+
+/* Ester technologies: a sticky stage beside the copy; the stage follows the pillar that
+   holds the viewport centre. CSS sticky, no scroll-jacking. */
+.ester { padding: 130px 0; }
+.ester-block { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.ester-block + .ester-block { margin-top: 150px; }
+.ester-block--flip .ester-visual { order: 2; }
+.ester-visual { align-self: stretch; }   /* the column spans the copy's height, so the stage has room to stick */
+.ester-sticky { position: sticky; top: 110px; }
+.ester-stage { position: relative; width: 100%; max-width: 540px; aspect-ratio: 1 / 1; margin: 0 auto; display: grid; place-items: center;
+  --sway: 6deg; --glow: 5px; --drift: 8s; --tint: rgba(255, 215, 0, .07); }
+.ester-stage::before { content: ''; position: absolute; inset: 6%; border-radius: 50%; background: radial-gradient(circle at 50% 55%, var(--tint), transparent 70%); transition: background 1s var(--ease2); }
+.ester-stage .g-ring:nth-child(1) { width: 100%; height: 100%; }
+.ester-stage .g-ring:nth-child(2) { width: 78%; height: 78%; }
+.ester-stage .g-ring:nth-child(3) { width: 56%; height: 56%; }
+.ester-stage.pulse .g-ring:nth-child(3) { animation: ring-hit .9s var(--ease2); }
+@keyframes ring-hit { 0% { transform: scale(1); border-color: rgba(255, 215, 0, .7); } 100% { transform: scale(1.25); border-color: rgba(255, 215, 0, .25); } }
+.ester-big { position: absolute; top: 16%; font-family: var(--fh); font-size: clamp(120px, 12vw, 200px); font-weight: 700; line-height: 1; letter-spacing: 2px; color: transparent; -webkit-text-stroke: 1.5px rgba(255, 215, 0, .55); text-shadow: 0 0 60px rgba(255, 215, 0, .12); }
+.stage-mol { position: absolute; left: 7%; width: 86%; bottom: 21%; }
+.ester-caption { position: absolute; bottom: 7%; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; padding: 10px 20px; border-radius: 30px; white-space: nowrap;
+  background: rgba(6, 6, 17, .85); border: 1px solid rgba(255, 215, 0, .35); box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+  font-family: var(--fh); font-size: 12.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
+.ester-caption-num { color: var(--gold); }
+.ester-caption.swap { animation: cap-swap .5s var(--ease2); }
+@keyframes cap-swap { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
+.ester-stage[data-state="1"] { --sway: 2deg; }
+.ester-stage[data-state="2"] { --glow: 16px; }
+.ester-stage[data-state="3"] { --tint: rgba(255, 120, 40, .16); }
+.ester-stage[data-state="4"] { --drift: 3.2s; --tint: rgba(120, 190, 255, .1); }
+.ester-stage[data-state="5"] { --glow: 11px; --tint: rgba(255, 245, 200, .1); }
+.ester-copy .sec-title { font-size: clamp(32px, 3.8vw, 50px); }
+.ester-pillars { display: flex; flex-direction: column; gap: 14px; margin: 26px 0 34px; }
+.ep { position: relative; }
+.ep .ep-num { display: block; font-family: var(--fh); font-size: 11px; letter-spacing: 2px; color: var(--tm); margin-bottom: 2px; }
+.ep.is-active { background: rgba(255, 215, 0, .1); border-color: var(--gold); transform: translateX(8px); box-shadow: -6px 0 0 -2px var(--gold), 0 14px 34px rgba(0, 0, 0, .35); }
+.ep.is-active .tp-icon { background: var(--gold); color: #000; border-color: var(--gold); }
+.ep.is-active .ep-num { color: var(--gold); }
+
 /* ---------- Typewriter title (index.html's, with the words in the HTML) ---------- */
 html.js:not(.reduced) [data-scene="typewriter"]:not(.tw-ready) { visibility: hidden; }
 html.js:not(.reduced):not(.motion-ready) [data-scene="typewriter"] { animation: failsafe-visible .01s linear 2.5s forwards; }
@@ -663,6 +712,9 @@ html.reduced .ticker-track { animation: none; }
 @media (max-width: 900px) {
   .about-grid, .tech-grid, .ester-cards, .prod-grid, .cta-grid, .story-grid, .two-col { grid-template-columns: 1fr; gap: 44px; }
   .chain { grid-template-columns: repeat(2, 1fr); row-gap: 56px; }
+  .ester-block { grid-template-columns: 1fr; gap: 40px; }
+  .ester-block--flip .ester-visual { order: 0; }
+  .ester-sticky { position: relative; top: 0; }
   .cert-grid { grid-template-columns: repeat(3, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }

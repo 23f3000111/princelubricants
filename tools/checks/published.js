@@ -10,8 +10,8 @@ async (page, base = 'https://23f3000111.github.io/princelubricants', deep404 = t
   const origin = new URL(base).origin;
   const errors = [];
   const failed = [];
-  page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
-  page.on('pageerror', (e) => errors.push(String(e)));
+  page.on('console', (m) => { if (m.type() === 'error') errors.push({ text: m.text(), url: m.location().url }); });
+  page.on('pageerror', (e) => errors.push({ text: String(e), url: '' }));
   page.on('response', (r) => { if (r.url().startsWith(origin) && r.status() >= 400 && r.request().resourceType() !== 'document') failed.push(`${r.status()} ${r.url()}`); });
   await page.setViewportSize({ width: 1440, height: 900 });
 
@@ -24,10 +24,12 @@ async (page, base = 'https://23f3000111.github.io/princelubricants', deep404 = t
     const info = await page.evaluate((o) => ({
       styled: getComputedStyle(document.body).backgroundColor === 'rgb(6, 6, 17)' && getComputedStyle(document.querySelector('#nav')).position === 'fixed',
       logo: (() => { const img = document.querySelector('.nav-logo img'); return !!img && img.complete && img.naturalWidth > 0; })(),
-      links: [...document.querySelectorAll('a[href]')].map((a) => a.href).filter((h) => h.startsWith(o)),
+      links: [...document.querySelectorAll('a[href]')].filter((a) => !a.getAttribute('href').startsWith('#')).map((a) => a.href).filter((h) => h.startsWith(o)),
     }), origin);
     info.links.forEach((h) => links.add(h.split('#')[0]));
-    const r = { status: res ? res.status() : 0, styled: info.styled, logo: info.logo, errors: [...errors], failed: [...failed] };
+    // A missing URL's own 404 is logged by the browser as a console error; that one is the point.
+    const own = (e) => wantStatus === 404 && e.url === base + path && /status of 404/.test(e.text);
+    const r = { status: res ? res.status() : 0, styled: info.styled, logo: info.logo, errors: errors.filter((e) => !own(e)).map((e) => e.text), failed: [...failed] };
     r.pass = r.status === wantStatus && r.styled && r.logo && !r.errors.length && !r.failed.length;
     out.pages[path] = r;
     out.pass = out.pass && r.pass;

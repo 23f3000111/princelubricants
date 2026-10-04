@@ -372,3 +372,47 @@ double-clicking works. Any static server works as it is.
    - the header, mega menus, mobile menu and forms work;
    - all content is visible with reduced motion and with JavaScript off;
    - `file:` navigation works.
+
+## 11. Amendment, 2026-10-04: the visual reference is index.html, not PX98
+
+The user reviewed the first shell and rejected it as "looking like the PX98 website, not
+like old index.html". The intent in §4 was always to carry `../index.html` forward, but the
+implementation had drifted into PX98's dark editorial language.
+
+What drifted:
+
+- left-aligned giant headlines;
+- hairline panels and big ghost numerals;
+- full-width mega panels;
+- flat gold on black.
+
+From here on, every page is built from index.html's own components and values, and only the
+motion is upgraded.
+
+**Components to use:**
+
+- the centred photo hero, with a gradient overlay, gold grid, particles, orbs, the eyebrow
+  between two rules, a typewriter title, a gold stats line, gold and outline buttons, and a
+  bouncing scroll cue;
+- the gold stats band with black line icons;
+- white sections with a centred `sec-label`, `sec-title` and `gold-bar`;
+- yellow-bordered pillars with gold circle icons;
+- the dark technology split, with pulsing rings and an orbit around a floating pack shot,
+  plus `tp` point cards and `tn` number tiles;
+- white product cards with a pale-yellow image well, a gold tag and a "Discover" link;
+- the racing band over a photo, with a gold badge, pill tags and a gold button;
+- why-cards with a gold top rule;
+- the photo band with an ink overlay;
+- index.html's nav, with compact dropdowns rather than mega panels;
+- index.html's footer, with a Certified list. The PX98 studio credit is not carried over.
+
+**Motion added on top:**
+
+- split-line headline reveals;
+- gold-bar and label rules that draw in;
+- odometer counters;
+- scrubbed parallax;
+- tilt with glare;
+- a motorsport ticker;
+- a gold wipe for image reveals;
+- gold page transitions.

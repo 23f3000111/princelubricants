@@ -15,12 +15,12 @@ async (page) => {
   await page.waitForTimeout(500);
   r.consoleErrors = [...errors];
 
-  // Link lists in the footer carry no bullets; the eyebrow's gold rule has drawn in.
-  r.footerListsBulletless = await page.evaluate(() => [...document.querySelectorAll('.footer-col ul')]
+  // Link lists in the footer carry no bullets; the gold bar under the title has drawn in.
+  r.footerListsBulletless = await page.evaluate(() => [...document.querySelectorAll('.ft-col ul')]
     .every((ul) => getComputedStyle(ul).listStyleType === 'none'));
   await page.waitForTimeout(1600);
-  r.eyebrowRuleDrawn = await page.evaluate(() => {
-    const t = getComputedStyle(document.querySelector('main .eyebrow'), '::before').transform;
+  r.goldBarDrawn = await page.evaluate(() => {
+    const t = getComputedStyle(document.querySelector('main .gold-bar'), null).transform;
     return t === 'none' || t === 'matrix(1, 0, 0, 1, 0, 0)';
   });
 
@@ -36,21 +36,21 @@ async (page) => {
   let reached = false;
   for (let i = 0; i < 14 && !reached; i++) {
     await page.keyboard.press('Tab');
-    reached = await page.evaluate(() => !!document.activeElement?.matches('.nav-toggle[aria-controls="mega-company"]'));
+    reached = await page.evaluate(() => !!document.activeElement?.matches('.nav-toggle[aria-controls="menu-company"]'));
   }
   r.tabReachesCompanyToggle = reached;
   await page.keyboard.press('Enter');
   await page.waitForTimeout(350);
   r.enterOpens = await page.evaluate(() => {
-    const t = document.querySelector('.nav-toggle[aria-controls="mega-company"]');
-    const panel = document.getElementById('mega-company');
+    const t = document.querySelector('.nav-toggle[aria-controls="menu-company"]');
+    const panel = document.getElementById('menu-company');
     return !!t && !!panel && t.getAttribute('aria-expanded') === 'true' && getComputedStyle(panel).visibility === 'visible';
   });
   await page.keyboard.press('Escape');
   await page.waitForTimeout(350);
   r.escCloses = await page.evaluate(() => {
-    const t = document.querySelector('.nav-toggle[aria-controls="mega-company"]');
-    const panel = document.getElementById('mega-company');
+    const t = document.querySelector('.nav-toggle[aria-controls="menu-company"]');
+    const panel = document.getElementById('menu-company');
     return !!t && t.getAttribute('aria-expanded') === 'false' && document.activeElement === t &&
       getComputedStyle(panel).visibility === 'hidden';
   });
@@ -59,7 +59,7 @@ async (page) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto(BASE + '/404.html', { waitUntil: 'networkidle' });
   r.reducedCursorRingHidden = await page.evaluate(() => {
-    const ring = document.getElementById('cursor-ring');
+    const ring = document.getElementById('cur-ring');
     return !ring || getComputedStyle(ring).display === 'none';
   });
   r.reducedBodyCursor = await page.evaluate(() => getComputedStyle(document.body).cursor);
@@ -90,7 +90,7 @@ async (page) => {
     r.fileCompanyHref = 'error: ' + String(e.message).split('\n')[0];
   }
 
-  r.pass = r.consoleErrors.length === 0 && r.footerListsBulletless && r.eyebrowRuleDrawn && r.firstTabIsSkip && r.skipFocusesMain && r.tabReachesCompanyToggle &&
+  r.pass = r.consoleErrors.length === 0 && r.footerListsBulletless && r.goldBarDrawn && r.firstTabIsSkip && r.skipFocusesMain && r.tabReachesCompanyToggle &&
     r.enterOpens && r.escCloses && r.reducedCursorRingHidden && r.reducedBodyCursor !== 'none' &&
     r.noJsBodyCursor !== 'none' && r.noJsHiddenText.length === 0 && !r.noJsLoaderShown &&
     String(r.fileCompanyHref).endsWith('company/index.html');

@@ -1,10 +1,11 @@
 /*
  * PRINCE LUBRICANTS: site runtime.
  *
- * Every module is a no-op on a page that has none of its elements. GSAP (core,
- * ScrollTrigger, SplitText) choreographs when it is present; without it the page still
- * reveals, counts and navigates. Nothing here writes content: every word on every page
- * is already in the HTML, which is what search engines and answer engines read.
+ * The behaviour of the client-approved index.html (loader, gold progress bar, ring
+ * cursor, side dots, back-to-top, typewriter title, particles, reveals, counters,
+ * parallax, card tilt), carried to every page and taken further with GSAP where it is
+ * present. Every module is a no-op on a page without its elements. Nothing here writes
+ * content: every word is already in the HTML, which is what crawlers read.
  */
 (() => {
   'use strict';
@@ -20,16 +21,17 @@
   const Split = G && window.SplitText ? window.SplitText : null;
   if (G) G.registerPlugin(window.ScrollTrigger, ...(Split ? [Split] : []));
 
-  // Resolves once the first-visit loader has gone (at once on every later page), so an
-  // intro never plays underneath it.
+  // Resolves once the first-visit loader has gone (at once on later pages), so an intro
+  // never plays underneath it. A timer guarantees it resolves whatever else happens.
   let markReady;
   const pageReady = new Promise((resolve) => { markReady = resolve; });
+  setTimeout(() => markReady(), 4000);
 
   // Page scenes register here by name and run for each [data-scene="name"] element.
   const SCENES = {};
 
-  /* Double-click preview from disk. Under file: a link to a folder opens a folder
-     listing, so point it at that folder's index.html. Served, nothing changes. */
+  /* Double-click preview from disk: under file: a folder link opens a folder listing,
+     so point it at that folder's index.html. Served, nothing changes. */
   function fileLinks() {
     if (location.protocol !== 'file:') return;
     for (const a of $$('a[href]')) {
@@ -54,31 +56,30 @@
       markReady();
       setTimeout(() => el.remove(), 750);
     };
-    const go = () => setTimeout(out, Math.max(0, 1300 - performance.now()));
+    const go = () => setTimeout(out, Math.max(0, 1500 - performance.now()));
     if (d.readyState === 'complete') go();
     else window.addEventListener('load', go, { once: true });
   }
 
-  function header() {
-    const head = $('.site-header');
-    if (!head) return;
+  function navbar() {
+    const nav = $('#nav');
+    if (!nav) return;
 
-    // Scrolled state from a sentinel, not a scroll listener.
     const top = d.createElement('div');
     top.className = 'scroll-sentinel';
     top.setAttribute('aria-hidden', 'true');
     d.body.prepend(top);
-    new IntersectionObserver(([e]) => head.classList.toggle('is-scrolled', !e.isIntersecting)).observe(top);
+    new IntersectionObserver(([e]) => nav.classList.toggle('scrolled', !e.isIntersecting)).observe(top);
 
     const items = $$('.nav-item[data-menu]');
     const burger = $('.burger');
-    const menu = $('#mobile-menu');
+    const menu = $('#mob-menu');
 
     const setOpen = (item, open, returnFocus) => {
       const toggle = $('.nav-toggle', item);
       item.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
-      head.classList.toggle('has-open', items.some((i) => i.classList.contains('is-open')));
+      nav.classList.toggle('has-open', items.some((i) => i.classList.contains('is-open')));
       if (!open && returnFocus) toggle.focus();
     };
     const openOnly = (item) => {
@@ -94,8 +95,8 @@
         else openOnly(item);
       });
       if (finePointer) {
-        item.addEventListener('mouseenter', () => { clearTimeout(timer); timer = setTimeout(() => openOnly(item), 90); });
-        item.addEventListener('mouseleave', () => { clearTimeout(timer); timer = setTimeout(() => setOpen(item, false), 180); });
+        item.addEventListener('mouseenter', () => { clearTimeout(timer); timer = setTimeout(() => openOnly(item), 80); });
+        item.addEventListener('mouseleave', () => { clearTimeout(timer); timer = setTimeout(() => setOpen(item, false), 160); });
       }
       item.addEventListener('focusout', (e) => { if (!item.contains(e.relatedTarget)) setOpen(item, false); });
     }
@@ -103,7 +104,7 @@
     const setMobile = (open, returnFocus) => {
       if (!burger || !menu) return;
       burger.setAttribute('aria-expanded', String(open));
-      menu.classList.toggle('is-open', open);
+      menu.classList.toggle('open', open);
       d.body.style.overflow = open ? 'hidden' : '';
       if (!open && returnFocus) burger.focus();
     };
@@ -138,8 +139,8 @@
   }
 
   function cursor() {
-    const ring = $('#cursor-ring');
-    const dot = $('#cursor-dot');
+    const ring = $('#cur-ring');
+    const dot = $('#cur-dot');
     if (!ring || !dot || !finePointer || reduced) return;
     html.classList.add('cursor-on');
     let mx = -100, my = -100, rx = -100, ry = -100;
@@ -148,30 +149,30 @@
       dot.style.transform = `translate(${mx}px, ${my}px)`;
     }, { passive: true });
     (function follow() {
-      rx += (mx - rx) * 0.16;
-      ry += (my - ry) * 0.16;
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
       ring.style.transform = `translate(${rx}px, ${ry}px)`;
       requestAnimationFrame(follow);
     })();
-    window.addEventListener('pointerdown', () => ring.classList.add('is-down'));
-    window.addEventListener('pointerup', () => ring.classList.remove('is-down'));
+    window.addEventListener('pointerdown', () => ring.classList.add('click'));
+    window.addEventListener('pointerup', () => ring.classList.remove('click'));
     d.addEventListener('pointerover', (e) => {
-      ring.classList.toggle('is-big', !!e.target.closest('a, button, .tilt, [data-cursor]'));
+      ring.classList.toggle('big', !!e.target.closest('a, button, .tilt, .pillar, .why-card, .tp, .tn, .tag, .cert'));
     });
-    html.addEventListener('mouseleave', () => { ring.classList.add('is-hidden'); dot.classList.add('is-hidden'); });
-    html.addEventListener('mouseenter', () => { ring.classList.remove('is-hidden'); dot.classList.remove('is-hidden'); });
+    html.addEventListener('mouseleave', () => { ring.classList.add('gone'); dot.classList.add('gone'); });
+    html.addEventListener('mouseenter', () => { ring.classList.remove('gone'); dot.classList.remove('gone'); });
   }
 
-  function dots() {
+  function sideDots() {
     const sections = $$('[data-dot]');
     if (sections.length < 3) return;
     const nav = d.createElement('nav');
-    nav.id = 'section-dots';
+    nav.id = 'sidenav';
     nav.setAttribute('aria-label', 'Sections on this page');
-    const buttons = sections.map((section) => {
+    const dots = sections.map((section) => {
       const b = d.createElement('button');
       b.type = 'button';
-      b.className = 'sdot';
+      b.className = 'snd';
       b.dataset.label = section.dataset.dot;
       b.setAttribute('aria-label', section.dataset.dot);
       b.addEventListener('click', () => section.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' }));
@@ -183,22 +184,22 @@
       for (const e of entries) {
         if (!e.isIntersecting) continue;
         const i = sections.indexOf(e.target);
-        buttons.forEach((b, j) => b.classList.toggle('is-on', i === j));
-        nav.classList.toggle('on-light', e.target.matches('.section--paper, .section--paper-2, .section--gold, .stat-band, .cta-band'));
+        dots.forEach((b, j) => b.classList.toggle('on', i === j));
+        nav.classList.toggle('on-light', e.target.matches('[data-light], .stats'));
       }
     }, { rootMargin: '-48% 0px -48% 0px' });
     sections.forEach((s) => io.observe(s));
   }
 
-  function toTop() {
-    const btn = $('#to-top');
+  function backToTop() {
+    const btn = $('#btt');
     if (!btn) return;
     const deep = d.createElement('div');
     deep.className = 'scroll-sentinel scroll-sentinel--deep';
     deep.setAttribute('aria-hidden', 'true');
     d.body.prepend(deep);
     new IntersectionObserver(([e]) => {
-      btn.classList.toggle('is-shown', !e.isIntersecting && e.boundingClientRect.top < 0);
+      btn.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0);
     }).observe(deep);
     btn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
@@ -208,7 +209,7 @@
   }
 
   function reveals() {
-    const els = $$('.rv, .rv-l, .rv-r, .rv-s');
+    const els = $$('.rv, .rv-l, .rv-r, .rv-s, .rv-wipe');
     if (reduced || !('IntersectionObserver' in window)) {
       els.forEach((el) => el.classList.add('vis'));
       return;
@@ -221,20 +222,20 @@
         e.target.classList.add('vis');
         io.unobserve(e.target);
       }
-    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     els.filter((el) => !intro.includes(el)).forEach((el) => io.observe(el));
   }
 
-  // Headlines rise line by line from a mask. Lines are re-measured when fonts load or
-  // the window resizes (autoSplit), so a headline never keeps a stale break.
-  function splitHeadings() {
-    const heads = $$('[data-split]');
-    if (!heads.length) return;
+  // Section titles rise line by line from a mask. autoSplit re-measures the lines when
+  // fonts load or the window resizes, so a title never keeps a stale break.
+  function splitTitles() {
+    const titles = $$('[data-split]');
+    if (!titles.length) return;
     if (reduced || !Split) {
-      heads.forEach((h) => h.classList.add('is-split'));
+      titles.forEach((t) => t.classList.add('is-split'));
       return;
     }
-    const run = () => heads.forEach((el) => {
+    const run = () => titles.forEach((el) => {
       const isIntro = !!el.closest('[data-intro]');
       let played = false;
       Split.create(el, {
@@ -249,12 +250,12 @@
             G.set(self.lines, { yPercent: 110 });
             pageReady.then(() => {
               played = true;
-              G.to(self.lines, { yPercent: 0, duration: 1.25, ease: 'expo.out', stagger: 0.1, delay: 0.05 });
+              G.to(self.lines, { yPercent: 0, duration: 1.2, ease: 'expo.out', stagger: 0.1, delay: 0.1 });
             });
             return undefined;
           }
           return G.from(self.lines, {
-            yPercent: 110, duration: 1.1, ease: 'expo.out', stagger: 0.09,
+            yPercent: 110, duration: 1.05, ease: 'expo.out', stagger: 0.09,
             scrollTrigger: { trigger: el, start: 'top 88%', once: true, onEnter: () => { played = true; } },
           });
         },
@@ -281,7 +282,7 @@
       const t0 = performance.now();
       const tick = (now) => {
         const p = Math.min(1, (now - t0) / 1900);
-        el.textContent = pre + fmt(target * (1 - Math.pow(1 - p, 4))) + post;
+        el.textContent = pre + fmt(target * (1 - Math.pow(1 - p, 3))) + post;
         if (p < 1) requestAnimationFrame(tick);
         else el.textContent = final;
       };
@@ -293,7 +294,7 @@
         run(e.target);
         io.unobserve(e.target);
       }
-    }, { threshold: 0.6 });
+    }, { threshold: 0.5 });
     els.forEach((el) => io.observe(el));
   }
 
@@ -302,14 +303,15 @@
     for (const el of $$('[data-parallax]')) {
       const amount = (parseFloat(el.dataset.parallax) || 0.12) * 100;
       const atTop = !!el.closest('.hero, .page-hero');
-      G.fromTo(el, { yPercent: atTop ? 0 : -amount }, {
-        yPercent: amount,
+      G.fromTo(el, { yPercent: atTop ? 0 : -amount / 2 }, {
+        yPercent: atTop ? amount : amount / 2,
         ease: 'none',
         scrollTrigger: { trigger: el.parentElement, start: atTop ? 'top top' : 'top bottom', end: 'bottom top', scrub: true },
       });
     }
   }
 
+  // index.html's 3D card tilt, with a glare that follows the pointer.
   function tilt() {
     if (!finePointer || reduced) return;
     for (const card of $$('.tilt')) {
@@ -318,7 +320,7 @@
         const x = (e.clientX - r.left) / r.width - 0.5;
         const y = (e.clientY - r.top) / r.height - 0.5;
         card.classList.add('is-tilting');
-        card.style.transform = `perspective(1000px) rotateY(${x * 9}deg) rotateX(${-y * 7}deg) translateY(-6px)`;
+        card.style.transform = `perspective(800px) rotateY(${x * 10}deg) rotateX(${-y * 8}deg) translateY(-6px)`;
         card.style.setProperty('--mx', `${((x + 0.5) * 100).toFixed(1)}%`);
         card.style.setProperty('--my', `${((y + 0.5) * 100).toFixed(1)}%`);
       });
@@ -329,10 +331,112 @@
     }
   }
 
+  /* index.html's typewriter title. The words are in the HTML for crawlers and for
+     visitors without JavaScript; here they are only revealed one letter at a time,
+     with the gold cursor following the last letter typed. */
+  SCENES.typewriter = (el) => {
+    const ready = () => el.classList.add('tw-ready');
+    if (reduced) { ready(); return; }
+    try {
+      const label = el.textContent.replace(/\s+/g, ' ').trim();
+      const chars = [];
+      const split = (node) => {
+        for (const child of Array.from(node.childNodes)) {
+          if (child.nodeType === Node.TEXT_NODE) {
+            const frag = d.createDocumentFragment();
+            for (const ch of child.textContent) {
+              const span = d.createElement('span');
+              span.className = 'tw-char';
+              span.setAttribute('aria-hidden', 'true');
+              span.textContent = ch;
+              frag.append(span);
+              chars.push(span);
+            }
+            child.replaceWith(frag);
+          } else if (child.nodeType === Node.ELEMENT_NODE) {
+            split(child);
+          }
+        }
+      };
+      split(el);
+      el.setAttribute('aria-label', label);
+      const caret = d.createElement('span');
+      caret.className = 'type-cursor';
+      caret.setAttribute('aria-hidden', 'true');
+      el.append(caret);
+      const place = (c, after) => {
+        caret.style.left = `${c.offsetLeft + (after ? c.offsetWidth + 4 : -8)}px`;
+        caret.style.top = `${c.offsetTop + c.offsetHeight * 0.11}px`;
+        caret.style.height = `${c.offsetHeight * 0.78}px`;
+      };
+      el.classList.add('tw-on');
+      place(chars[0], false);
+      pageReady.then(() => {
+        let i = 0;
+        const step = () => {
+          if (i >= chars.length) return;
+          chars[i].classList.add('on');
+          place(chars[i], true);
+          i += 1;
+          setTimeout(step, chars[i - 1].textContent === ' ' ? 30 : 62);
+        };
+        setTimeout(step, 350);
+      });
+    } finally {
+      ready();
+    }
+  };
+
+  // Gold dust rising through the hero, as in index.html, on one canvas.
+  SCENES.particles = (canvas) => {
+    if (reduced) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    let w = 0, h = 0;
+    const resize = () => {
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      w = canvas.clientWidth; h = canvas.clientHeight;
+      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener('resize', resize);
+    const spawn = (anywhere) => ({
+      x: Math.random() * w,
+      y: anywhere ? Math.random() * h : h + 10,
+      r: Math.random() * 2.2 + 0.6,
+      vy: -(Math.random() * 0.45 + 0.12),
+      vx: (Math.random() - 0.5) * 0.18,
+      a: Math.random() * 0.5 + 0.2,
+      t: Math.random() * Math.PI * 2,
+    });
+    const dots = Array.from({ length: Math.round(Math.min(70, w / 20)) }, () => spawn(true));
+    let visible = true;
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(canvas);
+    (function frame() {
+      if (visible) {
+        ctx.clearRect(0, 0, w, h);
+        for (const p of dots) {
+          p.x += p.vx; p.y += p.vy; p.t += 0.02;
+          if (p.y < -12) Object.assign(p, spawn(false));
+          const alpha = p.a * (0.55 + 0.45 * Math.sin(p.t)) * Math.min(1, p.y / (h * 0.25));
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 215, 0, ${alpha.toFixed(3)})`;
+          ctx.shadowBlur = 10;
+          ctx.shadowColor = 'rgba(255, 200, 0, .85)';
+          ctx.fill();
+        }
+      }
+      requestAnimationFrame(frame);
+    })();
+  };
+
   function scenes() {
     for (const el of $$('[data-scene]')) {
       const scene = SCENES[el.dataset.scene];
-      if (scene) scene(el, { G, Split, reduced, pageReady });
+      if (!scene) continue;
+      try { scene(el); } catch (err) { console.error(`[prince] scene ${el.dataset.scene}:`, err); }
     }
   }
 
@@ -341,7 +445,7 @@
   }
 
   function init() {
-    [fileLinks, loaderOnce, header, progress, cursor, dots, toTop, reveals, splitHeadings, counters, parallax, tilt, scenes]
+    [fileLinks, loaderOnce, navbar, progress, cursor, sideDots, backToTop, reveals, splitTitles, counters, parallax, tilt, scenes]
       .forEach(safely);
     html.classList.add('motion-ready');
     if (G) window.addEventListener('load', () => window.ScrollTrigger.refresh(), { once: true });

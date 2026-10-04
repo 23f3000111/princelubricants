@@ -82,9 +82,17 @@ Browser checks used during development are in `tools/checks/`. Each one exports 
 
 ## Deploy
 
-The site deploys to Vercel as static files. `vercel.json` sets trailing-slash URLs and
-the headers. `.vercelignore` keeps `tools/`, `partials/`, `docs/` and this README out of
-the deployment.
+- **GitHub Pages.** Every push to `main` runs `.github/workflows/pages.yml`. The workflow
+  runs the unit tests and the page checks. Then `node tools/pages.js _site <base>` copies
+  the deployable files into `_site/` and publishes them. A project site lives under
+  `/<repo>/`, so the script points 404.html's root links at that path. Every other page
+  links relatively and needs no change. The site is live at
+  https://23f3000111.github.io/princelubricants/.
+- **Vercel.** The site also deploys to Vercel as static files at a domain root.
+  `vercel.json` sets trailing-slash URLs and the headers.
+
+Both deployments leave out what `.vercelignore` lists: `tools/`, `partials/`, `docs/`,
+this README and the repository's own files.
 
 ## Open items for the client
 

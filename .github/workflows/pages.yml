@@ -1,0 +1,45 @@
+# Publishes the site to GitHub Pages on every push to main. The unit tests and the page
+# checks run first. tools/pages.js then copies the deployable files into _site/ and
+# points 404.html's root-absolute links at the project path (/<repo>/).
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Test the build tools and check every page
+        run: |
+          node --test tools/build.test.js tools/pages.test.js
+          node tools/build.js --check
+
+      - id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Assemble the site
+        run: node tools/pages.js _site "${{ steps.pages.outputs.base_path }}"
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v5

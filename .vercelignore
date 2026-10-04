@@ -1,0 +1,8 @@
+# The deployment is the site. The build scripts, the partials they stamp from and the
+# design notes are not part of it.
+tools/
+partials/
+docs/
+README.md
+.gitignore
+.gitattributes

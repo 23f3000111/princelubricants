@@ -38,6 +38,7 @@ test('markCurrent marks only the link that points at this page', () => {
 
 const good = (canon) => `<html><head><title>T</title><meta name="description" content="D">
 <link rel="canonical" href="https://www.princelubricants.com${canon}">
+<!-- @head --><!-- /@head -->
 <script type="application/ld+json">{"@type":"WebPage"}</script></head>
 <body><!-- @header --><!-- /@header --><h1>One</h1><!-- @cta --><!-- /@cta --><!-- @footer --><!-- /@footer --></body></html>`;
 
@@ -53,6 +54,8 @@ test('checkPage flags h1 count, canonical, JSON-LD, tokens and markers', () => {
   assert.match(b.checkPage(rel, good('/company/').replace('{"@type":"WebPage"}', '{bad')).join(), /JSON-LD/);
   assert.match(b.checkPage(rel, good('/company/').replace('<h1>One', '<h1>{{root}}')).join(), /token/);
   assert.match(b.checkPage(rel, good('/company/').replace('<!-- @cta --><!-- /@cta -->', '')).join(), /cta/);
+  assert.match(b.checkPage(rel, good('/company/').replace('<!-- @head --><!-- /@head -->', '')).join(), /@head/);
+  assert.match(b.checkPage(rel, good('/company/').replace('<!-- @head --><!-- /@head -->', '').replace('<body>', '<body data-cta="none">')).join(), /@head/);
   assert.deepEqual(b.checkPage(rel, good('/company/').replace('<!-- @cta --><!-- /@cta -->', '').replace('<body>', '<body data-cta="none">')), []);
 });
 

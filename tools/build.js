@@ -6,7 +6,8 @@
  *   node tools/build.js           stamp, write, check
  *   node tools/build.js --check   check only, change nothing
  *
- * partials/<name>.html lands between <!-- @name --> and <!-- /@name --> in each page.
+ * partials/<name>.html (head, header, footer, cta) lands between <!-- @name --> and
+ * <!-- /@name --> in each page.
  * Inside a partial, {{root}} is the relative path from that page to the site root and
  * {{home}} is its link to the home page. Every link in the site is relative so it runs
  * from a domain, a sub-path or straight off the disk. 404.html is the exception: the
@@ -18,7 +19,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const ORIGIN = 'https://www.princelubricants.com';
-const PARTIALS = ['header', 'footer', 'cta'];
+const PARTIALS = ['head', 'header', 'footer', 'cta'];
 const SKIP_DIRS = new Set(['.git', '.superpowers', 'node_modules', 'docs', 'tools', 'partials', 'assets']);
 // A URL scheme (https:, mailto:, tel:, data:) or protocol-relative: not ours to check.
 const EXTERNAL = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
@@ -85,7 +86,8 @@ function checkPage(rel, html) {
 
   if (/\{\{\w+\}\}/.test(html)) fail('unfilled {{token}} left in the page');
 
-  const required = /<body[^>]*\sdata-cta="none"/.test(html) ? ['header', 'footer'] : PARTIALS;
+  const noCta = /<body[^>]*\sdata-cta="none"/.test(html);
+  const required = PARTIALS.filter((name) => !(noCta && name === 'cta'));
   for (const name of required) {
     if (!html.includes(`<!-- @${name} -->`) || !html.includes(`<!-- /@${name} -->`)) {
       fail(`missing the <!-- @${name} --> markers`);

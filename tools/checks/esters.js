@@ -1,7 +1,8 @@
 // P-9 and P-10 page checks: each carries its doc copy verbatim (headline, sub, body, the
 // five pillars, the home card's tagline and small line), a breadcrumb through Our
-// Technology, series cards that link to the matching product category, sibling links,
-// the labelled placeholder for technical data, no console errors, nothing hidden without JS.
+// Technology, series cards that open their range in the catalogue and show a real image
+// (no photo slot), sibling links, the labelled placeholder for technical data (the line-up
+// itself now lives in the catalogue), no console errors, nothing hidden without JS.
 async (page) => {
   const BASE = 'http://127.0.0.1:8765';
   const norm = (s) => s.replace(/[’‘]/g, "'").replace(/\s+/g, ' ').trim();
@@ -16,7 +17,7 @@ async (page) => {
         'RAPID COLD-START PROTECTION', 'Immediate circulation and surface retention support protection during critical start-up conditions.',
         'ENHANCED ENGINE CLEANLINESS', 'Natural ester solvency supports deposit and sludge control and cleaner internal engine surfaces.',
         'FS1 SERIES', 'FS1 EUROGEN SERIES', 'FSR SERIES'],
-      series: ['../../products/#passenger-car', '../../products/#motorsport'],
+      series: ['../../products/passenger-car/#fs1', '../../products/passenger-car/#fs1-eurogen', '../../products/motorsport/#racing-motor-oils'],
       siblings: ['../p-10-ester/', '../#p-plus-synthese', '../'],
     },
     'p-10-ester': {
@@ -29,7 +30,7 @@ async (page) => {
         'THERMAL DEGRADATION RESISTANCE', 'Heat resistance properties help resist lubricant breakdown during severe and sustained operating conditions.',
         'LOW-DEPOSIT PERFORMANCE', 'Natural ester solvency supports deposit control and cleaner lubrication under demanding operations.',
         'MAXX GOLD SERIES'],
-      series: ['../../products/#motorcycle'],
+      series: ['../../products/motorcycle/#maxx-gold-4t'],
       siblings: ['../p-9-ester/', '../#p-plus-synthese', '../'],
     },
   };
@@ -57,8 +58,16 @@ async (page) => {
     r.series = await page.evaluate((hrefs) => hrefs.filter((h) => !document.querySelector(`main a[href="${h}"]`)), spec.series);
     r.siblings = await page.evaluate((hrefs) => hrefs.filter((h) => !document.querySelector(`main a[href="${h}"]`)), spec.siblings);
     r.placeholder = await page.evaluate(() => !!document.querySelector('main .ph .ph-tag'));
+    r.lineupPending = text.includes('product line-up');
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await page.waitForTimeout(800);
+    await page.evaluate(() => document.querySelector('#series .p-card')?.scrollIntoView());
+    await page.waitForTimeout(800);
+    r.seriesImages = await page.evaluate(() => {
+      const grid = document.querySelector('#series');
+      const imgs = grid ? [...grid.querySelectorAll('img')] : [];
+      return { slots: grid ? grid.querySelectorAll('.photo-slot').length : -1, loaded: imgs.filter((i) => i.complete && i.naturalWidth > 0).length, cards: grid ? grid.querySelectorAll('.p-card').length : 0 };
+    });
     r.consoleErrors = [...errors];
     const ctx = await page.context().browser().newContext({ javaScriptEnabled: false, viewport: { width: 1440, height: 900 } });
     const nojs = await ctx.newPage();
@@ -69,7 +78,8 @@ async (page) => {
       .map((e) => e.tagName + ':' + e.textContent.trim().slice(0, 40)));
     await ctx.close();
     r.pass = r.missing.length === 0 && r.h1.length === 1 && r.h1[0] === spec.h1 && r.crumb &&
-      r.series.length === 0 && r.siblings.length === 0 && r.placeholder && r.consoleErrors.length === 0 && r.noJsHidden.length === 0;
+      r.series.length === 0 && r.siblings.length === 0 && r.placeholder && !r.lineupPending &&
+      r.seriesImages.slots === 0 && r.seriesImages.loaded === r.seriesImages.cards && r.consoleErrors.length === 0 && r.noJsHidden.length === 0;
     out[slug] = r;
     out.pass = out.pass && r.pass;
   }

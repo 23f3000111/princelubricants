@@ -1,6 +1,9 @@
 // Home page checks: the client's copy is in the served HTML verbatim, the two 2x3 grids
 // follow the doc's row/column order, the counters land on their exact figures, every
 // next-page CTA goes where the doc says, and nothing is hidden without JavaScript.
+// Amendment 1: the Singapore sentence is the title; "ESTER" is as big as "P-9" and each
+// ester card carries its photograph; the product cards lose their numbers, their line
+// grows and they open their category's catalogue.
 async (page) => {
   const BASE = 'http://127.0.0.1:8765';
   const norm = (s) => s.replace(/[’‘]/g, "'").replace(/\s+/g, ' ').trim();
@@ -42,6 +45,8 @@ async (page) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto(BASE + '/', { waitUntil: 'networkidle' });
   await page.waitForTimeout(2200);
+  // The title types without a caret: no blinking bar while it types, nor once it is done.
+  r.caretWhileTyping = await page.evaluate(() => document.querySelectorAll('.type-cursor').length);
 
   const src = await page.evaluate(async () => {
     const html = await (await fetch(location.href, { cache: 'no-store' })).text();
@@ -68,6 +73,8 @@ async (page) => {
   await page.evaluate(() => document.querySelector('.stats')?.scrollIntoView({ block: 'center' }));
   await page.waitForTimeout(2600);
   r.counters = await page.evaluate(() => [...document.querySelectorAll('.stats [data-count]')].map((e) => e.textContent.trim()));
+  r.caret = await page.evaluate(() => document.querySelectorAll('.type-cursor').length);
+  r.typed = await page.evaluate(() => { const c = [...document.querySelectorAll('h1 .tw-char')]; return c.length > 0 && c.every((x) => x.classList.contains('on')); });
 
   r.links = await page.evaluate(() => {
     const has = (href) => !!document.querySelector(`main a[href="${href}"]`);
@@ -75,6 +82,22 @@ async (page) => {
       p9: has('technology/p-9-ester/'), p10: has('technology/p-10-ester/'), products: has('products/'),
       motorsport: has('motorsport/'), company: has('company/'), technology: has('technology/'),
       tiles: [...document.querySelectorAll('.p-card')].map((a) => a.getAttribute('href')).join(' '),
+    };
+  });
+  r.amend = await page.evaluate(() => {
+    const px = (el) => (el ? parseFloat(getComputedStyle(el).fontSize) : 0);
+    const cards = [...document.querySelectorAll('.ester-card')];
+    return {
+      esterWord: cards.map((c) => Math.round(px(c.querySelector('.ester-word')) / Math.max(1, px(c.querySelector('.ester-code'))) * 100)),
+      esterPhotos: cards.map((c) => { const i = c.querySelector('.ester-photo img'); return i && i.complete && i.naturalWidth > 0 ? i.getAttribute('src') : null; }),
+      molecules: document.querySelectorAll('.ester-card .molecule').length,
+      pTags: document.querySelectorAll('.p-card .p-tag').length,
+      lineSize: px(document.querySelector('.p-card-body p')),
+      // P-9 / P-10 and ESTER share one line, the code never broken at its hyphen.
+      heads: [...document.querySelectorAll('.ester-head')].map((h) => {
+        const a = h.querySelector('.ester-code').getBoundingClientRect(), b = h.querySelector('.ester-word').getBoundingClientRect();
+        return Math.abs(a.top - b.top) < 2 && Math.abs(a.height - b.height) < 2;
+      }),
     };
   });
   r.consoleErrors = [...errors];
@@ -92,13 +115,17 @@ async (page) => {
     tiles: ['PASSENGER CAR', 'MOTORSPORT', 'COMMERCIAL FLEET', 'MOTORCYCLE', 'INDUSTRIAL', 'MARINE'],
     archive: ['FIA FORMULA', 'GT', 'GYMKHANA', 'ENDURANCE', 'DRIFT', 'TOURING'],
     counters: ['>100,000', '>15,000', '30+', '70+', '200+'],
-    tileHrefs: 'products/#passenger-car products/#motorsport products/#commercial-fleet products/#motorcycle products/#industrial products/#marine',
+    tileHrefs: 'products/passenger-car/ products/motorsport/ products/commercial-fleet/ products/motorcycle/ products/industrial/ products/marine/',
   };
-  r.pass = r.missingCopy.length === 0 && r.h1.length === 1 && r.h1[0] === 'PRINCE LUBRICANTS' &&
+  r.pass = r.missingCopy.length === 0 && r.h1.length === 1 && r.h1[0] === "SINGAPORE'S PERFORMANCE LUBRICANT SPECIALIST SINCE 1998." &&
     JSON.stringify(r.tileOrder) === JSON.stringify(want.tiles) && r.tileGrid &&
     JSON.stringify(r.archiveOrder) === JSON.stringify(want.archive) && r.archiveGrid &&
     JSON.stringify(r.counters) === JSON.stringify(want.counters) &&
     Object.entries(r.links).every(([k, v]) => (k === 'tiles' ? v === want.tileHrefs : v)) &&
+    r.amend.esterWord.every((pc) => pc >= 95) && r.amend.esterPhotos.length === 2 &&
+    /aston\.webp$/.test(r.amend.esterPhotos[0] || '') && /bike\.webp$/.test(r.amend.esterPhotos[1] || '') && r.amend.molecules === 0 &&
+    r.amend.pTags === 0 && r.amend.lineSize >= 15.5 && r.amend.heads.length === 2 && r.amend.heads.every(Boolean) &&
+    r.caretWhileTyping === 0 && r.caret === 0 && r.typed &&
     r.consoleErrors.length === 0 && r.noJsHiddenText.length === 0;
   return r;
 }

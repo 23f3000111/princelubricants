@@ -7,7 +7,14 @@
 async (page, base = 'http://127.0.0.1:8765', paths = null) => {
   const PAGES = paths || ['/', '/company/', '/company/airasia/', '/company/china-lubricant-expo-2017/', '/technology/',
     '/technology/p-9-ester/', '/technology/p-10-ester/', '/products/', '/motorsport/', '/contact/',
-    '/become-a-distributor/', '/faq/', '/404.html'];
+    '/become-a-distributor/', '/faq/', '/404.html',
+    // The catalogue: its six category pages and, from each, the product page with the most
+    // text (plus the longest product name).
+    '/products/passenger-car/', '/products/motorsport/', '/products/commercial-fleet/', '/products/motorcycle/',
+    '/products/industrial/', '/products/marine/', '/products/passenger-car/central-hydraulic-fluid/',
+    '/products/motorsport/fsr-gt-racing-0w-40/', '/products/commercial-fleet/super-shift-gl-4-gl-4-plus-75w-80/',
+    '/products/commercial-fleet/heavy-duty-extended-life-elc-antifreeze-coolant/', '/products/motorcycle/fork-oil-5w-light/',
+    '/products/industrial/turb-x-zinc-ep/', '/products/marine/marino-valvi-ultra-t-d-15w-40/'];
   const SIZES = [[1280, 800], [1366, 768], [1440, 900], [1536, 864], [1920, 1080]];
   const browser = page.context().browser();
 
@@ -26,7 +33,7 @@ async (page, base = 'http://127.0.0.1:8765', paths = null) => {
       const walker = document.createTreeWalker(el, NodeFilter.SHOW_ALL);
       for (let node = walker.nextNode(); node; node = walker.nextNode()) {
         if (node.nodeName === 'BR') { run += 1; continue; }
-        if (node.nodeType !== Node.TEXT_NODE || node.parentElement.closest('.type-cursor')) continue;
+        if (node.nodeType !== Node.TEXT_NODE) continue;
         for (const m of node.textContent.matchAll(/[^\s ]+/g)) {
           const range = document.createRange();
           range.setStart(node, m.index);

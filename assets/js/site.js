@@ -82,7 +82,7 @@
       for (const child of node.childNodes) {
         if (child.nodeType === Node.TEXT_NODE) lines[lines.length - 1].push(child);
         else if (child.nodeName === 'BR') lines.push([]);
-        else if (child.nodeType === Node.ELEMENT_NODE && !child.matches('.glue, .type-cursor, svg, script')) walk(child);
+        else if (child.nodeType === Node.ELEMENT_NODE && !child.matches('.glue, svg, script')) walk(child);
       }
     })(el);
     return lines.map(glueLastTwo).some(Boolean);
@@ -405,8 +405,8 @@
   }
 
   /* index.html's typewriter title. The words are in the HTML for crawlers and for
-     visitors without JavaScript; here they are only revealed one letter at a time,
-     with the gold cursor following the last letter typed. */
+     visitors without JavaScript; here they are only revealed one letter at a time.
+     No caret: the client asked for no blinking bar at the end of the title. */
   SCENES.typewriter = (el) => {
     const ready = () => el.classList.add('tw-ready');
     if (reduced) { ready(); return; }
@@ -433,23 +433,12 @@
       };
       split(el);
       el.setAttribute('aria-label', label);
-      const caret = d.createElement('span');
-      caret.className = 'type-cursor';
-      caret.setAttribute('aria-hidden', 'true');
-      el.append(caret);
-      const place = (c, after) => {
-        caret.style.left = `${c.offsetLeft + (after ? c.offsetWidth + 4 : -8)}px`;
-        caret.style.top = `${c.offsetTop + c.offsetHeight * 0.11}px`;
-        caret.style.height = `${c.offsetHeight * 0.78}px`;
-      };
       el.classList.add('tw-on');
-      place(chars[0], false);
       pageReady.then(() => {
         let i = 0;
         const step = () => {
           if (i >= chars.length) return;
           chars[i].classList.add('on');
-          place(chars[i], true);
           i += 1;
           setTimeout(step, chars[i - 1].textContent === ' ' ? 30 : 62);
         };
@@ -595,6 +584,36 @@
     }
   }
 
+  // A product page: each size button puts its pack in view.
+  function packSizes() {
+    const main = $('.pd-main');
+    const thumbs = $$('.pd-thumb');
+    if (!main || !thumbs.length) return;
+    for (const thumb of thumbs) {
+      thumb.addEventListener('click', () => {
+        main.removeAttribute('width');
+        main.removeAttribute('height');
+        main.src = thumb.dataset.src;
+        for (const t of thumbs) {
+          t.classList.toggle('is-active', t === thumb);
+          t.setAttribute('aria-pressed', String(t === thumb));
+        }
+      });
+    }
+  }
+
+  // An enquiry sent from a product page names the product in the form.
+  function enquiryFromProduct() {
+    const product = new URLSearchParams(location.search).get('product');
+    const form = $('form[data-enquiry]');
+    if (!product || !form) return;
+    const type = $('select', form);
+    const option = type && Array.from(type.options).find((o) => /product/i.test(o.text));
+    if (option) type.value = option.value;
+    const message = $('textarea', form);
+    if (message && !message.value) message.value = `Enquiry about ${product}: `;
+  }
+
   /* FAQ: a link to a question opens it. The search, shown only when this runs, keeps the
      questions whose question or answer holds every word typed, hides the categories left
      empty, and says how many match or that none do. */
@@ -657,7 +676,7 @@
   }
 
   function init() {
-    [fileLinks, noOrphans, loaderOnce, navbar, progress, cursor, sideDots, backToTop, reveals, splitTitles, counters, parallax, tilt, forms, faq, scenes]
+    [fileLinks, noOrphans, loaderOnce, navbar, progress, cursor, sideDots, backToTop, reveals, splitTitles, counters, parallax, tilt, forms, enquiryFromProduct, packSizes, faq, scenes]
       .forEach(safely);
     html.classList.add('motion-ready');
     if (G) window.addEventListener('load', () => window.ScrollTrigger.refresh(), { once: true });

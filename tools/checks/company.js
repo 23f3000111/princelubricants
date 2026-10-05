@@ -1,10 +1,10 @@
 // Our Company checks: doc copy verbatim in the served HTML, the anchors the header links
-// to, the five proof counters, the story links, the map's 14 markets and hub with arcs
+// to, the five proof counters, the story links, the map's 18 markets and hub with arcs
 // that draw in, no console errors, and nothing hidden without JavaScript.
 async (page) => {
   const BASE = 'http://127.0.0.1:8765';
   const norm = (s) => s.replace(/[’‘]/g, "'").replace(/\s+/g, ' ').trim();
-  const LINE = 'Our international footprint includes the United Kingdom, Australia, China, Saudi Arabia, India, Thailand, Vietnam, Malaysia, Indonesia, the Philippines, Papua New Guinea, Egypt, Ethiopia, Kenya and other markets worldwide.';
+  const LINE = 'Our international footprint includes the United Kingdom, Australia, China, Saudi Arabia, India, Thailand, Vietnam, Malaysia, Indonesia, the Philippines, Papua New Guinea, Egypt, Ethiopia, Kenya, Oman, Bangladesh, the Maldives, Fiji and other markets worldwide.';
   const MUST = [
     'OUR COMPANY', 'FROM BASE OILS TO HIGH-PERFORMANCE LUBRICANTS.',
     'PRINCE LUBRICANTS is built upon a long-standing industry foundation dating back to 1998, when our company began operations in the sourcing, bulk trading and regional distribution of base stocks to lubricant manufacturers.',
@@ -91,7 +91,7 @@ async (page) => {
   r.pass = r.missingCopy.length === 0 && r.h1.length === 1 && r.h1[0] === 'FROM BASE OILS TO HIGH-PERFORMANCE LUBRICANTS.' &&
     r.anchors.length === 0 && r.storyLinks && r.breadcrumb && r.paraGap >= 12 &&
     JSON.stringify(r.counters) === JSON.stringify(['>40,000', '>15,000', '>100,000', '40+', '30+']) &&
-    r.map.markets === 14 && r.map.hub === 1 && r.map.arcsDrawn && r.noJsArcsVisible &&
+    r.map.markets === 18 && r.map.hub === 1 && r.map.arcsDrawn && r.noJsArcsVisible &&
     r.consoleErrors.length === 0 && r.noJsHiddenText.length === 0;
   return { pass: r.pass, paraGap: r.paraGap, missing: r.missingCopy, h1: r.h1, anchors: r.anchors, storyLinks: r.storyLinks, breadcrumb: r.breadcrumb, counters: r.counters, map: r.map, noJsArcsVisible: r.noJsArcsVisible, consoleErrors: r.consoleErrors, noJsHidden: r.noJsHiddenText };
 }

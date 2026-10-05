@@ -40,6 +40,28 @@ CROPS = {
     "handshake": ("prince_1.jpg", None),
 }
 
+# Stock photography under free licences, standing in until the client supplies its own
+# (amendment 1, page 3). The downloads live in tools/data/stock/, which is not committed.
+#   aston  Eric Joseph on Pexels, photo 35662012 (Pexels licence): a yellow Aston Martin
+#          V12 Vantage; no free photograph of a yellow DBS Superleggera could be found
+#   bike   Bobby Thapa on Unsplash, photo tnAYx91-Qn4 (Unsplash licence): a yellow and black
+#          Ducati Panigale
+# name: (file, crop box or None, widest edge in px)
+STOCK = {
+    "aston": ("am-front.jpg", (0, 900, 2000, 2250), 1400),
+    "bike": ("bike-tnAYx91-Qn4.jpg", None, 1600),
+}
+
+
+def stock():
+    made = []
+    for name, (file, box, edge) in STOCK.items():
+        img = Image.open(DATA / "stock" / file).convert("RGB")
+        img = img.crop(box) if box else img
+        img.thumbnail((edge, edge), Image.LANCZOS)
+        made.append(save_webp(img, name))
+    return made
+
 
 def save_webp(img, name, quality=82):
     PHOTO.mkdir(parents=True, exist_ok=True)
@@ -204,6 +226,7 @@ def main():
     made.append(save_webp(racing_range(), "racing-range"))
     made.append(save_webp(fs1_jug(), "fs1"))
     made.append(save_webp(fs1_duo(), "fs1-duo", quality=86))
+    made += stock()
     favicons()
     share_image()
     for path in made:

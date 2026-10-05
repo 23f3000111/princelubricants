@@ -2,3 +2,4 @@ tools/data/
 .superpowers/
 node_modules/
 _site/
+__pycache__/

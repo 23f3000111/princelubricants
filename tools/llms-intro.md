@@ -9,7 +9,7 @@ PRINCE LUBRICANTS develops performance-driven and advanced lubricants for demand
 - More than 100,000 metric tonnes of annual blending capacity, and more than 15,000 MT of base oil storage capacity.
 - More than 40,000 MT of annual base oil supply volume, and more than 40 factories served across Southeast Asia and South Asia.
 - 70+ API-licensed products and 200+ racing partnerships.
-- A presence in more than 30 countries through importers, exclusive distributors and market partners, including the United Kingdom, Australia, China, Saudi Arabia, India, Thailand, Vietnam, Malaysia, Indonesia, the Philippines, Papua New Guinea, Egypt, Ethiopia and Kenya.
+- A presence in more than 30 countries through importers, exclusive distributors and market partners, including the United Kingdom, Australia, China, Saudi Arabia, India, Thailand, Vietnam, Malaysia, Indonesia, the Philippines, Papua New Guinea, Egypt, Ethiopia, Kenya, Oman, Bangladesh, the Maldives and Fiji.
 - Quality marks: ISO 9001:2015, API ENERGY, API STARBURST, ACEA and EELQMS.
 
 ## Technologies and products

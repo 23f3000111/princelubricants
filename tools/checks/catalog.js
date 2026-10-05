@@ -1,7 +1,9 @@
 // Products and Motorsport checks: doc copy verbatim, the twelve anchors in the doc's order,
-// series named only where the doc names them, the event names, labelled placeholders, deep
-// links landing below the fixed header (and the sticky category bar), no console errors,
-// nothing hidden without JavaScript.
+// series named only where the doc names them, the event names, deep links landing below
+// the fixed header (and the sticky category bar), no console errors, nothing hidden without
+// JavaScript. Amendment 1: each category has a write-up, lists its own ranges (linking to
+// them in its catalogue) and a gold Browse Products button; the catalogue placeholder is
+// gone; every motorsport discipline has written copy instead of a placeholder.
 async (page) => {
   const BASE = 'http://127.0.0.1:8765';
   const norm = (s) => s.replace(/[’‘]/g, "'").replace(/\s+/g, ' ').trim();
@@ -63,6 +65,16 @@ async (page) => {
     r.chips = await page.evaluate(() => [...document.querySelectorAll('.cat-nav a')].map((a) => a.getAttribute('href')));
     r.seriesWhere = await page.evaluate(() => Object.fromEntries([...document.querySelectorAll('main .cat-section')].map((s) => [s.id, [...s.querySelectorAll('.series-tags .tag')].map((t) => t.textContent.trim())])));
     r.placeholder = await page.evaluate(() => !!document.querySelector('main .ph .ph-tag'));
+    const catalogue = await (await page.request.get(BASE + '/docs/content/products.json')).json();
+    r.categories = await page.evaluate((cats) => cats.map((c) => {
+      const s = document.getElementById(c.id);
+      const want = c.ranges.map((r) => `${c.id}/#${r.id}`);
+      const got = [...s.querySelectorAll('.range-list a.range-link')].map((a) => a.getAttribute('href'));
+      const browse = s.querySelector(`a.btn-gold[href="${c.id}/"]`);
+      return { id: c.id, intro: (s.querySelector('.cat-intro')?.textContent.trim().split(/\s+/).length || 0) >= 20,
+        ranges: JSON.stringify(got) === JSON.stringify(want), browse: !!browse && /Browse Products/i.test(browse.textContent) };
+    }), catalogue.categories);
+    r.total = await page.evaluate(() => document.querySelector('.cat-total')?.textContent.replace(/\s+/g, ' ').trim());
     r.consoleErrors = [...errors];
     r.landing = await landing('/products/', 'marine');
     r.noJsHidden = await noJs('/products/');
@@ -70,7 +82,8 @@ async (page) => {
     const wantSeries = { 'passenger-car': ['FS1 SERIES', 'FS1 EUROGEN SERIES'], motorsport: ['FSR SERIES'], 'commercial-fleet': [], motorcycle: ['MAXX GOLD SERIES'], industrial: [], marine: [] };
     r.pass = r.missing.length === 0 && r.h1.length === 1 && r.h1[0] === 'FROM RACE TO ROAD. INDUSTRY TO SEA.' &&
       JSON.stringify(r.order) === JSON.stringify(wantOrder) && JSON.stringify(r.chips) === JSON.stringify(wantOrder.map((i) => `#${i}`)) &&
-      JSON.stringify(r.seriesWhere) === JSON.stringify(wantSeries) && r.placeholder &&
+      JSON.stringify(r.seriesWhere) === JSON.stringify(wantSeries) && !r.placeholder &&
+      r.categories.every((c) => c.intro && c.ranges && c.browse) && /^161 products/.test(r.total || '') &&
       r.landing.headingTop >= r.landing.coveredTo && r.consoleErrors.length === 0 && r.noJsHidden.length === 0;
     out.products = r;
     out.pass = out.pass && r.pass;
@@ -90,7 +103,8 @@ async (page) => {
     r.order = await page.evaluate(() => [...document.querySelectorAll('main .discipline')].map((s) => s.id));
     r.names = await page.evaluate(() => [...document.querySelectorAll('main .discipline h2')].map((h) => h.textContent.trim()));
     r.placeholders = await page.evaluate(() => document.querySelectorAll('main .discipline .ph').length);
-    r.links = await page.evaluate(() => !!document.querySelector('main a[href="../technology/p-9-ester/"]') && !!document.querySelector('main a[href="../products/#motorsport"]'));
+    r.copyWords = await page.evaluate(() => [...document.querySelectorAll('main .discipline')].map((d) => (d.querySelector('.disc-copy')?.textContent.trim().split(/\s+/).length || 0)));
+    r.links = await page.evaluate(() => !!document.querySelector('main a[href="../technology/p-9-ester/"]') && !!document.querySelector('main a[href="../products/motorsport/"]'));
     r.consoleErrors = [...errors];
     r.landing = await landing('/motorsport/', 'drift');
     r.noJsHidden = await noJs('/motorsport/');
@@ -98,7 +112,7 @@ async (page) => {
     r.pass = r.missing.length === 0 && r.h1.length === 1 && r.h1[0] === 'PERFORMANCE FORGED THROUGH MOTORSPORT.' &&
       JSON.stringify(r.order) === JSON.stringify(wantOrder) &&
       JSON.stringify(r.names) === JSON.stringify(['FIA FORMULA', 'GT', 'GYMKHANA', 'ENDURANCE', 'DRIFT', 'TOURING']) &&
-      r.placeholders === 6 && r.links && r.landing.headingTop >= r.landing.coveredTo &&
+      r.placeholders === 0 && r.copyWords.every((n) => n >= 40) && r.links && r.landing.headingTop >= r.landing.coveredTo &&
       r.consoleErrors.length === 0 && r.noJsHidden.length === 0;
     out.motorsport = r;
     out.pass = out.pass && r.pass;

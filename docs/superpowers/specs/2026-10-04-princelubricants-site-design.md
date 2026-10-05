@@ -416,3 +416,50 @@ motion is upgraded.
 - a motorsport ticker;
 - a gold wipe for image reveals;
 - gold page transitions.
+
+## 12. Amendment 1, 2026-10-05: the client's design amendments
+
+Source: `docs/content/amendment-1-2026-10-05.md`, a transcription of the client's PDF. The
+user added: "do not use px-98 UI, proceed with our current prince lubricants ui". Every
+change below is built from the components in §11.
+
+1. **Home hero.** "PRINCE LUBRICANTS" goes. The doc's eyebrow sentence, "SINGAPORE'S
+   PERFORMANCE LUBRICANT SPECIALIST SINCE 1998.", becomes the H1, set large and typed
+   letter by letter, with "SINCE 1998." in gold. It sets in two lines at every desktop
+   width. The user then asked for no blinking bar at the end of the heading, so the
+   typewriter has no caret.
+2. **Home ester cards.** "ESTER" is set at the same size as "P-9"/"P-10". The drawn
+   molecule gives way to photographs: a yellow Aston Martin for P-9 and a yellow-and-black
+   sport motorcycle for P-10, both under free licences (Pexels, Unsplash) until the client
+   supplies their own. No free photograph of a yellow DBS Superleggera exists; the car
+   used is a yellow Aston Martin V12 Vantage.
+3. **Home product cards.** The 01–06 badges go and the line under each title grows.
+4. **Motorsport.** The six "Content to come" boxes become written copy about each
+   discipline: what it demands of an engine and its oil, and the events the doc and the
+   current site name. It claims no seasons, teams or results for PRINCE LUBRICANTS.
+5. **Product catalogue.** Every product on the current princelubricants.com (161), with its
+   pack images and its information (description, sizes, application, specifications or
+   performance levels, benefits, technical data), in the current site's order.
+   - The six categories of §2 hold them. Each old range goes to one category:
+     - Passenger Car: the passenger car motor oils, PRO-SHIFT MTF, the ATF/DCT/CVT fluids,
+       brake and clutch fluids, the G11/G12+/G13 coolants and the hydraulic and power
+       steering fluids;
+     - Motorsport: the current site's Racing page;
+     - Commercial Fleet: the commercial truck oils, SUPER-SHIFT and the heavy-duty ELC
+       coolant;
+     - Motorcycle: the MAXX motor oils, MAXX-SHIFT and the fork oils;
+     - Industrial: industrial oils and metal processing fluids;
+     - Marine: the marine specialties, the marine transmission oils and the maritime
+       solutions.
+   - URLs: `/products/<category>/` lists a category, range by range, as white product
+     cards with pale-yellow wells; `/products/<category>/<product>/` is one product.
+   - Pack shots are keyed off their white ground, trimmed and saved as WebP.
+6. **Products page.** Under each category title, a short write-up. The pillars list the
+   category's own product ranges instead of generic lines, each linking to its range. The
+   second button becomes a gold "Browse Products" to the category page.
+7. **Global presence.** The Maldives, Oman, Bangladesh and Fiji join the map, and the
+   written list of markets. The Maldives are too small for the map's 1:110m data, so
+   they have a marker at Malé and no dots.
+8. **Technology pages.** The P-9 and P-10 series cards open their ranges in the
+   catalogue, and the FS1 EUROGEN and MAXX GOLD photo slots take those ranges' pack
+   shots.

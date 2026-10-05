@@ -125,7 +125,7 @@ async (page) => {
     const must = ['BECOME A DISTRIBUTOR',
       'Every new market begins with the right partnership. Connect with PRINCE LUBRICANTS for product enquiries, technical support and exclusive distribution opportunities.',
       'International expansion at PRINCE LUBRICANTS is built around lasting partnerships rather than market presence alone, combining performance-focused lubricant technology and collaborative market development across diverse regions worldwide.',
-      'Our international footprint includes the United Kingdom, Australia, China, Saudi Arabia, India, Thailand, Vietnam, Malaysia, Indonesia, the Philippines, Papua New Guinea, Egypt, Ethiopia, Kenya and other markets worldwide.',
+      'Our international footprint includes the United Kingdom, Australia, China, Saudi Arabia, India, Thailand, Vietnam, Malaysia, Indonesia, the Philippines, Papua New Guinea, Egypt, Ethiopia, Kenya, Oman, Bangladesh, the Maldives, Fiji and other markets worldwide.',
       'Exclusive territorial rights', 'Full marketing support', 'Custom formulation collaboration', 'Flexible packaging'];
     const r = { missing: must.map(norm).filter((s) => !text.includes(s)), h1: src.h1.map(norm) };
     r.form = await formCheck();

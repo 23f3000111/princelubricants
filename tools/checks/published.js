@@ -2,11 +2,19 @@
 // every page answers 200 with its stylesheet applied, no console errors and no failed
 // same-origin requests; every internal link on every page resolves; 404.html is styled
 // and its links resolve under the project path. With deep404, a missing URL several
-// folders deep must answer 404 with that same styled page.
-async (page, base = 'https://23f3000111.github.io/princelubricants', deep404 = true) => {
-  const PAGES = ['/', '/company/', '/company/airasia/', '/company/china-lubricant-expo-2017/', '/technology/',
+// folders deep must answer 404 with that same styled page. Pass `paths` to check only the
+// pages a change touched.
+async (page, base = 'https://23f3000111.github.io/princelubricants', deep404 = true, paths = null) => {
+  const PAGES = paths || ['/', '/company/', '/company/airasia/', '/company/china-lubricant-expo-2017/', '/technology/',
     '/technology/p-9-ester/', '/technology/p-10-ester/', '/products/', '/motorsport/', '/contact/',
-    '/become-a-distributor/', '/faq/', '/404.html'];
+    '/become-a-distributor/', '/faq/', '/404.html',
+    // The catalogue: its six category pages and, from each, the product page with the most
+    // text (plus the longest product name).
+    '/products/passenger-car/', '/products/motorsport/', '/products/commercial-fleet/', '/products/motorcycle/',
+    '/products/industrial/', '/products/marine/', '/products/passenger-car/central-hydraulic-fluid/',
+    '/products/motorsport/fsr-gt-racing-0w-40/', '/products/commercial-fleet/super-shift-gl-4-gl-4-plus-75w-80/',
+    '/products/commercial-fleet/heavy-duty-extended-life-elc-antifreeze-coolant/', '/products/motorcycle/fork-oil-5w-light/',
+    '/products/industrial/turb-x-zinc-ep/', '/products/marine/marino-valvi-ultra-t-d-15w-40/'];
   const origin = new URL(base).origin;
   const errors = [];
   const failed = [];

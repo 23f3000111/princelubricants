@@ -1,9 +1,11 @@
 # princelubricants.com
 
 The PRINCE LUBRICANTS website: thirteen static pages built on the client-approved
-`index.html` design, with the copy from the client's October 2026 website document.
-There is no framework and no build step at deploy time. What is in this folder is the
-site.
+`index.html` design, with the copy from the client's October 2026 website document,
+plus a product catalogue of 167 generated pages (six categories, 161 products) carried
+over from the current princelubricants.com. The client's first round of design
+amendments (5 Oct 2026) is in `docs/content/amendment-1-2026-10-05.md`. There is no
+framework and no build step at deploy time. What is in this folder is the site.
 
 ## Pages
 
@@ -16,15 +18,18 @@ site.
 | `/technology/` | `technology/index.html` | Our Technology: formulation, P-9, P-10, P+ SYNTHESE |
 | `/technology/p-9-ester/` | `technology/p-9-ester/index.html` | P-9 ESTER Based Technology |
 | `/technology/p-10-ester/` | `technology/p-10-ester/index.html` | P-10 ESTER Based Technology |
-| `/products/` | `products/index.html` | The six product categories, each with its own anchor |
+| `/products/` | `products/index.html` | The six product categories: write-up, ranges and a Browse Products button each |
+| `/products/<category>/` | `products/<category>/index.html` | One category, range by range, one card per product (generated) |
+| `/products/<category>/<product>/` | `products/<category>/<product>/index.html` | One product: packs, sizes, specification and its sections (generated) |
 | `/motorsport/` | `motorsport/index.html` | Motorsport heritage, one section per discipline |
 | `/contact/` | `contact/index.html` | Contact details, map and enquiry form |
 | `/become-a-distributor/` | `become-a-distributor/index.html` | Partnership, benefits, markets and application form |
 | `/faq/` | `faq/index.html` | 110 questions in seven categories, with search; built from the client's spreadsheet |
 | any missing URL | `404.html` | Not found (noindex) |
 
-Product category anchors: `#passenger-car`, `#motorsport`, `#commercial-fleet`,
-`#motorcycle`, `#industrial`, `#marine`.
+Categories: `passenger-car`, `motorsport`, `commercial-fleet`, `motorcycle`,
+`industrial`, `marine`. Each is an anchor on `/products/` and a page of its own; each
+range is an anchor on its category page, e.g. `/products/passenger-car/#fs1-eurogen`.
 
 ## Preview
 
@@ -54,6 +59,14 @@ disk.
   `node tools/build.js`. The script writes the sections, the category chips and the
   FAQPage JSON-LD into `faq/index.html`, and `docs/content/faq.json` for the checks. A
   new sheet needs a line in its `CATEGORIES` table.
+- **Product catalogue.** The products come from the current site, crawled into
+  `tools/data/oldsite/` (not committed). `python tools/build-products.py` (needs Pillow,
+  numpy and scipy) maps its ranges onto the six categories, fixes its typos (ILASC,
+  Passanger, Maintanence, Industiral), keys each pack shot off its white ground into
+  `assets/img/products/` and writes `docs/content/products.json`. `node
+  tools/build-catalogue.js` then writes the category and product pages and the overview
+  blocks on `/products/`; run `node tools/build.js` after it. To change a category's
+  title, photo or write-up, edit its entry in `META` at the top of `build-catalogue.js`.
 - **Line breaks.** A heading or paragraph never ends on a word by itself: `site.js`
   keeps the last two words of each one, and of each line a `<br>` ends, together, and
   lets go again wherever the pair would not fit. `tools/checks/orphans.js` checks every
@@ -79,7 +92,10 @@ Two scripts make assets and only need to run again if their sources change:
 
 - `python tools/build-images.py` crops the photography out of the old site's banners in
   `../Prince Lubricants Images/`, and draws the favicons and the share image. It needs
-  Pillow, plus Oswald and Inter (from github.com/google/fonts) in `tools/data/`.
+  Pillow, plus Oswald and Inter (from github.com/google/fonts) in `tools/data/`. It also
+  sizes the two stock photographs in `tools/data/stock/`: the yellow Aston Martin V12
+  Vantage (Eric Joseph, Pexels photo 35662012, Pexels licence) and the yellow and black
+  Ducati Panigale (Bobby Thapa, Unsplash photo tnAYx91-Qn4, Unsplash licence).
 - `node tools/build-map.js` draws the Global Presence map from Natural Earth 1:110m
   data (URLs at the top of the script) saved into `tools/data/`. It writes
   `assets/img/world-dots.svg`, `assets/img/world-overlay.svg` and the map inside
@@ -89,6 +105,8 @@ Two scripts make assets and only need to run again if their sources change:
 
 Browser checks used during development are in `tools/checks/`. Each one exports an
 `async (page) => result` function for Playwright to run against the preview server.
+`orphans.js` and `published.js` take a list of paths, so a change can be checked on the
+pages it touches.
 
 ## Deploy
 
@@ -110,7 +128,7 @@ this README and the repository's own files.
 |---|---|---|
 | 1 | Product count hidden by the watermark ("more than [?]00") | "more than 500", from the current site's "500++" |
 | 2 | Home base-oil storage hidden ("[?]0,000 MT") | ">15,000 MT", the legible Company figure |
-| 3 | Home hero has no headline | H1 "PRINCE LUBRICANTS" |
+| 3 | Home hero has no headline | Amendment 1: the H1 is "SINGAPORE'S PERFORMANCE LUBRICANT SPECIALIST SINCE 1998.", typed without a caret |
 | 4 | COMMERCIAL FLEET (Home) vs Heavy Duty (Products list) | Home: Commercial Fleet. Products: Commercial Fleet, eyebrow Heavy Duty |
 | 5 | East African Safari Rally has no archive tile | Kept in the body copy |
 | 6 | Typos in the document | Fixed: DRIFT, STARBURST, Heavy-Duty |
@@ -122,22 +140,26 @@ this README and the repository's own files.
 | 12 | Photography and official marks | Labelled slots, listed below |
 | 13 | Technology document numbering (two S03s) and the CTA label copied from Company | Treated as S04, with Technology's own CTA |
 | 14 | "FSR SERIES" (Home) vs "FSR RACING SERIES" (Technology) | Each page uses its own section's wording |
-| 15 | FS1 EUROGEN has no category in the document | Linked to Passenger Car, as an FS1 line |
-| 16 | SS1, D1 and MAXX ULTRA have no category in the document | Named on Technology only |
+| 15 | FS1 EUROGEN has no category in the document | Passenger Car, as on the current site |
+| 16 | SS1, D1 and MAXX ULTRA have no category in the document | Catalogued as on the current site: SS1 in Passenger Car, D1 in Commercial Fleet, MAXX ULTRA in Motorcycle |
 | 17 | The "Designed and developed by Imsuya Global" credit | Left out of the footer. Add it back if wanted |
 | 18 | Slips in the FAQ spreadsheet | Fixed on the page: a missing question mark and a double space. "DEVO" and "Devo" both appear and are kept as written |
-| 19 | The FAQ names ranges the Products page does not yet show (FSe, the D Series: D1 GOLD, D1 and DEVO; MAXX ULTRA) | Answered on the FAQ only |
+| 19 | The FAQ names ranges the Products page did not show (FSe, the D Series: D1 GOLD, D1 and DEVO; MAXX ULTRA) | All are in the catalogue now |
+| 20 | P-9 card: "yellow car (Aston Martin DBS Superleggera)" | No free photograph of a yellow DBS Superleggera could be found. A yellow Aston Martin V12 Vantage (Pexels) stands in. Please send a licensed DBS Superleggera photograph |
+| 21 | P-10 card: "bike image of yellow and black" | A yellow and black Ducati Panigale (Unsplash), with the Ducati name visible. It is also the motorcycle photograph on Home and Products. Please confirm or send your own |
+| 22 | Motorsport: "use words from Chat GPT" | New copy for each discipline: what it asks of an engine and its oil. It claims no seasons, teams or results. Please approve |
+| 23 | Products: "keep all products listed like in PX98 style" | Built in the current PRINCE design, as the user asked: all 161 products of the current site, in its order, with its pack shots and information |
+| 24 | The catalogue copies the current site's wording | Kept as written, with four typos fixed (ILASC, Passanger, Maintanence, Industiral). A few product names are in capitals there and stay so |
+| 25 | The Maldives on the map | Too small for the map's data: a marker at Malé, no dots |
 
 ## Placeholders
 
 Every gap the client still has to fill is a visible, labelled slot in the page:
 
 - **Photography:** the AirAsia livery and the Expo 2017 stand (Company and both story
-  pages), three gallery photos on each story page, the FS1 EUROGEN pack shot (P-9), the
-  MAXX GOLD pack shot (P-10), motorcycle photography (Home and Products), and GT,
-  Gymkhana, endurance and drift photography (Motorsport).
+  pages), three gallery photos on each story page, and GT, Gymkhana, endurance and drift
+  photography (Motorsport).
 - **Official marks:** the ISO 9001:2015, API ENERGY, API STARBURST, ACEA and EELQMS logos
   (Company).
-- **Content:** the full AirAsia and Expo 2017 stories; P-9 and P-10 test data, line-ups
-  and data sheets; the product catalogue (grades, specifications, pack sizes); and one
-  involvement summary for each of the six motorsport disciplines.
+- **Content:** the full AirAsia and Expo 2017 stories, and the P-9 and P-10 test data and
+  technical data sheets.

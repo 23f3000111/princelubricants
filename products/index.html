@@ -102,12 +102,12 @@
         <a class="nav-link" data-nav="products" href="../products/" aria-current="page">Products</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-products"><span class="sr-only">Products menu</span><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.2 5 7l4-3.8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
         <div class="dropdown dropdown--wide" id="menu-products">
-          <a href="../products/#passenger-car"><span><span class="dd-title">Passenger Car</span><span class="dd-desc">Engine Oils · Transmission Fluids · Antifreeze Coolants</span></span></a>
-          <a href="../products/#motorsport"><span><span class="dd-title">Motorsport</span><span class="dd-desc">Racing Oils · Manual Gear Oils · Performance Coolants</span></span></a>
-          <a href="../products/#commercial-fleet"><span><span class="dd-title">Commercial Fleet</span><span class="dd-desc">Diesel Engine Oils · Hypoid Gear Oils · Long-life Coolants</span></span></a>
-          <a href="../products/#motorcycle"><span><span class="dd-title">Motorcycle</span><span class="dd-desc">4T Engine Oils · Scooter Engine Oils · Driveline Fluids</span></span></a>
-          <a href="../products/#industrial"><span><span class="dd-title">Industrial</span><span class="dd-desc">Hydraulic · Compressor · Slideways · Metalworking</span></span></a>
-          <a href="../products/#marine"><span><span class="dd-title">Marine</span><span class="dd-desc">Outboard Engine Oils · Heavy-Duty Oils · System Lubricants</span></span></a>
+          <a href="../products/passenger-car/"><span><span class="dd-title">Passenger Car</span><span class="dd-desc">Engine Oils · Transmission Fluids · Antifreeze Coolants</span></span></a>
+          <a href="../products/motorsport/"><span><span class="dd-title">Motorsport</span><span class="dd-desc">Racing Oils · Manual Gear Oils · Performance Coolants</span></span></a>
+          <a href="../products/commercial-fleet/"><span><span class="dd-title">Commercial Fleet</span><span class="dd-desc">Diesel Engine Oils · Hypoid Gear Oils · Long-life Coolants</span></span></a>
+          <a href="../products/motorcycle/"><span><span class="dd-title">Motorcycle</span><span class="dd-desc">4T Engine Oils · Scooter Engine Oils · Driveline Fluids</span></span></a>
+          <a href="../products/industrial/"><span><span class="dd-title">Industrial</span><span class="dd-desc">Hydraulic · Compressor · Slideways · Metalworking</span></span></a>
+          <a href="../products/marine/"><span><span class="dd-title">Marine</span><span class="dd-desc">Outboard Engine Oils · Heavy-Duty Oils · System Lubricants</span></span></a>
         </div>
       </li>
       <li class="nav-item"><a class="nav-link" data-nav="motorsport" href="../motorsport/">Motorsport</a></li>
@@ -165,14 +165,16 @@
     </div>
   </nav>
 
-  <!-- The doc's own words for the portfolio, and what is still to come -->
+  <!-- The doc's own words for the portfolio, and the size of the catalogue -->
   <section class="section section--intro bg-light" data-light>
     <div class="container">
       <div class="sec-head sec-head--center" style="margin-bottom: 40px">
         <span class="sec-label rv">The Portfolio</span>
         <p class="sec-text sec-text--lead rv">Discover the complete PRINCE LUBRICANTS product portfolio, combining advanced engine oils, transmission fluids, driveline lubricants and specialised fluids for a wide range of vehicles, vessels, equipment and machinery.</p>
       </div>
-      <div class="ph ph--wide rv"><span class="ph-tag">Catalogue to come</span><p><strong>Grades, specifications and pack sizes.</strong> Each product line below opens into its full catalogue once the client supplies the product data.</p></div>
+      <!-- @cat-total -->
+      <ul class="cat-total rv"><li><b>161</b> products</li><li><b>53</b> ranges</li><li><b>6</b> categories</li></ul>
+      <!-- /@cat-total -->
     </div>
   </section>
 
@@ -190,13 +192,27 @@
           <span class="sec-label rv">Category 01</span>
           <h2 class="sec-title" data-split>PASSENGER <span>CAR</span></h2>
           <div class="gold-bar rv"></div>
-          <ul class="pillars">
-            <li class="pillar rv"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.4 4.4 5.6 7.3 5.6 10.2a5.6 5.6 0 0 1-11.2 0C6.4 10.3 8.6 7.4 12 3Z"/></svg></span><span class="p-text"><h3>Engine Oils</h3></span></li>
-            <li class="pillar rv" style="--d:1"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1M18.7 18.7l-2.1-2.1M7.4 7.4 5.3 5.3"/></svg></span><span class="p-text"><h3>Transmission Fluids</h3></span></li>
-            <li class="pillar rv" style="--d:2"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14.5V4a2 2 0 0 1 4 0v10.5a4 4 0 1 1-4 0Z"/><path d="M12 10v7"/></svg></span><span class="p-text"><h3>Antifreeze Coolants</h3></span></li>
+          <!-- @cat:passenger-car -->
+          <p class="cat-lines rv">Engine Oils · Transmission Fluids · Antifreeze Coolants</p>
+          <p class="sec-text cat-intro rv">Engine oils for every kind of car, from the P-9 ESTER FS1 and FS1 EUROGEN flagships to FSe for hybrid engines, FS SUPER, SS1 and the M SERIES, with the transmission fluids, brake fluids, coolants and hydraulic fluids that keep the rest of the car in step.</p>
+          <ul class="range-list">
+            <li class="rv" style="--d:0"><a class="range-link" href="passenger-car/#fs1"><span class="rl-name">FS1</span><span class="rl-count">4</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="passenger-car/#fs1-eurogen"><span class="rl-name">FS1 EUROGEN</span><span class="rl-count">4</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="passenger-car/#fse"><span class="rl-name">FSe</span><span class="rl-count">5</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="passenger-car/#fs-super"><span class="rl-name">FS SUPER</span><span class="rl-count">6</span></a></li>
+            <li class="rv" style="--d:0"><a class="range-link" href="passenger-car/#ss1"><span class="rl-name">SS1</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="passenger-car/#m-series"><span class="rl-name">M SERIES</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="passenger-car/#pro-shift-mtf"><span class="rl-name">PRO-SHIFT MTF</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="passenger-car/#atf"><span class="rl-name">ATF</span><span class="rl-count">4</span></a></li>
+            <li class="rv" style="--d:0"><a class="range-link" href="passenger-car/#dct"><span class="rl-name">DCT</span><span class="rl-count">1</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="passenger-car/#cvt"><span class="rl-name">CVT</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="passenger-car/#brake-and-clutch-fluids"><span class="rl-name">Brake &amp; Clutch Fluids</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="passenger-car/#antifreeze-coolants"><span class="rl-name">Antifreeze Coolants</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:0"><a class="range-link" href="passenger-car/#hydraulic-and-power-steering-fluids"><span class="rl-name">Hydraulic &amp; Power Steering Fluids</span><span class="rl-count">3</span></a></li>
           </ul>
           <div class="series-tags rv"><span class="series-label">P-9 ESTER series</span><ul class="tags"><li class="tag">FS1 SERIES</li><li class="tag">FS1 EUROGEN SERIES</li></ul></div>
-          <div class="btn-row rv"><a class="btn-dark" href="../contact/">Product Enquiry ›</a><a class="btn-ghost" href="../technology/p-9-ester/">P-9 ESTER Technology</a></div>
+          <div class="btn-row rv"><a class="btn-dark" href="../contact/">Product Enquiry ›</a><a class="btn-gold" href="passenger-car/">Browse Products ›</a></div>
+          <!-- /@cat:passenger-car -->
         </div>
       </div>
     </div>
@@ -216,13 +232,18 @@
           <span class="sec-label rv">Category 02</span>
           <h2 class="sec-title" data-split>MOTORSPORT</h2>
           <div class="gold-bar rv"></div>
-          <ul class="pillars">
-            <li class="pillar rv"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 5h12l-2.5 4L17 13H5"/></svg></span><span class="p-text"><h3>Racing Oils</h3></span></li>
-            <li class="pillar rv" style="--d:1"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><path d="M6 7v12M12 7v12M18 7v5H6"/></svg></span><span class="p-text"><h3>Manual Gear Oils</h3></span></li>
-            <li class="pillar rv" style="--d:2"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14.5V4a2 2 0 0 1 4 0v10.5a4 4 0 1 1-4 0Z"/><path d="M12 10v7M17 5h3M17 9h3"/></svg></span><span class="p-text"><h3>Performance Coolants</h3></span></li>
+          <!-- @cat:motorsport -->
+          <p class="cat-lines rv">Racing Oils · Manual Gear Oils · Performance Coolants</p>
+          <p class="sec-text cat-intro rv">The range built for the track: FSR GT Racing motor oils, PRO-SHIFT GT Racing gear oils, GT Racing brake fluid and the GT COOLING race coolant, each made for the heat, loads and revs of competition.</p>
+          <ul class="range-list">
+            <li class="rv" style="--d:0"><a class="range-link" href="motorsport/#racing-motor-oils"><span class="rl-name">Racing Motor Oils</span><span class="rl-count">4</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="motorsport/#racing-gear-oils"><span class="rl-name">Racing Gear Oils</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="motorsport/#racing-brake-fluid"><span class="rl-name">Racing Brake Fluid</span><span class="rl-count">1</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="motorsport/#racing-coolant"><span class="rl-name">Racing Coolant</span><span class="rl-count">1</span></a></li>
           </ul>
           <div class="series-tags rv"><span class="series-label">P-9 ESTER series</span><ul class="tags"><li class="tag">FSR SERIES</li></ul></div>
-          <div class="btn-row rv"><a class="btn-gold" href="../contact/">Product Enquiry ›</a><a class="btn-out" href="../motorsport/">Motorsport Heritage</a></div>
+          <div class="btn-row rv"><a class="btn-out" href="../contact/">Product Enquiry ›</a><a class="btn-gold" href="motorsport/">Browse Products ›</a></div>
+          <!-- /@cat:motorsport -->
         </div>
       </div>
     </div>
@@ -241,12 +262,19 @@
           <span class="sec-label rv">HEAVY DUTY</span>
           <h2 class="sec-title" data-split>COMMERCIAL <span>FLEET</span></h2>
           <div class="gold-bar rv"></div>
-          <ul class="pillars">
-            <li class="pillar rv"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V7h11v9M13 10h4l3 3v3h-7"/><circle cx="6" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span><span class="p-text"><h3>Diesel Engine Oils</h3></span></li>
-            <li class="pillar rv" style="--d:1"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1M18.7 18.7l-2.1-2.1M7.4 7.4 5.3 5.3"/></svg></span><span class="p-text"><h3>Hypoid Gear Oils</h3></span></li>
-            <li class="pillar rv" style="--d:2"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><span class="p-text"><h3>Long-life Coolants</h3></span></li>
+          <!-- @cat:commercial-fleet -->
+          <p class="cat-lines rv">Diesel Engine Oils · Hypoid Gear Oils · Long-life Coolants</p>
+          <p class="sec-text cat-intro rv">Diesel engine oils for trucks, buses, pickups and working fleets, from D1 GOLD with P-12 Ester for EURO VI engines to D1 GOLD 4X4, D1 and DEVO, with SUPER-SHIFT gear oils for gearboxes and differentials and an extended-life coolant for heavy-duty cooling systems.</p>
+          <ul class="range-list">
+            <li class="rv" style="--d:0"><a class="range-link" href="commercial-fleet/#d1-gold"><span class="rl-name">D1 GOLD</span><span class="rl-count">4</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="commercial-fleet/#d1-gold-4x4"><span class="rl-name">D1 GOLD 4X4</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="commercial-fleet/#d1"><span class="rl-name">D1</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="commercial-fleet/#devo"><span class="rl-name">Devo</span><span class="rl-count">8</span></a></li>
+            <li class="rv" style="--d:0"><a class="range-link" href="commercial-fleet/#super-shift"><span class="rl-name">SUPER-SHIFT</span><span class="rl-count">9</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="commercial-fleet/#antifreeze-coolants"><span class="rl-name">Antifreeze Coolants</span><span class="rl-count">1</span></a></li>
           </ul>
-          <div class="btn-row rv"><a class="btn-dark" href="../contact/">Product Enquiry ›</a><a class="btn-ghost" href="../become-a-distributor/">Become a Distributor</a></div>
+          <div class="btn-row rv"><a class="btn-dark" href="../contact/">Product Enquiry ›</a><a class="btn-gold" href="commercial-fleet/">Browse Products ›</a></div>
+          <!-- /@cat:commercial-fleet -->
         </div>
       </div>
     </div>
@@ -259,20 +287,27 @@
       <div class="about-grid">
         <div class="about-img-wrap rv-r">
           <div class="about-accent" aria-hidden="true"></div>
-          <div class="about-main about-main--slot"><div class="photo-slot photo-slot--dark"><div class="ps-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.6"/></svg><span class="ph-tag">Photo to come</span><p>Motorcycle photography</p></div></div></div>
+          <div class="about-main img-reveal rv-wipe"><img src="../assets/img/photo/bike.webp" alt="A yellow and black Ducati Panigale motorcycle" width="1600" height="900" loading="lazy"></div>
           <div class="cert-row"><div class="cert"><strong>P-10</strong>ESTER</div></div>
         </div>
         <div>
           <span class="sec-label rv">Category 04</span>
           <h2 class="sec-title" data-split>MOTORCYCLE</h2>
           <div class="gold-bar rv"></div>
-          <ul class="pillars">
-            <li class="pillar rv"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="9" rx="1.5"/><path d="M7 6h10M7 8.5h10M12 12v4M9 21l3-5 3 5"/></svg></span><span class="p-text"><h3>4T Engine Oils</h3></span></li>
-            <li class="pillar rv" style="--d:1"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 17h7M16 17l-2-8h-3M14 9h3l1-3"/></svg></span><span class="p-text"><h3>Scooter Engine Oils</h3></span></li>
-            <li class="pillar rv" style="--d:2"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="9" width="9" height="6" rx="3"/><rect x="12.5" y="9" width="9" height="6" rx="3"/></svg></span><span class="p-text"><h3>Driveline Fluids</h3></span></li>
+          <!-- @cat:motorcycle -->
+          <p class="cat-lines rv">4T Engine Oils · Scooter Engine Oils · Driveline Fluids</p>
+          <p class="sec-text cat-intro rv">4T engine oils for every rider: MAXX GOLD with P-10 Ester for high-performance machines, MAXX ULTRA, MAXX LAUNCH for everyday riding and the MAXX SCOOTER oils, with MAXX-SHIFT gear oils and suspension fork oils for the rest of the bike.</p>
+          <ul class="range-list">
+            <li class="rv" style="--d:0"><a class="range-link" href="motorcycle/#maxx-gold-4t"><span class="rl-name">MAXX GOLD 4T</span><span class="rl-count">5</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="motorcycle/#maxx-ultra-4t"><span class="rl-name">MAXX ULTRA 4T</span><span class="rl-count">4</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="motorcycle/#maxx-launch-4t"><span class="rl-name">MAXX LAUNCH 4T</span><span class="rl-count">4</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="motorcycle/#maxx-scooter"><span class="rl-name">MAXX SCOOTER</span><span class="rl-count">4</span></a></li>
+            <li class="rv" style="--d:0"><a class="range-link" href="motorcycle/#maxx-shift"><span class="rl-name">MAXX-SHIFT</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="motorcycle/#suspension-fork-oil"><span class="rl-name">Suspension Fork Oil</span><span class="rl-count">4</span></a></li>
           </ul>
           <div class="series-tags rv"><span class="series-label">P-10 ESTER series</span><ul class="tags"><li class="tag">MAXX GOLD SERIES</li></ul></div>
-          <div class="btn-row rv"><a class="btn-gold" href="../contact/">Product Enquiry ›</a><a class="btn-out" href="../technology/p-10-ester/">P-10 ESTER Technology</a></div>
+          <div class="btn-row rv"><a class="btn-out" href="../contact/">Product Enquiry ›</a><a class="btn-gold" href="motorcycle/">Browse Products ›</a></div>
+          <!-- /@cat:motorcycle -->
         </div>
       </div>
     </div>
@@ -291,13 +326,25 @@
           <span class="sec-label rv">Category 05</span>
           <h2 class="sec-title" data-split>INDUSTRIAL</h2>
           <div class="gold-bar rv"></div>
-          <ul class="pillars pillars--grid">
-            <li class="pillar rv"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="12" height="6" rx="1"/><path d="M15 12h6M18 10v4"/></svg></span><span class="p-text"><h3>Hydraulic</h3></span></li>
-            <li class="pillar rv" style="--d:1"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.6"/><path d="M12 10.4C11 6 13 3.5 15.5 4.5c2 .8 1 3.6-1.9 5.4M13.6 12.4c4.3-1 6.8 1 5.8 3.5-.8 2-3.6 1-5.4-1.9M10.6 13.2c-1.5 4.2-4.2 5.4-6 3.4-1.4-1.6.6-3.8 3.9-4.2"/></svg></span><span class="p-text"><h3>Compressor</h3></span></li>
-            <li class="pillar rv" style="--d:2"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5v14M10 5v14M4 9h6M4 15h6M14 12h6M17 9l3 3-3 3"/></svg></span><span class="p-text"><h3>Slideways</h3></span></li>
-            <li class="pillar rv" style="--d:3"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h10l2 2v2l-2 2H3z"/><path d="M15 12h6M8 15v4"/></svg></span><span class="p-text"><h3>Metalworking</h3></span></li>
+          <!-- @cat:industrial -->
+          <p class="cat-lines rv">Hydraulic · Compressor · Slideways · Metalworking</p>
+          <p class="sec-text cat-intro rv">Oils for machines that run around the clock: hydraulic, compressor, refrigeration, turbine, spindle, gear, heat transfer and insulating oils, with way oils, cutting oils and quenching oils for metal processing.</p>
+          <ul class="range-list">
+            <li class="rv" style="--d:0"><a class="range-link" href="industrial/#spindle-bearing-oils"><span class="rl-name">Spindle Bearing Oils</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="industrial/#refrigeration-oil"><span class="rl-name">Refrigeration Oil</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="industrial/#air-compressor-oil"><span class="rl-name">Air Compressor Oil</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="industrial/#turbine-oil"><span class="rl-name">Turbine Oil</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:0"><a class="range-link" href="industrial/#heat-transfer-oil"><span class="rl-name">Heat Transfer Oil</span><span class="rl-count">1</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="industrial/#electrical-insulating-oil"><span class="rl-name">Electrical Insulating Oil</span><span class="rl-count">1</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="industrial/#hydraulic-oil"><span class="rl-name">Hydraulic Oil</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="industrial/#gear-oil"><span class="rl-name">Gear Oil</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:0"><a class="range-link" href="industrial/#way-oils"><span class="rl-name">Way Oils</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="industrial/#neat-oils"><span class="rl-name">Neat Oils</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="industrial/#emulsifiable-soluble-oils"><span class="rl-name">Emulsifiable / Soluble Oils</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="industrial/#quenching-oils"><span class="rl-name">Quenching Oils</span><span class="rl-count">1</span></a></li>
           </ul>
-          <div class="btn-row rv"><a class="btn-dark" href="../contact/">Product Enquiry ›</a><a class="btn-ghost" href="../become-a-distributor/">Become a Distributor</a></div>
+          <div class="btn-row rv"><a class="btn-dark" href="../contact/">Product Enquiry ›</a><a class="btn-gold" href="industrial/">Browse Products ›</a></div>
+          <!-- /@cat:industrial -->
         </div>
       </div>
     </div>
@@ -316,12 +363,25 @@
           <span class="sec-label rv">Category 06</span>
           <h2 class="sec-title" data-split>MARINE</h2>
           <div class="gold-bar rv"></div>
-          <ul class="pillars">
-            <li class="pillar rv"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.8"/><path d="M12 10.2c-.6-3.6.6-6.2 2.6-6.2s2 3-.9 6.6M13.6 12.9c3.4 1.3 5 3.6 4 5.4s-3.8.6-5.2-3.6M10.4 12.9c-2.8 2.3-5.6 2.6-6.4.8s1.7-3.5 6.2-2.6"/></svg></span><span class="p-text"><h3>Outboard Engine Oils</h3></span></li>
-            <li class="pillar rv" style="--d:1"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M5 13a7 7 0 0 0 14 0M9 10h6"/></svg></span><span class="p-text"><h3>Heavy-Duty Oils</h3></span></li>
-            <li class="pillar rv" style="--d:2"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1M18.7 18.7l-2.1-2.1M7.4 7.4 5.3 5.3"/></svg></span><span class="p-text"><h3>System Lubricants</h3></span></li>
+          <!-- @cat:marine -->
+          <p class="cat-lines rv">Outboard Engine Oils · Heavy-Duty Oils · System Lubricants</p>
+          <p class="sec-text cat-intro rv">From the outboard to the engine room: MARINO four-stroke and two-stroke outboard oils and marine gear oils for boats, and cylinder, trunk piston, stern tube, gear, turbine, hydraulic and compressor oils for ships.</p>
+          <ul class="range-list">
+            <li class="rv" style="--d:0"><a class="range-link" href="marine/#marino-racing-4t"><span class="rl-name">MARINO RACING 4T</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="marine/#marino-gold-4t"><span class="rl-name">MARINO GOLD 4T</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="marine/#marino-silver-4t"><span class="rl-name">MARINO SILVER 4T</span><span class="rl-count">2</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="marine/#marino-blue-2t"><span class="rl-name">MARINO BLUE 2T</span><span class="rl-count">1</span></a></li>
+            <li class="rv" style="--d:0"><a class="range-link" href="marine/#marine-transmission-specialties"><span class="rl-name">Marine Transmission Specialties</span><span class="rl-count">3</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="marine/#cylinder-oils"><span class="rl-name">Cylinder Oils</span><span class="rl-count">4</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="marine/#trunk-piston-engine-oils"><span class="rl-name">Trunk Piston Engine Oils</span><span class="rl-count">14</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="marine/#stern-tube-oils"><span class="rl-name">Stern Tube Oils</span><span class="rl-count">1</span></a></li>
+            <li class="rv" style="--d:0"><a class="range-link" href="marine/#auxiliary-gear-oils"><span class="rl-name">Auxiliary Gear Oils</span><span class="rl-count">1</span></a></li>
+            <li class="rv" style="--d:1"><a class="range-link" href="marine/#turbine-oils"><span class="rl-name">Turbine Oils</span><span class="rl-count">1</span></a></li>
+            <li class="rv" style="--d:2"><a class="range-link" href="marine/#hydraulic-oils"><span class="rl-name">Hydraulic Oils</span><span class="rl-count">1</span></a></li>
+            <li class="rv" style="--d:3"><a class="range-link" href="marine/#compressor-oils"><span class="rl-name">Compressor Oils</span><span class="rl-count">1</span></a></li>
           </ul>
-          <div class="btn-row rv"><a class="btn-gold" href="../contact/">Product Enquiry ›</a><a class="btn-out" href="../become-a-distributor/">Become a Distributor</a></div>
+          <div class="btn-row rv"><a class="btn-out" href="../contact/">Product Enquiry ›</a><a class="btn-gold" href="marine/">Browse Products ›</a></div>
+          <!-- /@cat:marine -->
         </div>
       </div>
     </div>
@@ -383,12 +443,12 @@
       <div class="ft-col">
         <p class="ft-h">Products</p>
         <ul>
-          <li><a href="../products/#passenger-car">Passenger Car</a></li>
-          <li><a href="../products/#motorsport">Motorsport</a></li>
-          <li><a href="../products/#commercial-fleet">Commercial Fleet</a></li>
-          <li><a href="../products/#motorcycle">Motorcycle</a></li>
-          <li><a href="../products/#industrial">Industrial</a></li>
-          <li><a href="../products/#marine">Marine</a></li>
+          <li><a href="../products/passenger-car/">Passenger Car</a></li>
+          <li><a href="../products/motorsport/">Motorsport</a></li>
+          <li><a href="../products/commercial-fleet/">Commercial Fleet</a></li>
+          <li><a href="../products/motorcycle/">Motorcycle</a></li>
+          <li><a href="../products/industrial/">Industrial</a></li>
+          <li><a href="../products/marine/">Marine</a></li>
         </ul>
       </div>
       <div class="ft-col">

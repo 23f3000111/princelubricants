@@ -3,7 +3,14 @@
 async (page) => {
   const BASE = 'http://127.0.0.1:8765';
   const PATHS = ['/', '/company/', '/technology/', '/technology/p-9-ester/', '/technology/p-10-ester/', '/products/', '/motorsport/',
-    '/company/airasia/', '/company/china-lubricant-expo-2017/', '/contact/', '/become-a-distributor/', '/404.html'];
+    '/company/airasia/', '/company/china-lubricant-expo-2017/', '/contact/', '/become-a-distributor/', '/faq/', '/404.html',
+    // The catalogue: its six category pages and, from each, the product page with the most
+    // text (plus the longest product name).
+    '/products/passenger-car/', '/products/motorsport/', '/products/commercial-fleet/', '/products/motorcycle/',
+    '/products/industrial/', '/products/marine/', '/products/passenger-car/central-hydraulic-fluid/',
+    '/products/motorsport/fsr-gt-racing-0w-40/', '/products/commercial-fleet/super-shift-gl-4-gl-4-plus-75w-80/',
+    '/products/commercial-fleet/heavy-duty-extended-life-elc-antifreeze-coolant/', '/products/motorcycle/fork-oil-5w-light/',
+    '/products/industrial/turb-x-zinc-ep/', '/products/marine/marino-valvi-ultra-t-d-15w-40/'];
   await page.setViewportSize({ width: 1440, height: 900 });
   const bad = [];
   for (const path of PATHS) {

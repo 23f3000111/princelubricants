@@ -9,7 +9,7 @@
  *   https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@master/geojson/ne_110m_admin_0_countries.geojson
  *
  * Outputs:
- *   assets/img/world-dots.svg      the dot field, land in grey and the 14 named markets in
+ *   assets/img/world-dots.svg      the dot field, land in grey and the named markets in
  *                                  gold. Static, so it ships as an <img> and caches.
  *   assets/img/world-overlay.svg   the Singapore hub, one marker per market and an arc to
  *                                  each, with classes the page animates. The same SVG is
@@ -41,14 +41,18 @@ const unproject = (x, y) => [x / K + LON0, LAT0 - y / K];
 const HUB = { id: 'singapore', name: 'Singapore', at: [103.8198, 1.3521], label: [-10, 16, 'end'] };
 
 // `at` is where the marker sits: the Natural Earth label point, or a capital where the
-// label point would land on top of Singapore. `label` is [dx, dy, text-anchor].
+// label point would land on top of Singapore. `label` is [dx, dy, text-anchor]. The
+// Maldives are too small for 1:110m data, so they have a marker at Malé and no dots.
 const MARKETS = [
   { id: 'united-kingdom', name: 'United Kingdom', at: [-1.5, 52.5], label: [-9, 4, 'end'] },
   { id: 'egypt', name: 'Egypt', at: [29.45, 26.19], label: [-9, 4, 'end'] },
   { id: 'saudi-arabia', name: 'Saudi Arabia', at: [44.7, 23.81], label: [9, -6, 'start'] },
+  { id: 'oman', name: 'Oman', at: [57.34, 22.12], label: [9, 12, 'start'] },
   { id: 'ethiopia', name: 'Ethiopia', at: [39.09, 8.03], label: [9, 4, 'start'] },
   { id: 'kenya', name: 'Kenya', at: [37.91, 0.55], label: [-9, 8, 'end'] },
+  { id: 'maldives', name: 'Maldives', at: [73.51, 4.17], label: [-9, 4, 'end'], dotless: true },
   { id: 'india', name: 'India', at: [79.36, 22.69], label: [-9, 4, 'end'] },
+  { id: 'bangladesh', name: 'Bangladesh', at: [89.68, 24.21], label: [0, -10, 'middle'] },
   { id: 'china', name: 'China', at: [106.34, 32.5], label: [9, -6, 'start'] },
   { id: 'thailand', name: 'Thailand', at: [100.5, 15.0], label: [-9, 4, 'end'] },
   { id: 'vietnam', name: 'Vietnam', at: [105.39, 21.72], label: [9, 2, 'start'] },
@@ -57,6 +61,7 @@ const MARKETS = [
   { id: 'indonesia', name: 'Indonesia', at: [110.4, -7.3], label: [-6, 15, 'end'] },
   { id: 'papua-new-guinea', name: 'Papua New Guinea', at: [143.91, -5.7], label: [9, 4, 'start'] },
   { id: 'australia', name: 'Australia', at: [134.05, -24.13], label: [9, 4, 'start'] },
+  { id: 'fiji', name: 'Fiji', at: [177.98, -17.83], label: [-9, 4, 'end'] },
 ];
 
 function polygons(geometry) {
@@ -99,7 +104,7 @@ function main() {
     .flatMap((f) => polygons(f.geometry)).map(withBox);
 
   const found = new Set(countries.map((f) => f.properties.NAME));
-  const missing = MARKETS.filter((m) => !found.has(m.name)).map((m) => m.name);
+  const missing = MARKETS.filter((m) => !m.dotless && !found.has(m.name)).map((m) => m.name);
   if (missing.length) throw new Error(`not in Natural Earth: ${missing.join(', ')}`);
 
   // A hex-offset grid reads as a field rather than as graph paper.

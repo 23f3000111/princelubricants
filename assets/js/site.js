@@ -27,6 +27,9 @@
   const pageReady = new Promise((resolve) => { markReady = resolve; });
   setTimeout(() => markReady(), 4000);
 
+  // Resolves once the web fonts are in, so anything that measures text measures it right.
+  const fontsReady = d.fonts && d.fonts.ready ? d.fonts.ready : Promise.resolve();
+
   // Page scenes register here by name and run for each [data-scene="name"] element.
   const SCENES = {};
 
@@ -46,6 +49,72 @@
       const dir = path.endsWith('/') ? path : `${path}/`;
       a.setAttribute('href', `${dir}index.html${hash === undefined ? '' : `#${hash}`}`);
     }
+  }
+
+  /* No orphans: the last two words of every heading and paragraph, and of every line a
+     <br> ends, stay on one line, so a line never ends on a word by itself. A pair inside
+     one text node goes into a no-wrap span, which also holds a hyphenated word together;
+     a pair across an element boundary gets a no-break space. Runs before the titles are
+     split and typed. Once the fonts are in, anything glued that no longer fits its box is
+     put back the way it was, so a narrow screen wraps as before. */
+  const GLUED = 'main h1, main h2, main h3, main h4, main p, .site-footer p';
+  function noOrphans() {
+    const wide = mq('(min-width: 900px)');
+    const glued = [];
+    for (const el of $$(GLUED)) {
+      const typed = el.matches('[data-scene="typewriter"]');
+      if (typed && !wide) continue;
+      const before = el.cloneNode(true);
+      if (glueLines(el) && !typed) glued.push([el, before]);
+    }
+    fontsReady.then(() => {
+      for (const [el, before] of glued) {
+        const box = el.getBoundingClientRect();
+        const room = el.parentElement.getBoundingClientRect();
+        if (el.scrollWidth > el.clientWidth + 1 || box.right > room.right + 1) el.replaceChildren(...before.childNodes);
+      }
+    });
+  }
+
+  function glueLines(el) {
+    const lines = [[]];
+    (function walk(node) {
+      for (const child of node.childNodes) {
+        if (child.nodeType === Node.TEXT_NODE) lines[lines.length - 1].push(child);
+        else if (child.nodeName === 'BR') lines.push([]);
+        else if (child.nodeType === Node.ELEMENT_NODE && !child.matches('.glue, .type-cursor, svg, script')) walk(child);
+      }
+    })(el);
+    return lines.map(glueLastTwo).some(Boolean);
+  }
+
+  function glueLastTwo(nodes) {
+    const at = [];
+    for (const n of nodes) for (let i = 0; i < n.data.length; i += 1) at.push([n, i]);
+    const space = (j) => /[ \t\n\r\f]/.test(at[j][0].data[at[j][1]]);
+    let j = at.length - 1;
+    while (j >= 0 && space(j)) j -= 1;
+    const end = j;
+    while (j >= 0 && !space(j)) j -= 1;
+    const gapEnd = j;
+    while (j >= 0 && space(j)) j -= 1;
+    if (end < 0 || gapEnd < 0 || j < 0) return false;
+    const gapStart = j + 1;
+    while (j >= 0 && !space(j)) j -= 1;
+    const [first, from] = at[j + 1];
+    const [last, to] = at[end];
+    if (first === last) {
+      const pair = first.splitText(from);
+      pair.splitText(to - from + 1);
+      const span = d.createElement('span');
+      span.className = 'glue';
+      pair.replaceWith(span);
+      span.append(pair);
+      return true;
+    }
+    for (let g = gapEnd; g >= gapStart; g -= 1) at[g][0].deleteData(at[g][1], 1);
+    at[gapStart][0].insertData(at[gapStart][1], ' ');
+    return true;
   }
 
   function loaderOnce() {
@@ -161,7 +230,7 @@
     window.addEventListener('pointerdown', () => ring.classList.add('click'));
     window.addEventListener('pointerup', () => ring.classList.remove('click'));
     d.addEventListener('pointerover', (e) => {
-      ring.classList.toggle('big', !!e.target.closest('a, button, .tilt, .pillar, .why-card, .tp, .tn, .tag, .cert'));
+      ring.classList.toggle('big', !!e.target.closest('a, button, summary, .tilt, .pillar, .why-card, .tp, .tn, .tag, .cert'));
     });
     html.addEventListener('mouseleave', () => { ring.classList.add('gone'); dot.classList.add('gone'); });
     html.addEventListener('mouseenter', () => { ring.classList.remove('gone'); dot.classList.remove('gone'); });
@@ -265,7 +334,7 @@
         },
       });
     });
-    (d.fonts && d.fonts.ready ? d.fonts.ready : Promise.resolve()).then(run);
+    fontsReady.then(run);
   }
 
   // A counter's final value is its HTML text, so a crawler and a visitor without
@@ -526,6 +595,55 @@
     }
   }
 
+  /* FAQ: a link to a question opens it. The search, shown only when this runs, keeps the
+     questions whose question or answer holds every word typed, hides the categories left
+     empty, and says how many match or that none do. */
+  function faq() {
+    const items = $$('details.faq-item');
+    if (!items.length) return;
+    const openFromHash = () => {
+      const target = location.hash.length > 1 && d.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (!target || !target.matches('details.faq-item')) return;
+      // Reveal its list at once: a list still rising into place would carry the question
+      // up under the header after the scroll.
+      const list = target.closest('.rv');
+      if (list && !list.classList.contains('vis')) {
+        list.style.transition = 'none';
+        list.classList.add('vis');
+        void list.offsetWidth;
+        list.style.transition = '';
+      }
+      target.hidden = false;
+      target.open = true;
+      target.scrollIntoView({ block: 'start' });
+    };
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+
+    const input = $('#faq-search');
+    if (!input) return;
+    const cats = $$('.faq-cat');
+    const empty = $('.faq-empty');
+    const status = $('#faq-results');
+    const text = new Map(items.map((item) => [item, item.textContent.toLowerCase().replace(/\s+/g, ' ')]));
+    const apply = () => {
+      const words = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+      let shown = 0;
+      for (const item of items) {
+        const hit = words.every((w) => text.get(item).includes(w));
+        item.hidden = !hit;
+        if (hit) shown += 1;
+      }
+      for (const cat of cats) cat.hidden = !cat.querySelector('details.faq-item:not([hidden])');
+      if (empty) empty.hidden = shown > 0;
+      if (status) status.textContent = words.length ? `${shown} ${shown === 1 ? 'question matches' : 'questions match'}` : '';
+      if (G) window.ScrollTrigger.refresh();
+    };
+    let timer = 0;
+    input.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(apply, 120); });
+    input.hidden = false;
+  }
+
   function scenes() {
     for (const el of $$('[data-scene]')) {
       const scene = SCENES[el.dataset.scene];
@@ -539,7 +657,7 @@
   }
 
   function init() {
-    [fileLinks, loaderOnce, navbar, progress, cursor, sideDots, backToTop, reveals, splitTitles, counters, parallax, tilt, forms, scenes]
+    [fileLinks, noOrphans, loaderOnce, navbar, progress, cursor, sideDots, backToTop, reveals, splitTitles, counters, parallax, tilt, forms, faq, scenes]
       .forEach(safely);
     html.classList.add('motion-ready');
     if (G) window.addEventListener('load', () => window.ScrollTrigger.refresh(), { once: true });

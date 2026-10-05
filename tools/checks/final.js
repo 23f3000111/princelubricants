@@ -7,7 +7,7 @@ async (page) => {
   const BASE = 'http://127.0.0.1:8765';
   const PAGES = ['/', '/company/', '/company/airasia/', '/company/china-lubricant-expo-2017/', '/technology/',
     '/technology/p-9-ester/', '/technology/p-10-ester/', '/products/', '/motorsport/', '/contact/',
-    '/become-a-distributor/', '/404.html'];
+    '/become-a-distributor/', '/faq/', '/404.html'];
   const SIZES = [[1440, 900], [1920, 1080]];
   const browser = page.context().browser();
   const slug = (path) => (path.replace(/^\/|\/$/g, '').replace(/[/.]/g, '-') || 'home');

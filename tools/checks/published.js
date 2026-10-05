@@ -6,7 +6,7 @@
 async (page, base = 'https://23f3000111.github.io/princelubricants', deep404 = true) => {
   const PAGES = ['/', '/company/', '/company/airasia/', '/company/china-lubricant-expo-2017/', '/technology/',
     '/technology/p-9-ester/', '/technology/p-10-ester/', '/products/', '/motorsport/', '/contact/',
-    '/become-a-distributor/', '/404.html'];
+    '/become-a-distributor/', '/faq/', '/404.html'];
   const origin = new URL(base).origin;
   const errors = [];
   const failed = [];

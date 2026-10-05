@@ -1,6 +1,6 @@
 # princelubricants.com
 
-The PRINCE LUBRICANTS website: twelve static pages built on the client-approved
+The PRINCE LUBRICANTS website: thirteen static pages built on the client-approved
 `index.html` design, with the copy from the client's October 2026 website document.
 There is no framework and no build step at deploy time. What is in this folder is the
 site.
@@ -20,6 +20,7 @@ site.
 | `/motorsport/` | `motorsport/index.html` | Motorsport heritage, one section per discipline |
 | `/contact/` | `contact/index.html` | Contact details, map and enquiry form |
 | `/become-a-distributor/` | `become-a-distributor/index.html` | Partnership, benefits, markets and application form |
+| `/faq/` | `faq/index.html` | 110 questions in seven categories, with search; built from the client's spreadsheet |
 | any missing URL | `404.html` | Not found (noindex) |
 
 Product category anchors: `#passenger-car`, `#motorsport`, `#commercial-fleet`,
@@ -48,6 +49,15 @@ disk.
 - **Styles and motion.** These are in `assets/css/site.css` and `assets/js/site.js`.
   GSAP 3.13 is vendored in `assets/js/vendor/`. Every page works without JavaScript and
   with reduced motion.
+- **FAQ.** The questions and answers live in `docs/content/FAQ.xlsx`, one sheet per
+  category. After changing it, run `python tools/build-faq.py` (needs openpyxl) and then
+  `node tools/build.js`. The script writes the sections, the category chips and the
+  FAQPage JSON-LD into `faq/index.html`, and `docs/content/faq.json` for the checks. A
+  new sheet needs a line in its `CATEGORIES` table.
+- **Line breaks.** A heading or paragraph never ends on a word by itself: `site.js`
+  keeps the last two words of each one, and of each line a `<br>` ends, together, and
+  lets go again wherever the pair would not fit. `tools/checks/orphans.js` checks every
+  page at five desktop widths.
 - **Forms.** Contact and Become a Distributor open a mail draft to
   info@princelubricants.com. To post to a form service instead, set `formEndpoint` in
   the `SITE` constant near the top of `assets/js/site.js`.
@@ -115,6 +125,8 @@ this README and the repository's own files.
 | 15 | FS1 EUROGEN has no category in the document | Linked to Passenger Car, as an FS1 line |
 | 16 | SS1, D1 and MAXX ULTRA have no category in the document | Named on Technology only |
 | 17 | The "Designed and developed by Imsuya Global" credit | Left out of the footer. Add it back if wanted |
+| 18 | Slips in the FAQ spreadsheet | Fixed on the page: a missing question mark and a double space. "DEVO" and "Devo" both appear and are kept as written |
+| 19 | The FAQ names ranges the Products page does not yet show (FSe, the D Series: D1 GOLD, D1 and DEVO; MAXX ULTRA) | Answered on the FAQ only |
 
 ## Placeholders
 

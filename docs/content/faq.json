@@ -1,0 +1,608 @@
+[
+  {
+    "id": "company",
+    "chip": "Company",
+    "label": "The Company",
+    "title": "ABOUT PRINCE <span>LUBRICANTS</span>",
+    "items": [
+      {
+        "id": "what-is-prince-lubricants",
+        "q": "What is PRINCE LUBRICANTS?",
+        "a": "PRINCE LUBRICANTS is a Singapore-based high-performance lubricant manufacturer specialising in highly-advanced automotive, marine and industrial lubrication solutions. Its portfolio covers passenger cars, motorcycles, commercial vehicles, motorsport, transmissions and drivetrains, as well as marine equipment and industrial machinery, with products distributed across more than 30 international markets."
+      },
+      {
+        "id": "who-manufactures-prince-lubricants",
+        "q": "Who manufactures PRINCE LUBRICANTS?",
+        "a": "PRINCE LUBRICANTS products are manufactured by PRINCE GLOBAL PTE. LTD. in Singapore. PRINCE GLOBAL PTE. LTD. supports lubricant manufacturing, base-oil operations and international supply across the PRINCE LUBRICANTS portfolio."
+      },
+      {
+        "id": "where-is-prince-lubricants-based",
+        "q": "Where is PRINCE LUBRICANTS based?",
+        "a": "PRINCE LUBRICANTS is based in Singapore, where its lubricant manufacturing and international operations are supported by PRINCE GLOBAL PTE. LTD. Singapore serves as a base for the brand’s production, product development and supply to overseas markets."
+      },
+      {
+        "id": "when-was-prince-lubricants-established",
+        "q": "When was PRINCE LUBRICANTS established?",
+        "a": "The history of PRINCE LUBRICANTS dates to 1998, when PRINCELUBE (ASIA) PTE. LTD. began developing the brand’s presence across international lubricant markets. Operations subsequently transitioned to PRINCE GLOBAL PTE. LTD., continuing the brand’s development from Singapore."
+      },
+      {
+        "id": "how-much-experience-does-prince-lubricants-have-in-the",
+        "q": "How much experience does PRINCE LUBRICANTS have in the lubricant industry?",
+        "a": "PRINCE LUBRICANTS has more than 25 years of experience in the lubricant industry, with its history dating to 1998. Over this period, the brand has developed products for automotive, motorsport, commercial vehicle, marine and industrial applications while expanding across international markets."
+      },
+      {
+        "id": "what-types-of-lubricants-does-prince-lubricants-manufacture",
+        "q": "What types of lubricants does PRINCE LUBRICANTS manufacture?",
+        "a": "PRINCE LUBRICANTS offers a comprehensive range of cutting-edge automotive, marine and industrial lubricants. The portfolio includes high-performance passenger car motor oils, heavy-duty diesel engine oils, motorcycle oils, racing lubricants, transmission fluids, gear oils, brake fluids, coolants, marine oils and specialised industrial products."
+      },
+      {
+        "id": "is-prince-lubricants-an-international-brand",
+        "q": "Is PRINCE LUBRICANTS an international brand?",
+        "a": "Yes. PRINCE LUBRICANTS has built a substantial international presence, with Singapore-manufactured products reaching more than 30 markets across Asia, Europe, the Middle East, Africa and Oceania. From major automotive markets to rapidly developing economies, the brand serves a diverse international network of distributors and lubricant markets across multiple countries and continents. Backed by large-scale manufacturing and base-oil infrastructure in Singapore, PRINCE LUBRICANTS continues to strengthen its position as a prominent international lubricant player."
+      },
+      {
+        "id": "what-makes-prince-lubricants-different-from-other-lubricant",
+        "q": "What makes PRINCE LUBRICANTS different from other lubricant brands?",
+        "a": "PRINCE LUBRICANTS combines more than 25 years of lubricant-market experience with stringent Singapore manufacturing, proprietary lubricant technologies, an extensive product portfolio and a long-standing connection with international motorsport. Its approach places particular emphasis on formulation technology, performance and application-specific lubrication."
+      },
+      {
+        "id": "how-large-is-the-manufacturing-capacity-behind-prince-lubricants",
+        "q": "How large is the manufacturing capacity behind PRINCE LUBRICANTS?",
+        "a": "The manufacturing operations of PRINCE LUBRICANTS have an annual lubricant blending capacity exceeding 100,000 metric tonnes, together with substantial base oil storage and supply capabilities, making it one of the largest lubricant manufacturing operations in the Asia Pacific region. This extensive infrastructure supports large-scale production and international supply."
+      },
+      {
+        "id": "how-much-base-oil-storage-capacity-does-prince-global-pte-ltd",
+        "q": "How much base oil storage capacity does PRINCE GLOBAL PTE. LTD. have?",
+        "a": "PRINCE GLOBAL PTE. LTD. operates nearly 20,000 metric tonnes of base oil storage capacity in Singapore, supporting large-scale lubricant manufacturing and a consistent supply of base stocks and toll blending services to lubricant manufacturers across the region."
+      },
+      {
+        "id": "what-quality-standards-does-prince-lubricants-follow",
+        "q": "What quality standards does PRINCE LUBRICANTS follow?",
+        "a": "PRINCE LUBRICANTS products are manufactured in Singapore within a strict ISO 9001:2015 quality-management environment. Product development and manufacturing are supported by controlled formulation and quality processes designed to maintain consistent performance."
+      },
+      {
+        "id": "how-does-prince-lubricants-maintain-consistent-product-quality",
+        "q": "How does PRINCE LUBRICANTS maintain consistent product quality across international markets?",
+        "a": "PRINCE LUBRICANTS maintains consistent product quality through controlled formulation, carefully selected raw materials, standardised manufacturing processes and systematic quality control at its Singapore production facilities. Manufacturing is supported by an ISO 9001:2015 quality management system, helping ensure that finished lubricants consistently meet defined technical, performance and quality requirements across international markets."
+      },
+      {
+        "id": "how-extensive-is-the-prince-lubricants-product-portfolio",
+        "q": "How extensive is the PRINCE LUBRICANTS product portfolio?",
+        "a": "With more than 500 lubricant products and formulations, PRINCE LUBRICANTS offers an extensive portfolio spanning automotive, marine and industrial applications. The range covers passenger car, motorcycle and heavy-duty diesel engine oils, transmission and driveline fluids, coolants, brake fluids, marine lubricants and specialised industrial products, enabling PRINCE LUBRICANTS to serve a diverse spectrum of vehicles, machinery and operating environments worldwide."
+      },
+      {
+        "id": "how-has-motorsport-influenced-the-performance-identity-of",
+        "q": "How has motorsport influenced the performance identity of PRINCE LUBRICANTS?",
+        "a": "Motorsport has played an important role in shaping the performance identity of PRINCE LUBRICANTS. Years of involvement across international circuit racing, endurance competition, rally, drifting and gymkhana have strengthened the brand's association with high-performance automotive lubrication and demanding operating environments. This motorsport heritage continues to form an important part of how PRINCE LUBRICANTS approaches performance, technology and product development."
+      }
+    ]
+  },
+  {
+    "id": "technology",
+    "chip": "Technology",
+    "label": "Ester &amp; Synthetic Technology",
+    "title": "OUR <span>TECHNOLOGY</span>",
+    "items": [
+      {
+        "id": "why-does-prince-lubricants-use-ester-technology",
+        "q": "Why does PRINCE LUBRICANTS use ester technology?",
+        "a": "Ester molecules have natural polarity, giving them a strong affinity for metal surfaces. This helps maintain a protective lubricating layer on critical engine components while supporting reduced friction, wear protection and high-temperature performance."
+      },
+      {
+        "id": "which-prince-lubricants-products-use-p-9-ester-based-technology",
+        "q": "Which PRINCE LUBRICANTS products use P-9 ESTER Based Technology?",
+        "a": "P-9 ESTER Based Technology is featured in flagship high-performance PRINCE LUBRICANTS products, including the FS1 and FS1 EUROGEN passenger car engine oil range and FSR motorsport racing lubricant range."
+      },
+      {
+        "id": "what-is-p-9-ester-based-technology",
+        "q": "What is P-9 ESTER Based Technology?",
+        "a": "P-9 ESTER Based Technology is a proprietary esterification technology engineered by PRINCE LUBRICANTS for high-performance engine oils. It incorporates polar ester chemistry to enhance lubrication, oil film retention, thermal stability, viscosity retention and improves overall protection across a wide operating temperature range."
+      },
+      {
+        "id": "why-are-esters-used-in-high-performance-engine-oils",
+        "q": "Why are esters used in high-performance engine oils?",
+        "a": "Esters combine strong polarity with excellent lubricity and thermal characteristics, making them valuable components in high-performance lubricant formulations. Their affinity for metal surfaces can enhance lubrication and protection under demanding operating conditions."
+      },
+      {
+        "id": "what-does-polar-molecular-protection-mean",
+        "q": "What does polar molecular protection mean?",
+        "a": "Polar ester molecules are naturally attracted to metallic surfaces, allowing the lubricant to adhere more effectively to engine components. This provides an additional lubrication mechanism that helps protect critical moving surfaces during demanding operating conditions."
+      },
+      {
+        "id": "how-does-p-9-ester-based-technology-perform-at-high-temperatures",
+        "q": "How does P-9 ESTER Based Technology perform at high temperatures?",
+        "a": "P-9 ESTER Based Technology is designed to maintain lubricant stability and protective performance under elevated engine temperatures. Its ester formulation contributes to strong thermal stability, lubricity and resistance to lubricant heat-related degradation."
+      },
+      {
+        "id": "how-does-p-9-ester-based-technology-improve-oil-film-strength",
+        "q": "How does P-9 ESTER Based Technology improve oil film strength?",
+        "a": "P-9 ESTER Based Technology enhances lubricant film integrity under high temperatures and mechanical loads. Its polar characteristics help the lubricant remain associated with metal surfaces where protection is most critical."
+      },
+      {
+        "id": "how-does-p-9-ester-based-technology-help-during-cold-starts",
+        "q": "How does P-9 ESTER Based Technology help during cold starts?",
+        "a": "P-9 ESTER Based Technology combines strong surface affinity with excellent low-temperature lubricant characteristics, helping critical components remain protected as lubrication begins circulating after start-up."
+      },
+      {
+        "id": "how-does-ester-technology-contribute-to-engine-cleanliness",
+        "q": "How does ester technology contribute to engine cleanliness?",
+        "a": "High-quality ester components can contribute to formulation solvency and optimized deposit control. Combined with a specialized detergent-dispersant agents, P-9 ESTER Based Technology helps maintain cleaner internal engine surfaces and components and prevent the buildup of harmful deposits."
+      },
+      {
+        "id": "what-is-the-difference-between-p-9-ester-and-p-10-ester-based",
+        "q": "What is the difference between P-9 ESTER and P-10 ESTER Based Technology?",
+        "a": "Both are proprietary ester technologies developed by PRINCE LUBRICANTS, but they are designed around different lubrication environments. P-9 focuses on high-performance automotive lubrication, while P-10 is specifically formulated around the combined engine, transmission and clutch demands of motorcycles."
+      },
+      {
+        "id": "why-was-p-10-ester-based-technology-developed-specifically-for",
+        "q": "Why was P-10 ESTER Based Technology developed specifically for motorcycles?",
+        "a": "Motorcycle lubricants can simultaneously lubricate the engine, gearbox and wet clutch, exposing the oil to intense thermal and mechanical stresses. P-10 ESTER Based Technology is designed around these specialised lubrication requirements."
+      },
+      {
+        "id": "what-is-p-10-ester-based-technology",
+        "q": "What is P-10 ESTER Based Technology?",
+        "a": "P-10 ESTER Based Technology is a proprietary PRINCE LUBRICANTS ester technology developed specifically for high-performance motorcycle lubrication. It is formulated to withstand the high RPMS, high engine speeds, loads, temperatures and combined engine-transmission stresses found in powerful motorcycles."
+      },
+      {
+        "id": "how-does-p-10-ester-based-technology-protect-motorcycle-engines",
+        "q": "How does P-10 ESTER Based Technology protect motorcycle engines and transmissions?",
+        "a": "P-10 ESTER Based Technology provides strong shear and lubrication stability under high RPM, elevated temperatures and gearbox shear. Its ester chemistry supports wear protection and lubricant performance across critical motorcycle components."
+      },
+      {
+        "id": "does-p-10-ester-based-technology-support-wet-clutch-performance",
+        "q": "Does P-10 ESTER Based Technology support wet-clutch performance?",
+        "a": "P-10 ESTER Based Technology is incorporated into motorcycle lubricant formulations designed to provide the controlled friction characteristics required by wet-clutch systems while maintaining dependable engine and gearbox protection."
+      },
+      {
+        "id": "what-is-p-plus-synthese-technology",
+        "q": "What is P+ SYNTHESE Technology?",
+        "a": "P+ SYNTHESE is a PRINCE LUBRICANTS formulation technology incorporating a high proportion of severely hydroisomerized, high-viscosity-index base stocks. It provides enhanced oxidation stability, viscosity performance and protection compared with conventional mineral-based formulations."
+      },
+      {
+        "id": "how-is-p-plus-synthese-different-from-conventional-semi",
+        "q": "How is P+ SYNTHESE different from conventional semi-synthetic technology?",
+        "a": "P+ SYNTHESE places greater emphasis on high-quality, severely hydroisomerized high VI base stocks rather than relying on a simple mineral-and-synthetic blend description. The technology is designed to deliver stronger thermal stability, oxidation resistance, cleanliness and lasting-lubricant performance."
+      },
+      {
+        "id": "does-a-higher-ester-content-automatically-mean-a-better-engine",
+        "q": "Does a higher ester content automatically mean a better engine oil?",
+        "a": "Not necessarily. Overall lubricant performance depends on the complete formulation, including base oil chemistry, ester selection, viscosity characteristics, additive technology and compatibility between individual components."
+      },
+      {
+        "id": "does-a-higher-synthetic-content-always-mean-better-lubricant",
+        "q": "Does a higher synthetic content always mean better lubricant performance?",
+        "a": "Not by itself. A lubricant must be formulated for its intended engine, operating conditions and performance specifications; base oil quality and additive chemistry must work together as a complete system."
+      },
+      {
+        "id": "why-is-base-oil-quality-important-in-lubricant-formulation",
+        "q": "Why is base oil quality important in lubricant formulation?",
+        "a": "Base oils influence viscosity stability, volatility, oxidation resistance, low-temperature performance and lubricant durability. Selecting the appropriate base system is therefore fundamental to the performance of the finished lubricant."
+      }
+    ]
+  },
+  {
+    "id": "fs1",
+    "chip": "FS1 &amp; FS1 EUROGEN",
+    "label": "Passenger Car Motor Oils",
+    "title": "PRINCE FS1 <span>&amp; FS1 EUROGEN</span>",
+    "items": [
+      {
+        "id": "what-is-prince-fs1",
+        "q": "What is PRINCE FS1?",
+        "a": "PRINCE LUBRICANTS FS1 is the flagship fully synthetic passenger car motor oil range from PRINCE LUBRICANTS. Developed with proprietary P-9 ESTER Based Technology, FS1 combines advanced ester and synthetic base stocks and high-performance additive chemistry for exceptional lubrication, thermal stability, oxidation stability, engine cleanliness and wear protection."
+      },
+      {
+        "id": "what-is-the-formulation-philosophy-behind-prince-fs1",
+        "q": "What is the formulation philosophy behind PRINCE FS1?",
+        "a": "PRINCE LUBRICANTS FS1 is developed around the principle that high-performance lubrication depends on the interaction of the entire formulation — not a single component. Base oil quality, ester base stock quality, ester chemistry, viscosity control and specialized additive technology are balanced as an integrated system to deliver optimum stability, protection, cleanliness, and performance."
+      },
+      {
+        "id": "why-is-prince-fs1-more-than-simply-an-ester-engine-oil",
+        "q": "Why is PRINCE FS1 more than simply an ester engine oil?",
+        "a": "Ester technology is one component of the complete FS1 formulation. PRINCE FS1 integrates P-9 ESTER Based Technology, premium synthetic base oils, viscosity-control technology and a sophisticated additive technology to achieve balanced performance across lubrication, wear protection, cleanliness, oxidation stability and durability."
+      },
+      {
+        "id": "what-makes-prince-fs1-different-from-conventional-fully",
+        "q": "What makes PRINCE FS1 different from conventional fully synthetic engine oils?",
+        "a": "PRINCE LUBRICANTS FS1 goes beyond conventional synthetic formulation through the integration of P-9 ESTER Based Technology. The polar characteristics of ester chemistry enhance surface affinity and lubricant film strength, complementing the thermal stability and oxidation resistance of the synthetic base oil system."
+      },
+      {
+        "id": "is-prince-fs1-developed-only-for-performance-cars",
+        "q": "Is PRINCE FS1 developed only for performance cars?",
+        "a": "No. FS1 is a high-performance lubricant platform rather than an oil exclusively for sports cars. It is suitable for passenger vehicles whose engine requirements correspond to the SAE viscosity, performance specifications and application profile of the selected FS1 product."
+      },
+      {
+        "id": "is-prince-fs1-suitable-for-performance-oriented-driving",
+        "q": "Is PRINCE FS1 suitable for performance-oriented driving?",
+        "a": "Yes. PRINCE LUBRICANTS FS1 is designed to provide robust lubrication under elevated engine speeds, temperatures and loads, making applicable formulations suitable for performance-oriented road driving while retaining the cleanliness and efficiency required for everyday use."
+      },
+      {
+        "id": "what-role-does-p-9-ester-based-technology-play-in-prince-fs1",
+        "q": "What role does P-9 ESTER Based Technology play in PRINCE FS1?",
+        "a": "P-9 ESTER Based Technology forms a key part of the FS1 performance architecture. Its polar ester molecules exhibit strong affinity for metallic surfaces, reinforcing lubrication at critical contact areas while supporting a maximum level of film strength, thermal stability, shear resistance and wear protection."
+      },
+      {
+        "id": "how-does-prince-fs1-manage-the-demands-of-modern-downsized",
+        "q": "How does PRINCE FS1 manage the demands of modern downsized engines?",
+        "a": "Modern downsized engines can generate high specific power, elevated temperatures and substantial loads from relatively small displacement. PRINCE LUBRICANTS FS1 is formulated to provide the thermal stability, wear protection, stable lubricant-film performance required under these demanding conditions."
+      },
+      {
+        "id": "is-prince-fs1-suitable-for-gdi-and-tgdi-engines",
+        "q": "Is PRINCE FS1 suitable for GDI and TGDI engines?",
+        "a": "Yes. PRINCE FS1 is designed for modern gasoline direct injection (GDI) and turbocharged gasoline direct injection (TGDI) engines. Its advanced formulation combines P-9 ESTER Based Technology, premium synthetic base oils and high-performance additive chemistry to provide strong protection against wear, deposits, oxidation and the demanding operating conditions associated with high-output, high-efficiency engine designs."
+      },
+      {
+        "id": "is-prince-fs1-suitable-for-turbocharged-and-high-output-engines",
+        "q": "Is PRINCE FS1 suitable for turbocharged and high-output engines?",
+        "a": "Yes. PRINCE FS1 is developed for demanding modern powertrains, including turbocharged and high-output engines where the applicable viscosity and performance specifications are required. Its formulation provides the thermal stability, deposit control and oil film strength necessary for highly stressed engine and advanced turbocharger components."
+      },
+      {
+        "id": "is-prince-fs1-suitable-for-both-city-and-highway-driving",
+        "q": "Is PRINCE FS1 suitable for both city and highway driving?",
+        "a": "Yes. PRINCE LUBRICANTS FS1 is engineered to provide stable lubrication across diverse operating conditions, from repeated urban stop-start cycles to sustained high-speed highway operation."
+      },
+      {
+        "id": "does-prince-fs1-reduce-friction-inside-the-engine",
+        "q": "Does PRINCE FS1 reduce friction inside the engine?",
+        "a": "PRINCE LUBRICANTS FS1 incorporates carefully balanced frictional characteristics together with P-9 ESTER Based Technology to support efficient lubrication between moving components. Friction performance is optimised as part of the complete formulation rather than through a single additive or base-oil component."
+      },
+      {
+        "id": "does-prince-fs1-offer-advantages-beyond-meeting-industry",
+        "q": "Does PRINCE FS1 offer advantages beyond meeting industry specifications?",
+        "a": "Industry and manufacturer specifications establish defined performance requirements, while the overall character of a lubricant is determined by its complete formulation. PRINCE LUBRICANTS FS1 combines applicable performance standards with proprietary P-9 ESTER Based Technology, premium ester synthetic base stocks and application-specific additive chemistry."
+      },
+      {
+        "id": "what-is-prince-fs1-eurogen",
+        "q": "What is PRINCE FS1 EUROGEN?",
+        "a": "PRINCE FS1 EUROGEN is a specialised fully synthetic Mid SAPS range within the FS1 family, engineered around the requirements of European powertrains of the latest generation. It combines P-9 ESTER Based Technology with emissions-system-compatible formulation chemistry for modern Euro VI engines requiring applicable ACEA and European manufacturer performance standards."
+      },
+      {
+        "id": "what-is-the-difference-between-prince-fs1-and-fs1-eurogen",
+        "q": "What is the difference between PRINCE FS1 and FS1 EUROGEN?",
+        "a": "Both belong to the flagship PRINCE LUBRICANTS FS1 family and incorporate proprietary P-9 ESTER Based Technology, but their formulation priorities differ. FS1 covers high-performance passenger car lubrication across a broad range of applications, while FS1 EUROGEN incorporates advanced Mid SAPS chemistry especially for the current European engines and cutting-edge exhaust after-treatment systems."
+      },
+      {
+        "id": "why-is-prince-fs1-eurogen-positioned-as-a-specialised-range",
+        "q": "Why is PRINCE FS1 EUROGEN positioned as a specialised range within FS1?",
+        "a": "PRINCE LUBRICANTS FS1 EUROGEN addresses a particularly demanding combination of engine performance, emissions-system compatibility and stringent European lubricant specifications. It retains the flagship FS1 performance philosophy while introducing specialised reduced-SAPS chemistry for these applications."
+      },
+      {
+        "id": "does-prince-fs1-eurogen-meet-european-lubricant-requirements",
+        "q": "Does PRINCE FS1 EUROGEN meet European lubricant requirements?",
+        "a": "Yes. PRINCE LUBRICANTS FS1 EUROGEN is formulated around relevant ACEA C2/C3 and C5/C6 performance categories and European vehicle manufacturer requirements. Individual specifications vary by product and should be confirmed from the applicable Product Information Data Sheet."
+      },
+      {
+        "id": "is-prince-fs1-eurogen-only-for-european-car-brands",
+        "q": "Is PRINCE FS1 EUROGEN only for European car brands?",
+        "a": "No. FS1 EUROGEN is developed around European-style lubricant performance requirements, but suitability is determined by the required viscosity and specification rather than the nationality of the vehicle manufacturer."
+      },
+      {
+        "id": "is-prince-fs1-eurogen-suitable-for-dpf-and-gpf-equipped-vehicles",
+        "q": "Is PRINCE FS1 EUROGEN suitable for DPF and GPF-equipped vehicles?",
+        "a": "Yes. FS1 EUROGEN formulations are designed for engines equipped with diesel particulate filters (DPF), gasoline particulate filters (GPF) and compatible catalytic after-treatment systems. The appropriate product should be selected according to the required ACEA and vehicle-manufacturer specification."
+      },
+      {
+        "id": "why-is-mid-saps-technology-important-in-modern-european-engines",
+        "q": "Why is Mid SAPS technology important in modern European engines?",
+        "a": "Modern European powertrains increasingly rely on sensitive emissions-control systems. Mid SAPS technology controls sulphated ash, phosphorus and sulphur to help protect these systems while maintaining the wear protection, cleanliness and durability required by the engine."
+      },
+      {
+        "id": "is-prince-fs1-eurogen-suitable-for-both-gasoline-and-diesel",
+        "q": "Is PRINCE FS1 EUROGEN suitable for both gasoline and diesel engines?",
+        "a": "Yes. The FS1 EUROGEN range includes formulations developed for modern gasoline and diesel passenger car light-duty engines. The appropriate product should be selected according to the viscosity grade and ACEA or manufacturer specification required by the vehicle."
+      },
+      {
+        "id": "how-does-prince-fs1-eurogen-help-protect-a-gpf",
+        "q": "How does PRINCE FS1 EUROGEN help protect a GPF?",
+        "a": "PRINCE LUBRICANTS FS1 EUROGEN uses controlled SAPS chemistry to limit lubricant-derived inorganic ash that can accumulate within a particulate filter. Unlike combustible soot, this ash cannot be removed through normal filter regeneration, making appropriate lubricant selection particularly important."
+      },
+      {
+        "id": "how-does-prince-fs1-eurogen-control-deposits-in-turbocharged",
+        "q": "How does PRINCE FS1 EUROGEN control deposits in turbocharged engines?",
+        "a": "Its oxidation-resistant base oil system and detergent-dispersant chemistry help control sludge, varnish and high-temperature carbon deposits. This supports cleanliness in thermally stressed areas including piston zones and turbocharger lubrication pathways."
+      },
+      {
+        "id": "can-prince-fs1-and-fs1-eurogen-support-extended-oil-drain",
+        "q": "Can PRINCE FS1 and FS1 EUROGEN support extended oil drain intervals?",
+        "a": "PRINCE LUBRICANTS FS1 and FS1 EUROGEN are formulated for strong oxidation resistance, deposit control and lubricant durability throughout its service life. Actual drain intervals must nevertheless follow the vehicle manufacturer's requirements and account for operating severity and service conditions."
+      },
+      {
+        "id": "can-prince-fs1-be-used-in-both-new-and-high-mileage-engines",
+        "q": "Can PRINCE FS1 be used in both new and high-mileage engines?",
+        "a": "Suitability is determined primarily by the engine's required viscosity and performance specification rather than mileage alone. Where these requirements correspond with an FS1 product, the lubricant can provide high-level protection across different stages of engine service life."
+      }
+    ]
+  },
+  {
+    "id": "fsr",
+    "chip": "FSR",
+    "label": "Racing Oils",
+    "title": "PRINCE <span>FSR</span>",
+    "items": [
+      {
+        "id": "what-is-prince-fsr",
+        "q": "What is PRINCE FSR?",
+        "a": "PRINCE LUBRICANTS FSR is the top-of-the-line racing oil series of PRINCE LUBRICANTS, developed for harsh competition environments and extreme high-performance applications. It combines leading-edge Poly-alpha-olefin PAO base oils with proprietary P-9 ESTER and P-12 ESTER Based Chemistry to deliver exceptional lubricating film strength, shear and thermal stability and wear protection under severe racing conditions."
+      },
+      {
+        "id": "what-makes-prince-fsr-different-from-conventional-fully",
+        "q": "What makes PRINCE FSR different from conventional fully synthetic engine oils?",
+        "a": "PRINCE LUBRICANTS FSR is formulated around the demands of competition rather than conventional road use alone. Its P-9 and P-12 ESTER Based Chemistry, high-performance synthetic PAO base oil system and specialised additive technology are designed to withstand sustained high RPM, extreme temperatures and severe mechanical loading."
+      },
+      {
+        "id": "is-prince-fsr-only-intended-for-professional-racing",
+        "q": "Is PRINCE FSR only intended for professional racing?",
+        "a": "No. While PRINCE LUBRICANTS FSR is developed around competition-level lubrication demands, it can also be applicable to highly modified and performance-oriented engines where its viscosity and formulation characteristics are appropriate. Product selection should reflect engine configuration, clearances and operating conditions."
+      },
+      {
+        "id": "can-prince-fsr-be-used-in-modified-engines",
+        "q": "Can PRINCE FSR be used in modified engines?",
+        "a": "Yes. PRINCE LUBRICANTS FSR is particularly relevant to modified and high-output engines operating beyond conventional production-engine conditions. The appropriate viscosity should be selected according to engine clearances, oil temperature, power level, fuel system and engine-builder requirements."
+      },
+      {
+        "id": "why-does-prince-fsr-use-two-ester-based-chemistries",
+        "q": "Why does PRINCE FSR use two ester-based chemistries?",
+        "a": "Racing lubrication requires more than a single performance characteristic. The combination of P-9 and P-12 ESTER Based Chemistry enables FSR to optimise polar surface protection, lubricity, oil film integrity and high-temperature performance as part of a complete racing lubricant system."
+      },
+      {
+        "id": "how-does-prince-fsr-maintain-oil-film-strength-at-high",
+        "q": "How does PRINCE FSR maintain oil film strength at high temperatures?",
+        "a": "PRINCE LUBRICANTS FSR combines thermally stable PAO base stocks with high-polarity P-9 and P-12 ESTER Based Chemistry to maintain robust lubricant film characteristics as temperature and load increase. This is critical for protecting highly loaded bearings, valvetrain components, pistons and other racing engine surfaces."
+      },
+      {
+        "id": "how-does-prince-fsr-protect-an-engine-at-sustained-high-rpm",
+        "q": "How does PRINCE FSR protect an engine at sustained high RPM?",
+        "a": "At sustained high RPM, the lubricant is subjected to intense shear, aeration, heat and rapidly changing loads. PRINCE LUBRICANTS FSR is formulated to maintain viscosity stability, oil film integrity and unsurpassed anti-wear protection under these severe dynamic conditions."
+      },
+      {
+        "id": "how-does-prince-fsr-protect-highly-loaded-engine-bearings",
+        "q": "How does PRINCE FSR protect highly loaded engine bearings?",
+        "a": "Racing bearings experience extremely high loads and oil film stress. PRINCE LUBRICANTS FSR combines strong and robust high-temperature film characteristics, polar ester chemistry, low-volatility behaviour, and specialised anti-wear technology to maintain separation and protection between heavily loaded moving surfaces."
+      },
+      {
+        "id": "how-important-is-shear-stability-in-prince-fsr",
+        "q": "How important is shear stability in PRINCE FSR?",
+        "a": "Shear stability is critical in extreme racing because the lubricant experiences intense mechanical stress at severely high engine speeds and loads. PRINCE LUBRICANTS FSR is formulated to resist excessive viscosity loss and maintain protective layer characteristics throughout severe competition use."
+      },
+      {
+        "id": "how-does-prince-fsr-control-oxidation-during-racing",
+        "q": "How does PRINCE FSR control oxidation during racing?",
+        "a": "Extreme engine temperatures accelerate lubricant oxidation. PRINCE LUBRICANTS FSR combines oxidation-resistant synthetic and optimized ester components with a robust antioxidant system to limit lubricant degradation, viscosity change and deposit formation during severe high-temperature operation."
+      },
+      {
+        "id": "how-does-prince-fsr-control-deposits-in-racing-engines",
+        "q": "How does PRINCE FSR control deposits in racing engines?",
+        "a": "PRINCE LUBRICANTS FSR combines thermally stable base oil chemistry with advanced detergent-dispersant and antioxidant systems to control oxidation products, varnish and high-temperature deposits. This helps maintain cleanliness in critical areas exposed to intense combustion and thermal loading."
+      },
+      {
+        "id": "does-a-thicker-fsr-automatically-provide-greater-protection",
+        "q": "Does a thicker FSR automatically provide greater protection?",
+        "a": "No. Effective racing lubrication depends on maintaining the correct balance between oil flow and film thickness. Excessive viscosity can compromise circulation and efficiency, while insufficient viscosity may reduce oil-film strength under severe load."
+      },
+      {
+        "id": "is-prince-fsr-simply-a-higher-viscosity-version-of-prince-fs1",
+        "q": "Is PRINCE FSR simply a higher-viscosity version of PRINCE FS1?",
+        "a": "No. PRINCE LUBRICANTS FSR is a dedicated racing lubricant platform with its own formulation philosophy. While both ranges draw on PRINCE LUBRICANTS ester expertise, FSR incorporates P-9 and P-12 ESTER Based Chemistry and is specifically formulated additive system around the thermal, mechanical and lubrication demands of severe competition environments."
+      }
+    ]
+  },
+  {
+    "id": "fse",
+    "chip": "<span class=\"keep-case\">FSe</span>",
+    "label": "Resource Conserving Engine Oils",
+    "title": "PRINCE <span class=\"keep-case\">FSe</span>",
+    "items": [
+      {
+        "id": "what-is-prince-fse",
+        "q": "What is PRINCE FSe?",
+        "a": "PRINCE LUBRICANTS FSe is a fully synthetic Resource Conserving engine oil range developed for modern fuel-efficient gasoline and hybrid-driven engines. Formulated to ILSAC GF-6A performance requirements, it combines low-friction lubrication with advanced protection against wear, deposits, oxidation and modern engine-specific challenges."
+      },
+      {
+        "id": "what-does-resource-conserving-mean-for-prince-fse",
+        "q": "What does “Resource Conserving” mean for PRINCE FSe?",
+        "a": "Resource Conserving identifies engine oils designed to provide specified fuel-economy performance alongside engine protection and emissions-system compatibility. PRINCE LUBRICANTS FSe is formulated to reduce unnecessary frictional losses while maintaining the lubrication performance required by modern engines."
+      },
+      {
+        "id": "what-is-the-difference-between-prince-fse-and-prince-fs1",
+        "q": "What is the difference between PRINCE FSe and PRINCE FS1?",
+        "a": "PRINCE LUBRICANTS FSe is focused on Resource Conserving performance and ILSAC GF-6A requirements, with particular emphasis on fuel economy, friction control and modern downsized gasoline-hybrid engine protection. PRINCE LUBRICANTS FS1 is the flagship high-performance fully synthetic range built around P-9 ESTER Based Technology and broader performance-oriented applications."
+      },
+      {
+        "id": "is-prince-fse-suitable-for-modern-fuel-efficient-engines",
+        "q": "Is PRINCE FSe suitable for modern fuel-efficient engines?",
+        "a": "Yes. PRINCE LUBRICANTS FSe is specifically developed for modern gasoline engines designed around fuel efficiency and lower-viscosity lubrication. Its formulation balances reduced friction with robust wear protection, cleanliness and lubricant durability."
+      },
+      {
+        "id": "how-does-prince-fse-support-fuel-economy",
+        "q": "How does PRINCE FSe support fuel economy?",
+        "a": "PRINCE LUBRICANTS FSe uses carefully controlled viscosity and frictional characteristics to reduce energy losses associated with lubricant resistance inside the engine. This supports the fuel-economy performance requirements established by ILSAC GF-6A."
+      },
+      {
+        "id": "how-does-prince-fse-protect-against-lspi",
+        "q": "How does PRINCE FSe protect against LSPI?",
+        "a": "PRINCE LUBRICANTS FSe uses modern additive chemistry formulated around the LSPI performance requirements of ILSAC GF-6A. This helps reduce the occurrence of damaging low-speed pre-ignition events in susceptible turbocharged direct-injection gasoline engines."
+      },
+      {
+        "id": "how-does-prince-fse-protect-timing-chains",
+        "q": "How does PRINCE FSe protect timing chains?",
+        "a": "PRINCE LUBRICANTS FSe is formulated to satisfy the timing chain wear requirements incorporated into ILSAC GF-6A. Its anti-wear and deposit-control chemistry helps limit chain wear and maintain reliable operation of modern timing systems."
+      },
+      {
+        "id": "is-prince-fse-suitable-for-hybrid-vehicles",
+        "q": "Is PRINCE FSe suitable for hybrid vehicles?",
+        "a": "Yes. Applicable PRINCE LUBRICANTS FSe viscosity grades are well suited to hybrid gasoline powertrains requiring ILSAC GF-6A lubrication. Its low-temperature performance, friction control and protection are particularly relevant to engines experiencing frequent starts and intermittent operation."
+      },
+      {
+        "id": "does-fuel-economy-performance-mean-reduced-engine-protection",
+        "q": "Does fuel-economy performance mean reduced engine protection?",
+        "a": "No. Resource Conserving lubrication requires fuel-economy benefits to be achieved while satisfying stringent requirements for wear, oxidation, deposits and engine durability. PRINCE LUBRICANTS FSe is formulated to balance energy-efficiency with robust engine wear protection."
+      },
+      {
+        "id": "does-lower-viscosity-mean-weaker-engine-protection",
+        "q": "Does lower viscosity mean weaker engine protection?",
+        "a": "No. Modern engines designed for low-viscosity oils use lubrication systems and component clearances developed around these viscosity characteristics. PRINCE LUBRICANTS FSe combines controlled viscosity with advanced anti-wear chemistry to deliver protection while supporting improved efficiency."
+      },
+      {
+        "id": "is-prince-fse-simply-a-fuel-economy-engine-oil",
+        "q": "Is PRINCE FSe simply a fuel-economy engine oil?",
+        "a": "No. Fuel economy is only one element of its performance profile. PRINCE LUBRICANTS FSe must simultaneously address wear, oxidation, corrosion, deposits, LSPI, timing-chain wear, sludge control and emissions-system compatibility while delivering Resource Conserving performance."
+      }
+    ]
+  },
+  {
+    "id": "d-series",
+    "chip": "D Series",
+    "label": "Heavy-Duty Diesel Engine Oils",
+    "title": "PRINCE <span>D SERIES</span>",
+    "items": [
+      {
+        "id": "what-is-the-prince-d-series",
+        "q": "What is the PRINCE D Series?",
+        "a": "PRINCE LUBRICANTS D Series is the heavy-duty diesel engine oil portfolio from PRINCE LUBRICANTS, designed and developed for commercial vehicles and diesel-powered equipment across different operating and performance requirements. The range comprises D1 GOLD, D1 and DEVO, providing distinct lubrication platforms from signature UHPD P-12 ESTER technology to advanced synthetic versions and high-quality mineral formulations."
+      },
+      {
+        "id": "what-are-the-differences-between-d1-gold-d1-and-devo",
+        "q": "What are the differences between D1 GOLD, D1 and Devo?",
+        "a": "D1 GOLD is the signature UHPD range featuring proprietary P-12 ESTER Based Technology for severe-duty modern EURO V, VI diesel engines with highly-advanced emissions-reduction systems. D1 provides modern synthetic performance for demanding daily commercial applications, while Devo delivers high-quality mineral lubrication for established diesel engine technologies and mainstream fleet requirements."
+      },
+      {
+        "id": "why-does-prince-d1-gold-use-ester-technology-in-a-heavy-duty",
+        "q": "Why does PRINCE D1 GOLD use ester technology in a heavy-duty diesel engine oil?",
+        "a": "Ester chemistry remains uncommon in heavy-duty diesel engine oils, where conventional synthetic base oil technologies dominate the market. PRINCE LUBRICANTS D1 GOLD takes a more specialised approach by incorporating proprietary P-12 ESTER Based Technology to reinforce lubricant polarity, oil-film strength, volatility control, and surface protection under the sustained loads, increased temperatures and severe operating cycles of hardworking heavy-duty diesel engines."
+      },
+      {
+        "id": "is-prince-d1-gold-suitable-for-euro-vi-diesel-engines",
+        "q": "Is PRINCE D1 GOLD suitable for Euro VI diesel engines?",
+        "a": "Yes, where the applicable PRINCE LUBRICANTS D1 GOLD formulation meets the engine manufacturer's required performance specification. Its UHPD formulation platform is designed around the demanding lubrication and emissions-system requirements of latest-generation heavy-duty diesel powertrains."
+      },
+      {
+        "id": "what-does-uhpd-mean-in-prince-d1-gold",
+        "q": "What does UHPD mean in PRINCE D1 GOLD?",
+        "a": "UHPD stands for Ultra-High-Performance-Diesel, describing lubricants developed for highly demanding heavy-duty diesel applications. PRINCE LUBRICANTS D1 GOLD combines advanced base oil technology, P-12 ESTER Based Technology and specialized additive chemistry to provide the highest levels of efficiency, protection and lubricant durability."
+      },
+      {
+        "id": "is-prince-d1-gold-suitable-for-modern-low-emission-diesel",
+        "q": "Is PRINCE D1 GOLD suitable for modern low-emission diesel engines?",
+        "a": "Yes. Applicable PRINCE LUBRICANTS D1 GOLD formulations are developed for modern low-emission heavy-duty diesel engines, including those using technologies such as EGR, SCR, DOC and diesel particulate filters (DPF). Product selection should follow the required API, ACEA and manufacturer specification."
+      },
+      {
+        "id": "is-prince-d1-gold-suitable-for-turbocharged-heavy-duty-diesel",
+        "q": "Is PRINCE D1 GOLD suitable for turbocharged heavy-duty diesel engines?",
+        "a": "Yes. D1 GOLD is engineered for high-output turbocharged diesel engines where extreme temperatures, high cylinder pressures and sustained loads place substantial demands on the lubricant."
+      },
+      {
+        "id": "how-does-prince-d1-gold-protect-diesel-particulate-filters",
+        "q": "How does PRINCE D1 GOLD protect diesel particulate filters?",
+        "a": "Applicable PRINCE LUBRICANTS D1 GOLD formulations use advanced low-SAPS chemistry to reduce lubricant-derived ash while maintaining maximum engine protection. This helps support the durability and functionality of DPF-equipped, EURO V, VI heavy-duty diesel fleets and their sensitive exhaust after-treatment systems."
+      },
+      {
+        "id": "what-defines-the-formulation-philosophy-of-prince-d1-gold",
+        "q": "What defines the formulation philosophy of PRINCE D1 GOLD?",
+        "a": "PRINCE LUBRICANTS D1 GOLD is developed around sustained protection under severe heavy-duty operation. P-12 ESTER Based Technology, advanced base oils and specialised additive chemistry work as an integrated UHPD system to manage load, heat, soot, wear and lubricant degradation."
+      },
+      {
+        "id": "can-prince-d1-gold-support-extended-drain-intervals",
+        "q": "Can PRINCE D1 GOLD support extended drain intervals?",
+        "a": "PRINCE LUBRICANTS D1 GOLD is formulated for high lubricant durability, oxidation resistance, soot control and viscosity retention under prolonged service. Actual drain intervals should follow the engine manufacturer's recommendations and, where applicable, be supported by used-oil analysis."
+      },
+      {
+        "id": "how-is-prince-d1-different-from-prince-d1-gold",
+        "q": "How is PRINCE D1 different from PRINCE D1 GOLD?",
+        "a": "PRINCE LUBRICANTS D1 GOLD represents the signature UHPD platform and incorporates proprietary P-12 ESTER Based Technology for the most demanding applications. D1 is positioned as an advanced synthetic-blend range, delivering strong heavy-duty diesel performance across a broad spectrum of commercial vehicles and operating conditions."
+      },
+      {
+        "id": "is-prince-d1-suitable-for-turbocharged-diesel-engines",
+        "q": "Is PRINCE D1 suitable for turbocharged diesel engines?",
+        "a": "Yes. Applicable PRINCE LUBRICANTS D1 formulations are designed for naturally aspirated and turbocharged heavy-duty diesel engines, providing strong wear protection, deposit control and lubricant stability under demanding commercial service."
+      },
+      {
+        "id": "how-does-prince-d1-manage-soot-varnish-and-deposits",
+        "q": "How does PRINCE D1 manage soot, varnish and deposits?",
+        "a": "PRINCE LUBRICANTS D1 incorporates excellent detergent-dispersant chemistry to control acid, soot, combustion contaminants and carbon deposit formation. This helps maintain engine cleanliness and prevents excessive lubricant thickening and sludge formation during service."
+      },
+      {
+        "id": "what-is-prince-devo",
+        "q": "What is PRINCE Devo?",
+        "a": "PRINCE Devo is the high-quality, mineral blend, multi-grade diesel engine oil range from PRINCE LUBRICANTS, designed for mainstream commercial vehicles and established diesel engine technologies. It combines carefully selected base oils with proven-performance additive chemistry for reliable wear protection, cleanliness and lubricant stability."
+      },
+      {
+        "id": "is-prince-devo-simply-an-entry-level-diesel-engine-oil",
+        "q": "Is PRINCE Devo simply an entry-level diesel engine oil?",
+        "a": "No. Devo is positioned as a high-quality mineral lubrication platform rather than a low-specification product. It is formulated to provide the protection and cleanliness required by diesel engines whose performance specifications are appropriately served by mineral-based technology."
+      },
+      {
+        "id": "how-does-prince-devo-protect-engines-under-heavy-commercial-use",
+        "q": "How does PRINCE Devo protect engines under heavy commercial use?",
+        "a": "Devo uses proven anti-wear, detergent-dispersant and antioxidant chemistry to control wear, deposits, soot and lubricant degradation. Its mineral base oil system is formulated to maintain dependable lubrication throughout the recommended service interval."
+      },
+      {
+        "id": "which-prince-d-series-product-should-i-choose",
+        "q": "Which PRINCE D Series product should I choose?",
+        "a": "Selection should be based on the engine manufacturer's required SAE viscosity, performance specification, emissions technology and operating severity. D1 GOLD addresses the highest-demand UHPD applications, D1 provides advanced synthetic SHPD performance, and Devo serves established applications requiring high-quality mineral lubrication."
+      }
+    ]
+  },
+  {
+    "id": "maxx",
+    "chip": "MAXX",
+    "label": "Motorcycle Engine Oils",
+    "title": "PRINCE <span>MAXX</span>",
+    "items": [
+      {
+        "id": "what-is-the-prince-maxx-motorcycle-lubricant-range",
+        "q": "What is the PRINCE MAXX motorcycle lubricant range?",
+        "a": "PRINCE LUBRICANTS MAXX is the high-performance motorcycle engine oil family from PRINCE LUBRICANTS. The range includes MAXX GOLD, the signature ultra-high-performance fully synthetic P-10 ESTER series, and MAXX ULTRA, an advanced synthetic range featuring leading-edge P+ SYNTHESE Technology."
+      },
+      {
+        "id": "what-is-the-difference-between-maxx-gold-and-maxx-ultra",
+        "q": "What is the difference between MAXX GOLD and MAXX ULTRA?",
+        "a": "PRINCE LUBRICANTS MAXX GOLD represents the top-of-the-range, highest-performance motorcycle lubrication platform from PRINCE LUBRICANTS, combining fully synthetic base oils with proprietary P-10 ESTER Based Technology. MAXX ULTRA uses P+ SYNTHESE Technology to provide dependable synthetic performance, protection and durability across a broad range of motorcycle applications."
+      },
+      {
+        "id": "why-are-motorcycle-engine-oils-different-from-passenger-car",
+        "q": "Why are motorcycle engine oils different from passenger car engine oils?",
+        "a": "Many motorcycles use a common lubricant for the engine, transmission and wet clutch. The oil must therefore withstand high engine speeds, gearbox shear and elevated temperatures while maintaining the controlled friction characteristics required for reliable clutch operation."
+      },
+      {
+        "id": "what-is-prince-maxx-gold",
+        "q": "What is PRINCE MAXX GOLD?",
+        "a": "PRINCE LUBRICANTS MAXX GOLD is the top-of-the-line ester-based fully synthetic motorcycle engine oil series from PRINCE LUBRICANTS. It incorporates proprietary P-10 ESTER Based Technology for exceptional lubrication, viscosity stay-in-grade, oil film strength and protection under high-RPM, high-temperature and high-load motorcycle operation."
+      },
+      {
+        "id": "is-prince-maxx-gold-suitable-for-high-performance-motorcycles",
+        "q": "Is PRINCE MAXX GOLD suitable for high-performance motorcycles?",
+        "a": "Yes. PRINCE LUBRICANTS MAXX GOLD is specifically engineered for high-performance motorcycle applications where high engine speeds, elevated temperatures and substantial mechanical loads place exceptional demands on the lubricant."
+      },
+      {
+        "id": "how-does-prince-maxx-gold-protect-high-revving-motorcycle",
+        "q": "How does PRINCE MAXX GOLD protect high-revving motorcycle engines?",
+        "a": "At sustained high RPM, motorcycle oil experiences intense heat, shear and rapidly changing mechanical loads. PRINCE LUBRICANTS MAXX GOLD is formulated to preserve viscosity stability, lubricant-film integrity and anti-wear protection under these demanding conditions."
+      },
+      {
+        "id": "does-ester-technology-affect-wet-clutch-performance",
+        "q": "Does ester technology affect wet-clutch performance?",
+        "a": "Ester chemistry must be carefully balanced within the complete motorcycle lubricant formulation. In PRINCE LUBRICANTS MAXX GOLD, P-10 ESTER Based Technology is integrated with application-specific friction chemistry to provide ultimate-performance lubrication without compromising the required wet-clutch characteristics."
+      },
+      {
+        "id": "is-prince-maxx-gold-suitable-for-everyday-road-motorcycles",
+        "q": "Is PRINCE MAXX GOLD suitable for everyday road motorcycles?",
+        "a": "Yes. Its high-performance formulation is not limited to extreme environment use. PRINCE LUBRICANTS MAXX GOLD can provide premium protection for everyday motorcycles where its viscosity grade and performance specifications correspond with the manufacturer's requirements."
+      },
+      {
+        "id": "how-does-maxx-gold-protect-under-extreme-gearbox-shear",
+        "q": "How does MAXX GOLD protect under extreme gearbox shear?",
+        "a": "PRINCE LUBRICANTS MAXX GOLD combines shear-stable viscosity characteristics with the strong surface affinity and oil film performance of P-10 ESTER Based Technology. This helps preserve lubrication across highly loaded gears while maintaining protection throughout the shared engine lubrication circuit."
+      },
+      {
+        "id": "what-is-p-plus-synthese-technology-in-maxx-ultra",
+        "q": "What is P+ SYNTHESE Technology in MAXX ULTRA?",
+        "a": "P+ SYNTHESE Technology incorporates a high proportion of severely hydroisomerized, high VI base stocks within a state-of-the-art formulation system. This provides enhanced thermal stability, oxidation resistance and viscosity performance compared with conventional based motorcycle oils."
+      },
+      {
+        "id": "who-should-choose-maxx-gold-instead-of-maxx-ultra",
+        "q": "Who should choose MAXX GOLD instead of MAXX ULTRA?",
+        "a": "PRINCE LUBRICANTS MAXX GOLD is positioned for riders seeking the highest-performance motorcycle lubricant technology within the PRINCE LUBRICANTS range, particularly for high engine capacity, high-output and demanding applications. MAXX ULTRA provides advanced synthetic performance for riders requiring strong protection and optimal durability across broader everyday motorcycle use."
+      }
+    ]
+  }
+]

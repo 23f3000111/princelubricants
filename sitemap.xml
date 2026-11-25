@@ -29,15 +29,6 @@
   <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-ci-4-15w-40/</loc></url>
   <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-ci-4-20w-50/</loc></url>
   <url><loc>https://www.princelubricants.com/products/commercial-fleet/heavy-duty-extended-life-elc-antifreeze-coolant/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/super-shift-gl-4-gl-4-plus-75w-80/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/super-shift-gl-4-gl-5-75w-90/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/super-shift-gl-5-75w-90/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/super-shift-gl-5-80w-90/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/super-shift-gl-5-85w-90/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/super-shift-gl-5-plus-lsd-75w-140/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/super-shift-gl-5-plus-lsd-75w-90/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/super-shift-gl-5-plus-lsd-80w-90/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/super-shift-gl-5-plus-lsd-85w-90/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/activcutt-hd-ep/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/activcutt-md-chlorine-free/</loc></url>
@@ -134,48 +125,78 @@
   <url><loc>https://www.princelubricants.com/products/motorsport/pro-shift-gt-racing-gl-5-75w-140/</loc></url>
   <url><loc>https://www.princelubricants.com/products/motorsport/pro-shift-gt-racing-gl-5-75w-90/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/50-50-antifreeze-coolant-g11/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/50-50-antifreeze-coolant-g12-evo/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/50-50-antifreeze-coolant-g12-g12-plus/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/50-50-antifreeze-coolant-g12-plus-plus-g13/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/antifreeze-and-coolants/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/atf-10-mercon-ulv/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-3h-dexron-iii-h-mercon/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-6-dexron-vi-mercon-lv/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-multi-vehicle-mercon-v/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/brake-fluid-dot-3/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/brake-fluid-dot-4/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/brake-fluid-dot-5-1/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/central-hydraulic-fluid/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/coolant-g11-iat-37-c/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/coolant-g12-plus-oat-37-c/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/coolant-g13-oat-37-c/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-3h/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-6-mercon-lv-dexron-vi/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-eurospec-7gt-fe-plus/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-eurospec-7gt/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-eurospec-8at-aw-2/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-eurospec-8hp/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-eurospec-9gt/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-eurospec-9hp/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-lv-multi-vehicle/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/atf-sv-multi-vehicle/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/automatic-transmission-fluids/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/brake-and-clutch-fluid-dot-3/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/brake-and-clutch-fluid-dot-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/brake-and-clutch-fluid-dot-5-1/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/brake-and-clutch-fluids/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/central-hydraulic-fluid-chf-11s/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/cvt-fe/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/cvt-universal/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/dct-magna-lv/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/dct-plus/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/fs-super-0w-20-gf-5/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/differential-and-hypoid-gear-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/flagship-ester-based-engine-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fs-super-0w-20-sp-rc/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs-super-0w-30-a5-b5/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fs-super-0w-30-sp-rc/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs-super-5w-30-a5-b5/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/fs-super-5w-30-gf-5/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs-super-5w-30-sp/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs-super-5w-40-sp/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-0w-30/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-0w-40/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-5w-30/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-5w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-eurogen-0w-20-c5/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-eurogen-0w-20-c6-c5/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-eurogen-0w-30-c3/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-eurogen-5w-30-c3/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-eurogen-5w-40-c3/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-0w-16/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-0w-20/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-0w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-5w-20/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-5w-30/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-technica-0w-30-c2/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-technica-5w-30-a7-b7/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fs1-technica-5w-30-c4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-0w-16-gf-6b/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-0w-20-gf-6a/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-0w-30-gf-6a/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-5w-20-gf-6a/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/fse-5w-30-gf-6a/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/hydraulic-and-power-steering-fluids/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/m1-10w-30/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/m1-15w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/power-steering-fluid-stop-leak/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/manual-transmission-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/passenger-car-engine-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/power-steering-fluid-with-stop-leak/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/power-steering-fluid/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/pro-shift-mtf-gl-4-75w-80/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/pro-shift-mtf-gl-4-75w-85/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/pro-shift-mtf-gl-4-75w/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/ss-super-10w-40/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/ss1-10w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/ss1-fuel-economy-plus-10w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/passenger-car/ss1-fuel-economy-plus-5w-30/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/ss1-fuel-economy-10w-30/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/ss1-fuel-economy-5w-30/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-4-gl-4-plus-75w-80/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-4-gl-5-75w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-75w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-80w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-85w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-plus-lsd-75w-140/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-plus-lsd-75w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-plus-lsd-80w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-plus-lsd-85w-90/</loc></url>
   <url><loc>https://www.princelubricants.com/technology/</loc></url>
   <url><loc>https://www.princelubricants.com/technology/p-10-ester/</loc></url>
   <url><loc>https://www.princelubricants.com/technology/p-9-ester/</loc></url>

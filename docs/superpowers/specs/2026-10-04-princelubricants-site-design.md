@@ -463,3 +463,43 @@ change below is built from the components in §11.
 8. **Technology pages.** The P-9 and P-10 series cards open their ranges in the
    catalogue, and the FS1 EUROGEN and MAXX GOLD photo slots take those ranges' pack
    shots.
+
+## 13. The Passenger Car product document, 2026-11-24
+
+Source: `Product Page - Passenger Cars.pdf` (53 pages, Word, 23 Nov 2026), read into
+`docs/content/product-docs/passenger-car.json`. The client goes ahead with the website; the
+motorcycle, truck and marine documents follow in a few days in the same form, so everything
+here is built to take them.
+
+1. **What the document is.** A menu of eight product types in two rows of four, the current
+   one in red; under each type its series with their number of products; and, per product, a
+   "Product Page Description" (a list of label and value lines) and an "Individual Page
+   Description" (a description, intended applications, standards, packaging). 64 products.
+2. **It replaces the crawl** for Passenger Car: order, names, copy and packaging are the
+   document's. Products of the current site that it does not have are out.
+3. **Pages, not scripted tabs.** Each type has its own URL, title and description, which is
+   what "SEO friendly, AI-crawl friendly" asks for, and works without JavaScript. The menu is
+   on every type's page with its own cell in gold (the document's red), and its links open the
+   next type with the menu in the same place, so moving between types feels like tabs.
+   `/products/passenger-car/` opens on the eight types. Product URLs stay one level under the
+   category.
+4. **The product list** is the existing white card with the pale-yellow well, plus the
+   document's lines. The rows line up across the cards (subgrid), so a series reads like a
+   table. Three or four cards a row, whichever leaves the last row fuller; a series of one or
+   two has the pack beside the list.
+5. **A product's page** keeps the existing layout: the pack in the rings beside the
+   description, the packaging and the buttons; below, Product Details (the list), Intended
+   Applications, and the standards as chips under the document's own headings.
+6. **Copy** is the document's, word for word. Corrections are data
+   (`passenger-car.fixes.json`), one entry per slip; a technical contradiction is left as
+   written and listed for the client. The reader fails unless every word of the PDF is
+   accounted for, and `tools/product-docs.test.js` fails unless every word is on its page.
+7. **Pack shots** are used only where the label names the same product and category. The 17
+   products without one show PRINCE's own jug or bottle in outline, traced from the pack shots,
+   labelled "Pack shot to come". No pack is drawn or relabelled.
+8. **Shared products.** The SUPER-SHIFT gear oils are in this document and were in Commercial
+   Fleet. They have one page each, here; Commercial Fleet lists the same pages.
+9. **Fixed along the way:** links to a section of another page stopped part of the way there,
+   site-wide, because ScrollTrigger's refresh at load ended the browser's smooth scroll. They
+   now land on the section (`landOnSection` in `site.js`, `tools/checks/landing.js`). The
+   hero's small line no longer has a gap where the no-orphans script split it.

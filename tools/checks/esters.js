@@ -17,7 +17,7 @@ async (page) => {
         'RAPID COLD-START PROTECTION', 'Immediate circulation and surface retention support protection during critical start-up conditions.',
         'ENHANCED ENGINE CLEANLINESS', 'Natural ester solvency supports deposit and sludge control and cleaner internal engine surfaces.',
         'FS1 SERIES', 'FS1 EUROGEN SERIES', 'FSR SERIES'],
-      series: ['../../products/passenger-car/#fs1', '../../products/passenger-car/#fs1-eurogen', '../../products/motorsport/#racing-motor-oils'],
+      series: ['../../products/passenger-car/flagship-ester-based-engine-oils/#fs1', '../../products/passenger-car/flagship-ester-based-engine-oils/#fs1-eurogen', '../../products/motorsport/#racing-motor-oils'],
       siblings: ['../p-10-ester/', '../#p-plus-synthese', '../'],
     },
     'p-10-ester': {

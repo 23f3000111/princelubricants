@@ -2,7 +2,7 @@
 // series named only where the doc names them, the event names, deep links landing below
 // the fixed header (and the sticky category bar), no console errors, nothing hidden without
 // JavaScript. Amendment 1: each category has a write-up, lists its own ranges (linking to
-// them in its catalogue) and a gold Browse Products button; the catalogue placeholder is
+// them in its catalogue), or its product types, and a gold Browse Products button; the catalogue placeholder is
 // gone; every motorsport discipline has written copy instead of a placeholder.
 async (page) => {
   const BASE = 'http://127.0.0.1:8765';
@@ -68,7 +68,7 @@ async (page) => {
     const catalogue = await (await page.request.get(BASE + '/docs/content/products.json')).json();
     r.categories = await page.evaluate((cats) => cats.map((c) => {
       const s = document.getElementById(c.id);
-      const want = c.ranges.map((r) => `${c.id}/#${r.id}`);
+      const want = c.types ? c.types.map((t) => `${c.id}/${t.id}/`) : c.ranges.map((r) => `${c.id}/#${r.id}`);
       const got = [...s.querySelectorAll('.range-list a.range-link')].map((a) => a.getAttribute('href'));
       const browse = s.querySelector(`a.btn-gold[href="${c.id}/"]`);
       return { id: c.id, intro: (s.querySelector('.cat-intro')?.textContent.trim().split(/\s+/).length || 0) >= 20,
@@ -79,11 +79,11 @@ async (page) => {
     r.landing = await landing('/products/', 'marine');
     r.noJsHidden = await noJs('/products/');
     const wantOrder = ['passenger-car', 'motorsport', 'commercial-fleet', 'motorcycle', 'industrial', 'marine'];
-    const wantSeries = { 'passenger-car': ['FS1 SERIES', 'FS1 EUROGEN SERIES'], motorsport: ['FSR SERIES'], 'commercial-fleet': [], motorcycle: ['MAXX GOLD SERIES'], industrial: [], marine: [] };
+    const wantSeries = { 'passenger-car': ['FS1 SERIES', 'FS1 EUROGEN SERIES', 'FS1 TECHNICA SERIES'], motorsport: ['FSR SERIES'], 'commercial-fleet': [], motorcycle: ['MAXX GOLD SERIES'], industrial: [], marine: [] };
     r.pass = r.missing.length === 0 && r.h1.length === 1 && r.h1[0] === 'FROM RACE TO ROAD. INDUSTRY TO SEA.' &&
       JSON.stringify(r.order) === JSON.stringify(wantOrder) && JSON.stringify(r.chips) === JSON.stringify(wantOrder.map((i) => `#${i}`)) &&
       JSON.stringify(r.seriesWhere) === JSON.stringify(wantSeries) && !r.placeholder &&
-      r.categories.every((c) => c.intro && c.ranges && c.browse) && /^161 products/.test(r.total || '') &&
+      r.categories.every((c) => c.intro && c.ranges && c.browse) && /^174 products/.test(r.total || '') &&
       r.landing.headingTop >= r.landing.coveredTo && r.consoleErrors.length === 0 && r.noJsHidden.length === 0;
     out.products = r;
     out.pass = out.pass && r.pass;

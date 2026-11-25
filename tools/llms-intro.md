@@ -19,6 +19,7 @@ PRINCE LUBRICANTS develops performance-driven and advanced lubricants for demand
 - P+ SYNTHESE: a high concentration of severely hydroisomerized, high-viscosity-index base stocks, used in SS1, D1 and MAXX ULTRA engine oils.
 - High-performance formulations are built on high-purity hydroisomerized VHVI (Very-High-Viscosity Index) base stocks.
 - Product categories: Passenger Car, Motorsport, Commercial Fleet, Motorcycle, Industrial and Marine.
+- Passenger Car: 64 products in eight types. Flagship ester based engine oils (FS1, FS1 EUROGEN, FS1 TECHNICA), passenger car engine oils (FSe, FS SUPER, SS1, SS SUPER, M1), automatic transmission fluids (ATF EUROSPEC, ATF, DCT, CVT), manual transmission oils (PRO-SHIFT MTF), differential and hypoid gear oils (SUPER-SHIFT), hydraulic and power steering fluids, brake and clutch fluids (DOT 5.1, DOT 4, DOT 3), and antifreeze coolants (G11, G12/G12+, G12++/G13, G12 EVO).
 
 ## Motorsport and milestones
 

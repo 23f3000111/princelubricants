@@ -1,22 +1,29 @@
 """
-Builds the product catalogue from a crawl of the current princelubricants.com.
+Builds the product catalogue from the client's product documents and, for the categories that
+have none yet, from a crawl of the current princelubricants.com.
 
     python tools/build-products.py
 
-Reads tools/data/oldsite/ (not committed; see the README for how it was made):
+Reads docs/content/product-docs/ (written by tools/read-product-doc.py):
+  <category>.json         the category's product types, their series and their products
+  <category>.packs.json   the pack shots each of those products has
+
+and tools/data/oldsite/ (not committed; see the README for how it was made):
   lists.json     each range page of the current site, in its menu order: the ranges on it,
                  their one-line descriptions and their products, in order
   details.json   each product page: name, introduction, sizes, images and its tabs
   raw/           the product images, as the current site serves them
+Pack shots the client sends later go in tools/data/packs/, as PNG on white.
 
 Writes:
-  docs/content/products.json   six categories, their ranges and their 161 products
+  docs/content/products.json   six categories, their types or ranges, and their products
   assets/img/products/*.webp   each pack shot keyed off its white ground, trimmed, resized
 
-The current site's order is kept. A category takes its ranges in the order of that site's
-product menu (Racing, Motor oil, Gear oil, Automatic transmission fluid, Maintenance fluid,
-Industrial, Metal processing, Maritime solution), and every range keeps its products in the
-order the site shows them. Needs Pillow, numpy and scipy.
+A category with a document takes everything from it, in the document's order. The others keep
+the current site's order: their ranges follow its product menu (Racing, Motor oil, Gear oil,
+Automatic transmission fluid, Maintenance fluid, Industrial, Metal processing, Maritime
+solution), and every range keeps its products as the site shows them. Needs Pillow, numpy and
+scipy.
 """
 import json
 import re
@@ -28,6 +35,8 @@ from scipy import ndimage
 
 ROOT = Path(__file__).resolve().parent.parent
 CRAWL = ROOT / "tools" / "data" / "oldsite"
+NEW_PACKS = ROOT / "tools" / "data" / "packs"
+DOCS = ROOT / "docs" / "content" / "product-docs"
 OUT_JSON = ROOT / "docs" / "content" / "products.json"
 OUT_IMG = ROOT / "assets" / "img" / "products"
 PACK_HEIGHT = 600          # px; cards show packs about 240px tall, the product page 460px
@@ -36,23 +45,27 @@ M, T, A, F = "pcars.html", "tfluid.html", "atfluid.html", "mfluid.html"
 R, C, P, S = "racing_product.html", "ctrucks.html", "psport.html", "mspec.html"
 I, X, Y = "industrial_oil_product.html", "metal_processing_product.html", "marine_solution_product.html"
 
-# The six categories of the site, each with the current site's ranges it takes:
-# (range page, range title[, only these product pages]). Every product lands exactly once.
+DOCUMENT = "document"
+
+
+class Shared:
+    """A range that lists the products of another category's type; their pages stay there."""
+
+    def __init__(self, title, category, type_):
+        self.title, self.category, self.type = title, category, type_
+
+
+# The six categories of the site. One with a client document takes everything from it. The
+# others list the current site's ranges: (range page, range title[, only these pages]). Every
+# crawled product lands exactly once, here or in SUPERSEDED.
 CATEGORIES = [
-    ("passenger-car", "Passenger Car", [
-        (M, "FS1"), (M, "FS1 EUROGEN"), (M, "FSe"), (M, "FS SUPER"), (M, "SS1"), (M, "M Series"),
-        (T, "PRO-SHIFT MTF"),
-        (A, "ATF"), (A, "DCT"), (A, "CVT"),
-        (F, "Non-silicone Brake & Clutch Fluid"),
-        (F, "Antifreeze Coolant", ["coolant_g11_iat.html", "coolant_g12_plus_oat.html", "coolant_g13_oat.html"]),
-        (F, "Hydraulic Fluid"),
-    ]),
+    ("passenger-car", "Passenger Car", DOCUMENT),
     ("motorsport", "Motorsport", [
         (R, "RACING MOTOR OIL"), (R, "RACING GEAR OILS"), (R, "RACING BRAKE FLUID"), (R, "RACING COOLANT"),
     ]),
     ("commercial-fleet", "Commercial Fleet", [
         (C, "D1 GOLD"), (C, "D1 GOLD 4X4"), (C, "D1"), (C, "Devo"),
-        (T, "SUPER-SHIFT Series"),
+        Shared("SUPER-SHIFT", "passenger-car", "differential-and-hypoid-gear-oils"),
         (F, "Antifreeze Coolant", ["coolant-heavy.html"]),
     ]),
     ("motorcycle", "Motorcycle", [
@@ -73,15 +86,29 @@ CATEGORIES = [
     ]),
 ]
 
+# The current site's ranges that a client document has replaced. Their products are out of the
+# catalogue; the one-line description of a series that goes on is kept (LINES).
+SUPERSEDED = [
+    (M, "FS1"), (M, "FS1 EUROGEN"), (M, "FSe"), (M, "FS SUPER"), (M, "SS1"), (M, "M Series"),
+    (T, "PRO-SHIFT MTF"), (T, "SUPER-SHIFT Series"),
+    (A, "ATF"), (A, "DCT"), (A, "CVT"),
+    (F, "Non-silicone Brake & Clutch Fluid"),
+    (F, "Antifreeze Coolant", ["coolant_g11_iat.html", "coolant_g12_plus_oat.html", "coolant_g13_oat.html"]),
+    (F, "Hydraulic Fluid"),
+]
+LINES = {"FS1": (M, "FS1"), "FS1 EUROGEN": (M, "FS1 EUROGEN"), "FSe": (M, "FSe"), "FS SUPER": (M, "FS SUPER"),
+         "SS1": (M, "SS1"), "M1": (M, "M Series")}
+
+# A document's series that the site shows under another title.
+SERIES_TITLES = {"others ATF": "Other ATF, DCT & CVT"}
+
 # Range titles as the site shows them; the current site's capitals are kept where they are
 # product names, and generic words are set in title case.
 TITLES = {
     "RACING MOTOR OIL": "Racing Motor Oils", "RACING GEAR OILS": "Racing Gear Oils",
     "RACING BRAKE FLUID": "Racing Brake Fluid", "RACING COOLANT": "Racing Coolant",
-    "MAXX SCOOTER RANGE": "MAXX SCOOTER", "SUPER-SHIFT Series": "SUPER-SHIFT", "MAXX-SHIFT Series": "MAXX-SHIFT",
-    "MARINE TRANSMISSION SPECIALTIES": "Marine Transmission Specialties", "M Series": "M SERIES",
-    "Non-silicone Brake & Clutch Fluid": "Brake & Clutch Fluids", "Antifreeze Coolant": "Antifreeze Coolants",
-    "Hydraulic Fluid": "Hydraulic & Power Steering Fluids",
+    "MAXX SCOOTER RANGE": "MAXX SCOOTER", "MAXX-SHIFT Series": "MAXX-SHIFT",
+    "MARINE TRANSMISSION SPECIALTIES": "Marine Transmission Specialties", "Antifreeze Coolant": "Antifreeze Coolants",
 }
 
 PREFIX = re.compile(r"^([A-Z][A-Za-z &/,.-]{2,40}):\s*(.+)$")
@@ -101,6 +128,51 @@ def tidy(text):
         text = text.replace(wrong, right)
     return text
 
+
+# ---------- The client's documents ----------
+
+def product_id(name):
+    """A document product's slug: without the brand, the word SAE and the freezing point."""
+    name = re.sub(r"^PRINCE®\s+", "", name)
+    name = re.sub(r"\bSAE\s+", "", name)
+    return slug(re.sub(r"\s+−\d+°C$", "", name))
+
+
+def type_id(title):
+    return slug(re.sub(r"\s*\([^()]*\)", "", title))
+
+
+def from_document(data, packs, lines, titles):
+    """A client document's types, with their series as ranges. `packs` are the pack shots by
+    product id, `lines` the series' one-line descriptions, `titles` the series the site shows
+    under another name."""
+    used, types = set(), []
+    for t in data["types"]:
+        ranges = []
+        for s in t["series"]:
+            products = []
+            for p in s["products"]:
+                pid = product_id(p["name"])
+                used.add(pid)
+                lists = [x["items"] for x in p["sections"] if "items" in x]
+                products.append({
+                    "id": pid, "name": p["name"], "facts": p["facts"], "intro": p["description"],
+                    "sizes": p["packaging"]["sizes"], "sizeNote": p["packaging"]["note"],
+                    "spec": " · ".join(lists[0][:3]) if lists else "",
+                    "sections": [{"label": x["label"], "blocks": [{"chips": x["items"]} if "items" in x else {"p": x["text"]}]}
+                                 for x in p["sections"]],
+                    "images": packs.get(pid, []),
+                })
+            title = titles.get(s["title"], s["title"])
+            ranges.append({"id": slug(title) or "products", "title": title, "desc": lines.get(s["title"], ""), "products": products})
+        types.append({"id": type_id(t["title"]), "title": t["title"], "ranges": ranges})
+    unknown = sorted(set(packs) - used)
+    if unknown:
+        raise SystemExit(f"pack shots for products the document does not have: {unknown}")
+    return types
+
+
+# ---------- The crawl ----------
 
 def blocks_of(raw):
     out = []
@@ -172,27 +244,51 @@ def main():
     lists = json.loads((CRAWL / "lists.json").read_text(encoding="utf-8"))
     details = json.loads((CRAWL / "details.json").read_text(encoding="utf-8"))
     ranges_by_page = {(l["file"], g["title"]): g for l in lists for g in l["groups"]}
-
     placed, taken_ids, images = {}, set(), set()
+
+    def crawled(source, where):
+        """The products of one of the crawl's ranges, each marked as placed."""
+        group = ranges_by_page[(source[0], source[1])]
+        only = source[2] if len(source) > 2 else None
+        items = [item for item in group["items"] if not only or item["href"] in only]
+        for item in items:
+            if item["href"] in placed:
+                raise SystemExit(f"{item['href']} is in two ranges: {placed[item['href']]} and {where}")
+            placed[item["href"]] = where
+        return group, items
+
+    for source in SUPERSEDED:
+        crawled(source, f"{source[1]}, replaced by a client document")
+    lines = {series: tidy(ranges_by_page[source]["desc"]) for series, source in LINES.items()}
+
     categories = []
     for cid, name, sources in CATEGORIES:
+        if sources == DOCUMENT:
+            data, packs = (json.loads((DOCS / f"{cid}{ext}").read_text(encoding="utf-8")) for ext in (".json", ".packs.json"))
+            types = from_document(data, packs, lines, SERIES_TITLES)
+            for p in (p for t in types for r in t["ranges"] for p in r["products"]):
+                if p["id"] in taken_ids or p["id"] in {t["id"] for t in types}:
+                    raise SystemExit(f"two pages would share the address {cid}/{p['id']}/")
+                taken_ids.add(p["id"])
+                images.update(p["images"])
+            categories.append({"id": cid, "name": name, "types": types})
+            continue
         ranges = []
         for source in sources:
-            page, title = source[0], source[1]
-            only = source[2] if len(source) > 2 else None
-            group = ranges_by_page[(page, title)]
+            if isinstance(source, Shared):
+                owner = next(c for c in categories if c["id"] == source.category)
+                shown = next(t for t in owner["types"] if t["id"] == source.type)
+                ranges.append({"id": slug(source.title), "title": source.title, "desc": "", "products": [],
+                               "shared": [f"{owner['id']}/{p['id']}" for r in shown["ranges"] for p in r["products"]]})
+                continue
+            title = source[1]
+            group, items = crawled(source, f"{cid}/{title}")
             products = []
-            for item in group["items"]:
-                href = item["href"]
-                if only and href not in only:
-                    continue
-                if href in placed:
-                    raise SystemExit(f"{href} is in two ranges: {placed[href]} and {cid}/{title}")
-                placed[href] = f"{cid}/{title}"
-                det = details[href]
+            for item in items:
+                det = details[item["href"]]
                 pid = slug(det["name"])
                 if pid in taken_ids:
-                    pid = slug(Path(href).stem)
+                    pid = slug(Path(item["href"]).stem)
                 taken_ids.add(pid)
                 paras = [tidy(p) for p in det["paras"] if tidy(p)]
                 grades = next((p for p in paras if p.lower().startswith("available in")), "")
@@ -203,7 +299,7 @@ def main():
                 imgs += [image_name(src) for src in det["imgs"] if image_name(src) not in imgs]
                 images.update(imgs)
                 products.append({
-                    "id": pid, "name": tidy(det["name"]), "source": href, "intro": intro, "grades": grades,
+                    "id": pid, "name": tidy(det["name"]), "source": item["href"], "intro": intro, "grades": grades,
                     "sizes": [tidy(s) for s in det["sizes"]], "spec": spec_line(sections),
                     "sections": sections, "images": imgs,
                 })
@@ -216,7 +312,7 @@ def main():
         raise SystemExit(f"not placed in any category: {missing}")
 
     OUT_IMG.mkdir(parents=True, exist_ok=True)
-    raw = {image_name(p.name): p for p in (CRAWL / "raw").glob("*.png")}
+    raw = {image_name(p.name): p for folder in (CRAWL / "raw", NEW_PACKS) for p in folder.glob("*.png")}
     made = 0
     for name in sorted(images):
         src = raw.get(name)
@@ -227,16 +323,22 @@ def main():
             continue
         key_white(src).save(out, "WEBP", quality=82, method=4)
         made += 1
+    # A pack no product shows any more is not deployed.
+    dropped = [f for f in OUT_IMG.glob("*.webp") if f.stem not in images]
+    for f in dropped:
+        f.unlink()
 
     sizes = {}
     for name in sorted(images):
         with Image.open(OUT_IMG / f"{name}.webp") as im:
             sizes[name] = list(im.size)
-    data = {"source": "https://www.princelubricants.com/, the current site, crawled 2026-10-05",
+    data = {"source": "The client's product documents (docs/content/product-docs/) and, for the categories without one, "
+                      "https://www.princelubricants.com/, the current site, crawled 2026-10-05",
             "categories": categories, "imageSizes": sizes}
     OUT_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
-    total = sum(len(r["products"]) for c in categories for r in c["ranges"])
-    print(f"{total} products in {len(categories)} categories; {len(images)} pack images ({made} written)")
+    ranges = [r for c in categories for owner in c.get("types", [c]) for r in owner["ranges"]]
+    total = sum(len(r["products"]) for r in ranges)
+    print(f"{total} products in {len(categories)} categories; {len(images)} pack images ({made} written, {len(dropped)} removed)")
 
 
 if __name__ == "__main__":

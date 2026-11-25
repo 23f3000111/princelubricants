@@ -1,0 +1,272 @@
+[
+ {
+  "product": "PRINCE® FSe SAE 0W-16 GF-6B",
+  "was": "API SP-RC, ILSAC GF-6A",
+  "now": "API SP-RC, ILSAC GF-6B",
+  "why": "The product's name, list and text all say GF-6B, and its text says it is not interchangeable with GF-6A. To be confirmed by the client"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-40 SP",
+  "was": "PRINCE® FS SUPER SAE 5W-30 SP",
+  "now": "PRINCE® FS SUPER SAE 5W-40 SP",
+  "why": "The description names the 5W-30"
+ },
+ {
+  "product": "PRINCE® 50/50 ANTIFREEZE/COOLANT G12++/G13 −37°C",
+  "was": "50/50 ANTIFREEZE/COOLANT G12/G12+ −37°C",
+  "now": "50/50 ANTIFREEZE/COOLANT G12++/G13 −37°C",
+  "why": "The Product Series line names the G12/G12+"
+ },
+ {
+  "product": "PRINCE® Fse SAE 0W-20 GF-6A",
+  "was": "PRINCE® Fse",
+  "now": "PRINCE® FSe",
+  "why": "Capital S, as everywhere else"
+ },
+ {
+  "product": "PRINCE® Fse SAE 5W-20 GF-6A",
+  "was": "PRINCE® Fse",
+  "now": "PRINCE® FSe",
+  "why": "Capital S, as everywhere else"
+ },
+ {
+  "product": "PRINCE® BRAKE & CLUTCH FLUID DOT 4",
+  "was": "ISO 4925 4,",
+  "now": "ISO 4925 Class 4,",
+  "why": "As in the same product's own standards"
+ },
+ {
+  "product": "PRINCE® BRAKE & CLUTCH FLUID DOT 3",
+  "was": "ISO 4925 3,",
+  "now": "ISO 4925 Class 3,",
+  "why": "As in the same product's own standards"
+ },
+ {
+  "product": "PRINCE® SS SUPER SAE 10W-40",
+  "was": "hydrocraked",
+  "now": "hydrocracked",
+  "why": "Spelling"
+ },
+ {
+  "product": "PRINCE® M1 SAE 10W-30",
+  "was": "hydrocraked",
+  "now": "hydrocracked",
+  "why": "Spelling"
+ },
+ {
+  "product": "PRINCE® M1 SAE 15W-40",
+  "was": "hydrocraked",
+  "now": "hydrocracked",
+  "why": "Spelling"
+ },
+ {
+  "product": "PRINCE® CENTRAL HYDRAULIC FLUID CHF 11S",
+  "was": "hydropneumatics suspension",
+  "now": "hydropneumatic suspension",
+  "why": "Spelling"
+ },
+ {
+  "product": "PRINCE® FS1 SAE 0W-30",
+  "was": "Renault RN 0700",
+  "now": "Renault RN0700",
+  "why": "Spacing, as everywhere else"
+ },
+ {
+  "product": "PRINCE® FS1 EUROGEN SAE 0W-20 C6/C5",
+  "was": "OV 0401547 -A20",
+  "now": "OV 0401547-A20",
+  "why": "Spacing"
+ },
+ {
+  "product": "PRINCE® FS1 EUROGEN SAE 0W-20 C6/C5",
+  "was": "ACEA C5; or ACEA C6",
+  "now": "ACEA C5 or ACEA C6",
+  "why": "Punctuation"
+ },
+ {
+  "product": "PRINCE® FSe SAE 0W-30 GF-6A",
+  "was": "WSS- M2C953-B1",
+  "now": "WSS-M2C953-B1",
+  "why": "Spacing"
+ },
+ {
+  "product": "PRINCE® FS1 TECHNICA SAE 5W-30 C4",
+  "was": "requirements of ACEA C4 standard",
+  "now": "requirements of the ACEA C4 standard",
+  "why": "Article"
+ },
+ {
+  "product": "PRINCE® FS1 TECHNICA SAE 5W-30 C4",
+  "was": "high-temperature deposits build up",
+  "now": "high-temperature deposit build-up",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® FS1 TECHNICA SAE 5W-30 A7/B7",
+  "was": "turbocharger compressor deposit,",
+  "now": "turbocharger compressor deposits,",
+  "why": "Plural"
+ },
+ {
+  "product": "PRINCE® Fse SAE 0W-20 GF-6A",
+  "was": "(LSPI) event,",
+  "now": "(LSPI) events,",
+  "why": "Plural"
+ },
+ {
+  "product": "PRINCE® FSe SAE 0W-30 GF-6A",
+  "was": "(LSPI) event,",
+  "now": "(LSPI) events,",
+  "why": "Plural"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 0W-20 SP-RC",
+  "was": "equipped with or without turbocharger",
+  "now": "equipped with or without a turbocharger",
+  "why": "Article"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 0W-30 SP-RC",
+  "was": "equipped with or without turbocharger",
+  "now": "equipped with or without a turbocharger",
+  "why": "Article"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-30 A5/B5",
+  "was": "Fortified with advanced additive package",
+  "now": "Fortified with an advanced additive package",
+  "why": "Article"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-30 SP",
+  "was": "maintaining effective lubricating layer",
+  "now": "maintaining an effective lubricating layer",
+  "why": "Article"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-30 SP",
+  "was": "agents provides enhanced",
+  "now": "agents provide enhanced",
+  "why": "Verb agreement"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-30 SP",
+  "was": "protection, safeguards critical",
+  "now": "protection, safeguard critical",
+  "why": "Verb agreement"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-30 SP",
+  "was": "controls piston deposit, and mitigates sludge",
+  "now": "control piston deposits, and mitigate sludge",
+  "why": "Verb agreement"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-40 SP",
+  "was": "maintaining effective lubricating layer",
+  "now": "maintaining an effective lubricating layer",
+  "why": "Article"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-40 SP",
+  "was": "agents provides enhanced",
+  "now": "agents provide enhanced",
+  "why": "Verb agreement"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-40 SP",
+  "was": "protection, safeguards critical",
+  "now": "protection, safeguard critical",
+  "why": "Verb agreement"
+ },
+ {
+  "product": "PRINCE® FS SUPER SAE 5W-40 SP",
+  "was": "controls piston deposit, and mitigates sludge",
+  "now": "control piston deposits, and mitigate sludge",
+  "why": "Verb agreement"
+ },
+ {
+  "product": "PRINCE® SS1 SAE 10W-40",
+  "was": "sludge, varnish in",
+  "now": "sludge and varnish in",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® SS1 SAE 10W-40",
+  "was": "complete backward compatible",
+  "now": "completely backward compatible",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® SS SUPER SAE 10W-40",
+  "was": "complete backward compatible",
+  "now": "completely backward compatible",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® ATF EUROSPEC 7GT FE+",
+  "was": "and a efficiency-performance",
+  "now": "and an efficiency-performance",
+  "why": "Article"
+ },
+ {
+  "product": "PRINCE® ATF SV MULTI-VEHICLE",
+  "was": "For wide range of applications",
+  "now": "For a wide range of applications",
+  "why": "Article"
+ },
+ {
+  "product": "PRINCE® PRO-SHIFT MTF GL-4 SAE 75W",
+  "was": "surface fatigue and components wear",
+  "now": "surface fatigue and component wear",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® SUPER-SHIFT GL-5 +LSD SAE 75W-140",
+  "was": "where the manufacturer specified SAE 75W-140",
+  "now": "where the manufacturer specifies SAE 75W-140",
+  "why": "Tense"
+ },
+ {
+  "product": "PRINCE® SUPER-SHIFT GL-5 +LSD SAE 85W-90",
+  "was": "where the manufacturer specified, or permits",
+  "now": "where the manufacturer specifies, or permits",
+  "why": "Tense"
+ },
+ {
+  "product": "PRINCE® SUPER-SHIFT GL-5 +LSD SAE 85W-90",
+  "was": "hypoid drive axles protection",
+  "now": "hypoid drive axle protection",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® SUPER-SHIFT GL-5 SAE 85W-90",
+  "was": "to deliver maximize protection",
+  "now": "to deliver maximized protection",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® CENTRAL HYDRAULIC FLUID CHF 11S",
+  "was": "fluidity ensures rapid",
+  "now": "fluidity ensure rapid",
+  "why": "Verb agreement"
+ },
+ {
+  "product": "PRINCE® CENTRAL HYDRAULIC FLUID CHF 11S",
+  "was": "including extended change interval.",
+  "now": "including extended change intervals.",
+  "why": "Plural"
+ },
+ {
+  "product": "PRINCE® POWER STEERING FLUID",
+  "was": "base stocks and specialized additive system",
+  "now": "base stocks and a specialized additive system",
+  "why": "Article"
+ },
+ {
+  "product": "PRINCE® POWER STEERING FLUID",
+  "was": "Well suitable for",
+  "now": "Well suited for",
+  "why": "Grammar"
+ }
+]

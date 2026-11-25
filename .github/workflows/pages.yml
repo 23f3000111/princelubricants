@@ -28,7 +28,7 @@ jobs:
 
       - name: Test the build tools and check every page
         run: |
-          node --test tools/build.test.js tools/pages.test.js
+          node --test tools/build.test.js tools/pages.test.js tools/build-catalogue.test.js tools/product-docs.test.js
           node tools/build.js --check
 
       - id: pages

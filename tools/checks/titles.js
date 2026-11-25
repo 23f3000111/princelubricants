@@ -4,11 +4,18 @@ async (page) => {
   const BASE = 'http://127.0.0.1:8765';
   const PATHS = ['/', '/company/', '/technology/', '/technology/p-9-ester/', '/technology/p-10-ester/', '/products/', '/motorsport/',
     '/company/airasia/', '/company/china-lubricant-expo-2017/', '/contact/', '/become-a-distributor/', '/faq/', '/404.html',
-    // The catalogue: its six category pages and, from each, the product page with the most
-    // text (plus the longest product name).
+    // The catalogue: its category and type pages and, from each category, the product pages
+    // with the most text or the longest name, and one without a pack shot.
     '/products/passenger-car/', '/products/motorsport/', '/products/commercial-fleet/', '/products/motorcycle/',
-    '/products/industrial/', '/products/marine/', '/products/passenger-car/central-hydraulic-fluid/',
-    '/products/motorsport/fsr-gt-racing-0w-40/', '/products/commercial-fleet/super-shift-gl-4-gl-4-plus-75w-80/',
+    '/products/industrial/', '/products/marine/', '/products/passenger-car/flagship-ester-based-engine-oils/',
+    '/products/passenger-car/passenger-car-engine-oils/', '/products/passenger-car/automatic-transmission-fluids/',
+    '/products/passenger-car/manual-transmission-oils/', '/products/passenger-car/differential-and-hypoid-gear-oils/',
+    '/products/passenger-car/hydraulic-and-power-steering-fluids/', '/products/passenger-car/brake-and-clutch-fluids/',
+    '/products/passenger-car/antifreeze-and-coolants/', '/products/passenger-car/fs1-eurogen-0w-20-c6-c5/',
+    '/products/passenger-car/fse-0w-16-gf-6b/', '/products/passenger-car/ss-super-10w-40/', '/products/passenger-car/atf-lv-multi-vehicle/',
+    '/products/passenger-car/cvt-fe/', '/products/passenger-car/super-shift-gl-4-gl-4-plus-75w-80/',
+    '/products/passenger-car/central-hydraulic-fluid-chf-11s/', '/products/passenger-car/power-steering-fluid-with-stop-leak/',
+    '/products/passenger-car/50-50-antifreeze-coolant-g12-plus-plus-g13/', '/products/motorsport/fsr-gt-racing-0w-40/',
     '/products/commercial-fleet/heavy-duty-extended-life-elc-antifreeze-coolant/', '/products/motorcycle/fork-oil-5w-light/',
     '/products/industrial/turb-x-zinc-ep/', '/products/marine/marino-valvi-ultra-t-d-15w-40/'];
   await page.setViewportSize({ width: 1440, height: 900 });

@@ -7,3 +7,11 @@ README.md
 .gitignore
 .gitattributes
 .github/
+
+# What the client sent, kept here while it is worked from, and the tools' own files.
+/*.pdf
+New Prince Website Doc/
+Prince Lubricants Images/
+.agents/
+.playwright-mcp/
+skills-lock.json

@@ -69,6 +69,23 @@ test('assemble copies the deployable files and rebases 404.html alone', () => {
   }
 });
 
+test('assemble leaves out the documents and pictures the client sent, and the tools’ own files', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'pl-pages-'));
+  const put = (rel) => { fs.mkdirSync(path.dirname(path.join(root, rel)), { recursive: true }); fs.writeFileSync(path.join(root, rel), 'x'); };
+  fs.copyFileSync(path.join(ROOT, '.vercelignore'), path.join(root, '.vercelignore'));
+  const keep = ['index.html', 'assets/data-sheet.pdf'];
+  const out = ['Product Page - Motorcycles.pdf', 'Amendment 2.PDF', 'New Prince Website Doc/1.png', 'Prince Lubricants Images/a.png', '.playwright-mcp/shot.png', '.agents/skills/x.md', 'skills-lock.json'];
+  [...keep, ...out].forEach(put);
+  try {
+    const site = path.join(root, '_site');
+    assemble(root, site, '');
+    for (const rel of keep) assert.ok(fs.existsSync(path.join(site, rel)), `${rel} is part of the site`);
+    for (const rel of out) assert.ok(!fs.existsSync(path.join(site, rel)), `${rel} is not`);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('outside 404.html the site has no root-absolute URLs, so it also works under /<repo>/', () => {
   const skip = ignored(fs.readFileSync(path.join(ROOT, '.vercelignore'), 'utf8'));
   const ROOT_ABSOLUTE = /(?:\s(?:href|src|action)="|url\(['"]?|"(?:src|start_url)":\s*")\/(?!\/)[^"')]*/g;

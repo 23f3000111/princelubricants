@@ -14,6 +14,8 @@
 const fs = require('fs');
 const path = require('path');
 
+// Client documents wait in this folder while they are worked from; none of them is the site.
+const CLIENT_DOCUMENT = /\.pdf$/i;
 const ALWAYS_SKIP = ['.git', '.github', '.superpowers', 'node_modules', '_site', '.vercelignore', 'vercel.json'];
 
 // .vercelignore lists top-level names, folders with a trailing slash.
@@ -41,7 +43,7 @@ function assemble(root, out, base) {
   fs.rmSync(out, { recursive: true, force: true });
   fs.mkdirSync(out, { recursive: true });
   for (const entry of fs.readdirSync(root)) {
-    if (!skip.has(entry)) fs.cpSync(path.join(root, entry), path.join(out, entry), { recursive: true });
+    if (!skip.has(entry) && !CLIENT_DOCUMENT.test(entry)) fs.cpSync(path.join(root, entry), path.join(out, entry), { recursive: true });
   }
   const notFound = path.join(out, '404.html');
   if (fs.existsSync(notFound)) fs.writeFileSync(notFound, rebase(fs.readFileSync(notFound, 'utf8'), base));

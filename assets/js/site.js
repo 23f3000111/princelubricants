@@ -64,6 +64,7 @@
     for (const el of $$(GLUED)) {
       const typed = el.matches('[data-scene="typewriter"]');
       if (typed && !wide) continue;
+      if (getComputedStyle(el).display === 'flex') continue;   // a glued pair would become a flex item of its own
       const before = el.cloneNode(true);
       if (glueLines(el) && !typed) glued.push([el, before]);
     }
@@ -663,6 +664,25 @@
     input.hidden = false;
   }
 
+  /* A link to a section of another page (/products/#marine) lands on that section. Left alone,
+     the browser glides there (scroll-behavior: smooth) and ScrollTrigger's refresh, which saves
+     and restores the scroll position as the page loads, ends the glide half way. So the jump is
+     made here, then made again when the page has loaded and when the fonts are in, as both can
+     move the section. It stops for good once the visitor scrolls, and it leaves a page they come
+     back to alone: the browser returns them to the place they had reached. */
+  function landOnSection() {
+    const target = location.hash.length > 1 && d.getElementById(decodeURIComponent(location.hash.slice(1)));
+    const visit = performance.getEntriesByType('navigation')[0];
+    if (!target || (visit && visit.type !== 'navigate')) return;
+    let ours = true;
+    const theirs = () => { ours = false; };
+    for (const type of ['wheel', 'touchmove', 'keydown', 'pointerdown']) window.addEventListener(type, theirs, { once: true, passive: true });
+    const land = () => { if (ours) target.scrollIntoView({ behavior: 'instant', block: 'start' }); };
+    land();
+    window.addEventListener('load', () => requestAnimationFrame(land), { once: true });
+    fontsReady.then(() => requestAnimationFrame(land));
+  }
+
   function scenes() {
     for (const el of $$('[data-scene]')) {
       const scene = SCENES[el.dataset.scene];
@@ -680,6 +700,7 @@
       .forEach(safely);
     html.classList.add('motion-ready');
     if (G) window.addEventListener('load', () => window.ScrollTrigger.refresh(), { once: true });
+    safely(landOnSection);
   }
 
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', init);

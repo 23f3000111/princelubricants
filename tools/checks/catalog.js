@@ -54,12 +54,12 @@ async (page) => {
       'Explore PRINCE LUBRICANTS high-performance solutions across automotive, motorsport, motorcycle, marine, heavy-duty and industrial applications — from state-of-the-art motor oils and transmission fluids to specialised lubricants engineered for demanding conditions.',
       'Discover the complete PRINCE LUBRICANTS product portfolio, combining advanced engine oils, transmission fluids, driveline lubricants and specialised fluids for a wide range of vehicles, vessels, equipment and machinery.',
       'PASSENGER CAR', 'Engine Oils', 'Transmission Fluids', 'Antifreeze Coolants',
-      'MOTORSPORT', 'Racing Oils', 'Manual Gear Oils', 'Performance Coolants',
-      'COMMERCIAL FLEET', 'HEAVY DUTY', 'Diesel Engine Oils', 'Hypoid Gear Oils', 'Long-life Coolants',
-      'MOTORCYCLE', '4T Engine Oils', 'Scooter Engine Oils', 'Driveline Fluids',
-      'INDUSTRIAL', 'Hydraulic', 'Compressor', 'Slideways', 'Metalworking',
+      'COMPETITION', 'Racing Engine Oils · Gear Oils · Brake Fluids · Coolants',
+      'COMMERCIAL VEHICLE', 'HEAVY DUTY', 'Diesel Engine Oils · Transmission & Gear Oils · Coolants',
+      'POWERSPORTS', '4T & 2T Engine Oils · Gear Oils · Fork Oils & Coolants',
+      'INDUSTRIAL', 'Hydraulic · Compressor · Turbine · Gear Oils',
       'MARINE', 'Outboard Engine Oils', 'Heavy-Duty Oils', 'System Lubricants',
-      'FS1 SERIES', 'FS1 EUROGEN SERIES', 'FSR SERIES', 'MAXX GOLD SERIES'];
+      'FS1 SERIES', 'FS1 EUROGEN SERIES', 'FSR SERIES', 'D1 GOLD SERIES', 'MAXX GOLD 4T SERIES'];
     const r = { missing: MUST.map(norm).filter((s) => !text.includes(s)), h1: src.h1.map(norm) };
     r.order = await page.evaluate(() => [...document.querySelectorAll('main .cat-section')].map((s) => s.id));
     r.chips = await page.evaluate(() => [...document.querySelectorAll('.cat-nav a')].map((a) => a.getAttribute('href')));
@@ -78,12 +78,15 @@ async (page) => {
     r.consoleErrors = [...errors];
     r.landing = await landing('/products/', 'marine');
     r.noJsHidden = await noJs('/products/');
-    const wantOrder = ['passenger-car', 'motorsport', 'commercial-fleet', 'motorcycle', 'industrial', 'marine'];
-    const wantSeries = { 'passenger-car': ['FS1 SERIES', 'FS1 EUROGEN SERIES', 'FS1 TECHNICA SERIES'], motorsport: ['FSR SERIES'], 'commercial-fleet': [], motorcycle: ['MAXX GOLD SERIES'], industrial: [], marine: [] };
+    const wantOrder = ['passenger-car', 'competition', 'commercial-vehicle', 'powersports', 'industrial', 'marine'];
+    const wantSeries = { 'passenger-car': ['FS1 SERIES', 'FS1 EUROGEN SERIES', 'FS1 TECHNICA SERIES'], competition: ['FSR SERIES'],
+      'commercial-vehicle': ['D1 GOLD 4X4 SERIES', 'D1 GOLD SERIES'], powersports: ['MAXX GOLD 4T SERIES', 'MAXX GOLD 2T'], industrial: [], marine: [] };
+    // A product listed in a second category is counted once, where its page is.
+    const pages = catalogue.categories.flatMap((c) => (c.types ? c.types.flatMap((t) => t.ranges) : c.ranges)).flatMap((x) => x.products).filter((p) => !p.page).length;
     r.pass = r.missing.length === 0 && r.h1.length === 1 && r.h1[0] === 'FROM RACE TO ROAD. INDUSTRY TO SEA.' &&
       JSON.stringify(r.order) === JSON.stringify(wantOrder) && JSON.stringify(r.chips) === JSON.stringify(wantOrder.map((i) => `#${i}`)) &&
       JSON.stringify(r.seriesWhere) === JSON.stringify(wantSeries) && !r.placeholder &&
-      r.categories.every((c) => c.intro && c.ranges && c.browse) && /^174 products/.test(r.total || '') &&
+      r.categories.every((c) => c.intro && c.ranges && c.browse) && new RegExp(`^${pages} products`).test(r.total || '') &&
       r.landing.headingTop >= r.landing.coveredTo && r.consoleErrors.length === 0 && r.noJsHidden.length === 0;
     out.products = r;
     out.pass = out.pass && r.pass;
@@ -104,7 +107,12 @@ async (page) => {
     r.names = await page.evaluate(() => [...document.querySelectorAll('main .discipline h2')].map((h) => h.textContent.trim()));
     r.placeholders = await page.evaluate(() => document.querySelectorAll('main .discipline .ph').length);
     r.copyWords = await page.evaluate(() => [...document.querySelectorAll('main .discipline')].map((d) => (d.querySelector('.disc-copy')?.textContent.trim().split(/\s+/).length || 0)));
-    r.links = await page.evaluate(() => !!document.querySelector('main a[href="../technology/p-9-ester/"]') && !!document.querySelector('main a[href="../products/motorsport/"]'));
+    r.links = await page.evaluate(() => !!document.querySelector('main a[href="../technology/p-9-ester/"]') && !!document.querySelector('main a[href="../products/competition/"]'));
+    // Every discipline has its photograph, and the archive its six, all loaded once in view.
+    await page.locator('.ms-gallery').scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => [...document.querySelectorAll('main .ms-gallery img')].every((i) => i.complete && i.naturalWidth > 0), null, { timeout: 8000 }).catch(() => {});
+    r.photos = await page.evaluate(() => ({ slots: document.querySelectorAll('main .photo-slot').length,
+      archive: [...document.querySelectorAll('main .ms-gallery img')].filter((i) => i.complete && i.naturalWidth > 0).length }));
     r.consoleErrors = [...errors];
     r.landing = await landing('/motorsport/', 'drift');
     r.noJsHidden = await noJs('/motorsport/');
@@ -113,6 +121,7 @@ async (page) => {
       JSON.stringify(r.order) === JSON.stringify(wantOrder) &&
       JSON.stringify(r.names) === JSON.stringify(['FIA FORMULA', 'GT', 'GYMKHANA', 'ENDURANCE', 'DRIFT', 'TOURING']) &&
       r.placeholders === 0 && r.copyWords.every((n) => n >= 40) && r.links && r.landing.headingTop >= r.landing.coveredTo &&
+      r.photos.slots === 0 && r.photos.archive === 6 &&
       r.consoleErrors.length === 0 && r.noJsHidden.length === 0;
     out.motorsport = r;
     out.pass = out.pass && r.pass;

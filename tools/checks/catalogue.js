@@ -13,7 +13,9 @@ async (page, base = 'http://127.0.0.1:8765') => {
   page.on('pageerror', (e) => errors.push(String(e)));
   await page.setViewportSize({ width: 1440, height: 900 });
   const out = { pass: true, categories: {}, types: {}, products: {} };
-  const productsOf = (cat) => (cat.types ? cat.types.flatMap((t) => t.ranges) : cat.ranges).flatMap((r) => r.products);
+  // The products with their page in the category: a product listed in a second category has its
+  // page in the first.
+  const productsOf = (cat) => (cat.types ? cat.types.flatMap((t) => t.ranges) : cat.ranges).flatMap((r) => r.products).filter((p) => !p.page);
 
   const scroll = async () => {
     const h = await page.evaluate(() => document.documentElement.scrollHeight);
@@ -32,7 +34,8 @@ async (page, base = 'http://127.0.0.1:8765') => {
   const wells = () => {
     const imgs = [...document.querySelectorAll('main .pc-card img, main .type-tile img, main .ty-visual img')];
     return {
-      images: imgs.length > 0 && imgs.every((i) => i.complete && i.naturalWidth > 0),
+      // Every picture has loaded; a type whose pack shots are all still to come shows outlines.
+      images: (imgs.length > 0 || document.querySelectorAll('main .pack-outline').length > 0) && imgs.every((i) => i.complete && i.naturalWidth > 0),
       cropped: [...document.querySelectorAll('.pc-well, .tt-well')].filter((w) => {
         const a = w.getBoundingClientRect();
         return [...w.querySelectorAll('img, .pack-outline, .ph-tag')].some((e) => {
@@ -56,7 +59,7 @@ async (page, base = 'http://127.0.0.1:8765') => {
       }
       const ranges = [...document.querySelectorAll('main .range-sec')].map((s) => s.id);
       const cards = c.ranges.map((rg) => [...document.querySelectorAll(`[id="${rg.id}"] .pc-card`)].map((a) => a.getAttribute('href')));
-      const want = c.ranges.map((rg) => [...rg.products.map((p) => `${p.id}/`), ...(rg.shared || []).map((ref) => `../${ref}/`)]);
+      const want = c.ranges.map((rg) => rg.products.map((p) => `${p.id}/`));
       return crumbs && same(ranges, c.ranges.map((x) => x.id)) && same(cards, want) && document.querySelectorAll('.cat-nav a').length === c.ranges.length;
     }, cat);
     r.pass = r.status === 200 && r.h1 === 1 && r.content && r.images && r.cropped === 0 && !r.overflow && !r.errors.length;

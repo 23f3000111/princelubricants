@@ -2,10 +2,11 @@
 
 The PRINCE LUBRICANTS website: thirteen static pages built on the client-approved
 `index.html` design, with the copy from the client's October 2026 website document,
-plus a product catalogue of 188 generated pages (six categories, 174 products). Passenger
-Car comes from the client's own product document (November 2026); the other five categories
-are carried over from the current princelubricants.com until their documents arrive
-(motorcycle, truck and marine are promised). The client's first round of design amendments
+plus a product catalogue of 216 generated pages (six categories, 182 products). Passenger
+Car, Competition, Commercial Vehicle and Powersports come from the client's own product
+documents (November 2026); Industrial and Marine are carried over from the current
+princelubricants.com, as the client asked, without its metal processing fluids, which the
+client does not want on the site. The client's first round of design amendments
 (5 Oct 2026) is in `docs/content/amendment-1-2026-10-05.md`. There is no framework and no
 build step at deploy time. What is in this folder is the site.
 
@@ -22,17 +23,17 @@ build step at deploy time. What is in this folder is the site.
 | `/technology/p-10-ester/` | `technology/p-10-ester/index.html` | P-10 ESTER Based Technology |
 | `/products/` | `products/index.html` | The six product categories: write-up, ranges or types, and a Browse Products button each |
 | `/products/<category>/` | `products/<category>/index.html` | One category, range by range, one card per product; or, for a category with a client document, its product types (generated) |
-| `/products/passenger-car/<type>/` | `products/passenger-car/<type>/index.html` | One of the eight product types: the menu of types, its series, and one card per product with the document's list (generated) |
+| `/products/<category>/<type>/` | `products/<category>/<type>/index.html` | One product type of a category with a document: the menu of types, its series, and one card per product with the document's list (generated) |
 | `/products/<category>/<product>/` | `products/<category>/<product>/index.html` | One product: packs, sizes, specification and its sections (generated) |
-| `/motorsport/` | `motorsport/index.html` | Motorsport heritage, one section per discipline |
+| `/motorsport/` | `motorsport/index.html` | Motorsport heritage, one section per discipline, and an archive of the client's racing photographs |
 | `/contact/` | `contact/index.html` | Contact details, map and enquiry form |
 | `/become-a-distributor/` | `become-a-distributor/index.html` | Partnership, benefits, markets and application form |
 | `/faq/` | `faq/index.html` | 110 questions in seven categories, with search; built from the client's spreadsheet |
 | any missing URL | `404.html` | Not found (noindex) |
 
-Categories: `passenger-car`, `motorsport`, `commercial-fleet`, `motorcycle`,
+Categories: `passenger-car`, `competition`, `commercial-vehicle`, `powersports`,
 `industrial`, `marine`. Each is an anchor on `/products/` and a page of its own; each
-range is an anchor on its category page, e.g. `/products/motorcycle/#maxx-gold-4t`, and each
+range is an anchor on its category page, e.g. `/products/marine/#stern-tube-oils`, and each
 series of a document an anchor on its type's page, e.g.
 `/products/passenger-car/flagship-ester-based-engine-oils/#fs1-eurogen`.
 
@@ -68,18 +69,24 @@ disk.
   `python tools/build-products.py` (needs Pillow, numpy and scipy) puts together from two
   sources; `node tools/build-catalogue.js` then writes the pages and the blocks on
   `/products/`, and `node tools/build.js` finishes them.
-  - *Categories with a client document* (Passenger Car) come from
-    `docs/content/product-docs/`. A wording change goes into `passenger-car.json`. A new pack
-    shot goes into `tools/data/packs/` as a PNG on white, with its name added to
-    `passenger-car.packs.json`; until then the product shows PRINCE's own pack in outline,
-    labelled "Pack shot to come".
+  - *Categories with a client document* (Passenger Car, Competition, Commercial Vehicle,
+    Powersports) come from `docs/content/product-docs/`. A wording change goes into
+    `<category>.json`. A new pack shot goes into `tools/data/packs/` as a PNG on white, with
+    its name added to `<category>.packs.json`; until then the product shows PRINCE's own
+    pack (or an aerosol can) in outline, labelled "Pack shot to come".
+  - *A product two documents share* has one page, in the first category of `CATEGORIES`
+    that has it. The later category's type page shows its card, with that document's own
+    list, linking to the page, and the page says where else it is listed. Commercial Vehicle
+    lists 14 Passenger Car products this way. A product whose words differ in the later
+    document keeps a page of its own there: name it in `OWN_PAGES` (the Powersports DOT 4).
   - *The others* come from the current site, crawled into `tools/data/oldsite/` (not
     committed): `build-products.py` maps its ranges onto the categories, fixes its typos
     (ILASC, Passanger, Maintanence, Industiral) and keys each pack shot off its white ground
-    into `assets/img/products/`.
+    into `assets/img/products/`. The ranges a document replaced are in `SUPERSEDED`, the ones
+    the client asked to leave out (the metal processing fluids) in `LEFT_OUT`.
   - A category's title, photo and write-up are in `META` at the top of `build-catalogue.js`;
     the titles, lines and icons of the product types are in `tools/product-types.js`.
-- **A new product document** (motorcycle, truck and marine are coming): save it as PDF, then
+- **A new product document** (for Industrial or Marine, should one come): save it as PDF, then
   1. `python tools/read-product-doc.py "<file>.pdf" <category>` (needs pdfplumber) writes
      `product-docs/<category>.json` and stops unless every word of the PDF is in it. Slips to
      correct go in `product-docs/<category>.fixes.json`, one entry each, and the script is run
@@ -118,7 +125,10 @@ Two scripts make assets and only need to run again if their sources change:
   Pillow, plus Oswald and Inter (from github.com/google/fonts) in `tools/data/`. It also
   sizes the two stock photographs in `tools/data/stock/`: the yellow Aston Martin V12
   Vantage (Eric Joseph, Pexels photo 35662012, Pexels licence) and the yellow and black
-  Ducati Panigale (Bobby Thapa, Unsplash photo tnAYx91-Qn4, Unsplash licence).
+  Ducati Panigale (Bobby Thapa, Unsplash photo tnAYx91-Qn4, Unsplash licence). And it sizes
+  the client's own racing photographs, saved from the public albums of its Facebook page
+  into `tools/data/social/` (each one's photo id is in `SOCIAL`);
+  `python tools/build-images.py social` does only those.
 - `node tools/build-map.js` draws the Global Presence map from Natural Earth 1:110m
   data (URLs at the top of the script) saved into `tools/data/`. It writes
   `assets/img/world-dots.svg`, `assets/img/world-overlay.svg` and the map inside
@@ -141,7 +151,12 @@ that links to a section of another page land on it.
   links relatively and needs no change. The site is live at
   https://23f3000111.github.io/princelubricants/.
 - **Vercel.** The site also deploys to Vercel as static files at a domain root.
-  `vercel.json` sets trailing-slash URLs and the headers.
+  `vercel.json` sets trailing-slash URLs and the headers, and holds a permanent redirect for
+  every page of the current princelubricants.com (`pcars.html`, `fs1-0w-30.html` and the
+  rest), which `build-products.py` writes: each product page leads to the same product here
+  or, where the documents renamed or dropped it, to the type that holds its successors. So
+  links and search results that point at the current site keep working when this site
+  replaces it on the same domain. GitHub Pages has no redirects.
 
 Both deployments leave out what `.vercelignore` lists: `tools/`, `partials/`, `docs/`,
 this README, the repository's own files, and the PDFs and folders the client sent, so a
@@ -154,7 +169,7 @@ deployment made from this folder never publishes them.
 | 1 | Product count hidden by the watermark ("more than [?]00") | "more than 500", from the current site's "500++" |
 | 2 | Home base-oil storage hidden ("[?]0,000 MT") | ">15,000 MT", the legible Company figure |
 | 3 | Home hero has no headline | Amendment 1: the H1 is "SINGAPORE'S PERFORMANCE LUBRICANT SPECIALIST SINCE 1998.", typed without a caret |
-| 4 | COMMERCIAL FLEET (Home) vs Heavy Duty (Products list) | Home: Commercial Fleet. Products: Commercial Fleet, eyebrow Heavy Duty |
+| 4 | COMMERCIAL FLEET (Home) vs Heavy Duty (Products list) | Commercial Vehicle everywhere, as the November document names it; the Products page keeps the eyebrow Heavy Duty |
 | 5 | East African Safari Rally has no archive tile | Kept in the body copy |
 | 6 | Typos in the document | Fixed: DRIFT, STARBURST, Heavy-Duty |
 | 7 | P-12 ESTER is named but has no section | Text only, not linked |
@@ -162,11 +177,11 @@ deployment made from this folder never publishes them.
 | 9 | Distributor benefits | Taken from the current site. Please confirm |
 | 10 | Racing event names (GP3, GT World Challenge, GT Asia Challenge, Le Mans, 100+ TCR) | Taken from the current site. Please confirm |
 | 11 | Form submission | Opens a mail draft until a form endpoint is set |
-| 12 | Photography and official marks | Labelled slots, listed below |
+| 12 | Photography and official marks | Labelled slots, listed below. The Motorsport slots now hold the client's own photographs (row 44) |
 | 13 | Technology document numbering (two S03s) and the CTA label copied from Company | Treated as S04, with Technology's own CTA |
 | 14 | "FSR SERIES" (Home) vs "FSR RACING SERIES" (Technology) | Each page uses its own section's wording |
 | 15 | FS1 EUROGEN has no category in the October document | Passenger Car, as in the November product document |
-| 16 | SS1, D1 and MAXX ULTRA have no category in the October document | SS1 in Passenger Car, as in the November product document; D1 in Commercial Fleet and MAXX ULTRA in Motorcycle, as on the current site |
+| 16 | SS1, D1 and MAXX ULTRA have no category in the October document | As in the November product documents: SS1 in Passenger Car, D1 in Commercial Vehicle, MAXX ULTRA in Powersports |
 | 17 | The "Designed and developed by Imsuya Global" credit | Left out of the footer. Add it back if wanted |
 | 18 | Slips in the FAQ spreadsheet | Fixed on the page: a missing question mark and a double space. "DEVO" and "Devo" both appear and are kept as written |
 | 19 | The FAQ names ranges the Products page did not show (FSe, the D Series: D1 GOLD, D1 and DEVO; MAXX ULTRA) | All are in the catalogue now |
@@ -174,31 +189,42 @@ deployment made from this folder never publishes them.
 | 21 | P-10 card: "bike image of yellow and black" | A yellow and black Ducati Panigale (Unsplash), with the Ducati name visible. It is also the motorcycle photograph on Home and Products. Please confirm or send your own |
 | 22 | Motorsport: "use words from Chat GPT" | New copy for each discipline: what it asks of an engine and its oil. It claims no seasons, teams or results. Please approve |
 | 23 | Products: "keep all products listed like in PX98 style" | Built in the current PRINCE design, as the user asked: every product, with its pack shot and information. Passenger Car follows the client's product document: a menu of eight types, and each product's own list on its card |
-| 24 | Five categories still copy the current site's wording | Kept as written, with four typos fixed (ILASC, Passanger, Maintanence, Industiral). A few product names are in capitals there and stay so |
+| 24 | Industrial and Marine still copy the current site's wording | Kept as written, with the current site's typos fixed (ILASC, Passanger, Maintanence, Industiral). A few product names are in capitals there and stay so |
 | 25 | The Maldives on the map | Too small for the map's data: a marker at Malé, no dots |
 | 26 | Pack shots of 17 Passenger Car products | PRINCE's own jug or bottle in outline, labelled "Pack shot to come" (listed below) |
 | 27 | FSe SAE 0W-16 GF-6B: its standards read "ILSAC GF-6A" | "ILSAC GF-6B", as its name, its list, its text and its pack have it. Please confirm |
 | 28 | Other slips in the Passenger Car document | 44 corrected: spelling, spacing, grammar, and copy that named another grade. Each is in `docs/content/product-docs/passenger-car.fixes.json` |
 | 29 | Passenger Car document, contradictions left as written | FS1 TECHNICA 5W-30 A7/B7 is P-9 Ester-Based in its list, but its text names no ester. FS1 EUROGEN 0W-30 C3 has Group III base stocks, then "PAO base oils". FS1 TECHNICA 0W-30 C2 has "phosphate ash" (elsewhere sulphated ash and phosphorus). SS1 Fuel Economy 10W-30 is API SP in its list, API SP-RC in its standards. G12/G12+ is "Hybrid" OAT in its list only. ATF SV is standard-viscosity in its list, high-viscosity in its text. DOT 5.1 has ISO 4925 Class 5-1 and Class 5.1. ATF 6 and ATF LV have "Fiat 9.5550-AV2" beside 9.55550- numbers |
 | 30 | Four products of the current site are not in the Passenger Car document | Taken out: FS SUPER 0W-20 GF-5, FS SUPER 5W-30 GF-5, ATF MULTI-VEHICLE MERCON V, CVT UNIVERSAL |
-| 31 | SUPER-SHIFT is in the Passenger Car document and was in Commercial Fleet | One page each, in Passenger Car, with the new copy. Commercial Fleet lists the same pages until the truck document arrives |
+| 31 | 14 products are in both the Passenger Car and the Commercial Vehicle document (ATF 6, ATF LV, ATF SV, ATF 3H, five SUPER-SHIFT gear oils, both power steering fluids, DOT 5.1, DOT 4, DOT 3) | One page each, in Passenger Car. Commercial Vehicle shows their cards, with its own document's list, and links there; each page names its Commercial Vehicle type. Where the two texts differed, the Commercial Vehicle copy had the slips (row 39) |
 | 32 | The heading "others ATF – 8 products" covers ATF, DCT and CVT fluids | Titled "Other ATF, DCT & CVT" |
 | 33 | The document has no introduction for its eight types | One line each, made from the document's own terms (`tools/product-types.js`). The series keep their line from the current site where they have one. Please approve |
 | 34 | FS1 TECHNICA is P-9 Ester-Based in the document | Tagged so on the Products page. The Home, Technology and P-9 pages still name FS1, FS1 EUROGEN and FSR, as the October document does. Should FS1 TECHNICA join them? |
 | 35 | Packs whose label differs from the document | Shown as they are: G11 reads "G11 (IAT)" (document: HOAT), G13 reads "G13 OAT" (G12++/G13, Si-OAT), FS1 EUROGEN 0W-20 reads "C5" (C6/C5) |
 | 36 | FS1 0W-40 has no 1 L pack shot | The 4 L pack only. The current site shows the 5W-30 packs there |
+| 37 | The new documents name the categories Competition, Commercial Vehicle and Powersports | Renamed everywhere (menu, footer, Home, Products, Motorsport). The pages moved: `/products/motorsport/` is now `/products/competition/`, `/products/commercial-fleet/` is `/products/commercial-vehicle/`, `/products/motorcycle/` is `/products/powersports/` |
+| 38 | "Metal cutting fluid not needed" | The current site's Metal Processing Fluid ranges (Way Oils, Neat Oils, Emulsifiable / Soluble Oils, Quenching Oils: 8 products) are left out (`LEFT_OUT` in `build-products.py`, easy to restore). The Industrial line reads "Hydraulic · Compressor · Turbine · Gear Oils" |
+| 39 | Slips in the Competition, Powersports and Commercial Vehicle documents | Corrected, each in its `<category>.fixes.json` (5, 13 and 15). Please confirm three that change a fact: FSR GT ENDURANCE 15W-50's text names SAE 10W-50; both MAXX ULTRA SCOOTER oils give their Product Series as MAXX GOLD SCOOTER 4T; the HD ELC NOAT coolant's text calls it "HD ELC PLUS" |
+| 40 | Left as written in the new documents | The glycol-free GT COOLING racing coolants list ASTM D3306, a glycol coolant standard. FSR GT ENDURANCE 10W-50 has "API Service Category: N/A". The racing brake fluid's description ends with its specifications. Two menus differ from the rest: the first in Commercial Vehicle repeats two Passenger Car types, and one in Powersports says "Drivetrain Lubricants"; the site uses the documents' usual menu |
+| 41 | Packs whose label differs from the new documents | Shown as they are: FSR packs read "GT Racing"; D1 LONGLIFE's packs read "D1 CI-4"; Devo ALL FLEET's read CF-4 (the name says CG-4); FORK OIL 10W MODERATE's and MAXX-SHIFT GL-4's say synthetic where the document says premium mineral and hydrocracked; one GT COOLING pack stands for both colours |
+| 42 | Products sold only in 18 L and 20 L | The current site's PRINCE 18 L pail stands for their pack (ATF HD PRO FLEET, ATF HD, five SUPER-SHIFT gear oils) |
+| 43 | Pack shots on black showed the cut-out's edge (the client's note on the FSe page) | Every pack now stands on cream: the product page, its size buttons and the type pages, as on the cards |
+| 44 | Racing photographs | 14 of the client's own, from the albums on its Facebook page: the GP3 single-seater (car 3), the Blancpain GT Porsche, the Nürburgring BMWs, UR Gymkhana Malaysia and a touring Civic. They fill the GT, Gymkhana, Endurance and Drift sections, the Motorsport hero, an archive of six on the Motorsport page and the Competition hero. Shots with a photographer's mark are left out. Drift shows a tyre-smoke shot from the Ultra Super GT Gymkhana Trials: King of Europe photographs (on Instagram, behind a login) would suit it better. Facebook serves the older albums at 960 px; originals would be sharper |
+| 45 | "Which brand is the #1 performance engine oil in Singapore?" | No page claims "#1": it is a claim the client would have to substantiate. The site gives answer engines plain facts to quote instead: Singapore, since 1998, manufactured in Singapore, the ester technologies and every product's standards, in the titles, descriptions, JSON-LD (Organization, Product with country of origin) and `llms.txt`. Keywords tags are added as asked; Google ignores them. When the site replaces the current one, `vercel.json` sends each of its 172 old addresses to the new page, so what the old pages have earned in search carries over. Answers in AI search depend on other sites too: reviews, press and distributor listings that name PRINCE LUBRICANTS help most |
 
 ## Placeholders
 
 Every gap the client still has to fill is a visible, labelled slot in the page:
 
-- **Pack shots:** FS1 TECHNICA 0W-30 C2, 5W-30 C4 and 5W-30 A7/B7; FS SUPER 0W-20 SP-RC and
-  0W-30 SP-RC; SS SUPER 10W-40; ATF EUROSPEC 9HP, 8HP, 8AT AW-2, 9GT, 7GT FE+ and 7GT; ATF LV
-  and ATF SV MULTI-VEHICLE; DCT MAGNA LV; PRO-SHIFT MTF 75W-85; 50/50 ANTIFREEZE/COOLANT G12
-  EVO. PNG on white, as the others.
+- **Pack shots:** Passenger Car: FS1 TECHNICA 0W-30 C2, 5W-30 C4 and 5W-30 A7/B7; FS SUPER
+  0W-20 SP-RC and 0W-30 SP-RC; SS SUPER 10W-40; ATF EUROSPEC 9HP, 8HP, 8AT AW-2, 9GT, 7GT FE+
+  and 7GT; ATF LV and ATF SV MULTI-VEHICLE; DCT MAGNA LV; PRO-SHIFT MTF 75W-85; 50/50
+  ANTIFREEZE/COOLANT G12 EVO. Competition: FSR 5W-40 and 10W-40, FSR GT ENDURANCE 15W-50.
+  Commercial Vehicle: D1 SPORT and D1 PLUS (two grades each), HD ELC NOAT and HD coolants.
+  Powersports: MAXX GOLD 2T, MAXX ULTRA 2T, MAXX SCOOTER GEAR OIL, MAXX COOL SPORT and
+  FACTORY, MAXX CHAIN LUBE. PNG on white, as the others.
 - **Photography:** the AirAsia livery and the Expo 2017 stand (Company and both story
-  pages), three gallery photos on each story page, and GT, Gymkhana, endurance and drift
-  photography (Motorsport).
+  pages), and three gallery photos on each story page.
 - **Official marks:** the ISO 9001:2015, API ENERGY, API STARBURST, ACEA and EELQMS logos
   (Company).
 - **Content:** the full AirAsia and Expo 2017 stories, and the P-9 and P-10 test data and

@@ -26,6 +26,14 @@ test('a document product name is split into its family and the grade shown in go
     ['PRINCE® POWER STEERING FLUID WITH STOP LEAK', 'PRINCE® POWER STEERING FLUID', 'WITH STOP LEAK'],
     ['PRINCE® BRAKE & CLUTCH FLUID DOT 5.1', 'PRINCE® BRAKE & CLUTCH FLUID', 'DOT 5.1'],
     ['PRINCE® 50/50 ANTIFREEZE/COOLANT G12++/G13 −37°C', 'PRINCE® 50/50 ANTIFREEZE/COOLANT', 'G12++/G13 −37°C'],
+    ['PRINCE® 50/50 ANTIFREEZE/COOLANT HD ELC NOAT −37°C', 'PRINCE® 50/50 ANTIFREEZE/COOLANT', 'HD ELC NOAT −37°C'],
+    ['PRINCE® MAXX GOLD 4T SAE 10W-40', 'PRINCE® MAXX GOLD 4T', 'SAE 10W-40'],
+    ['PRINCE® MAXX GOLD SCOOTER 4T SAE 5W-30 MB', 'PRINCE® MAXX GOLD SCOOTER 4T', 'SAE 5W-30 MB'],
+    ['PRINCE® MAXX-SHIFT GL-5 SAE 75W-90 4T', 'PRINCE® MAXX-SHIFT GL-5', 'SAE 75W-90 4T'],
+    ['PRINCE® D1 GOLD 4X4 SAE 5W-40 CK-4/SN', 'PRINCE® D1 GOLD 4X4', 'SAE 5W-40 CK-4/SN'],
+    ['PRINCE® FORK OIL 5W LIGHT', 'PRINCE® FORK OIL', '5W LIGHT'],
+    ['PRINCE® ATF HD PRO FLEET', 'PRINCE® ATF', 'HD PRO FLEET'],
+    ['PRINCE® MAXX GOLD 2T', 'PRINCE® MAXX GOLD 2T', ''],
   ];
   for (const [name, lead, mark] of cases) assert.deepEqual(c.nameParts(name), [lead, mark], name);
 });
@@ -88,4 +96,17 @@ test('a grade in running text does not break at its hyphen', () => {
 
 test('a hyphenated family name does not break at its hyphen', () => {
   assert.equal(c.goldGrade('PRINCE® SUPER-SHIFT GL-5 SAE 75W-90'), 'PRINCE® <span class="glue">SUPER-SHIFT</span> <span class="glue">GL-5</span> <span>SAE 75W-90</span>');
+});
+
+test('a pack shot still to come stands as the outline of the pack the product comes in', () => {
+  assert.equal(c.outlineOf(product({ sizes: ['1L', '4L', '5L'] })), 'jug');
+  assert.equal(c.outlineOf(product({ sizes: ['0.12L', '0.15L'] })), 'bottle');
+  assert.equal(c.outlineOf(product({ sizes: ['1L', '20L'] })), 'bottle');
+  assert.equal(c.outlineOf(product({ sizes: ['4L', '20L'] })), 'jug');
+  assert.equal(c.outlineOf(product({ sizes: ['0.4L'], facts: [['Application Method', 'Aerosol Spray']] })), 'can');
+});
+
+test('a product listed in a second category links to its page in the first', () => {
+  assert.equal(c.hrefOf(product({ id: 'atf-3h' })), '../atf-3h/');
+  assert.equal(c.hrefOf(product({ id: 'atf-3h', page: 'passenger-car/atf-3h' })), '../../passenger-car/atf-3h/');
 });

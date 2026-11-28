@@ -503,3 +503,43 @@ here is built to take them.
    site-wide, because ScrollTrigger's refresh at load ended the browser's smooth scroll. They
    now land on the section (`landOnSection` in `site.js`, `tools/checks/landing.js`). The
    hero's small line no longer has a gap where the no-orphans script split it.
+
+## 14. Competition, Commercial Vehicle and Powersports, 2026-11-28
+
+Sources: `Competition.pdf` (10 pages, 10 products), `Commercial Vehicle.pdf` (36 pages, 44
+products) and `Powersports.pdf` (26 pages, 27 products), in the form of the Passenger Car
+document, read into `docs/content/product-docs/`. With them the client asked for four other
+things: Industrial and Marine from the current site, without the metal cutting fluids; the
+packs on white or cream, not black; stronger search and AI-search wording; and racing
+photographs, as many as wanted, from the web or the client's own social media.
+
+1. **The categories take the documents' names:** Competition, Commercial Vehicle,
+   Powersports (`competition`, `commercial-vehicle`, `powersports`), in that order after
+   Passenger Car. Industrial and Marine keep the current site's ranges and words.
+2. **The reader** now takes what these documents do differently: a "Products" header, a
+   menu that slips on one page (read as the document's usual menu, and reported), labels
+   written two ways, "Important" and "CAUTION" notices, and series that exist only as a
+   "Product Series" line (grouped by it when a document has no series headings at all).
+3. **A product two documents share** has one page, in the first category that lists it.
+   The later category's type page shows its card with that document's own list, linking to
+   the page, which names that type under "Also in". A product the later document describes
+   differently keeps its own page there (`OWN_PAGES`: the Powersports DOT 4). Counts on the
+   Products page count each page once.
+4. **Packs stand on cream** wherever they appear, as on the cards: the product page's
+   stage, its size buttons and the type page's line-up. A cut-out's edge is never seen
+   against black. A type whose pack shots are all still to come shows outlines; an aerosol
+   gets a can's outline.
+5. **Notices** are set as the document sets them, label and words, in a callout under the
+   description.
+6. **Racing photographs** are the client's own, from the public albums of its Facebook page.
+   Images found through Google search are not used: they belong to their photographers and
+   carry no licence for the site. Shots with a photographer's mark are left out.
+7. **Search and answer engines** get plain, quotable facts, never a claim the client would
+   have to prove ("#1"): keyword-led titles and descriptions, a keywords tag on every main
+   page (as asked, though Google ignores it), Organization JSON-LD with its markets and
+   subjects, Product JSON-LD with its country of origin (the client's FAQ: manufactured in
+   Singapore), and a summary of every category in `llms.txt`.
+8. **The current site's addresses** get permanent redirects in `vercel.json`, written by
+   `build-products.py`: a product page to the same product here, else to its plain successor
+   (by name and grade, never a guess between two), else to the type that replaced its range.
+

@@ -26,6 +26,9 @@ const TYPES = require('./product-types.js');
 const ROOT = path.resolve(__dirname, '..');
 const ORIGIN = 'https://www.princelubricants.com';
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/content/products.json'), 'utf8'));
+// "PRINCE LUBRICANTS products are manufactured by PRINCE GLOBAL PTE. LTD. in Singapore" (the
+// client's FAQ, docs/content/faq.json).
+const ORIGIN_COUNTRY = { '@type': 'Country', name: 'Singapore' };
 
 // The six categories as the site presents them. `lines` is the client doc's line for each.
 const META = {
@@ -35,34 +38,39 @@ const META = {
     title: 'Passenger Car Engine Oils & Fluids | PRINCE LUBRICANTS',
     description: 'PRINCE LUBRICANTS for passenger cars: ester based and synthetic engine oils, ATF, manual transmission and gear oils, hydraulic, brake and cooling fluids.',
     intro: 'Engine oils for every kind of car, from the P-9 ESTER flagships FS1, FS1 EUROGEN and FS1 TECHNICA to FSe for hybrid engines, FS SUPER, SS1, SS SUPER and M1, with the transmission fluids, gear oils, hydraulic and brake fluids and coolants that keep the rest of the car in step.',
+    keywords: 'engine oil Singapore, car engine oil, fully synthetic engine oil, ester engine oil, FS1, ATF, gear oil, brake fluid, coolant',
   },
-  motorsport: {
-    h1: 'MOTORSPORT', photo: 'formula.webp', pos: '60% 45%', dark: true,
-    lines: 'Racing Oils · Manual Gear Oils · Performance Coolants',
-    title: 'Motorsport Racing Oils & Fluids | PRINCE LUBRICANTS',
-    description: 'FSR GT Racing motor oils, PRO-SHIFT GT Racing gear oils, GT Racing brake fluid and GT COOLING coolant: the PRINCE LUBRICANTS range for the track.',
-    intro: 'The range built for the track: FSR GT Racing motor oils, PRO-SHIFT GT Racing gear oils, GT Racing brake fluid and the GT COOLING race coolant, each made for the heat, loads and revs of competition.',
+  competition: {
+    h1: 'COMPETITION', photo: 'formula-pass.webp', pos: '38% 58%', dark: true,
+    lines: 'Racing Engine Oils · Gear Oils · Brake Fluids · Coolants',
+    title: 'Racing Engine Oils & Competition Fluids | PRINCE LUBRICANTS',
+    description: 'FSR racing engine oils with P-9/P-12 double ester, PRO-SHIFT GT RACING gear oils, BRAKE FLUID GT RACING and GT COOLING race coolants from Singapore.',
+    intro: 'Built for the track: FSR racing engine oils with Group V double ester (P-9/P-12) base stocks, PRO-SHIFT GT RACING gear, axle and differential oils, BRAKE FLUID GT RACING and the GT COOLING race coolants, each made for the heat, loads and revs of competition.',
+    keywords: 'racing engine oil, racing oil Singapore, motorsport oil, FSR, ester racing oil, racing gear oil, racing brake fluid, race coolant',
   },
-  'commercial-fleet': {
-    h1: 'COMMERCIAL <span>FLEET</span>', photo: 'fleet.webp', pos: '40% 50%', dark: false,
-    lines: 'Diesel Engine Oils · Hypoid Gear Oils · Long-life Coolants',
-    title: 'Heavy-Duty Diesel Engine Oils | PRINCE LUBRICANTS',
-    description: 'D1 GOLD, D1 GOLD 4X4, D1 and DEVO diesel engine oils, SUPER-SHIFT gear oils and an extended-life coolant for trucks, buses, pickups and fleets.',
-    intro: 'Diesel engine oils for trucks, buses, pickups and working fleets, from D1 GOLD with P-12 Ester for EURO VI engines to D1 GOLD 4X4, D1 and DEVO, with SUPER-SHIFT gear oils for gearboxes and differentials and an extended-life coolant for heavy-duty cooling systems.',
+  'commercial-vehicle': {
+    h1: 'COMMERCIAL <span>VEHICLE</span>', photo: 'fleet.webp', pos: '40% 50%', dark: false,
+    lines: 'Diesel Engine Oils · Transmission & Gear Oils · Coolants',
+    title: 'Commercial Vehicle & Heavy-Duty Diesel Oils | PRINCE LUBRICANTS',
+    description: 'D1 GOLD and D1 GOLD 4X4 with P-12 ester, D1 and Devo heavy-duty diesel engine oils, ATF, SUPER-SHIFT gear oils and coolants for trucks, buses and fleets.',
+    intro: 'For trucks, buses, pickups and working fleets: D1 GOLD and D1 GOLD 4X4 with P-12 Ester-Based Technology, the D1 and Devo heavy-duty diesel engine oils, and the transmission fluids, SUPER-SHIFT gear oils, power steering and brake fluids and heavy-duty coolants that keep them working.',
+    keywords: 'diesel engine oil, heavy-duty engine oil Singapore, HDEO, truck engine oil, CK-4 engine oil, fleet lubricants, D1 GOLD, Devo',
   },
-  motorcycle: {
-    h1: 'MOTORCYCLE', photo: 'bike.webp', pos: '50% 50%', dark: true,
-    lines: '4T Engine Oils · Scooter Engine Oils · Driveline Fluids',
-    title: 'Motorcycle 4T Engine Oils | PRINCE LUBRICANTS',
-    description: 'MAXX GOLD, MAXX ULTRA, MAXX LAUNCH and MAXX SCOOTER 4T engine oils, MAXX-SHIFT gear oils and suspension fork oils from PRINCE LUBRICANTS.',
-    intro: '4T engine oils for every rider: MAXX GOLD with P-10 Ester for high-performance machines, MAXX ULTRA, MAXX LAUNCH for everyday riding and the MAXX SCOOTER oils, with MAXX-SHIFT gear oils and suspension fork oils for the rest of the bike.',
+  powersports: {
+    h1: 'POWERSPORTS', photo: 'bike.webp', pos: '50% 50%', dark: true,
+    lines: '4T & 2T Engine Oils · Gear Oils · Fork Oils & Coolants',
+    title: 'Powersports: Motorcycle & Scooter Oils | PRINCE LUBRICANTS',
+    description: 'MAXX GOLD 4T with P-10 ester, MAXX ULTRA and MAXX LAUNCH motorcycle oils, scooter and 2T oils, MAXX-SHIFT gear oils, fork oils, coolants and chain lube.',
+    intro: 'For every rider: MAXX GOLD 4T with P-10 Ester-Based Technology, MAXX ULTRA 4T and MAXX LAUNCH 4T motorcycle oils, scooter and two-stroke oils, with MAXX-SHIFT gear oils, fork oils, brake fluid, MAXX COOL coolants and chain lube for the rest of the machine.',
+    keywords: 'motorcycle engine oil, motorcycle oil Singapore, 4T oil, JASO MA2, scooter oil, 2T oil, fork oil, motorcycle coolant, MAXX GOLD',
   },
   industrial: {
     h1: 'INDUSTRIAL', photo: 'rig.webp', pos: '60% 40%', dark: false,
-    lines: 'Hydraulic · Compressor · Slideways · Metalworking',
-    title: 'Industrial Oils & Metalworking Fluids | PRINCE LUBRICANTS',
-    description: 'PRINCE LUBRICANTS industrial range: hydraulic, compressor, refrigeration, turbine, spindle, gear and heat transfer oils, and metal processing fluids.',
-    intro: 'Oils for machines that run around the clock: hydraulic, compressor, refrigeration, turbine, spindle, gear, heat transfer and insulating oils, with way oils, cutting oils and quenching oils for metal processing.',
+    lines: 'Hydraulic · Compressor · Turbine · Gear Oils',
+    title: 'Industrial Hydraulic, Compressor & Gear Oils | PRINCE LUBRICANTS',
+    description: 'PRINCE LUBRICANTS industrial range: hydraulic, air compressor, refrigeration, turbine, spindle bearing, gear, heat transfer and electrical insulating oils.',
+    intro: 'Oils for machines that run around the clock: hydraulic, air compressor, refrigeration, turbine, spindle bearing, gear, heat transfer and electrical insulating oils.',
+    keywords: 'industrial lubricants Singapore, hydraulic oil, compressor oil, turbine oil, industrial gear oil, refrigeration oil, heat transfer oil',
   },
   marine: {
     h1: 'MARINE', photo: 'marine.webp', pos: '50% 50%', dark: true,
@@ -70,14 +78,16 @@ const META = {
     title: 'Marine Lubricants & Outboard Oils | PRINCE LUBRICANTS',
     description: 'MARINO outboard oils and marine gear oils for boats, and cylinder, trunk piston, stern tube, gear, turbine, hydraulic and compressor oils for ships.',
     intro: 'From the outboard to the engine room: MARINO four-stroke and two-stroke outboard oils and marine gear oils for boats, and cylinder, trunk piston, stern tube, gear, turbine, hydraulic and compressor oils for ships.',
+    keywords: 'marine lubricants Singapore, outboard engine oil, marine engine oil, cylinder oil, trunk piston engine oil, stern tube oil, MARINO',
   },
 };
 
 // The client's documents tie these series to a technology; the Products page shows them as tags.
 const SERIES_TAGS = {
   'passenger-car': ['P-9 ESTER series', ['FS1 SERIES', 'FS1 EUROGEN SERIES', 'FS1 TECHNICA SERIES']],
-  motorsport: ['P-9 ESTER series', ['FSR SERIES']],
-  motorcycle: ['P-10 ESTER series', ['MAXX GOLD SERIES']],
+  competition: ['P-9/P-12 ESTER series', ['FSR SERIES']],
+  'commercial-vehicle': ['P-12 ESTER series', ['D1 GOLD 4X4 SERIES', 'D1 GOLD SERIES']],
+  powersports: ['P-10 ESTER series', ['MAXX GOLD 4T SERIES', 'MAXX GOLD 2T']],
 };
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -85,14 +95,14 @@ const json = (o) => JSON.stringify(o, null, 2).replace(/</g, '\\u003c');
 
 // A category holds ranges; one with a client document holds types, and they hold the ranges.
 const rangesOf = (cat) => (cat.types ? cat.types.flatMap((t) => t.ranges) : cat.ranges);
-// A range holds products, or shows those of another category by their "category/product" ids.
-const sizeOf = (range) => range.products.length + (range.shared || []).length;
-const countOf = (ranges) => ranges.reduce((n, r) => n + sizeOf(r), 0);
+const countOf = (ranges) => ranges.reduce((n, r) => n + r.products.length, 0);
 const products = (n) => `${n} ${n === 1 ? 'product' : 'products'}`;
-const sharedProduct = (ref) => {
-  const [cid, pid] = ref.split('/');
-  return rangesOf(DATA.categories.find((c) => c.id === cid)).flatMap((r) => r.products).find((p) => p.id === pid);
-};
+// A product that an earlier category's document also has keeps its one page there: `page` is
+// that page's "category/product", and the card links to it. From a type or product page, the
+// products folder is two levels up.
+const hrefOf = (p) => (p.page ? `../../${p.page}/` : `../${p.id}/`);
+const urlOf = (cat, p) => `${ORIGIN}/products/${p.page || `${cat.id}/${p.id}`}/`;
+const categoryOf = (id) => DATA.categories.find((c) => c.id === id);
 
 // A description for search results: the first sentences that fit in 155 characters.
 function summary(text) {
@@ -110,11 +120,12 @@ function summary(text) {
 }
 
 // A document's product name, as its family and its grade: "PRINCE® FS1 SAE 0W-30" ->
-// ["PRINCE® FS1", "SAE 0W-30"]. The grade opens at SAE, DOT, CHF or G1x, or at a word that
-// starts with a digit, after at least one word of family. A fluid without a grade is told
-// apart by the words after its family's.
+// ["PRINCE® FS1", "SAE 0W-30"]. The grade opens at SAE, DOT, CHF, G1x or HD, or at a word
+// that starts with a digit, after at least one word of family; 4T, 2T and 4X4 are part of a
+// series name (MAXX GOLD 4T, D1 GOLD 4X4), not a grade. A fluid without a grade is told apart
+// by the words after its family's.
 function nameParts(name) {
-  const grade = name.match(/^(PRINCE® \S+(?: \S+)*?) ((?:SAE|DOT|CHF|G1\d\S*|\d\S*)(?: .*)?)$/);
+  const grade = name.match(/^(PRINCE® \S+(?: \S+)*?) ((?:SAE|DOT|CHF|HD|G1\d\S*|(?!\d+T\b|4X4\b)\d\S*)(?: .*)?)$/);
   if (grade) return [grade[1], grade[2]];
   const fluid = name.match(/^PRINCE® (ATF|DCT|CVT|POWER STEERING FLUID)(?: (.+))?$/);
   if (fluid) return fluid[2] ? [`PRINCE® ${fluid[1]}`, fluid[2]] : ['PRINCE®', fluid[1]];
@@ -152,28 +163,40 @@ function img(name, root, alt, cls, lazy = true) {
   return `<img${cls ? ` class="${cls}"` : ''} src="${root}assets/img/products/${name}.webp" alt="${esc(alt)}" width="${w}" height="${h}"${lazy ? ' loading="lazy"' : ''} decoding="async">`;
 }
 
-// The outlines of PRINCE's own jug and bottle, traced from the pack shots, for a product whose
-// pack shot the client still has to send.
+// The outlines of PRINCE's own jug and bottle, traced from the pack shots, and of an aerosol
+// can, for a product whose pack shot the client still has to send.
 const OUTLINES = {
   jug: { box: '0 0 151 200', cap: 'M14 19.5H54', body: 'M22.7 .5 41.7 .4 50.8 1.7 51.6 3 52.1 11.7 53.2 16.9 55.3 23 58 24.8 86.3 12.4 102 7.1 116 3.6 133.3 1.1 139 2.7 142.9 6.3 144.6 11.7 143.7 25.7 143.7 39.3 147.3 73.7 150.3 132.7 150.3 188.7 149.6 192.3 147.3 195.9 144 198 139.3 199.3 10.7 199 5.7 197.6 2.1 194.3 .7 191 .3 187.7 .7 164.7 1.3 158.7 1.4 74 5.1 64.3 13.2 22.3 16.2 11.3 16.6 2.7 18.4 1.0ZM116.3 28.2 120.7 28.6 124 30.1 126.5 33 127.3 36.7 127.2 94.7 126.2 98.3 124.3 100.7 120.7 101.9 117.3 101.6 114.7 100.7 111.7 98.6 108.2 93.3 102.6 75.7 94.7 45 95.7 39.3 99.7 34.9 109.3 30.1Z' },
+  can: { box: '0 0 76 200', cap: 'M6 46H70', body: 'M31 .5h14V10H31ZM38 10C27 10 18 15 14 23L6 30V192Q6 199.5 14 199.5H62Q70 199.5 70 192V30L62 23C58 15 49 10 38 10Z' },
   bottle: { box: '0 0 109 200', cap: 'M2.4 24H45', body: 'M13 .5 34.7 .7 41.5 2.8 42.4 4.7 44.4 23.3 45.1 24.2 79.7 7.8 93 2.7 97.3 1.7 100.7 2 104.3 3.6 107 6.7 107.6 11.7 104.5 28 103.7 39.7 107 79 108.3 105 108.3 138.7 107.8 142.3 108.3 147.7 108.3 189 107.3 193.7 105.3 196.3 103 197.8 92.7 199.3 17.3 199.3 13 198.2 8.7 195.5 6.4 193 3.9 188.7 1.4 181.3 .7 166.7 .3 61 1.7 30.7 4.1 3.4 5.1 2.2 8.7 .9Z' },
 };
 
+// The outline of the pack a product comes in: a can for an aerosol, a jug when it is sold in a
+// jug's size (4 to 10 litres), otherwise a bottle; 18 and 20 litres are pails, not the pack
+// its shot would show.
+const outlineOf = (p) => {
+  if (p.facts.some(([label, value]) => label === 'Application Method' && /Aerosol/i.test(value))) return 'can';
+  return p.sizes.some((s) => parseFloat(s) >= 4 && parseFloat(s) <= 10) ? 'jug' : 'bottle';
+};
+const outline = (kind) => {
+  const o = OUTLINES[kind];
+  return `<svg class="pack-outline" viewBox="${o.box}" aria-hidden="true"><path fill-rule="evenodd" d="${o.body}"/><path d="${o.cap}"/></svg>`;
+};
+
 function packSlot(p) {
-  const o = OUTLINES[p.facts.some(([, value]) => /Engine Oil/.test(value)) ? 'jug' : 'bottle'];
-  return `<span class="pack-slot"><svg class="pack-outline" viewBox="${o.box}" aria-hidden="true"><path fill-rule="evenodd" d="${o.body}"/><path d="${o.cap}"/></svg><span class="ph-tag">Pack shot to come</span></span>`;
+  return `<span class="pack-slot">${outline(outlineOf(p))}<span class="ph-tag">Pack shot to come</span></span>`;
 }
 
 const pack = (p, root, cls, lazy) => (p.images.length ? img(p.images[0], root, `${p.name} pack`, cls, lazy) : packSlot(p));
 
-function head({ title, description, canonical, type = 'website', image, ld }) {
+function head({ title, description, canonical, type = 'website', image, ld, keywords }) {
   return `<!doctype html>
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
-<meta name="description" content="${esc(description)}">
+<meta name="description" content="${esc(description)}">${keywords ? `\n<meta name="keywords" content="${esc(keywords)}">` : ''}
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="${type}">
 <meta property="og:site_name" content="PRINCE LUBRICANTS">
@@ -242,8 +265,7 @@ function categoryHero(cat, count) {
 function categoryPage(cat) {
   const m = META[cat.id];
   const url = `${ORIGIN}/products/${cat.id}/`;
-  // Each range's products, with where their pages are from here.
-  const shown = (r) => [...r.products.map((p) => [p, `${p.id}/`]), ...(r.shared || []).map((ref) => [sharedProduct(ref), `../${ref}/`])];
+  const shown = (r) => r.products.map((p) => [p, `${p.id}/`]);
   const count = countOf(cat.ranges);
   const ld = {
     '@context': 'https://schema.org',
@@ -258,7 +280,7 @@ function categoryPage(cat) {
   const sections = cat.ranges.map((r, i) => `  <section class="section range-sec ${i % 2 ? 'bg-off' : 'bg-light'}" id="${r.id}" data-light data-dot="${esc(r.title)}">
     <div class="container">
       <div class="range-head">
-        <span class="sec-label rv">${esc(cat.name)} · ${products(sizeOf(r))}</span>
+        <span class="sec-label rv">${esc(cat.name)} · ${products(r.products.length)}</span>
         <h2 class="sec-title sec-title--md" data-split>${esc(r.title)}</h2>
         <div class="gold-bar rv"></div>
         ${r.desc ? `<p class="sec-text rv">${esc(r.desc)}</p>` : ''}
@@ -269,7 +291,7 @@ ${shown(r).map(([p, href], k) => card(p, r, '../../', href, k)).join('\n')}
     </div>
   </section>`).join('\n\n');
 
-  return `${head({ title: m.title, description: m.description, canonical: url, ld })}
+  return `${head({ title: m.title, description: m.description, canonical: url, ld, keywords: m.keywords })}
 <body data-section="products">
 <!-- @header -->
 <!-- /@header -->
@@ -326,7 +348,7 @@ function productPage(cat, range, p) {
     '@context': 'https://schema.org',
     '@graph': [
       { '@type': 'Product', '@id': `${url}#product`, name: p.name, description: p.intro.join(' ') || description, image,
-        brand: { '@type': 'Brand', name: 'PRINCE LUBRICANTS' }, manufacturer: { '@id': `${ORIGIN}/#organization` },
+        brand: { '@type': 'Brand', name: 'PRINCE LUBRICANTS' }, manufacturer: { '@id': `${ORIGIN}/#organization` }, countryOfOrigin: ORIGIN_COUNTRY,
         category: `${cat.name} > ${range.title}`, url },
       { '@type': 'BreadcrumbList', itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
@@ -461,9 +483,14 @@ function typeInfo(cat, type) {
 
 const icon = (info) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${info.icon}</svg>`;
 
-// Two or three packs standing together: left, front, right. Jugs are wide, so they stand closer.
-const isJug = (name) => DATA.imageSizes[name][0] / DATA.imageSizes[name][1] > 0.65;
-const lineUp = (info, root, lazy) => `<span class="line-up line-up--${info.packs.length}${info.packs.some(isJug) ? ' line-up--jugs' : ''}" aria-hidden="true">${info.packs.map((name) => img(name, root, '', '', lazy)).join('')}</span>`;
+// One to three packs standing together: left, front, right. Jugs are wide, so they stand
+// closer. "jug" or "bottle" in place of a pack shot stands as its outline until the shot comes.
+const isOutline = (name) => name in OUTLINES;
+const isJug = (name) => (isOutline(name) ? name === 'jug' : DATA.imageSizes[name][0] / DATA.imageSizes[name][1] > 0.65);
+const lineUp = (info, root, lazy) => {
+  const waiting = info.packs.every(isOutline);
+  return `<span class="line-up line-up--${info.packs.length}${info.packs.some(isJug) ? ' line-up--jugs' : ''}${waiting ? ' line-up--outline' : ''}" aria-hidden="true">${info.packs.map((name) => (isOutline(name) ? outline(name) : img(name, root, '', '', lazy))).join('')}${waiting ? `<span class="ph-tag">${info.packs.length > 1 ? 'Pack shots' : 'Pack shot'} to come</span>` : ''}</span>`;
+};
 
 // The document's menu of types, with the page's own type in gold.
 function typeNav(cat, current) {
@@ -504,7 +531,7 @@ function typesPage(cat) {
           </a>
         </li>`;
   }).join('\n');
-  return `${head({ title: m.title, description: m.description, canonical: url, ld })}
+  return `${head({ title: m.title, description: m.description, canonical: url, ld, keywords: m.keywords })}
 <body data-section="products">
 <!-- @header -->
 <!-- /@header -->
@@ -540,7 +567,7 @@ function typePage(cat, type) {
       { '@type': 'CollectionPage', '@id': `${url}#webpage`, url, name: info.title, description: info.description, isPartOf: { '@id': `${ORIGIN}/#website` } },
       breadcrumb(cat, [type.title, url]),
       { '@type': 'ItemList', name: type.title, numberOfItems: all.length, itemListElement: all
-        .map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: `${ORIGIN}/products/${cat.id}/${p.id}/` })) },
+        .map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: urlOf(cat, p) })) },
     ],
   };
   const count = `<p class="hero-count rv"><b>${all.length}</b> ${all.length === 1 ? 'product' : 'products'}${series.length > 1 ? ` in <b>${series.length}</b> series` : ''}</p>`;
@@ -556,14 +583,14 @@ ${r.title ? `      <div class="range-head">
         ${r.desc ? `<p class="sec-text rv">${esc(r.desc)}</p>` : ''}
       </div>` : `      <h2 class="sr-only">${esc(type.title)}: ${products(r.products.length)}</h2>`}
       <ul class="pc-grid pc-grid--doc pc-grid--c${columns(r.products.length)}" style="--rows:${Math.max(...r.products.map((p) => p.facts.length)) + 3}">
-${r.products.map((p, k) => docCard(p, root, `../${p.id}/`, k)).join('\n')}
+${r.products.map((p, k) => docCard(p, root, hrefOf(p), k)).join('\n')}
       </ul>
     </div>
   </section>`).join('\n\n');
   const at = cat.types.indexOf(type);
   const step = (t, dir, cls) => `<a class="ts-link ${cls}" href="../${t.id}/#types"><span class="ts-dir">${dir}</span><span class="ts-name">${esc(t.title)}</span></a>`;
   const n = cat.types.length;
-  return `${head({ title: info.title, description: info.description, canonical: url, ld })}
+  return `${head({ title: info.title, description: info.description, canonical: url, ld, keywords: info.keywords })}
 <body data-section="products">
 <!-- @header -->
 <!-- /@header -->
@@ -603,21 +630,32 @@ ${sections}
 ${FOOT}`;
 }
 
+// The names of the products with a page in more than one category (each document's own words).
+const twice = (() => {
+  const seen = new Map();
+  for (const cat of DATA.categories.filter((c) => c.types)) {
+    for (const p of rangesOf(cat).flatMap((r) => r.products).filter((x) => !x.page)) seen.set(p.name, (seen.get(p.name) || 0) + 1);
+  }
+  return new Set([...seen].filter(([, n]) => n > 1).map(([name]) => name));
+})();
+
 function docProductPage(cat, type, range, p) {
   const url = `${ORIGIN}/products/${cat.id}/${p.id}/`;
   const typeUrl = `${ORIGIN}/products/${cat.id}/${type.id}/`;
   const root = '../../../';
-  // The name opens with the brand, so a long one stands alone.
-  const full = `${p.name} | PRINCE LUBRICANTS`;
-  const title = full.length <= 65 ? full : p.name;
-  const description = docDescription(p);
+  // The name opens with the brand, so a long one stands alone; one that another category also
+  // has a page for says whose this is.
+  const name = twice.has(p.name) ? `${p.name} for ${cat.name}` : p.name;
+  const full = `${name} | PRINCE LUBRICANTS`;
+  const title = full.length <= 65 ? full : name;
+  const description = docDescription(name === p.name ? p : { ...p, name });
   const image = p.images.length ? `${ORIGIN}/assets/img/products/${p.images[0]}.webp` : undefined;
   const series = range.title ? ` > ${range.title}` : '';
   const ld = {
     '@context': 'https://schema.org',
     '@graph': [
       { '@type': 'Product', '@id': `${url}#product`, name: p.name, description: p.intro.join(' '), image,
-        brand: { '@type': 'Brand', name: 'PRINCE LUBRICANTS' }, manufacturer: { '@id': `${ORIGIN}/#organization` },
+        brand: { '@type': 'Brand', name: 'PRINCE LUBRICANTS' }, manufacturer: { '@id': `${ORIGIN}/#organization` }, countryOfOrigin: ORIGIN_COUNTRY,
         category: `${cat.name} > ${type.title}${series}`, url,
         additionalProperty: [...p.facts, ['Available Packaging', `${p.sizes.join(' / ')}${p.sizeNote ? ` (${p.sizeNote})` : ''}`]]
           .map(([name, value]) => ({ '@type': 'PropertyValue', name, value })) },
@@ -642,6 +680,18 @@ function docProductPage(cat, type, range, p) {
   const from = inSeries.length && range.title ? range.title : type.title;
   const rangeOf = (o) => type.ranges.find((r) => r.products.includes(o));
   const back = `../${type.id}/${range.title ? `#${range.id}` : ''}`;
+  // The document's notices, as it sets them: a label and its words.
+  const notices = (p.notices || []).length
+    ? `\n          <div class="pd-notices rv" role="note">${p.notices.map((n) => `<p class="pd-notice"><strong>${esc(n.label)}:</strong> ${prose(n.text)}</p>`).join('')}</div>`
+    : '';
+  // The other categories' types that list this product.
+  const also = (p.alsoIn || []).length
+    ? `\n          <p class="pd-also rv">Also in ${p.alsoIn.map(({ category, type: tid }) => {
+      const other = categoryOf(category);
+      const t = other.types.find((x) => x.id === tid);
+      return `<a href="../../${other.id}/${t.id}/">${esc(other.name)} · ${esc(t.title)}</a>`;
+    }).join(', ')}</p>`
+    : '';
 
   return `${head({ title, description, canonical: url, type: 'product', image, ld })}
 <body data-section="products">
@@ -664,7 +714,7 @@ function docProductPage(cat, type, range, p) {
           <a class="sec-label${keepCase(range.title)} rv" href="${back}">${esc(range.title || type.title)}</a>
           <h1 class="pd-title${keepCase(p.name)}" data-split>${goldGrade(p.name)}</h1>
           <div class="gold-bar rv"></div>
-          ${p.intro.map((t) => `<p class="sec-text rv">${prose(t)}</p>`).join('\n          ')}
+          ${p.intro.map((t) => `<p class="sec-text rv">${prose(t)}</p>`).join('\n          ')}${notices}${also}
           <div class="pd-facts rv"><div class="pd-fact"><span class="pd-fact-label">Available Packaging</span><ul class="pd-sizes">${p.sizes.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>${p.sizeNote ? `<span class="pd-fact-note">(${esc(p.sizeNote)})</span>` : ''}</div></div>
           <div class="btn-row rv"><a class="btn-gold" href="${root}contact/?product=${encodeURIComponent(p.name)}">Product Enquiry ›</a><a class="btn-out" href="${root}become-a-distributor/">Become a Distributor</a></div>
         </div>
@@ -692,7 +742,7 @@ ${blocks}
         <div class="gold-bar rv"></div>
       </div>
       <ul class="pc-grid">
-${others.map((o, k) => card(o, rangeOf(o).title ? rangeOf(o) : type, root, `../${o.id}/`, k)).join('\n')}
+${others.map((o, k) => card(o, rangeOf(o).title ? rangeOf(o) : type, root, hrefOf(o), k)).join('\n')}
       </ul>
       <div class="mt-cta rv"><a class="btn-dark" href="../${type.id}/">All ${esc(type.title)} ›</a></div>
     </div>
@@ -707,7 +757,7 @@ function overviewBlock(cat) {
   const m = META[cat.id];
   const links = cat.types
     ? cat.types.map((t) => [`${cat.id}/${t.id}/`, t.title, countOf(t.ranges)])
-    : cat.ranges.map((r) => [`${cat.id}/#${r.id}`, r.title, sizeOf(r)]);
+    : cat.ranges.map((r) => [`${cat.id}/#${r.id}`, r.title, r.products.length]);
   const ranges = links.map(([href, title, n], i) => `            <li class="rv" style="--d:${i % 4}"><a class="range-link" href="${href}"><span class="rl-name">${esc(title)}</span><span class="rl-count">${n}</span></a></li>`).join('\n');
   const tags = SERIES_TAGS[cat.id]
     ? `\n          <div class="series-tags rv"><span class="series-label">${SERIES_TAGS[cat.id][0]}</span><ul class="tags">${SERIES_TAGS[cat.id][1].map((t) => `<li class="tag">${t}</li>`).join('')}</ul></div>`
@@ -744,7 +794,7 @@ function main() {
     page(cat.id, typesPage(cat));
     for (const type of cat.types) {
       page(`${cat.id}/${type.id}`, typePage(cat, type));
-      for (const range of type.ranges) for (const p of range.products) page(`${cat.id}/${p.id}`, docProductPage(cat, type, range, p));
+      for (const range of type.ranges) for (const p of range.products.filter((x) => !x.page)) page(`${cat.id}/${p.id}`, docProductPage(cat, type, range, p));
     }
   }
   // A product dropped from the data loses its page.
@@ -760,10 +810,10 @@ function main() {
     if (!re.test(overview)) throw new Error(`products/index.html has no <!-- @cat:${cat.id} --> markers`);
     overview = overview.replace(re, () => `<!-- @cat:${cat.id} -->\n${overviewBlock(cat)}\n          <!-- /@cat:${cat.id} -->`);
   }
-  // A shared range shows products that are counted where their pages are.
-  const own = DATA.categories.flatMap(rangesOf).filter((r) => !r.shared);
-  const total = countOf(own);
-  const ranges = own.length;
+  // A product listed in a second category is counted once, where its page is. A category with
+  // a document counts its types as its ranges.
+  const total = DATA.categories.flatMap(rangesOf).flatMap((r) => r.products).filter((p) => !p.page).length;
+  const ranges = DATA.categories.reduce((n, c) => n + (c.types || c.ranges).length, 0);
   overview = overview.replace(/<!-- @cat-total -->[\s\S]*?<!-- \/@cat-total -->/, () => `<!-- @cat-total -->
       <ul class="cat-total rv"><li><b>${total}</b> products</li><li><b>${ranges}</b> ranges</li><li><b>${DATA.categories.length}</b> categories</li></ul>
       <!-- /@cat-total -->`);
@@ -771,6 +821,6 @@ function main() {
   console.log(`${pages} catalogue pages from ${DATA.categories.length} categories`);
 }
 
-module.exports = { summary, nameParts, goldGrade, prose, keepCase, packSize, columns, docDescription, docCard };
+module.exports = { summary, nameParts, goldGrade, prose, keepCase, packSize, columns, docDescription, docCard, outlineOf, hrefOf };
 
 if (require.main === module) main();

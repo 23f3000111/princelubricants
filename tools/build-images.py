@@ -2,7 +2,8 @@
 Cuts the site's imagery out of the client's existing banners, and draws the favicon set
 and the share image.
 
-    python tools/build-images.py
+    python tools/build-images.py            everything
+    python tools/build-images.py social     only the racing photographs (SOCIAL)
 
 Sources are in ../Prince Lubricants Images/, the old princelubricants.com banners. Most
 of them carry headline type baked into the picture, so every crop box below was chosen
@@ -51,6 +52,48 @@ STOCK = {
     "aston": ("am-front.jpg", (0, 900, 2000, 2250), 1400),
     "bike": ("bike-tnAYx91-Qn4.jpg", None, 1600),
 }
+
+
+# The client's own racing photographs, from the public albums of its Facebook page
+# (facebook.com/PrinceLubricants), saved at the size Facebook serves them in tools/data/social/,
+# which is not committed. Each one's page: facebook.com/photo/?fbid=<id>. None carries a
+# photographer's mark; the album shots that did are left out.
+#   formula-*   album "Photos": the PRINCE LUBRICANTS liveried Carlin single-seater, car 3
+#               (fbid 1069755675589537, 1069756805589424, 1069758272255944, 1069758342255937,
+#               1069757498922688)
+#   gt-*        album "BLANCPAIN GT CHALLENGE PORSCHE GT3" (343509231547522, 343510101547435)
+#   endurance-* album "NÜRBURGRING ENDURANCE RACING CHAMPIONSHIP" (344137394818039,
+#               344137744818004, 344137854817993)
+#   gymkhana-*  album "UR GYMKHANA MALAYSIA" (392881547484309, 392881487484315)
+#   smoke       album "ULTRA SUPER GT GYMKHANA TRIALS" (381384758633988)
+#   touring-87  album "Mobile uploads" (1062612969637141)
+# name: (file, crop box or None, widest edge in px)
+SOCIAL = {
+    "formula-alps": ("photos-46.jpg", None, 2048),
+    "formula-pass": ("photos-39.jpg", None, 2048),
+    "formula-cockpit": ("photos-24.jpg", None, 1400),
+    "formula-grid": ("photos-23.jpg", None, 1200),
+    "formula-kerb": ("photos-32.jpg", None, 1200),
+    "gt-911": ("blancpain-00.jpg", None, 960),
+    "gt-paddock": ("blancpain-12.jpg", None, 960),
+    "endurance-315": ("nurburgring-03.jpg", None, 960),
+    "endurance-pit": ("nurburgring-08.jpg", None, 960),
+    "endurance-dusk": ("nurburgring-10.jpg", None, 720),
+    "gymkhana-s2000": ("gymkhana-11.jpg", None, 1400),
+    "gymkhana-crowd": ("gymkhana-07.jpg", None, 1200),
+    "smoke": ("gt-gymkhana-00.jpg", None, 800),
+    "touring-87": ("mobile-18.jpg", None, 1024),
+}
+
+
+def social():
+    made = []
+    for name, (file, box, edge) in SOCIAL.items():
+        img = Image.open(DATA / "social" / file).convert("RGB")
+        img = img.crop(box) if box else img
+        img.thumbnail((edge, edge), Image.LANCZOS)
+        made.append(save_webp(img, name, quality=80))
+    return made
 
 
 def stock():
@@ -218,7 +261,12 @@ def share_image():
     img.save(BRAND / "og-default.jpg", quality=88, optimize=True)
 
 
-def main():
+def main(only=None):
+    if only == "social":
+        for path in social():
+            with Image.open(path) as im:
+                print(f"{path.relative_to(ROOT).as_posix():36s} {im.size[0]}x{im.size[1]}  {path.stat().st_size // 1024} KB")
+        return
     made = []
     for name, (file, box) in CROPS.items():
         img = Image.open(SRC / file).convert("RGB")
@@ -227,6 +275,7 @@ def main():
     made.append(save_webp(fs1_jug(), "fs1"))
     made.append(save_webp(fs1_duo(), "fs1-duo", quality=86))
     made += stock()
+    made += social()
     favicons()
     share_image()
     for path in made:
@@ -237,4 +286,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    main(*sys.argv[1:2])

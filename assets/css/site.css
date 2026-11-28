@@ -1057,9 +1057,9 @@ a.c-value:hover { color: var(--gold-ink); }
 .type-tile:hover .line-up--3 img:first-child { transform: translate(-7px, -2px); }
 .type-tile:hover .line-up--3 img:last-child { transform: translate(7px, -2px); }
 .tt-body { display: flex; flex: 1; flex-direction: column; gap: 12px; padding: 18px 20px 20px; border-top: 3px solid var(--gold); }
-.tt-head { display: flex; align-items: center; gap: 12px; min-height: 48px; }
+.tt-head { display: flex; align-items: center; gap: 10px; min-height: 48px; }
 .type-tile .type-ico { border-color: var(--gold); background: var(--gold); color: #000; }
-.tt-name { font-family: var(--fh); font-size: 18px; font-weight: 700; line-height: 1.2; letter-spacing: .5px; text-transform: uppercase; color: var(--td); }
+.tt-name { font-family: var(--fh); font-size: 17px; font-weight: 700; line-height: 1.2; letter-spacing: .3px; text-transform: uppercase; color: var(--td); }
 .tt-holds { font-size: 12.5px; line-height: 1.55; color: var(--tg); }
 .tt-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 6px; }
 .tt-count { font-size: 11.5px; font-weight: 600; letter-spacing: .4px; color: var(--td); }
@@ -1123,12 +1123,51 @@ a.c-value:hover { color: var(--gold-ink); }
 .pack-slot { position: relative; z-index: 1; display: grid; place-items: center; height: 100%; }
 .pack-outline { width: auto; height: 100%; max-height: 196px; overflow: visible; fill: rgba(184, 134, 11, .07); stroke: rgba(143, 108, 0, .6); stroke-width: 1.4; stroke-dasharray: 5 4; stroke-linejoin: round; }
 .pack-slot .ph-tag { position: absolute; top: 62%; left: 50%; margin: 0; transform: translate(-50%, -50%); white-space: nowrap; }
-.pd-pack .pack-outline { height: 400px; max-height: none; fill: rgba(255, 215, 0, .05); stroke: rgba(255, 215, 0, .65); stroke-width: 1; }
+.pd-pack .pack-outline { height: 400px; max-height: none; stroke-width: 1.1; }
+
+/* Every pack shot stands on cream, never on the dark: a cut-out's edge is lighter or darker
+   than the pack, and on a dark ground that fringe shows (the client's note on the FSe page).
+   The cream is the cards' own; the rings and the orbit keep turning on it, in deeper gold. */
+.pd-visual .tech-img-wrap, .ty-visual { border-radius: 14px; overflow: hidden; background: radial-gradient(circle at 50% 54%, #fff 0%, var(--cream2) 50%, var(--cream3) 100%); box-shadow: 0 26px 60px rgba(0, 0, 0, .38), inset 0 0 0 1px rgba(255, 215, 0, .42); }
+.pd-visual .g-ring, .ty-visual .g-ring { border-color: rgba(184, 134, 11, .22); }
+.pd-visual .g-ring:nth-child(2), .ty-visual .g-ring:nth-child(2) { border-color: rgba(184, 134, 11, .14); }
+.pd-visual .g-ring:nth-child(3) { border-color: rgba(184, 134, 11, .3); }
+.pd-visual .g-orbit::before, .ty-visual .g-orbit::before { background: var(--gold2); box-shadow: 0 0 12px rgba(184, 134, 11, .55); }
+.pd-visual .tech-img-wrap::after, .ty-visual::after { content: ''; position: absolute; left: 30%; right: 30%; bottom: 30px; height: 18px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0, 0, 0, .18), transparent 70%); }
+.pd-pack { filter: drop-shadow(0 18px 16px rgba(0, 0, 0, .16)); }
+.ty-visual { align-items: flex-end; padding: 36px 20px 40px; }
+.ty-visual .line-up { filter: drop-shadow(0 16px 14px rgba(0, 0, 0, .15)); }
+.pd-thumb { border-color: rgba(255, 215, 0, .4); background: var(--cream2); color: var(--gold-ink); }
+.pd-thumb:hover, .pd-thumb.is-active { border-color: var(--gold); background: #fff; color: #000; box-shadow: 0 0 0 1px var(--gold); }
+
+/* A line-up of one pack, and one of outlines for pack shots still to come */
+.line-up--1 img { height: calc(var(--lu, 300px) * .96); }
+.line-up .pack-outline { flex: none; height: var(--lu, 300px); max-height: none; }
+.line-up--2 .pack-outline { height: calc(var(--lu, 300px) * .9); }
+.line-up--2 .pack-outline:first-child { margin-right: calc(var(--lu, 300px) * .08); }
+.line-up--outline { position: relative; }
+.line-up--outline .ph-tag { position: absolute; top: 58%; left: 50%; z-index: 1; margin: 0; transform: translate(-50%, -50%); white-space: nowrap; }
+
+/* A product page's notices, as its document sets them, and the other places it is listed */
+.pd-notices { display: grid; gap: 8px; margin: 4px 0 18px; padding: 15px 18px; border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; background: rgba(255, 215, 0, .08); }
+.pd-notice { font-size: 14px; line-height: 1.6; color: var(--tl); }
+.pd-notice strong { margin-right: 3px; font-family: var(--fh); font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--gold); }
+.pd-also { margin: 2px 0 0; font-size: 13.5px; line-height: 1.7; color: var(--tb); }
+.pd-also a { color: var(--gold); border-bottom: 1px solid rgba(255, 215, 0, .35); transition: color .25s, border-color .25s; }
+.pd-also a:hover { color: #fff; border-color: #fff; }
 
 /* Motorsport: the written copy for each discipline */
 .disc-copy p { font-size: 15.5px; line-height: 1.85; color: var(--tb); }
 .disc-copy p + p { margin-top: 12px; }
 [data-light] .disc-copy p { color: var(--tg); }
+/* Motorsport: the archive, the client's own photographs, two wide and four square-ish */
+.ms-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.ms-shot { position: relative; border-radius: 10px; overflow: hidden; background: var(--d3); }
+.ms-shot--wide { grid-column: span 2; }
+.ms-shot img { width: 100%; height: 280px; object-fit: cover; transition: transform .8s var(--ease2); }
+.ms-shot:hover img { transform: scale(1.04); }
+.ms-shot figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 16px 12px; background: linear-gradient(to top, rgba(4, 4, 12, .86), transparent); font-family: var(--fh); font-size: 13px; font-weight: 500; letter-spacing: 1.6px; text-transform: uppercase; color: var(--w); }
+.ms-shot figcaption::before { content: ''; display: inline-block; width: 18px; height: 2px; margin: 0 10px 0 0; background: var(--gold); vertical-align: middle; }
 
 /* ---------- Typewriter title (index.html's, with the words in the HTML) ---------- */
 html.js:not(.reduced) [data-scene="typewriter"]:not(.tw-ready) { visibility: hidden; }
@@ -1188,6 +1227,8 @@ html.reduced .ticker-track { animation: none; }
   .faq-search, .faq-search input, .faq-search input:focus { width: 100%; }
   .markets { position: relative; top: 0; }
   .gallery { grid-template-columns: 1fr 1fr; }
+  .ms-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ms-shot img { height: 230px; }
   .series-grid { grid-template-columns: 1fr; }
   .ester-block { grid-template-columns: 1fr; gap: 40px; }
   .ester-block--flip .ester-visual { order: 0; }
@@ -1203,6 +1244,8 @@ html.reduced .ticker-track { animation: none; }
   .p-card { grid-template-columns: 1fr; }
   .p-card-img { height: 200px; }
   .f-row, .gallery, .pc-grid, .pc-grid--c3, .type-tiles { grid-template-columns: 1fr; }
+  .ms-gallery { grid-template-columns: 1fr; }
+  .ms-shot--wide { grid-column: auto; }
   .pc-grid--c2 .pc-card, .pc-grid--c1 .pc-card { flex-direction: column; }
   .pc-grid--c2 .pc-well, .pc-grid--c1 .pc-well { width: auto; height: 250px; min-height: 0; }
   .pc-grid--c2 .pc-body, .pc-grid--c1 .pc-body { border-left: 0; border-top: 3px solid var(--gold); }

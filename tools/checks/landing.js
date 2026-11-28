@@ -3,7 +3,7 @@
 // and stays there once the page has loaded. Going back keeps the place the visitor had reached.
 async (page, base = 'http://127.0.0.1:8765') => {
   const LINKS = ['/company/#journey', '/company/#global-presence', '/technology/#p-plus-synthese', '/motorsport/#drift',
-    '/products/#marine', '/products/commercial-fleet/#super-shift', '/products/marine/#stern-tube-oils',
+    '/products/#marine', '/products/commercial-vehicle/heavy-duty-engine-oils/#devo', '/products/marine/#stern-tube-oils',
     '/products/passenger-car/#types', '/products/passenger-car/automatic-transmission-fluids/#types',
     '/products/passenger-car/automatic-transmission-fluids/#other-atf-dct-and-cvt',
     '/products/passenger-car/flagship-ester-based-engine-oils/#fs1-eurogen', '/products/passenger-car/passenger-car-engine-oils/#m1'];
@@ -33,7 +33,7 @@ async (page, base = 'http://127.0.0.1:8765') => {
   // Back: the visitor scrolled on from the section, opened another page and came back.
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
   const p = await ctx.newPage();
-  await p.goto(`${base}/products/#motorsport`, { waitUntil: 'load' });
+  await p.goto(`${base}/products/#competition`, { waitUntil: 'load' });
   await p.waitForTimeout(2500);
   await p.mouse.wheel(0, 1500);
   await p.waitForTimeout(1200);

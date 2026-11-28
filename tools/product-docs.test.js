@@ -1,7 +1,9 @@
 'use strict';
 /*
  * The client's product documents, against the pages built from them: every product of every
- * docs/content/product-docs/<category>.json has its page, its card and all of its words.
+ * docs/content/product-docs/<category>.json has its page, its card and all of its words. A
+ * product that an earlier category's document also has is listed with a card that links to
+ * that category's page for it (its `page` in products.json), and that page says so.
  */
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -31,6 +33,9 @@ for (const doc of documents) {
   const builtTypes = cat.types || [];
   const builtOf = (t) => builtTypes[doc.types.indexOf(t)];
   const productsOf = (t) => t.series.flatMap((s) => s.products);
+  // The built products that have their page in this category, and where any product's page is.
+  const ownOf = (t) => t.ranges.flatMap((r) => r.products).filter((p) => !p.page);
+  const pageOf = (p) => (p.page ? `products/${p.page}` : `${base}/${p.id}`);
 
   test(`${doc.category}: the catalogue holds the document's types, series and products, in its order`, () => {
     assert.deepEqual(builtTypes.map((t) => t.title), doc.types.map((t) => t.title));
@@ -41,7 +46,7 @@ for (const doc of documents) {
 
   test(`${doc.category}: the folder holds the types and the products, and nothing else`, () => {
     const dirs = fs.readdirSync(path.join(ROOT, base), { withFileTypes: true }).filter((e) => e.isDirectory()).map((e) => e.name).sort();
-    const want = builtTypes.flatMap((t) => [t.id, ...t.ranges.flatMap((r) => r.products.map((p) => p.id))]).sort();
+    const want = builtTypes.flatMap((t) => [t.id, ...ownOf(t).map((p) => p.id)]).sort();
     assert.deepEqual(dirs, want);
   });
 
@@ -80,8 +85,8 @@ for (const doc of documents) {
       const products = productsOf(t);
       assert.equal(cards.length, products.length, built.id);
       products.forEach((p, i) => {
-        const id = built.ranges.flatMap((r) => r.products)[i].id;
-        assert.ok(cards[i].includes(`href="../${id}/"`), `${p.name}: link`);
+        const b = built.ranges.flatMap((r) => r.products)[i];
+        assert.ok(cards[i].includes(`href="${b.page ? `../../${b.page}/` : `../${b.id}/`}"`), `${p.name}: link`);
         assert.ok(textOf(cards[i]).includes(p.name), `${p.name}: name`);
         for (const [label, value] of p.facts) {
           assert.ok(cards[i].includes(`<dt>${esc(label)}</dt><dd>${esc(value)}</dd>`), `${p.name}: ${label}`);
@@ -102,12 +107,14 @@ for (const doc of documents) {
     for (const t of doc.types) {
       const built = builtOf(t).ranges.flatMap((r) => r.products);
       productsOf(t).forEach((p, i) => {
-        const html = mainOf(read(`${base}/${built[i].id}/index.html`));
+        const html = mainOf(read(`${pageOf(built[i])}/index.html`));
         const text = textOf(html);
-        const where = `${p.name} (${built[i].id})`;
+        const where = `${p.name} (${pageOf(built[i])})`;
         assert.equal(textOf(html.match(/<h1[\s\S]*?<\/h1>/)[0]).trim(), p.name, where);
         for (const d of p.description) assert.ok(text.includes(d), `${where}: description`);
-        for (const [label, value] of p.facts) assert.ok(html.includes(`<dt>${esc(label)}</dt><dd>${esc(value)}</dd>`), `${where}: ${label}`);
+        for (const n of p.notices || []) assert.ok(text.includes(`${n.label}: ${n.text}`), `${where}: ${n.label}`);
+        // A listed product's list is on its card (above); its page has its first document's list.
+        if (!built[i].page) for (const [label, value] of p.facts) assert.ok(html.includes(`<dt>${esc(label)}</dt><dd>${esc(value)}</dd>`), `${where}: ${label}`);
         for (const s of p.sections) {
           assert.ok(text.includes(s.label), `${where}: ${s.label}`);
           if (s.text) assert.ok(text.includes(s.text), `${where}: text of ${s.label}`);
@@ -121,7 +128,7 @@ for (const doc of documents) {
   });
 
   test(`${doc.category}: no page holds a control character`, () => {
-    for (const rel of ['', ...builtTypes.flatMap((t) => [t.id, ...t.ranges.flatMap((r) => r.products.map((p) => p.id))])]) {
+    for (const rel of ['', ...builtTypes.flatMap((t) => [t.id, ...ownOf(t).map((p) => p.id)])]) {
       const bad = [...read(path.join(base, rel, 'index.html'))].find((ch) => ch < ' ' && !'\n\r\t'.includes(ch));
       assert.equal(bad, undefined, `${rel || 'the category page'}: U+${bad && bad.codePointAt(0).toString(16)}`);
     }
@@ -129,11 +136,9 @@ for (const doc of documents) {
 
   test(`${doc.category}: every product page leads back to its type`, () => {
     for (const t of builtTypes) {
-      for (const r of t.ranges) {
-        for (const p of r.products) {
-          const crumbs = read(`${base}/${p.id}/index.html`).match(/<nav class="breadcrumb[\s\S]*?<\/nav>/)[0];
-          assert.ok(crumbs.includes(`href="../${t.id}/"`), p.id);
-        }
+      for (const p of ownOf(t)) {
+        const crumbs = read(`${base}/${p.id}/index.html`).match(/<nav class="breadcrumb[\s\S]*?<\/nav>/)[0];
+        assert.ok(crumbs.includes(`href="../${t.id}/"`), p.id);
       }
     }
   });
@@ -148,7 +153,7 @@ for (const doc of documents) {
   test(`${doc.category}: titles and search descriptions are unique and fit`, () => {
     const seen = new Map();
     for (const t of builtTypes) {
-      for (const rel of [t.id, ...t.ranges.flatMap((r) => r.products.map((p) => p.id))]) {
+      for (const rel of [t.id, ...ownOf(t).map((p) => p.id)]) {
         const html = read(`${base}/${rel}/index.html`);
         const title = html.match(/<title>([^<]+)<\/title>/)[1];
         const description = textOf(html.match(/<meta name="description" content="([^"]+)"/)[1]);
@@ -163,14 +168,25 @@ for (const doc of documents) {
   });
 }
 
-test('a range that shows another category’s products links to their own pages', () => {
-  for (const cat of catalogue.categories) {
-    for (const range of (cat.ranges || []).filter((r) => r.shared)) {
-      const html = mainOf(read(`products/${cat.id}/index.html`));
-      const section = html.match(new RegExp(`<section[^>]*id="${range.id}"[\\s\\S]*?</section>`))[0];
-      const links = [...section.matchAll(/<a class="pc-card" href="([^"]+)"/g)].map((m) => m[1]);
-      assert.deepEqual(links, range.shared.map((ref) => `../${ref}/`));
-      for (const ref of range.shared) assert.ok(fs.existsSync(path.join(ROOT, 'products', ref, 'index.html')), ref);
+test('a product listed in a second category has its page in the first, which links back', () => {
+  const documented = catalogue.categories.filter((c) => c.types);
+  for (const cat of documented) {
+    for (const t of cat.types) {
+      for (const p of t.ranges.flatMap((r) => r.products).filter((x) => x.page)) {
+        const [owner, id] = p.page.split('/');
+        assert.ok(documented.findIndex((c) => c.id === owner) < documented.indexOf(cat), `${cat.id}/${p.id}: ${owner} comes first`);
+        assert.equal(id, p.id);
+        const page = read(`products/${p.page}/index.html`);
+        assert.ok(page.includes(`<a href="../../${cat.id}/${t.id}/">${esc(cat.name)} · ${esc(t.title)}</a>`), `${p.page} links back to ${cat.id}/${t.id}`);
+        assert.ok(!fs.existsSync(path.join(ROOT, 'products', cat.id, p.id)), `${cat.id}/${p.id} has a page of its own`);
+      }
     }
   }
+});
+
+test('every product of the documents has exactly one page, unless a document gives it words of its own', () => {
+  const pages = catalogue.categories.filter((c) => c.types).flatMap((c) => c.types.flatMap((t) => t.ranges.flatMap((r) => r.products))
+    .filter((p) => !p.page).map((p) => [p.name, c.id]));
+  const twice = pages.filter(([name], i) => pages.findIndex(([n]) => n === name) !== i).map(([name, cid]) => `${cid}: ${name}`);
+  assert.deepEqual(twice, ['powersports: PRINCE® BRAKE & CLUTCH FLUID DOT 4']);
 });

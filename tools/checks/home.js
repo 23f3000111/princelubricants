@@ -22,9 +22,9 @@ async (page) => {
     'High-Performance Motorcycle Engineering', 'MAXX GOLD SERIES', 'Dedicated technology engineered for powerful 4T applications.', 'EXPLORE P-10 ESTER TECHNOLOGY',
     'FROM RACE TO ROAD. INDUSTRY TO SEA.',
     'Explore PRINCE LUBRICANTS high-performance solutions across automotive, motorsport, motorcycle, marine, heavy-duty and industrial applications — from state-of-the-art motor oils and transmission fluids to specialised lubricants engineered for demanding conditions.',
-    'Engine Oils · Transmission Fluids · Antifreeze Coolants', 'Racing Oils · Manual Gear Oils · Performance Coolants',
-    'Diesel Engine Oils · Hypoid Gear Oils · Long-life Coolants', '4T Engine Oils · Scooter Engine Oils · Driveline Fluids',
-    'Hydraulic · Compressor · Slideways · Metalworking', 'Outboard Engine Oils · Heavy-Duty Oils · System Lubricants',
+    'Engine Oils · Transmission Fluids · Antifreeze Coolants', 'Racing Engine Oils · Gear Oils · Brake Fluids · Coolants',
+    'Diesel Engine Oils · Transmission & Gear Oils · Coolants', '4T & 2T Engine Oils · Gear Oils · Fork Oils & Coolants',
+    'Hydraulic · Compressor · Turbine · Gear Oils', 'Outboard Engine Oils · Heavy-Duty Oils · System Lubricants',
     'EXPLORE ALL PRINCE LUBRICANTS PRODUCTS',
     'PERFORMANCE FORGED THROUGH MOTORSPORT.', 'FROM FORMULA RACING TO GT. FROM ENDURANCE TO DRIFT.',
     'International motorsport has played a defining role in the performance journey of PRINCE LUBRICANTS. From FIA Formula and GT Challenges to Nürburgring endurance racing, the King of Europe Pro Drift Series, East African Safari Rally and countless Gymkhana, this extensive motorsport heritage reflects a performance philosophy shaped by competition, extreme operating conditions and the relentless pursuit of engine protection and reliability.',
@@ -112,10 +112,10 @@ async (page) => {
   await ctx.close();
 
   const want = {
-    tiles: ['PASSENGER CAR', 'MOTORSPORT', 'COMMERCIAL FLEET', 'MOTORCYCLE', 'INDUSTRIAL', 'MARINE'],
+    tiles: ['PASSENGER CAR', 'COMPETITION', 'COMMERCIAL VEHICLE', 'POWERSPORTS', 'INDUSTRIAL', 'MARINE'],
     archive: ['FIA FORMULA', 'GT', 'GYMKHANA', 'ENDURANCE', 'DRIFT', 'TOURING'],
     counters: ['>100,000', '>15,000', '30+', '70+', '200+'],
-    tileHrefs: 'products/passenger-car/ products/motorsport/ products/commercial-fleet/ products/motorcycle/ products/industrial/ products/marine/',
+    tileHrefs: 'products/passenger-car/ products/competition/ products/commercial-vehicle/ products/powersports/ products/industrial/ products/marine/',
   };
   r.pass = r.missingCopy.length === 0 && r.h1.length === 1 && r.h1[0] === "SINGAPORE'S PERFORMANCE LUBRICANT SPECIALIST SINCE 1998." &&
     JSON.stringify(r.tileOrder) === JSON.stringify(want.tiles) && r.tileGrid &&

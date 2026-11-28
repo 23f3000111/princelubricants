@@ -9,7 +9,11 @@ async (page, BASE = 'http://127.0.0.1:8765', paths = null) => {
     '/become-a-distributor/', '/faq/', '/404.html',
     // The catalogue: its category and type pages and, from each category, the product pages
     // with the most text or the longest name, and one without a pack shot.
-    '/products/passenger-car/', '/products/motorsport/', '/products/commercial-fleet/', '/products/motorcycle/',
+    '/products/passenger-car/', '/products/competition/', '/products/commercial-vehicle/', '/products/powersports/',
+    '/products/competition/racing-engine-oils/', '/products/competition/racing-coolants/',
+    '/products/commercial-vehicle/heavy-duty-engine-oils/', '/products/commercial-vehicle/automatic-transmission-fluids/',
+    '/products/commercial-vehicle/hydraulic-and-power-steering-fluids/', '/products/powersports/motorcycle-engine-oils/',
+    '/products/powersports/two-stroke-lubricants/', '/products/powersports/chain-lubricants/',
     '/products/industrial/', '/products/marine/', '/products/passenger-car/flagship-ester-based-engine-oils/',
     '/products/passenger-car/passenger-car-engine-oils/', '/products/passenger-car/automatic-transmission-fluids/',
     '/products/passenger-car/manual-transmission-oils/', '/products/passenger-car/differential-and-hypoid-gear-oils/',
@@ -18,8 +22,11 @@ async (page, BASE = 'http://127.0.0.1:8765', paths = null) => {
     '/products/passenger-car/fse-0w-16-gf-6b/', '/products/passenger-car/ss-super-10w-40/', '/products/passenger-car/atf-lv-multi-vehicle/',
     '/products/passenger-car/cvt-fe/', '/products/passenger-car/super-shift-gl-4-gl-4-plus-75w-80/',
     '/products/passenger-car/central-hydraulic-fluid-chf-11s/', '/products/passenger-car/power-steering-fluid-with-stop-leak/',
-    '/products/passenger-car/50-50-antifreeze-coolant-g12-plus-plus-g13/', '/products/motorsport/fsr-gt-racing-0w-40/',
-    '/products/commercial-fleet/heavy-duty-extended-life-elc-antifreeze-coolant/', '/products/motorcycle/fork-oil-5w-light/',
+    '/products/passenger-car/50-50-antifreeze-coolant-g12-plus-plus-g13/', '/products/competition/fsr-gt-endurance-10w-50/',
+    '/products/competition/gt-cooling-purple-racing-coolant/', '/products/competition/fsr-5w-40/',
+    '/products/commercial-vehicle/d1-gold-4x4-5w-40-ck-4-sn/', '/products/commercial-vehicle/50-50-antifreeze-coolant-hd-elc-noat/',
+    '/products/commercial-vehicle/super-shift-gl-5-140/', '/products/powersports/maxx-gold-scooter-4t-5w-30-mb/',
+    '/products/powersports/brake-and-clutch-fluid-dot-4/', '/products/powersports/maxx-chain-lube/',
     '/products/industrial/turb-x-zinc-ep/', '/products/marine/marino-valvi-ultra-t-d-15w-40/'];
   const SIZES = [[1440, 900], [1920, 1080]];
   const browser = page.context().browser();

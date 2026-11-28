@@ -9,29 +9,61 @@
   <url><loc>https://www.princelubricants.com/faq/</loc></url>
   <url><loc>https://www.princelubricants.com/motorsport/</loc></url>
   <url><loc>https://www.princelubricants.com/products/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-10w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-10w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-15w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-gold-10w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-gold-10w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-gold-4x4-10w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-gold-4x4-10w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-gold-4x4-5w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-gold-5w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/d1-gold-5w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-cf-4-15w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-cf-4-20w-50/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-ch-4-15w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-ch-4-20w-50/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-ci-4-10w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-ci-4-10w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-ci-4-15w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/devo-ci-4-20w-50/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/commercial-fleet/heavy-duty-extended-life-elc-antifreeze-coolant/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/50-50-antifreeze-coolant-hd-elc-noat/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/50-50-antifreeze-coolant-hd-elc/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/50-50-antifreeze-coolant-hd/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/antifreeze-and-coolants/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/atf-hd-pro-fleet/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/atf-hd/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/automatic-transmission-fluids/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/brake-and-clutch-fluids/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-gold-10w-30-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-gold-10w-40-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-gold-4x4-10w-30-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-gold-4x4-10w-40-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-gold-4x4-5w-40-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-gold-5w-30-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-gold-5w-40-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-longlife-10w-30-ci-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-longlife-10w-40-ci-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-longlife-15w-40-ci-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-plus-10w-30-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-plus-10w-40-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-sport-10w-30-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/d1-sport-10w-40-ck-4-sn/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/devo-all-fleet-15w-40-cg-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/devo-all-fleet-20w-50-cg-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/devo-shpd-10w-30-ci-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/devo-shpd-10w-40-ci-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/devo-shpd-15w-40-ci-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/devo-shpd-20w-50-ci-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/differential-and-hypoid-gear-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/heavy-duty-engine-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/hydraulic-and-power-steering-fluids/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/manual-transmission-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/signature-ester-based-engine-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/super-shift-gl-4-80w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/super-shift-gl-4-85w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/super-shift-gl-4-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/super-shift-gl-5-140/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/commercial-vehicle/super-shift-gl-5-85w-140/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/brake-fluid-gt-racing/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/fsr-10w-40/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/fsr-5w-40/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/fsr-gt-endurance-10w-50/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/fsr-gt-endurance-15w-50/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/fsr-gt-extreme-10w-60/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/gt-cooling-light-blue-racing-coolant/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/gt-cooling-purple-racing-coolant/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/pro-shift-gt-racing-gl-5-75w-140/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/pro-shift-gt-racing-gl-5-75w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/racing-brake-fluids/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/racing-coolants/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/racing-engine-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/competition/racing-gear-axle-and-differential-oils/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/industrial/activcutt-hd-ep/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/industrial/activcutt-md-chlorine-free/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/air-compressor-ashless/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/air-compressor-non-detergent/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/canny-shift-ep-lead-free/</loc></url>
@@ -41,15 +73,9 @@
   <url><loc>https://www.princelubricants.com/products/industrial/hydraulic-hlp-aw-zinc-free/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/hydraulic-hlp-aws-zinc-plus/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/hydraulic-hvlp-high-vi/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/industrial/inactivcutt-lv/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/industrial/multiway-no-stains/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/industrial/quench-hfp/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/refri-compressor-ammonia/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/refri-compressor-aw-plus/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/refri-compressor-plus-nh3/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/industrial/slideway-clear/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/industrial/solucutt-hd-chlorinated/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/industrial/solucutt-md-chlorine-free/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/spindle-milling-lv/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/spindle-spinning-plus/</loc></url>
   <url><loc>https://www.princelubricants.com/products/industrial/transformaxx-tf-ii/</loc></url>
@@ -90,40 +116,6 @@
   <url><loc>https://www.princelubricants.com/products/marine/marino-valvi-gm-emd-sae40/</loc></url>
   <url><loc>https://www.princelubricants.com/products/marine/marino-valvi-mono-sae40/</loc></url>
   <url><loc>https://www.princelubricants.com/products/marine/marino-valvi-ultra-t-d-15w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/fork-oil-10w-moderate/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/fork-oil-15w-moderate-heavy/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/fork-oil-20w-heavy/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/fork-oil-5w-light/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-gold-4t-10w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-gold-4t-10w-50/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-gold-4t-10w-60/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-gold-4t-15w-50/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-gold-4t-5w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-gold-scooter-4t-5w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-gold-scooter-4t-5w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-launch-4t-15w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-launch-4t-20w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-launch-4t-20w-50/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-launch-4t-sae-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-shift-gl-4-10w-30-4t-and-2t/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-shift-gl-5-75w-90-4t/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-shift-gl-5-80w-90-4t/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-ultra-4t-10w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-ultra-4t-10w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-ultra-4t-15w-50/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-ultra-4t-20w-50/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-ultra-scooter-4t-10w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorcycle/maxx-ultra-scooter-4t-10w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorsport/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorsport/brake-fluid-gt-racing/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorsport/coolant-gt-cooling/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorsport/fsr-gt-racing-0w-40/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorsport/fsr-gt-racing-10w-50/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorsport/fsr-gt-racing-10w-60/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorsport/fsr-gt-racing-5w-30/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorsport/pro-shift-gt-racing-gl-5-75w-140/</loc></url>
-  <url><loc>https://www.princelubricants.com/products/motorsport/pro-shift-gt-racing-gl-5-75w-90/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/50-50-antifreeze-coolant-g11/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/50-50-antifreeze-coolant-g12-evo/</loc></url>
@@ -197,6 +189,42 @@
   <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-plus-lsd-75w-90/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-plus-lsd-80w-90/</loc></url>
   <url><loc>https://www.princelubricants.com/products/passenger-car/super-shift-gl-5-plus-lsd-85w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/brake-and-clutch-fluid-dot-4/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/brake-and-clutch-fluids/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/chain-lubricants/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/cooling-system-fluids/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/fork-and-suspension-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/fork-oil-10w-moderate/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/fork-oil-5w-light/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/gear-and-drivetrain-lubricants/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-chain-lube/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-cool-factory-blue/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-cool-sport-yellow/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-gold-2t/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-gold-4t-10w-40/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-gold-4t-10w-50/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-gold-4t-10w-60/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-gold-4t-15w-50/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-gold-4t-5w-40/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-gold-scooter-4t-5w-30-mb/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-gold-scooter-4t-5w-40-mb/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-launch-4t-15w-40/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-launch-4t-20w-40/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-launch-4t-20w-50/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-scooter-gear-oil-80w-90/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-shift-gl-4-10w-30/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-shift-gl-5-75w-90-4t/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-shift-gl-5-80w-90-4t/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-ultra-2t/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-ultra-4t-10w-30/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-ultra-4t-10w-40/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-ultra-4t-15w-50/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-ultra-scooter-4t-10w-30-mb/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/maxx-ultra-scooter-4t-10w-40-mb/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/motorcycle-engine-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/scooter-engine-oils/</loc></url>
+  <url><loc>https://www.princelubricants.com/products/powersports/two-stroke-lubricants/</loc></url>
   <url><loc>https://www.princelubricants.com/technology/</loc></url>
   <url><loc>https://www.princelubricants.com/technology/p-10-ester/</loc></url>
   <url><loc>https://www.princelubricants.com/technology/p-9-ester/</loc></url>

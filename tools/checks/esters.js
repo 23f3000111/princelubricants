@@ -17,7 +17,7 @@ async (page) => {
         'RAPID COLD-START PROTECTION', 'Immediate circulation and surface retention support protection during critical start-up conditions.',
         'ENHANCED ENGINE CLEANLINESS', 'Natural ester solvency supports deposit and sludge control and cleaner internal engine surfaces.',
         'FS1 SERIES', 'FS1 EUROGEN SERIES', 'FSR SERIES'],
-      series: ['../../products/passenger-car/flagship-ester-based-engine-oils/#fs1', '../../products/passenger-car/flagship-ester-based-engine-oils/#fs1-eurogen', '../../products/motorsport/#racing-motor-oils'],
+      series: ['../../products/passenger-car/flagship-ester-based-engine-oils/#fs1', '../../products/passenger-car/flagship-ester-based-engine-oils/#fs1-eurogen', '../../products/competition/racing-engine-oils/'],
       siblings: ['../p-10-ester/', '../#p-plus-synthese', '../'],
     },
     'p-10-ester': {
@@ -30,7 +30,7 @@ async (page) => {
         'THERMAL DEGRADATION RESISTANCE', 'Heat resistance properties help resist lubricant breakdown during severe and sustained operating conditions.',
         'LOW-DEPOSIT PERFORMANCE', 'Natural ester solvency supports deposit control and cleaner lubrication under demanding operations.',
         'MAXX GOLD SERIES'],
-      series: ['../../products/motorcycle/#maxx-gold-4t'],
+      series: ['../../products/powersports/motorcycle-engine-oils/#maxx-gold-4t'],
       siblings: ['../p-9-ester/', '../#p-plus-synthese', '../'],
     },
   };

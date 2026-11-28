@@ -1,0 +1,92 @@
+[
+ {
+  "product": "PRINCE® 50/50 ANTIFREEZE/COOLANT HD ELC NOAT −37°C",
+  "was": "PRINCE® 50/50 ANTIFREEZE/COOLANT HD ELC PLUS −37°C",
+  "now": "PRINCE® 50/50 ANTIFREEZE/COOLANT HD ELC NOAT −37°C",
+  "why": "The NOAT coolant's text names it HD ELC PLUS, which is not in the document. To be confirmed by the client"
+ },
+ {
+  "product": ["PRINCE® D1 GOLD 4X4 SAE 5W-40 CK-4/SN", "PRINCE® D1 GOLD 4X4 SAE 10W-30 CK-4/SN", "PRINCE® D1 GOLD 4X4 SAE 10W-40 CK-4/SN"],
+  "was": "piston deposit build up",
+  "now": "piston deposit build-up",
+  "why": "Spelling"
+ },
+ {
+  "product": ["PRINCE® D1 PLUS SAE 10W-30 CK-4/SN", "PRINCE® D1 PLUS SAE 10W-40 CK-4/SN", "PRINCE® D1 LONGLIFE SAE 10W-30 CI-4", "PRINCE® D1 LONGLIFE SAE 10W-40 CI-4", "PRINCE® D1 LONGLIFE SAE 15W-40 CI-4"],
+  "was": "severe hydroprocessed",
+  "now": "severely hydroprocessed",
+  "why": "Grammar"
+ },
+ {
+  "product": ["PRINCE® D1 PLUS SAE 10W-30 CK-4/SN", "PRINCE® D1 PLUS SAE 10W-40 CK-4/SN"],
+  "was": "dispersant technology inhibit",
+  "now": "dispersant technology inhibits",
+  "why": "Grammar"
+ },
+ {
+  "product": ["PRINCE® D1 LONGLIFE SAE 10W-30 CI-4", "PRINCE® D1 LONGLIFE SAE 10W-40 CI-4", "PRINCE® D1 LONGLIFE SAE 15W-40 CI-4"],
+  "was": "throughout the entire service intervals",
+  "now": "throughout the entire service interval",
+  "why": "Grammar"
+ },
+ {
+  "product": ["PRINCE® Devo SHPD SAE 10W-30 CI-4", "PRINCE® Devo SHPD SAE 10W-40 CI-4", "PRINCE® Devo SHPD SAE 15W-40 CI-4"],
+  "was": "throughout the whole drain intervals",
+  "now": "throughout the whole drain interval",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® BRAKE & CLUTCH FLUID DOT 4",
+  "was": "ISO 4925 4,",
+  "now": "ISO 4925 Class 4,",
+  "why": "As the Passenger Car document writes it"
+ },
+ {
+  "product": "PRINCE® BRAKE & CLUTCH FLUID DOT 3",
+  "was": "ISO 4925 3,",
+  "now": "ISO 4925 Class 3,",
+  "why": "As the Passenger Car document writes it"
+ },
+ {
+  "product": "PRINCE® ATF SV MULTI-VEHICLE",
+  "was": "For wide range of applications",
+  "now": "For a wide range of applications",
+  "why": "As the Passenger Car document writes it"
+ },
+ {
+  "product": "PRINCE® SUPER-SHIFT GL-5 +LSD SAE 85W-90",
+  "was": "hypoid drive axles protection",
+  "now": "hypoid drive axle protection",
+  "why": "As the Passenger Car document writes it"
+ },
+ {
+  "product": "PRINCE® SUPER-SHIFT GL-5 +LSD SAE 85W-90",
+  "was": "where the manufacturer specified, or permits",
+  "now": "where the manufacturer specifies, or permits",
+  "why": "As the Passenger Car document writes it"
+ },
+ {
+  "product": "PRINCE® SUPER-SHIFT GL-5 SAE 85W-90",
+  "was": "to deliver maximize protection",
+  "now": "to deliver maximized protection",
+  "why": "As the Passenger Car document writes it"
+ },
+ {
+  "product": "PRINCE® POWER STEERING FLUID",
+  "was": "highly refined base stocks and specialized additive system",
+  "now": "highly refined base stocks and a specialized additive system",
+  "why": "As the Passenger Car document writes it"
+ },
+ {
+  "product": "PRINCE® POWER STEERING FLUID",
+  "was": "Well suitable for",
+  "now": "Well suited for",
+  "why": "As the Passenger Car document writes it"
+ },
+ {
+  "product": "PRINCE® Devo SHPD SAE 20W-50 CI-4",
+  "was": "Fortified with specialized detergent-dispersant chemistry effectively controls",
+  "now": "Fortified with specialized detergent-dispersant chemistry, it effectively controls",
+  "why": "Grammar"
+ }
+]

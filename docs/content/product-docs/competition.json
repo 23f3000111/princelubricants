@@ -1,0 +1,528 @@
+{
+ "source": "Competition.pdf, 10 pages",
+ "category": "competition",
+ "types": [
+  {
+   "title": "Racing Engine Oils",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® FSR SAE 5W-40",
+       "facts": [
+        [
+         "Product Series",
+         "FSR"
+        ],
+        [
+         "Product Type",
+         "VHVI Group IV PAO + Group V Ester-Based 100% Synthetic Motor Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 5W-40"
+        ],
+        [
+         "API Service Category",
+         "API SP"
+        ],
+        [
+         "Category",
+         "Competition-Grade Motor Oil"
+        ]
+       ],
+       "description": [
+        "Expertly geared for the relentless demands of competitive environments, PRINCE® FSR SAE 5W-40 is a 100% synthetic motor oil formulated with a sophisticated blend of high-performance VHVI synthetic base oils, Group IV Polyalphaolefin (PAO) and Group V Double Ester (P-9/P-12) base stocks, fortified with cutting-edge racing-specific additive technology. The inherent polarity of its advanced ester components enhances lubricating film adhesion to metallic surfaces, while advanced boron-based additives and Zinc Dialkyldithiophosphate (ZDDP) anti-wear chemistry reinforce protection against extreme mechanical and thermal stress. Engineered to deliver exceptional shear stability, thermal and oxidative resistance, and robust high-temperature high-shear (HTHS) viscosity performance, its advanced formulation maintains consistent lubricating film integrity, minimises frictional losses and safeguards critical engine components during sustained high-RPM, high-load operation under challenging motorsport conditions.",
+        "Engineered to API SP performance standards, providing advanced LSPI suppression, improved protection against timing chain wear, and resistance to turbocharger oil coking and deposit-induced oil starvation."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Designed for highly stressed, high-revving and high-output naturally aspirated and turbocharged gasoline engines operating under extreme conditions. Well suited for demanding applications in both professional and amateur motorsport, including circuit racing, sprint racing, drag racing and time attack, as well as performance-oriented street driving where SAE 5W-40 viscosity is appropriate and recommended by the engine builder or tuning specialist."
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® FSR SAE 10W-40",
+       "facts": [
+        [
+         "Product Series",
+         "FSR"
+        ],
+        [
+         "Product Type",
+         "VHVI Group IV PAO + Group V Ester-Based 100% Synthetic Motor Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-40"
+        ],
+        [
+         "API Service Category",
+         "API SP"
+        ],
+        [
+         "Category",
+         "Competition-Grade Motor Oil"
+        ]
+       ],
+       "description": [
+        "Expertly geared for the relentless demands of competitive environments, PRINCE® FSR SAE 10W-40 is a 100% synthetic motor oil formulated with a sophisticated blend of high-performance VHVI synthetic base oils, Group IV Polyalphaolefin (PAO) and Group V Double Ester (P-9/P-12) base stocks, fortified with cutting-edge racing-specific additive technology. The inherent polarity of its advanced ester components enhances lubricating film adhesion to metallic surfaces, while advanced boron-based additives and Zinc Dialkyldithiophosphate (ZDDP) anti-wear chemistry reinforce protection against extreme mechanical and thermal stress. Engineered to deliver exceptional shear stability, thermal and oxidative resistance, and robust high-temperature high-shear (HTHS) viscosity performance, its advanced formulation maintains consistent lubricating film integrity, minimises frictional losses and safeguards critical engine components during sustained high-RPM, high-load operation under challenging motorsport conditions.",
+        "Engineered to API SP performance standards, providing advanced LSPI suppression, improved protection against timing chain wear, and resistance to turbocharger oil coking and deposit-induced oil starvation."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Designed for highly stressed, high-revving and high-output naturally aspirated and turbocharged gasoline engines operating under extreme conditions. Well suited for demanding applications in both professional and amateur motorsport, including circuit racing, sprint racing, drag racing and time attack, as well as performance-oriented street driving where SAE 10W-40 viscosity is appropriate and recommended by the engine builder or tuning specialist."
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® FSR GT ENDURANCE SAE 10W-50",
+       "facts": [
+        [
+         "Product Series",
+         "FSR"
+        ],
+        [
+         "Product Type",
+         "VHVI Group IV PAO + Group V Ester-Based 100% Synthetic Motor Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-50"
+        ],
+        [
+         "API Service Category",
+         "N/A"
+        ],
+        [
+         "Category",
+         "Competition-Grade Motor Oil"
+        ]
+       ],
+       "description": [
+        "Developed to withstand the punishing demands of endurance racing and extreme competitive environments, PRINCE® FSR GT ENDURANCE SAE 10W-50 is a 100% synthetic motor oil formulated with a sophisticated blend of high-performance VHVI synthetic base oils, Group IV Polyalphaolefin (PAO) and Group V Double Ester (P-9/P-12) base stocks, reinforced with advanced racing-specific additive technology. Its robust SAE 10W-50 viscosity profile delivers enhanced lubricating film strength, exceptional shear stability and resistance to thermal degradation under prolonged high-RPM operation, elevated boost pressures and extreme mechanical loads. Fortified with advanced boron-based additives and ZDDP anti-wear chemistry, its formulation is engineered to maintain consistent oil pressure and safeguard critical engine components throughout sustained, severe-duty competition."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Specially engineered for high-performance stock engines and extensively modified engines, including aggressively tuned and purpose-built racing powertrains subjected to prolonged high-temperature, high-load operation and extreme mechanical stress. Particularly suited to endurance racing, GT racing, circuit racing, drag racing, rally and other severe-duty motorsport applications, especially in hot climates where SAE 10W-50 or SAE 15W-50 viscosity grades are recommended by the engine builder or tuning specialist."
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® FSR GT ENDURANCE SAE 15W-50",
+       "facts": [
+        [
+         "Product Series",
+         "FSR"
+        ],
+        [
+         "Product Type",
+         "VHVI Group IV PAO + Group V Ester-Based 100% Synthetic Motor Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 15W-50"
+        ],
+        [
+         "API Service Category",
+         "API SN"
+        ],
+        [
+         "Category",
+         "Competition-Grade Motor Oil"
+        ]
+       ],
+       "description": [
+        "Developed to withstand the punishing demands of endurance racing and extreme competitive environments, PRINCE® FSR GT ENDURANCE SAE 15W-50 is a 100% synthetic motor oil formulated with a sophisticated blend of high-performance VHVI synthetic base oils, Group IV Polyalphaolefin (PAO) and Group V Double Ester (P-9/P-12) base stocks, reinforced with advanced racing-specific additive technology. Its robust SAE 15W-50 viscosity profile delivers enhanced lubricating film strength, exceptional shear stability and resistance to thermal degradation under prolonged high-RPM operation, elevated boost pressures and extreme mechanical loads. Fortified with advanced boron-based additives and ZDDP anti-wear chemistry, its formulation is engineered to maintain consistent oil pressure and safeguard critical engine components throughout sustained, severe-duty competition."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Specially engineered for high-performance stock engines and extensively modified engines, including aggressively tuned and purpose-built racing powertrains subjected to prolonged high-temperature, high-load operation and extreme mechanical stress. Particularly suited to endurance racing, GT racing, circuit racing, drag racing, rally and other severe-duty motorsport applications, especially in hot climates where SAE 10W-50 or SAE 15W-50 viscosity grades are recommended by the engine builder or tuning specialist."
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® FSR GT EXTREME SAE 10W-60",
+       "facts": [
+        [
+         "Product Series",
+         "FSR"
+        ],
+        [
+         "Product Type",
+         "VHVI Group IV PAO + Group V Ester-Based 100% Synthetic Motor Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-60"
+        ],
+        [
+         "API Service Category",
+         "API SN"
+        ],
+        [
+         "Category",
+         "Competition-Grade Motor Oil"
+        ]
+       ],
+       "description": [
+        "Masterfully formulated to withstand exceptional thermal stress, intense shear forces and severe mechanical loads, PRINCE® FSR GT EXTREME SAE 10W-60 is a 100% synthetic motor oil developed with a sophisticated blend of high-performance VHVI synthetic Group IV Polyalphaolefin (PAO) and Group V Double Ester (P-9/P-12) base stocks, reinforced with unparalleled heavy-duty racing additive technology. Its exceptionally robust SAE 10W-60 viscosity profile delivers outstanding lubricating film strength and high-temperature high-shear (HTHS) viscosity performance under extreme cylinder pressures, elevated oil temperatures and severe bearing loads. Fortified with an advanced boron-based additive package and Zinc Dialkyldithiophosphate (ZDDP) anti-wear chemistry, its formulation is engineered to resist permanent viscosity loss, maintain stable oil pressure and safeguard critical engine components against accelerated wear and lubricating film breakdown under the most punishing motorsport environments."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Specially developed for extremely high-output, high-boost and purpose-built racing engines, including high-displacement and high-revving powertrains subjected to extreme thermal, shear forces and mechanical loads. Particularly suited to endurance racing, GT racing, circuit racing, drag racing, drift racing and other severe-duty motorsport applications, as well as selected high-performance European sport vehicles and competition engines with increased bearing clearances where SAE 10W-60 viscosity grade is specified by the vehicle manufacturer, as well as recommended by the engine builder or tuning specialist."
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "5L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Racing Gear, Axle & Differential Oils",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® PRO-SHIFT GT RACING GL-5 SAE 75W-90",
+       "facts": [
+        [
+         "Product Type",
+         "Gear Oil"
+        ],
+        [
+         "Base Type",
+         "100% Synthetic (Severely Hydroisomerized + PAO)"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 75W-90"
+        ],
+        [
+         "Fluid Classification",
+         "Extreme-Pressure Driveline Lubricant"
+        ],
+        [
+         "API Service Category",
+         "API GL-5, API GL-5 +LS, API MT-1"
+        ],
+        [
+         "Category",
+         "Racing Gear, Axle & Differential Oils"
+        ]
+       ],
+       "description": [
+        "Precision-formulated for the demanding drivetrain requirements of competitive motorsport, PRINCE® PRO-SHIFT GT RACING GL-5 SAE 75W-90 is a high-performance racing gear oil reinforced with advanced extreme-pressure (EP) additives and specialised limited-slip friction modifiers. Its shear-stable formulation delivers robust lubricating film strength under aggressive torque transfer, sudden shock loads and sustained high-speed gear operation, safeguarding critical gear teeth, bearings and hypoid gear assemblies against scuffing, pitting and premature wear. Engineered to optimise drivetrain efficiency, thermal stability and controlled limited-slip differential engagement, it provides consistent lubrication performance under demanding competitive conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Specifically developed for high-torque and heavy-duty drivetrain assemblies in race-ready and high-performance sports vehicles, including hypoid drive axles, conventional differentials, limited-slip differentials (LSD), non-synchronised racing gearboxes and transaxles requiring SAE 75W-90 gear oil meeting GL-5 performance requirements."
+        },
+        {
+         "label": "Industry Standards & Specifications",
+         "items": [
+          "API GL-5",
+          "API GL-5 +LS",
+          "API MT-1"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® PRO-SHIFT GT RACING GL-5 SAE 75W-140",
+       "facts": [
+        [
+         "Product Type",
+         "Gear Oil"
+        ],
+        [
+         "Base Type",
+         "100% Synthetic (Severely Hydroisomerized + PAO)"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 75W-140"
+        ],
+        [
+         "Fluid Classification",
+         "Extreme-Pressure Driveline Lubricant"
+        ],
+        [
+         "API Service Category",
+         "API GL-5, API GL-5 +LS, API MT-1"
+        ],
+        [
+         "Category",
+         "Racing Gear, Axle & Differential Oils"
+        ]
+       ],
+       "description": [
+        "Developed to withstand extreme torque loads and severe thermal stress in competitive motorsport, PRINCE® PRO-SHIFT GT RACING GL-5 SAE 75W-140 is an advanced fully synthetic racing gear oil reinforced with a cutting-edge extreme-pressure (EP) additive package and specialized limited-slip friction modifiers. Its robust SAE 75W-140 viscosity profile delivers exceptional lubricating film strength under aggressive torque transfer, repeated shock loads and prolonged high-temperature operation, safeguarding heavily loaded hypoid gears and bearings against scuffing, pitting and adhesive wear. Its advanced shear-stable formulation is engineered to maintain viscosity integrity, controlled limited-slip differential engagement and consistent drivetrain protection under the most punishing competitive conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Specifically developed for ultra-high-torque and severely loaded drivetrain assemblies in extensively modified, race-ready and high-performance sports vehicles, including heavy-duty hypoid drive axles, conventional and limited-slip differentials (LSD), non-synchronised racing gearboxes and transaxles requiring SAE 75W-140 gear oil meeting GL-5 performance requirements."
+        },
+        {
+         "label": "Industry Standards & Specifications",
+         "items": [
+          "API GL-5",
+          "API GL-5 +LS",
+          "API MT-1"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Racing Brake Fluids",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® BRAKE FLUID GT RACING",
+       "facts": [
+        [
+         "Product Series",
+         "RBF"
+        ],
+        [
+         "Product Type",
+         "Non-Silicone Brake Fluid"
+        ],
+        [
+         "Industry Performance Standards",
+         "FMVSS 116 DOT 4, ISO 4925 Class 4, SAE J1704"
+        ],
+        [
+         "Category",
+         "Racing Brake & Clutch Fluid"
+        ]
+       ],
+       "description": [
+        "PRINCE® BRAKE FLUID GT RACING is a high-performance glycol ether and borate ester-based brake fluid developed to withstand the extreme thermal demands of competitive motorsport. Featuring an exceptionally high dry boiling point exceeding 320°C and a wet boiling point exceeding 190°C, its advanced formulation provides outstanding resistance to vapour lock and fluid-induced brake fade during repeated high-intensity braking. Its low-compressibility characteristics, superior thermal stability and advanced corrosion inhibition chemistry promote firm pedal response, consistent hydraulic pressure transmission and reliable braking performance under demanding motorsport conditions. Performance Specifications: FMVSS No. 116 DOT 4, ISO 4925 Class 4, SAE J1704"
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Specially developed for high-performance hydraulic braking and clutch systems in race-ready, extensively modified and high-performance sports vehicles subjected to repeated severe braking and extreme thermal loads, where the highest level of glycol-based DOT 4 brake fluid specification is specified."
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "0.5L",
+         "1L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Racing Coolants",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® GT COOLING LIGHT BLUE RACING COOLANT",
+       "facts": [
+        [
+         "Product Series",
+         "GT COOLING ULTRA-PURE RACING COOLANT"
+        ],
+        [
+         "Product Type",
+         "Ultra-Pure Water-Based Coolant"
+        ],
+        [
+         "Technology",
+         "Glycol-Free Thermal Management Technology"
+        ],
+        [
+         "Dilution",
+         "Prediluted, Ready-to-Use"
+        ],
+        [
+         "Visual Appearance",
+         "Light Blue"
+        ],
+        [
+         "Key Performance Standards",
+         "ASTM D3306"
+        ],
+        [
+         "Category",
+         "Racing Coolant"
+        ]
+       ],
+       "description": [
+        "PRINCE® GT COOLING LIGHT BLUE RACING COOLANT is a high-performance, ultra-pure water-based racing coolant specifically formulated to maximize heat dissipation and thermal exchange efficiency under the most extreme motorsport conditions. Unlike conventional glycol-based antifreezes, its specially designed glycol-free formulation capitalizes on the superior thermal conductivity, high specific heat capacity and low viscosity of water to facilitate efficient coolant circulation and rapid heat transfer from critical engine components. Reinforced with a specialized additive package, its formulation is designed to safeguard aluminium radiators, cylinder heads, water pumps and other cooling system components against corrosion, scale and deposit formation, while maintaining consistent and dependable thermal management under sustained high-RPM operation and extreme engine loads."
+       ],
+       "notices": [
+        {
+         "label": "Important",
+         "text": "Do not dilute further. Not intended for applications requiring antifreeze protection or mandatory glycol-based coolants."
+        },
+        {
+         "label": "CAUTION",
+         "text": "THIS PRODUCT OFFERS NO ANTIFREEZE PROTECTION."
+        }
+       ],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Specifically developed for high-performance stock engines, aggressively tuned high-boost engines and purpose-built racing powertrains equipped with water-cooled systems requiring enhanced heat dissipation and superior thermal management. Suitable for conventional and upgraded aluminium cooling systems where glycol-free coolant is permitted and antifreeze protection is not required."
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® GT COOLING PURPLE RACING COOLANT",
+       "facts": [
+        [
+         "Product Series",
+         "GT COOLING ULTRA-PURE RACING COOLANT"
+        ],
+        [
+         "Product Type",
+         "Ultra-Pure Water-Based Coolant"
+        ],
+        [
+         "Technology",
+         "Glycol-Free Thermal Management Technology"
+        ],
+        [
+         "Dilution",
+         "Prediluted, Ready-to-Use"
+        ],
+        [
+         "Visual Appearance",
+         "Purple"
+        ],
+        [
+         "Key Performance Standards",
+         "ASTM D3306"
+        ],
+        [
+         "Category",
+         "Racing Coolant"
+        ]
+       ],
+       "description": [
+        "PRINCE® GT COOLING PURPLE RACING COOLANT is a high-performance, ultra-pure water-based racing coolant specifically formulated to maximize heat dissipation and thermal exchange efficiency under the most extreme motorsport conditions. Unlike conventional glycol-based antifreezes, its specially designed glycol-free formulation capitalizes on the superior thermal conductivity, high specific heat capacity and low viscosity of water to facilitate efficient coolant circulation and rapid heat transfer from critical engine components. Reinforced with a specialized additive package, its formulation is designed to safeguard aluminium radiators, cylinder heads, water pumps and other cooling system components against corrosion, scale and deposit formation, while maintaining consistent and dependable thermal management under sustained high-RPM operation and extreme engine loads."
+       ],
+       "notices": [
+        {
+         "label": "Important",
+         "text": "Do not dilute further. Not intended for applications requiring antifreeze protection or mandatory glycol-based coolants."
+        },
+        {
+         "label": "CAUTION",
+         "text": "THIS PRODUCT OFFERS NO ANTIFREEZE PROTECTION."
+        }
+       ],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Specifically developed for high-performance stock engines, aggressively tuned high-boost engines and purpose-built racing powertrains equipped with water-cooled systems requiring enhanced heat dissipation and superior thermal management. Suitable for conventional and upgraded aluminium cooling systems where glycol-free coolant is permitted and antifreeze protection is not required."
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

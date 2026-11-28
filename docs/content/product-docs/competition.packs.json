@@ -1,0 +1,9 @@
+{
+ "fsr-gt-endurance-10w-50": ["fsr-4l-10w-50", "fsr-1l-10w-50"],
+ "fsr-gt-extreme-10w-60": ["fsr-4l-10w-60", "fsr-1l-10w-60"],
+ "pro-shift-gt-racing-gl-5-75w-90": ["pro-shift-gtracing-ls-1l-75w-90"],
+ "pro-shift-gt-racing-gl-5-75w-140": ["pro-shift-gtracing-ls-1l-75w-140"],
+ "brake-fluid-gt-racing": ["brake-fluid-gt-racing-1l"],
+ "gt-cooling-light-blue-racing-coolant": ["coolant-gtcooling-4l"],
+ "gt-cooling-purple-racing-coolant": ["coolant-gtcooling-4l"]
+}

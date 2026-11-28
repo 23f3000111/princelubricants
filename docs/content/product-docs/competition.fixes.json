@@ -1,0 +1,32 @@
+[
+ {
+  "product": "PRINCE® FSR GT ENDURANCE SAE 15W-50",
+  "was": "Its robust SAE 10W-50 viscosity profile",
+  "now": "Its robust SAE 15W-50 viscosity profile",
+  "why": "The 15W-50's text repeats the 10W-50's grade. To be confirmed by the client"
+ },
+ {
+  "product": ["PRINCE® FSR SAE 5W-40", "PRINCE® FSR SAE 10W-40"],
+  "was": "Well suitable for",
+  "now": "Well suited for",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® FSR GT EXTREME SAE 10W-60",
+  "was": "Fortified with advanced boron-based additive package",
+  "now": "Fortified with an advanced boron-based additive package",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® PRO-SHIFT GT RACING GL-5 SAE 75W-140",
+  "was": "reinforced with cutting-edge extreme-pressure (EP) additive package",
+  "now": "reinforced with a cutting-edge extreme-pressure (EP) additive package",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® BRAKE FLUID GT RACING",
+  "was": "ISO 4925 4,",
+  "now": "ISO 4925 Class 4,",
+  "why": "As the Passenger Car document writes it"
+ }
+]

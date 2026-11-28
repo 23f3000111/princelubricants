@@ -33,11 +33,27 @@ OUT = ROOT / "docs" / "content" / "product-docs"
 LIST_LABELS = (
     "Industry Standards, Specifications, & Recommendations", "Industry Standards & Specifications",
     "OEM Specifications & Recommendations", "Key OEM Performance Specifications",
-    "Key OEM Performance Specification", "Recommended OEM Fluid Specifications",
+    "Key OEM Performance Specification", "Recommended OEM Fluid Specifications", "Industry Standards",
 )
 TEXT_LABELS = ("Intended Applications",)
+# Safety notices, kept apart from the description so the page can show them as such.
+NOTICE_LABELS = ("Important", "CAUTION")
 PACKAGING = "Available Packaging"
-LABELS = LIST_LABELS + TEXT_LABELS + (PACKAGING,)
+# Labels typed a little differently in places, read as the label meant.
+LABEL_ALIASES = {
+    "Industry Standards, Specifications & Recommendations": "Industry Standards, Specifications, & Recommendations",
+    "Industry Standards, & Specifications": "Industry Standards & Specifications",
+}
+LABELS = LIST_LABELS + TEXT_LABELS + NOTICE_LABELS + (PACKAGING,) + tuple(LABEL_ALIASES)
+
+# The labels of the product list lines in the client's documents. A line break typed inside a
+# Word paragraph can run two lines together; these are where a second one may start.
+FACT_LABELS = {
+    "Product Series", "Product Type", "Base Type", "Viscosity Grade", "Fluid Classification", "API Service Category",
+    "ACEA Classification", "ILSAC Performance Category", "JASO Classification", "ISO Standard", "Performance Specifications",
+    "Transmission Compatibility", "Industry Performance Standards", "Key Performance Standards", "Technology", "Dilution",
+    "Visual Appearance", "Application Method", "Compatibility", "Category",
+}
 
 HEADING = re.compile(r"([^;–]+?)\s*–\s*(\d+) products?\b")
 
@@ -52,7 +68,7 @@ def labelled(text):
 
 def looks_labelled(text):
     """A few words and a colon at the start: perhaps a label LABELS does not have yet."""
-    return re.match(r"[A-Z][^.,:;()]{2,60}: [A-Z0-9]", text) is not None
+    return re.match(r"[A-Z][^.:;()]{2,70}: [A-Z0-9]", text) is not None
 
 
 def tidy(text):
@@ -62,6 +78,42 @@ def tidy(text):
 def series_of(heading):
     """"SS1 – 3 products ; SS SUPER – 1 product" -> [("SS1", 3), ("SS SUPER", 1)]."""
     return [(name.strip(), int(count)) for name, count in HEADING.findall(heading)]
+
+
+def is_header(cells):
+    """The row of column titles a product table opens with."""
+    return len(cells) == 3 and cells[0] in ("Product", "Products") and cells[1:] == ["Product Page Description", "Individual Page Description"]
+
+
+def sections_of(menus):
+    """The type each section of the document is, from the menu that opens it: (its cells, the
+    place of the one in red). Every menu should be the same; one that is not (a menu copied
+    from another document) is read by the place of its red cell in the menu most of them have.
+    Returns the titles, and each odd menu's cells that the usual menu does not have."""
+    usual = list(Counter(tuple(names) for names, _ in menus).most_common(1)[0][0])
+    titles = [usual[place] for _, place in menus]
+    if titles != usual:
+        raise ValueError(f"the sections are {titles}, but the menu names {usual}")
+    slips = [(i, [n for n in names if n not in usual]) for i, (names, _) in enumerate(menus) if list(names) != usual]
+    return titles, slips
+
+
+def series_by_fact(products):
+    """A type's series from each product's "Product Series" line, for a document without
+    headings: the runs of products that share one, as (title, count). Nothing when that would not
+    group anything: a product without a series, one series for the type, or one per product."""
+    names = [dict(p["facts"]).get("Product Series") for p in products]
+    if not names or None in names:
+        return []
+    runs = []
+    for name in names:
+        if runs and runs[-1][0] == name:
+            runs[-1][1] += 1
+        else:
+            runs.append([name, 1])
+    if len(runs) < 2 or all(n == 1 for _, n in runs):
+        return []
+    return [(name, n) for name, n in runs]
 
 
 def merge_rows(rows):
@@ -95,7 +147,8 @@ def lines_of(paragraphs, labels):
     """The "Label: value" lines of a product's list, one each. A line break typed inside a
     paragraph leaves two of them in it; `labels` are the labels the document uses."""
     # Longest first, so that "API Service Category" is not cut at the "Category" inside it.
-    label = re.compile(r"(?:^|(?<= ))(?:%s): " % "|".join(re.escape(l) for l in sorted(labels, key=len, reverse=True)))
+    known = set(labels) | FACT_LABELS
+    label = re.compile(r"(?:^|(?<= ))(?:%s): " % "|".join(re.escape(l) for l in sorted(known, key=len, reverse=True)))
     out = []
     for text in (tidy(p) for p in paragraphs):
         starts = sorted({0} | {m.start() for m in label.finditer(text)})
@@ -110,8 +163,9 @@ def split_list(text):
 
 
 def body(paragraphs):
-    """A product's own page: its description, its labelled sections and its packaging."""
-    description, sections, packaging = [], [], None
+    """A product's own page: its description, its safety notices, its labelled sections and its
+    packaging."""
+    description, notices, sections, packaging = [], [], [], None
     for text in (tidy(p) for p in paragraphs):
         if not text:
             continue
@@ -120,22 +174,26 @@ def body(paragraphs):
             description.append(text)
             continue
         value = text[len(label) + 1:].strip()
+        label = LABEL_ALIASES.get(label, label)
         if label == PACKAGING:
             m = re.fullmatch(r"(.*?)\s*(?:\(([^()]*)\))?", value)
             packaging = {"sizes": [s.strip() for s in m.group(1).split("/")], "note": m.group(2) or ""}
+        elif label in NOTICE_LABELS:
+            notices.append({"label": label, "text": value})
         elif label in LIST_LABELS:
             sections.append({"label": label, "items": split_list(value)})
         else:
             sections.append({"label": label, "text": value})
     if packaging is None:
         raise ValueError(f"no packaging: {paragraphs!r}")
-    return {"description": description, "sections": sections, "packaging": packaging}
+    return {"description": description, "notices": notices, "sections": sections, "packaging": packaging}
 
 
 def correct(product, text, fixes, used):
     """The text with the corrections listed for this product; `used` gathers those that applied."""
     for i, fix in enumerate(fixes):
-        if fix["product"] == product and fix["was"] in text:
+        named = fix["product"] if isinstance(fix["product"], list) else [fix["product"]]
+        if product in named and fix["was"] in text:
             text = text.replace(fix["was"], fix["now"])
             used.add(i)
     return text
@@ -200,10 +258,10 @@ def read(pdf):
         rows = [[cell for cell in find(tr, ("TH", "TD"))] for tr in find(top, ("TR",))]
         if all(len(row) == 4 for row in rows):
             names = [(tidy(pages.text(c)), any(is_red(ch) for ch in pages.of(c))) for row in rows for c in row]
-            current = [name for name, red in names if red]
+            current = [i for i, (_, red) in enumerate(names) if red]
             if len(current) != 1:
                 raise ValueError(f"a menu with {len(current)} current types: {names}")
-            types.append({"title": current[0], "menu": [n for n, _ in names], "series": [], "rows": []})
+            types.append({"menu": [n for n, _ in names], "current": current[0], "series": [], "rows": []})
             other += [n for n, _ in names]
             continue
         # Columns by where their text starts: a row cut by a page break has fewer cells.
@@ -219,12 +277,15 @@ def read(pdf):
                     continue
                 column = min(range(3), key=lambda i: abs(edges[i] - x))
                 cells[column] += [pages.text(p) for p in find(cell, ("P",))]
-            if [tidy("".join(c)) for c in cells] == ["Product", "Product Page Description", "Individual Page Description"]:
+            if is_header([tidy("".join(c)) for c in cells]):
                 other += [tidy("".join(c)) for c in cells]
                 continue
             table.append(tuple(cells))
         types[-1]["rows"] += merge_rows(table)
-    return types, other
+    titles, slips = sections_of([(t["menu"], t["current"]) for t in types])
+    for t, title in zip(types, titles):
+        t["title"] = title
+    return types, other, slips
 
 
 # Punctuation is left out: a label's colon and a list's commas are structure in the JSON.
@@ -244,6 +305,8 @@ def texts_of(types):
                 for label, value in p["facts"]:
                     yield f"{label} {value}"
                 yield from p["description"]
+                for notice in p.get("notices", []):
+                    yield f"{notice['label']} {notice['text']}"
                 for section in p["sections"]:
                     yield section["label"]
                     yield section.get("text") or " ".join(section["items"])
@@ -253,21 +316,23 @@ def texts_of(types):
 def build(types, fixes):
     used, out = set(), []
     labels = {tidy(p).partition(": ")[0] for t in types for _, facts, _ in t["rows"] for p in facts if ": " in p}
+    # A document that heads its series somewhere leaves the types it does not head ungrouped.
+    by_fact = series_by_fact if not any(t["series"] for t in types) else (lambda products: [])
     for t in types:
-        rows = list(t["rows"])
-        groups = t["series"] or [("", len(rows))]
-        if sum(n for _, n in groups) != len(rows):
-            raise ValueError(f"{t['title']}: headings count {groups}, the tables hold {len(rows)} products")
+        products = []
+        for name_paras, facts, paras in t["rows"]:
+            printed = tidy("".join(name_paras))
+            fix = lambda text: correct(printed, text, fixes, used)
+            page = body([fix(p) for p in paras])
+            products.append({"name": fix(printed), "facts": [list(fact(fix(f))) for f in lines_of(facts, labels)], **page})
+        # The document's own headings name the series; without them, the products' own lines do.
+        groups = t["series"] or by_fact(products) or [("", len(products))]
+        if sum(n for _, n in groups) != len(products):
+            raise ValueError(f"{t['title']}: headings count {groups}, the tables hold {len(products)} products")
         series = []
         for title, count in groups:
-            products = []
-            for name_paras, facts, paras in rows[:count]:
-                printed = tidy("".join(name_paras))
-                fix = lambda text: correct(printed, text, fixes, used)
-                page = body([fix(p) for p in paras])
-                products.append({"name": fix(printed), "facts": [list(fact(fix(f))) for f in lines_of(facts, labels)], **page})
-            rows = rows[count:]
-            series.append({"title": title, "products": products})
+            series.append({"title": title, "products": products[:count]})
+            products = products[count:]
         out.append({"title": t["title"], "series": series})
     unused = [f for i, f in enumerate(fixes) if i not in used]
     if unused:
@@ -281,15 +346,14 @@ def main(argv):
     fixes_file = OUT / f"{category}.fixes.json"
     fixes = json.loads(fixes_file.read_text(encoding="utf-8")) if fixes_file.exists() else []
     with pdfplumber.open(source) as pdf:
-        types, other = read(pdf)
+        types, other, slips = read(pdf)
         printed = words(w["text"] for page in pdf.pages for w in page.extract_words())
         count = len(pdf.pages)
     taken = words(other + list(texts_of(build(types, []))))
     if printed != taken:
         raise SystemExit(f"words missing: {printed - taken}; words extra: {taken - printed}")
-    menus = {tuple(t["menu"]) for t in types}
-    if len(menus) != 1 or [t["title"] for t in types] != list(menus.pop()):
-        raise SystemExit("the menus and the sections do not name the same types in the same order")
+    for i, odd in slips:
+        print(f"note: the menu over {types[i]['title']} also says {odd}; read as the document's usual menu")
     data = {"source": f"{Path(source).name}, {count} pages", "category": category, "types": build(types, fixes)}
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / f"{category}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")

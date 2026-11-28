@@ -1,0 +1,80 @@
+[
+ {
+  "product": "PRINCE® MAXX GOLD 4T SAE 10W-60",
+  "was": "JSAO MA2",
+  "now": "JASO MA2",
+  "why": "Spelling"
+ },
+ {
+  "product": ["PRINCE® MAXX COOL SPORT −37°C YELLOW", "PRINCE® MAXX COOL FACTORY −37°C BLUE"],
+  "was": "anime-free",
+  "now": "amine-free",
+  "why": "Spelling"
+ },
+ {
+  "product": "PRINCE® MAXX COOL FACTORY −37°C BLUE",
+  "was": "Phospated Organic Acid Technology",
+  "now": "Phosphated Organic Acid Technology",
+  "why": "Spelling"
+ },
+ {
+  "product": ["PRINCE® MAXX ULTRA SCOOTER 4T SAE 10W-30 MB", "PRINCE® MAXX ULTRA SCOOTER 4T SAE 10W-40 MB"],
+  "was": "MAXX GOLD SCOOTER 4T",
+  "now": "MAXX ULTRA SCOOTER 4T",
+  "why": "The Product Series line names the MAXX GOLD scooter oils. To be confirmed by the client"
+ },
+ {
+  "product": "PRINCE® MAXX GOLD 4T SAE 10W-60",
+  "was": "while sophisticated anti-wear agent",
+  "now": "while a sophisticated anti-wear agent",
+  "why": "Grammar"
+ },
+ {
+  "product": ["PRINCE® MAXX LAUNCH 4T SAE 15W-40", "PRINCE® MAXX LAUNCH 4T SAE 20W-40"],
+  "was": "detergent systems and antioxidant chemistry helps control",
+  "now": "detergent systems and antioxidant chemistry help control",
+  "why": "Grammar"
+ },
+ {
+  "product": ["PRINCE® MAXX ULTRA SCOOTER 4T SAE 10W-30 MB", "PRINCE® MAXX ULTRA SCOOTER 4T SAE 10W-40 MB"],
+  "was": "as well as helps control",
+  "now": "as well as help control",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® MAXX ULTRA 2T",
+  "was": "low smokes performance",
+  "now": "low-smoke performance",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® MAXX-SHIFT GL-5 SAE 75W-90 4T",
+  "was": "severe hydroisomerized",
+  "now": "severely hydroisomerized",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® MAXX COOL SPORT −37°C YELLOW",
+  "was": "two-wheelers coolant",
+  "now": "two-wheeler coolant",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® MAXX COOL SPORT −37°C YELLOW",
+  "was": "other powersports equipped",
+  "now": "other powersports vehicles equipped",
+  "why": "Grammar"
+ },
+ {
+  "product": "PRINCE® MAXX COOL FACTORY −37°C BLUE",
+  "was": "etc where",
+  "now": "etc., where",
+  "why": "Punctuation"
+ },
+ {
+  "product": "PRINCE® BRAKE & CLUTCH FLUID DOT 4",
+  "was": "ISO 4925 4,",
+  "now": "ISO 4925 Class 4,",
+  "why": "As the Passenger Car document writes it"
+ }
+]

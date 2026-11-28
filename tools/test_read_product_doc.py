@@ -34,6 +34,74 @@ class Headings(unittest.TestCase):
         self.assertEqual(doc.series_of(""), [])
 
 
+class HeaderRows(unittest.TestCase):
+    def test_the_column_titles_are_a_header(self):
+        for first in ("Product", "Products"):
+            self.assertTrue(doc.is_header([first, "Product Page Description", "Individual Page Description"]), first)
+
+    def test_a_product_row_is_not(self):
+        self.assertFalse(doc.is_header(["PRINCE® FSR SAE 5W-40", "Product Series: FSR", "Expertly geared."]))
+
+
+class Menus(unittest.TestCase):
+    MENU = ["Signature Ester Based Engine Oils", "Heavy-Duty Engine Oils (HDEO)", "Automatic Transmission Fluids (ATF)"]
+
+    def test_each_section_is_the_type_its_menu_marks(self):
+        titles, slips = doc.sections_of([(self.MENU, 0), (self.MENU, 1), (self.MENU, 2)])
+        self.assertEqual(titles, self.MENU)
+        self.assertEqual(slips, [])
+
+    def test_a_menu_copied_from_another_document_is_read_by_its_place(self):
+        # The first menu of the Commercial Vehicle document is the Passenger Car one, still
+        # marking its first cell: the section is this document's first type.
+        other = ["Flagship Ester Based Engine Oils", "Passenger Car Engine Oils", "Automatic Transmission Fluids (ATF)"]
+        titles, slips = doc.sections_of([(other, 0), (self.MENU, 1), (self.MENU, 2)])
+        self.assertEqual(titles, self.MENU)
+        self.assertEqual(slips, [(0, ["Flagship Ester Based Engine Oils", "Passenger Car Engine Oils"])])
+
+    def test_a_type_marked_twice_is_refused(self):
+        with self.assertRaises(ValueError):
+            doc.sections_of([(self.MENU, 0), (self.MENU, 0), (self.MENU, 2)])
+
+    def test_a_type_never_marked_is_refused(self):
+        with self.assertRaises(ValueError):
+            doc.sections_of([(self.MENU, 0), (self.MENU, 2)])
+
+
+class SeriesByFact(unittest.TestCase):
+    def product(self, series=None):
+        return {"facts": ([["Product Series", series]] if series else []) + [["Product Type", "Oil"]]}
+
+    def test_runs_of_the_same_series_are_grouped(self):
+        products = [self.product("D1 GOLD 4X4")] * 3 + [self.product("D1 GOLD")] * 4
+        self.assertEqual(doc.series_by_fact(products), [("D1 GOLD 4X4", 3), ("D1 GOLD", 4)])
+
+    def test_one_series_for_the_whole_type_is_no_grouping(self):
+        self.assertEqual(doc.series_by_fact([self.product("FSR")] * 5), [])
+
+    def test_a_series_per_product_is_no_grouping(self):
+        products = [self.product("BRAKE & CLUTCH FLUID DOT 5.1"), self.product("BRAKE & CLUTCH FLUID DOT 4")]
+        self.assertEqual(doc.series_by_fact(products), [])
+
+    def test_a_product_without_a_series_is_no_grouping(self):
+        self.assertEqual(doc.series_by_fact([self.product("D1")] * 2 + [self.product()] + [self.product("Devo")] * 2), [])
+
+    @staticmethod
+    def row(name, series):
+        return ([name], [f"Product Series: {series}", "Product Type: Oil"], ["Text.", "Available Packaging: 1L"])
+
+    def test_a_document_without_headings_is_grouped_by_its_products(self):
+        types = [{"title": "Engine Oils", "series": [], "rows": [self.row("A", "D1"), self.row("B", "D1"), self.row("C", "Devo")]}]
+        self.assertEqual([(s["title"], len(s["products"])) for s in doc.build(types, [])[0]["series"]], [("D1", 2), ("Devo", 1)])
+
+    def test_a_document_with_headings_groups_only_where_it_has_them(self):
+        types = [
+            {"title": "Engine Oils", "series": [("FS1", 1)], "rows": [self.row("A", "FS1")]},
+            {"title": "Fluids", "series": [], "rows": [self.row("B", "CHF"), self.row("C", "PSF"), self.row("D", "PSF")]},
+        ]
+        self.assertEqual([(s["title"], len(s["products"])) for s in doc.build(types, [])[1]["series"]], [("", 3)])
+
+
 class Rows(unittest.TestCase):
     def test_a_row_without_a_name_continues_the_product_above(self):
         rows = [
@@ -123,6 +191,15 @@ class SoftBreaks(unittest.TestCase):
     def test_blank_paragraphs_are_dropped(self):
         self.assertEqual(doc.lines_of(["Visual Appearance: Blue", " "], self.LABELS), ["Visual Appearance: Blue"])
 
+    def test_a_label_known_from_other_documents_splits_too(self):
+        # In the Powersports document "Technology" is never a line of its own.
+        self.assertEqual(doc.lines_of(["Product Type: Ethylene Glycol-Based Coolant Technology: Hybrid Organic Acid Technology (HOAT)"], {"Product Type"}),
+                         ["Product Type: Ethylene Glycol-Based Coolant", "Technology: Hybrid Organic Acid Technology (HOAT)"])
+
+    def test_a_label_inside_a_longer_one_does_not_split_it(self):
+        self.assertEqual(doc.lines_of(["Transmission Compatibility: 8-Speed Automatic Transmissions"], set()),
+                         ["Transmission Compatibility: 8-Speed Automatic Transmissions"])
+
 
 class Lists(unittest.TestCase):
     def test_splits_on_commas(self):
@@ -163,6 +240,28 @@ class Body(unittest.TestCase):
             out = doc.body(["D.", f"{label}: A 1, B 2", "Available Packaging: 1L"])
             self.assertEqual(out["sections"], [{"label": label, "items": ["A 1", "B 2"]}])
 
+    def test_a_mistyped_list_label_is_read_as_the_one_meant(self):
+        for typed, meant in (("Industry Standards, Specifications & Recommendations", "Industry Standards, Specifications, & Recommendations"),
+                             ("Industry Standards, & Specifications", "Industry Standards & Specifications")):
+            out = doc.body(["D.", f"{typed}: API SP, JASO MA2", "Intended Applications: Bikes.", "Available Packaging: 1L"])
+            self.assertEqual(out["description"], ["D."], typed)
+            self.assertEqual(out["sections"][0], {"label": meant, "items": ["API SP", "JASO MA2"]}, typed)
+
+    def test_industry_standards_alone_is_a_list(self):
+        out = doc.body(["D.", "Industry Standards: ASTM D3306, ASTM D4985", "Available Packaging: 4L"])
+        self.assertEqual(out["sections"], [{"label": "Industry Standards", "items": ["ASTM D3306", "ASTM D4985"]}])
+
+    def test_safety_notices_are_kept_apart_in_their_order(self):
+        out = doc.body(["D.", "Important: Do not dilute further.", "CAUTION: THIS PRODUCT OFFERS NO ANTIFREEZE PROTECTION.",
+                        "Intended Applications: Race cars.", "Available Packaging: 1L"])
+        self.assertEqual(out["description"], ["D."])
+        self.assertEqual(out["notices"], [{"label": "Important", "text": "Do not dilute further."},
+                                          {"label": "CAUTION", "text": "THIS PRODUCT OFFERS NO ANTIFREEZE PROTECTION."}])
+        self.assertEqual(out["sections"], [{"label": "Intended Applications", "text": "Race cars."}])
+
+    def test_a_product_without_notices_has_none(self):
+        self.assertEqual(doc.body(["D.", "Available Packaging: 1L"])["notices"], [])
+
     def test_a_colon_inside_a_sentence_is_not_a_label(self):
         out = doc.body(["Premixed at a 50:50 ratio, it protects.", "Available Packaging: 1L"])
         self.assertEqual(out["description"], ["Premixed at a 50:50 ratio, it protects."])
@@ -175,12 +274,13 @@ class Body(unittest.TestCase):
 class Accounting(unittest.TestCase):
     TYPES = [{"title": "T", "series": [{"title": "S", "products": [{
         "name": "PRINCE® A", "facts": [["Product Type", "ATF"]], "description": ["One."],
+        "notices": [{"label": "CAUTION", "text": "No antifreeze."}],
         "sections": [{"label": "Intended Applications", "text": "Cars."}, {"label": "OEM Specifications & Recommendations", "items": ["A 1", "B 2"]}],
         "packaging": {"sizes": ["1L", "4L"], "note": "as applicable"}}]}]}]
 
     def test_every_part_of_a_product_is_counted(self):
         self.assertEqual(doc.words(doc.texts_of(self.TYPES)), doc.words([
-            "PRINCE® A", "Product Type: ATF", "One.", "Intended Applications: Cars.",
+            "PRINCE® A", "Product Type: ATF", "One.", "CAUTION: No antifreeze.", "Intended Applications: Cars.",
             "OEM Specifications & Recommendations: A 1, B 2", "Available Packaging: 1L / 4L (as applicable)"]))
 
     def test_a_lost_word_shows(self):
@@ -190,6 +290,9 @@ class Accounting(unittest.TestCase):
 class UnknownLabels(unittest.TestCase):
     def test_a_paragraph_that_opens_like_a_label_is_reported(self):
         self.assertTrue(doc.looks_labelled("Performance Benefits: Keeps the engine clean."))
+
+    def test_a_label_with_commas_and_ampersands_is_reported(self):
+        self.assertTrue(doc.looks_labelled("Industry Standards, Approvals & Notes: API SP, JASO MA2"))
 
     def test_ordinary_sentences_are_not(self):
         for text in ("Premixed at a 50:50 ratio, it protects.", "PRINCE® A is an oil. Its use: cars.", "Precision where it matters, protection where it counts."):
@@ -202,6 +305,11 @@ class Corrections(unittest.TestCase):
     def test_replaces_in_the_named_product_only(self):
         self.assertEqual(doc.correct("PRINCE® A", "a hydrocraked base", self.FIXES, set()), "a hydrocracked base")
         self.assertEqual(doc.correct("PRINCE® B", "a hydrocraked base", self.FIXES, set()), "a hydrocraked base")
+
+    def test_one_correction_can_name_several_products(self):
+        fixes = [{"product": ["PRINCE® A", "PRINCE® B"], "was": "anime-free", "now": "amine-free"}]
+        self.assertEqual(doc.correct("PRINCE® B", "an anime-free coolant", fixes, set()), "an amine-free coolant")
+        self.assertEqual(doc.correct("PRINCE® C", "an anime-free coolant", fixes, set()), "an anime-free coolant")
 
     def test_remembers_which_corrections_were_used(self):
         used = set()

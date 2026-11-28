@@ -1,0 +1,3030 @@
+{
+ "source": "Commercial Vehicle.pdf, 36 pages",
+ "category": "commercial-vehicle",
+ "types": [
+  {
+   "title": "Signature Ester Based Engine Oils",
+   "series": [
+    {
+     "title": "D1 GOLD 4X4",
+     "products": [
+      {
+       "name": "PRINCE® D1 GOLD 4X4 SAE 5W-40 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1 GOLD 4X4"
+        ],
+        [
+         "Product Type",
+         "P-12 Ester-Based Fully Synthetic Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 5W-40"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "Expertly-engineered to address the extreme thermomechanical stresses of modern turbocharged, high-pressure common-rail direct-injection (CRDI) Euro IV, V, VI diesel engines, PRINCE® D1 GOLD 4X4 SAE 5W-40 CK-4/SN combines severely hydroisomerized, high-purity synthetic base stocks with proprietary Group V P-12 Ester-Based Technology, leveraging inherent molecular polarity to enhance surface affinity and boundary lubrication. Its high HTHS viscosity, low-volatility properties and exceptional shear stability maintain robust hydrodynamic film integrity under severe mechanical loads and elevated operating temperatures. A cutting-edge low-SAPS additive system delivers superior resistance to thermal-oxidative degradation, soot-induced abrasive wear, pitting, cylinder bore polishing and piston deposit build-up, while minimizing lubricant-derived ash accumulation in exhaust aftertreatment systems. Enhanced detergent-dispersant chemistry and optimal Total Base Number (TBN) retention effectively suppress soot agglomeration, neutralize acid combustion by-products and control viscosity thickening, ensuring sustained lubrication action and engine durability under demanding operating conditions including prolonged drain intervals."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Ideal for on-road and off-road diesel applications requiring API CK-4 specified diesel engine oils, as well as gasoline engines requiring API SN standard. Developed particularly for turbocharged, intercooled, high-speed diesel engines meeting Euro IV, V and VI emission standards, featuring high-pressure common-rail direct injection (CRDI) technology. Suitable for pickup trucks, light-duty utility vehicles, SUVs, heavy-duty commercial fleets, tractors and off-highway machinery, including engines incorporating highly-advanced variable geometry turbochargers (VGT), as well as multi-stage turbocharging and multi-stage fuel injection technologies. Compatible with sensitive emission control systems and aftertreatment devices, including diesel particulate filter (DPF), diesel oxidation catalysts (DOC), selective catalytic reduction (SCR) and exhaust gas recirculation (EGR) systems."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Chrysler MS-10902",
+          "Cummins CES 20086",
+          "Detroit Diesel DFS 93K222",
+          "Ford WSS-M2C171-F1",
+          "Isuzu",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MB 228.31",
+          "MB 228.51",
+          "Mitsubishi",
+          "Nissan",
+          "Toyota",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L",
+         "7.5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 GOLD 4X4 SAE 10W-30 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1 GOLD 4X4"
+        ],
+        [
+         "Product Type",
+         "P-12 Ester-Based Fully Synthetic Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-30"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "Expertly-engineered to address the extreme thermomechanical stresses of modern turbocharged, high-pressure common-rail direct-injection (CRDI) Euro IV, V, VI diesel engines, PRINCE® D1 GOLD 4X4 SAE 10W-30 CK-4/SN combines severely hydroisomerized, high-purity synthetic base stocks with proprietary Group V P-12 Ester-Based Technology, leveraging inherent molecular polarity to enhance surface affinity and boundary lubrication. Its high HTHS viscosity, low-volatility properties and exceptional shear stability maintain robust hydrodynamic film integrity under severe mechanical loads and elevated operating temperatures. A cutting-edge low-SAPS additive system delivers superior resistance to thermal-oxidative degradation, soot-induced abrasive wear, pitting, cylinder bore polishing and piston deposit build-up, while minimizing lubricant-derived ash accumulation in exhaust aftertreatment systems. Enhanced detergent-dispersant chemistry and optimal Total Base Number (TBN) retention effectively suppress soot agglomeration, neutralize acid combustion by-products and control viscosity thickening, ensuring sustained lubrication action and engine durability under demanding operating conditions including prolonged drain intervals."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Ideal for on-road and off-road diesel applications requiring API CK-4 specified diesel engine oils, as well as gasoline engines requiring API SN standard. Developed particularly for turbocharged, intercooled, high-speed diesel engines meeting Euro IV, V and VI emission standards, featuring high-pressure common-rail direct injection (CRDI) technology. Suitable for pickup trucks, light-duty utility vehicles, SUVs, heavy-duty commercial fleets, tractors and off-highway machinery, including engines incorporating highly-advanced variable geometry turbochargers (VGT), as well as multi-stage turbocharging and multi-stage fuel injection technologies. Compatible with sensitive emission control systems and aftertreatment devices, including diesel particulate filter (DPF), diesel oxidation catalysts (DOC), selective catalytic reduction (SCR) and exhaust gas recirculation (EGR) systems."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Chrysler MS-10902",
+          "Cummins CES 20086",
+          "Detroit Diesel DFS 93K222",
+          "Ford WSS-M2C171-F1",
+          "Isuzu",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MB 228.31",
+          "MB 228.51",
+          "Mitsubishi",
+          "Nissan",
+          "Toyota",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L",
+         "7.5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 GOLD 4X4 SAE 10W-40 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1 GOLD 4X4"
+        ],
+        [
+         "Product Type",
+         "P-12 Ester-Based Fully Synthetic Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-40"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "Expertly-engineered to address the extreme thermomechanical stresses of modern turbocharged, high-pressure common-rail direct-injection (CRDI) Euro IV, V, VI diesel engines, PRINCE® D1 GOLD 4X4 SAE 10W-40 CK-4/SN combines severely hydroisomerized, high-purity synthetic base stocks with proprietary Group V P-12 Ester-Based Technology, leveraging inherent molecular polarity to enhance surface affinity and boundary lubrication. Its high HTHS viscosity, low-volatility properties and exceptional shear stability maintain robust hydrodynamic film integrity under severe mechanical loads and elevated operating temperatures. A cutting-edge low-SAPS additive system delivers superior resistance to thermal-oxidative degradation, soot-induced abrasive wear, pitting, cylinder bore polishing and piston deposit build-up, while minimizing lubricant-derived ash accumulation in exhaust aftertreatment systems. Enhanced detergent-dispersant chemistry and optimal Total Base Number (TBN) retention effectively suppress soot agglomeration, neutralize acid combustion by-products and control viscosity thickening, ensuring sustained lubrication action and engine durability under demanding operating conditions including prolonged drain intervals."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Ideal for on-road and off-road diesel applications requiring API CK-4 specified diesel engine oils, as well as gasoline engines requiring API SN standard. Developed particularly for turbocharged, intercooled, high-speed diesel engines meeting Euro IV, V and VI emission standards, featuring high-pressure common-rail direct injection (CRDI) technology. Suitable for pickup trucks, light-duty utility vehicles, SUVs, heavy-duty commercial fleets, tractors and off-highway machinery, including engines incorporating highly-advanced variable geometry turbochargers (VGT), as well as multi-stage turbocharging and multi-stage fuel injection technologies. Compatible with sensitive emission control systems and aftertreatment devices, including diesel particulate filter (DPF), diesel oxidation catalysts (DOC), selective catalytic reduction (SCR) and exhaust gas recirculation (EGR) systems."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Chrysler MS-10902",
+          "Cummins CES 20086",
+          "Detroit Diesel DFS 93K222",
+          "Ford WSS-M2C171-F1",
+          "Isuzu",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MB 228.31",
+          "MB 228.51",
+          "Mitsubishi",
+          "Nissan",
+          "Toyota",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L",
+         "7.5L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    },
+    {
+     "title": "D1 GOLD",
+     "products": [
+      {
+       "name": "PRINCE® D1 GOLD SAE 5W-30 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1 GOLD"
+        ],
+        [
+         "Product Type",
+         "P-12 Ester-Based Fully Synthetic Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 5W-30"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "Developed to address the stringent lubrication demands and fuel-conserving performance of modern low-emission, high-specific-output diesel engines, PRINCE® D1 GOLD SAE 5W-30 CK-4/SN incorporates severely hydroisomerized, high-purity synthetic base stocks and proprietary Group V P-12 Ester-Based Technology to enhance molecular surface affinity, boundary lubrication, hydrodynamic film integrity and energy efficiency. Its optimized SAE 5W-30 viscosity profile, high HTHS viscosity and exceptional shear stability reduce viscous friction and pumping losses without compromising load-bearing protection. Advanced low-SAPS additive chemistry provides superior resistance to thermal-oxidative degradation, soot-induced abrasive wear, cylinder bore polishing and high-temperature piston deposits, while minimizing lubricant-derived ash accumulation in exhaust aftertreatment systems. Robust total base number (TBN) retention and advanced soot dispersion technology effectively suppress viscosity thickening, supporting sustained fuel efficiency, engine cleanliness and durability throughout demanding service intervals."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for modern high-performance, turbocharged and intercooled diesel engines meeting Euro IV, V and VI emission standards, encompassing light-duty and heavy-duty on-highway transportation, off-highway machinery and off-road applications. Particularly suited for long-haul trucks, buses, coaches, tractors, construction equipment and industrial diesel engines operating under sustained full-load conditions, high-torque/low-speed operation, frequent stop-start cycles and prolonged idling. Compatible with advanced configurations incorporating high-pressure common-rail direct injection (CRDI), variable geometry turbochargers (VGT), as well as sensitive aftertreatment systems including diesel particulate filter (DPF), diesel oxidation catalysts (DOC), selective catalytic reduction (SCR), and exhaust gas recirculation (EGR) systems."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Caterpillar ECF-3",
+          "Cummins CES 20086",
+          "DAF PSQL 2.1E-LD",
+          "Detroit Diesel DFS 93K222",
+          "Deutz DQC IV-18 LA",
+          "Isuzu",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MAN M3677",
+          "MAN M3777",
+          "MB 228.51",
+          "MB 228.52",
+          "MTU Type 3.1",
+          "Renault RLD-4",
+          "Scania LDF-4",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L",
+         "7.5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 GOLD SAE 5W-40 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1 GOLD"
+        ],
+        [
+         "Product Type",
+         "P-12 Ester-Based Fully Synthetic Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 5W-40"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "Designed to withstand elevated peak cylinder pressures and severe thermomechanical stresses in modern high-output, high-torque diesel engines, PRINCE® D1 GOLD SAE 5W-40 CK-4/SN combines severely hydroisomerized, high-purity synthetic base stocks with proprietary Group V P-12 Ester-Based Technology to enhance molecular surface affinity and boundary lubrication. Its high HTHS viscosity and exceptional shear stability maintain robust hydrodynamic film thickness across heavily loaded bearings, cylinder liners and valvetrain assemblies under sustained high-temperature, high-load operation. Advanced low-SAPS additive chemistry delivers superior resistance to thermal-oxidative degradation, soot-induced abrasive wear, cylinder bore polishing and turbocharger deposits, while minimizing lubricant-derived ash accumulation in sensitive exhaust aftertreatment systems. Enhanced detergent-dispersant chemistry and robust total base number (TBN) retention effectively neutralize acidic combustion by-products, suppress soot-induced viscosity thickening and maintain engine cleanliness throughout demanding service intervals."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for modern high-performance, turbocharged and intercooled diesel engines meeting Euro IV, V and VI emission standards, encompassing light-duty and heavy-duty on-highway transportation, off-highway machinery and off-road applications. Particularly suited for long-haul trucks, buses, coaches, tractors, construction equipment and industrial diesel engines operating under sustained full-load conditions, high-torque/low-speed operation, frequent stop-start cycles and prolonged idling. Compatible with advanced configurations incorporating high-pressure common-rail direct injection (CRDI), variable geometry turbochargers (VGT), as well as sensitive aftertreatment systems including diesel particulate filter (DPF), diesel oxidation catalysts (DOC), selective catalytic reduction (SCR), and exhaust gas recirculation (EGR) systems."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Caterpillar ECF-3",
+          "Chrysler MS-10902",
+          "Cummins CES 20086",
+          "Detroit Diesel DFS 93K222",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MB 228.31",
+          "MB 228.51",
+          "Renault RLD-4",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L",
+         "7.5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 GOLD SAE 10W-30 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1 GOLD"
+        ],
+        [
+         "Product Type",
+         "P-12 Ester-Based Fully Synthetic Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-30"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "Formulated to optimize fuel economy and operational efficiency in a wide range of modern commercial diesel engines, PRINCE® D1 GOLD SAE 10W-30 CK-4/SN incorporates severely hydroisomerized, high-purity synthetic base stocks and proprietary Group V P-12 Ester-Based Technology to enhance lubricity, improve low-volatility capacity, and reduce frictional energy losses. Its optimized viscosity characteristics minimize hydrodynamic drag, oil pumping resistance and parasitic power losses while maintaining sufficient HTHS viscosity for heavily loaded engine components. Cutting-edge anti-wear chemistry and shear-stable viscosity modifiers provide sustained protection against camshaft wear, cylinder liner wear, piston ring scuffing throughout demanding duty cycles and immediate torque operating conditions. Its low-SAPS additive system combines antioxidant and detergent-dispersant chemistry to control soot-induced viscosity increases, resist oil aeration and suppress high-temperature deposit formation, contributing to improved fuel economy, exhaust aftertreatment durability and reduced fleet operating costs."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for modern high-performance, turbocharged and intercooled diesel engines meeting Euro IV, V and VI emission standards, encompassing light-duty and heavy-duty on-highway transportation, off-highway machinery and off-road applications. Particularly suited for long-haul trucks, buses, coaches, tractors, construction equipment and industrial diesel engines operating under sustained full-load conditions, high-torque/low-speed operation, frequent stop-start cycles and prolonged idling. Compatible with advanced configurations incorporating high-pressure common-rail direct injection (CRDI), variable geometry turbochargers (VGT), as well as sensitive aftertreatment systems including diesel particulate filter (DPF), diesel oxidation catalysts (DOC), selective catalytic reduction (SCR), and exhaust gas recirculation (EGR) systems."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Caterpillar ECF-3",
+          "Cummins CES 20086",
+          "Chrysler MS-10902",
+          "Detroit Diesel DFS 93K222",
+          "Deutz DQC IV-18 LA",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MAN M3575",
+          "MB 228.31",
+          "MB 228.51",
+          "MTU Type 3.1",
+          "Renault RLD-4",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L",
+         "7.5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 GOLD SAE 10W-40 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1 GOLD"
+        ],
+        [
+         "Product Type",
+         "P-12 Ester-Based Fully Synthetic Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-40"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "Designed to withstand elevated peak cylinder pressures and severe thermomechanical stresses in modern high-output, high-torque diesel engines, PRINCE® D1 GOLD SAE 10W-40 CK-4/SN combines severely hydroisomerized, high-purity synthetic base stocks with proprietary Group V P-12 Ester-Based Technology to enhance molecular surface affinity and boundary lubrication. Its high HTHS viscosity and exceptional shear stability maintain robust hydrodynamic film thickness across heavily loaded bearings, cylinder liners and valvetrain assemblies under sustained high-temperature, high-load operation. Advanced low-SAPS additive chemistry delivers superior resistance to thermal-oxidative degradation, soot-induced abrasive wear, cylinder bore polishing and turbocharger deposits, while minimizing lubricant-derived ash accumulation in sensitive exhaust aftertreatment systems. Enhanced detergent-dispersant chemistry and robust total base number (TBN) retention effectively neutralize acidic combustion by-products, suppress soot-induced viscosity thickening and maintain engine cleanliness throughout demanding service intervals."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for modern high-performance, turbocharged and intercooled diesel engines meeting Euro IV, V and VI emission standards, encompassing light-duty and heavy-duty on-highway transportation, off-highway machinery and off-road applications. Particularly suited for long-haul trucks, buses, coaches, tractors, construction equipment and industrial diesel engines operating under sustained full-load conditions, high-torque/low-speed operation, frequent stop-start cycles and prolonged idling. Compatible with advanced configurations incorporating high-pressure common-rail direct injection (CRDI), variable geometry turbochargers (VGT), as well as sensitive aftertreatment systems including diesel particulate filter (DPF), diesel oxidation catalysts (DOC), selective catalytic reduction (SCR), and exhaust gas recirculation (EGR) systems."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Caterpillar ECF-3",
+          "Cummins CES 20086",
+          "Detroit Diesel DFS 93K222",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MAN M3575",
+          "MAN M3775",
+          "MB 228.31",
+          "MB 228.51",
+          "MTU Type 3.1",
+          "Renault RLD-4",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L",
+         "7.5L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heavy-Duty Engine Oils (HDEO)",
+   "series": [
+    {
+     "title": "D1",
+     "products": [
+      {
+       "name": "PRINCE® D1 SPORT SAE 10W-30 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1"
+        ],
+        [
+         "Product Type",
+         "Fully Synthetic Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-30"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® D1 SPORT SAE 10W-30 fully synthetic diesel engine oil is formulated with severely hydroisomerized synthetic base oils and advanced multifunctional additive chemistry to deliver reliable lubrication performance and exceptional wear, soot and deposit control across diverse heavy-duty applications. Its high HTHS viscosity provides a resilient lubricating film within heavily loaded crankshaft bearings and piston-cylinder interfaces, while shear-stable viscosity modifiers resist permanent viscosity loss during extended service. Advanced anti-wear chemistry minimizes metal-to-metal contact under mixed and boundary lubrication regimes, complemented by effective TBN retention to combat corrosive wear arising from acidic combustion by-products. Its optimized low-SAPS chemistry limits lubricant-derived ash accumulation within exhaust aftertreatment systems, while enhanced soot-handling capability and aeration resistance promote consistent oil pressure, efficient oil circulation and dependable engine protection throughout prolonged operating cycles."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Designed for use in naturally aspirated, turbocharged and intercooled diesel engines across multiple generations, and particularly suited for long-haul trucks, buses, coaches, tractors, construction equipment and industrial diesel engines operating under sustained full-load conditions, high-torque/low-speed operation, frequent stop-start cycles and prolonged idling. Compatible with advanced configurations incorporating high-pressure common-rail direct injection (CRDI), variable geometry turbochargers (VGT), as well as sensitive aftertreatment systems including diesel particulate filter (DPF), diesel oxidation catalysts (DOC), selective catalytic reduction (SCR), and exhaust gas recirculation (EGR) systems."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Caterpillar ECF-3",
+          "Cummins CES 20086",
+          "Chrysler MS-10902",
+          "Detroit Diesel DFS 93K222",
+          "Deutz DQC IV-18 LA",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MAN M3575",
+          "MB 228.31",
+          "MB 228.51",
+          "MTU Type 3.1",
+          "Renault RLD-4",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "8L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 SPORT SAE 10W-40 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1"
+        ],
+        [
+         "Product Type",
+         "Fully Synthetic Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-40"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® D1 SPORT SAE 10W-40 fully synthetic diesel engine oil is formulated with severely hydroisomerized synthetic base oils and advanced multifunctional additive chemistry to deliver reliable lubrication performance and exceptional wear, soot and deposit control across diverse heavy-duty applications. Its high HTHS viscosity provides a resilient lubricating film within heavily loaded crankshaft bearings and piston-cylinder interfaces, while shear-stable viscosity modifiers resist permanent viscosity loss during extended service. Advanced anti-wear chemistry minimizes metal-to-metal contact under mixed and boundary lubrication regimes, complemented by effective TBN retention to combat corrosive wear arising from acidic combustion by-products. Its optimized low-SAPS chemistry limits lubricant-derived ash accumulation within exhaust aftertreatment systems, while enhanced soot-handling capability and aeration resistance promote consistent oil pressure, efficient oil circulation and dependable engine protection throughout prolonged operating cycles."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Designed for use in naturally aspirated, turbocharged and intercooled diesel engines across multiple generations, and particularly suited for long-haul trucks, buses, coaches, tractors, construction equipment and industrial diesel engines operating under sustained full-load conditions, high-torque/low-speed operation, frequent stop-start cycles and prolonged idling. Compatible with advanced configurations incorporating high-pressure common-rail direct injection (CRDI), variable geometry turbochargers (VGT), as well as sensitive aftertreatment systems including diesel particulate filter (DPF), diesel oxidation catalysts (DOC), selective catalytic reduction (SCR), and exhaust gas recirculation (EGR) systems."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Caterpillar ECF-3",
+          "Cummins CES 20086",
+          "Detroit Diesel DFS 93K222",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MAN M3575",
+          "MAN M3775",
+          "MB 228.31",
+          "MB 228.51",
+          "MTU Type 3.1",
+          "Renault RLD-4",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "8L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 PLUS SAE 10W-30 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1"
+        ],
+        [
+         "Product Type",
+         "Synthetic Technology Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-30"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® D1 PLUS SAE 10W-30 CK-4/SN is formulated using severely hydroprocessed, advanced synthetic base stocks technology and sophisticated additive chemistry, featuring enhanced formulation developed to address the stringent lubrication requirements and emission control system protection of light-duty and heavy-duty commercial fleets meeting emission standards up to Euro VI. Its optimized low-SAPS chemistry minimizes ash accumulation within exhaust aftertreatment systems, while maintaining effective TBN reserves to neutralize acid combustion by-products and mitigate corrosive wear. Advanced detergent and dispersant technology inhibits soot particle agglomeration, effectively controlling soot-induced viscosity increases and abrasive wear and scoring while maintaining efficient lubricant circulation. Enhanced anti-wear and antioxidant chemistry safeguards critical engine components against cylinder liner scuffing, valvetrain wear, piston deposits and oxidative degradation."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for naturally aspirated, turbocharged and intercooled diesel engines meeting emission standards ranging from Euro II to Euro VI, including modern common-rail direct injection (CRDI) engines equipped with exhaust gas recirculation (EGR), diesel particulate filters (DPF) and selective catalytic reduction (SCR) systems. Particularly suited for pickups, trucks, buses, coaches, agricultural machinery, construction equipment and off-highway vehicles operating under sustained heavy loads and prolonged idling. Suitable for diesel engines requiring API CK-4 or compatible earlier API service categories, and gasoline engines specifying API SN."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Caterpillar ECF-3",
+          "Cummins CES 20081",
+          "Cummins CES 20086",
+          "Chrysler MS-10902",
+          "Detroit Diesel DFS 93K222",
+          "Deutz DQC IV-18 LA",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MAN M3575",
+          "MB 228.31",
+          "MB 228.51",
+          "MTU Type 3.1",
+          "Renault RLD-4",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L",
+         "7.5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 PLUS SAE 10W-40 CK-4/SN",
+       "facts": [
+        [
+         "Product Series",
+         "D1"
+        ],
+        [
+         "Product Type",
+         "Synthetic Technology Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-40"
+        ],
+        [
+         "API Service Category",
+         "API CK-4/SN"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E8/E11"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® D1 PLUS SAE 10W-40 CK-4/SN is formulated using severely hydroprocessed, advanced synthetic base stocks technology and sophisticated additive chemistry, featuring enhanced formulation developed to address the stringent lubrication requirements and emission control system protection of light-duty and heavy-duty commercial fleets meeting emission standards up to Euro VI. Its optimized low-SAPS chemistry minimizes ash accumulation within exhaust aftertreatment systems, while maintaining effective TBN reserves to neutralize acid combustion by-products and mitigate corrosive wear. Advanced detergent and dispersant technology inhibits soot particle agglomeration, effectively controlling soot-induced viscosity increases and abrasive wear and scoring while maintaining efficient lubricant circulation. Enhanced anti-wear and antioxidant chemistry safeguards critical engine components against cylinder liner scuffing, valvetrain wear, piston deposits and oxidative degradation."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for naturally aspirated, turbocharged and intercooled diesel engines meeting emission standards ranging from Euro II to Euro VI, including modern common-rail direct injection (CRDI) engines equipped with exhaust gas recirculation (EGR), diesel particulate filters (DPF) and selective catalytic reduction (SCR) systems. Particularly suited for pickups, trucks, buses, coaches, agricultural machinery, construction equipment and off-highway vehicles operating under sustained heavy loads and prolonged idling. Suitable for diesel engines requiring API CK-4 or compatible earlier API service categories, and gasoline engines specifying API SN."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CK-4/SN",
+          "ACEA E8/E11",
+          "Caterpillar ECF-3",
+          "Cummins CES 20081",
+          "Cummins CES 20086",
+          "Detroit Diesel DFS 93K222",
+          "JASO DH-2",
+          "Mack EOS-4.5",
+          "MAN M3575",
+          "MAN M3775",
+          "MB 228.31",
+          "MB 228.51",
+          "MTU Type 3.1",
+          "Renault RLD-4",
+          "Volvo VDS-4.5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L",
+         "7.5L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 LONGLIFE SAE 10W-30 CI-4",
+       "facts": [
+        [
+         "Product Series",
+         "D1"
+        ],
+        [
+         "Product Type",
+         "Synthetic Technology Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-30"
+        ],
+        [
+         "API Service Category",
+         "API CI-4/SL"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E7"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® D1 LONGLIFE SAE 10W-30 CI-4 is formulated with severely hydroprocessed, advanced synthetic base stocks and a high-performance additive system to deliver dependable engine soot and wear protection and sustained operational reliability across diverse commercial applications. Its robust detergent-dispersant chemistry effectively controls soot accumulation, varnish and sludge formation and piston deposits, maintaining engine cleanliness throughout the entire service interval. Enhanced TBN reserves neutralize acidic combustion by-products, mitigating wear, corrosion and protecting crucial engine components. Its shear-stable, low-volatility formulation maintains lubricating film integrity under demanding operating conditions, while effective anti-wear and antioxidant chemistry safeguards against cylinder liner wear, bore polishing, piston ring scuffing and oxidative degradation."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Formulated for naturally aspirated, turbocharged and intercooled light-duty and heavy-duty diesel engines meeting Euro II, III, IV and selected Euro V emission standards, including engines equipped with exhaust gas recirculation (EGR). Suitable for applications in pickups, commercial trucks, buses, tractors, construction equipment and industrial diesel engines requiring API CI-4 or compatible earlier API categories."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CI-4/SL",
+          "ACEA E7",
+          "Caterpillar ECF-2",
+          "Cummins CES 20076",
+          "Cummins CES 20077",
+          "Cummins CES 20078",
+          "Detroit Diesel DFS 93K218",
+          "JASO DH-1",
+          "Mack EO-N",
+          "MAN M3275-1",
+          "MAN M3277",
+          "MB 228.3",
+          "MB 228.5",
+          "Renault RLD-2",
+          "Volvo VDS-3"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 LONGLIFE SAE 10W-40 CI-4",
+       "facts": [
+        [
+         "Product Series",
+         "D1"
+        ],
+        [
+         "Product Type",
+         "Synthetic Technology Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-40"
+        ],
+        [
+         "API Service Category",
+         "API CI-4/SL"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E7"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® D1 LONGLIFE SAE 10W-40 CI-4 is formulated with severely hydroprocessed, advanced synthetic base stocks and a high-performance additive system to deliver dependable engine soot and wear protection and sustained operational reliability across diverse commercial applications. Its robust detergent-dispersant chemistry effectively controls soot accumulation, varnish and sludge formation and piston deposits, maintaining engine cleanliness throughout the entire service interval. Enhanced TBN reserves neutralize acidic combustion by-products, mitigating wear, corrosion and protecting crucial engine components. Its shear-stable, low-volatility formulation maintains lubricating film integrity under demanding operating conditions, while effective anti-wear and antioxidant chemistry safeguards against cylinder liner wear, bore polishing, piston ring scuffing and oxidative degradation."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Formulated for naturally aspirated, turbocharged and intercooled light-duty and heavy-duty diesel engines meeting Euro I, II, III, IV and selected Euro V emission standards, including engines equipped with exhaust gas recirculation (EGR). Suitable for applications in pickups, commercial trucks, buses, tractors, construction equipment and industrial diesel engines requiring API CI-4 or compatible earlier API categories."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CI-4/SL",
+          "ACEA E7",
+          "Caterpillar ECF-2",
+          "Cummins CES 20076",
+          "Cummins CES 20077",
+          "Cummins CES 20078",
+          "Detroit Diesel DFS 93K215",
+          "GLOBAL DHD-1",
+          "JASO DH-1",
+          "Mack EO-N",
+          "MAN M3275-1",
+          "MAN M3277",
+          "MB 228.3",
+          "MB 228.5",
+          "Renault RLD-2",
+          "Scania LDF-2",
+          "Volvo VDS-3"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® D1 LONGLIFE SAE 15W-40 CI-4",
+       "facts": [
+        [
+         "Product Series",
+         "D1"
+        ],
+        [
+         "Product Type",
+         "Synthetic Technology Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 15W-40"
+        ],
+        [
+         "API Service Category",
+         "API CI-4/SL"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E7"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® D1 LONGLIFE SAE 15W-40 CI-4 is formulated with severely hydroprocessed, advanced synthetic base stocks and a high-performance additive system to deliver dependable engine soot and wear protection and sustained operational reliability across diverse commercial applications. Its robust detergent-dispersant chemistry effectively controls soot accumulation, varnish and sludge formation and piston deposits, maintaining engine cleanliness throughout the entire service interval. Enhanced TBN reserves neutralize acidic combustion by-products, mitigating wear, corrosion and protecting crucial engine components. Its shear-stable, low-volatility formulation maintains lubricating film integrity under demanding operating conditions, while effective anti-wear and antioxidant chemistry safeguards against cylinder liner wear, bore polishing, piston ring scuffing and oxidative degradation."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Formulated for naturally aspirated, turbocharged and intercooled light-duty and heavy-duty diesel engines meeting Euro I, II, III, IV and selected Euro V emission standards, including engines equipped with exhaust gas recirculation (EGR). Suitable for applications in pickups, commercial trucks, buses, tractors, construction equipment and industrial diesel engines requiring API CI-4 or compatible earlier API categories."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CI-4/SL",
+          "ACEA E7",
+          "Caterpillar ECF-2",
+          "Cummins CES 20076",
+          "Cummins CES 20077",
+          "Cummins CES 20078",
+          "Detroit Diesel DFS 93K215",
+          "GLOBAL DHD-1",
+          "JASO DH-1",
+          "Mack EO-N",
+          "MAN M3275-1",
+          "MB 228.3",
+          "MB 228.5",
+          "Renault RLD-2",
+          "Volvo VDS-3"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    },
+    {
+     "title": "Devo",
+     "products": [
+      {
+       "name": "PRINCE® Devo SHPD SAE 10W-30 CI-4",
+       "facts": [
+        [
+         "Product Series",
+         "Devo"
+        ],
+        [
+         "Product Type",
+         "Premium Mineral Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-30"
+        ],
+        [
+         "API Service Category",
+         "API CI-4/SL"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E7"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® Devo SHPD SAE 10W-30 CI-4 is a super high-performance diesel engine oil formulated with selected hydrocracked mineral base stocks and a modern additive system to deliver dependable powertrain protection and lubrication performance across demanding on-highway and off-highway applications. Its robust formulation provides dependable wear control, thermal-oxidative stability, sludge reduction and soot-handling capabilities, while high TBN reserves neutralize acid combustion by-products and minimize corrosive wear. Optimized additives provide effective aeration and foam control, while safeguarding against non-ferrous metal corrosion, oxidative thickening and viscosity loss caused by severe mechanical shear, ensuring consistent lubrication performance throughout the whole drain interval."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for a wide range of naturally aspirated, turbocharged and intercooled diesel engines meeting Euro I, II, III, IV and selected Euro V emission standards. Suitable for pickups, trucks, buses, tractors, construction equipment and industrial diesel engines requiring API CI-4 or compatible earlier API categories."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CI-4/SL",
+          "ACEA E7",
+          "Caterpillar ECF-2",
+          "Cummins CES 20076",
+          "Cummins CES 20077",
+          "Cummins CES 20078",
+          "Detroit Diesel DFS 93K218",
+          "JASO DH-1",
+          "Mack EO-N",
+          "MB 228.3",
+          "Renault RLD-2",
+          "Volvo VDS-3"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® Devo SHPD SAE 10W-40 CI-4",
+       "facts": [
+        [
+         "Product Series",
+         "Devo"
+        ],
+        [
+         "Product Type",
+         "Premium Mineral Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 10W-40"
+        ],
+        [
+         "API Service Category",
+         "API CI-4/SL"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E7"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® Devo SHPD SAE 10W-40 CI-4 is a super high-performance diesel engine oil formulated with selected hydrocracked mineral base stocks and a modern additive system to deliver dependable powertrain protection and lubrication performance across demanding on-highway and off-highway applications. Its robust formulation provides dependable wear control, thermal-oxidative stability, sludge reduction and soot-handling capabilities, while high TBN reserves neutralize acid combustion by-products and minimize corrosive wear. Optimized additives provide effective aeration and foam control, while safeguarding against non-ferrous metal corrosion, oxidative thickening and viscosity loss caused by severe mechanical shear, ensuring consistent lubrication performance throughout the whole drain interval."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for a wide range of naturally aspirated, turbocharged and intercooled diesel engines meeting Euro I, II, III, IV and selected Euro V emission standards. Suitable for pickups, trucks, buses, tractors, construction equipment and industrial diesel engines requiring API CI-4 or compatible earlier API categories."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CI-4/SL",
+          "ACEA E7",
+          "Caterpillar ECF-2",
+          "Cummins CES 20076",
+          "Cummins CES 20077",
+          "Cummins CES 20078",
+          "Detroit Diesel DFS 93K215",
+          "JASO DH-1",
+          "Mack EO-N",
+          "MB 228.3",
+          "MTU Type 2",
+          "Renault RLD-2",
+          "Volvo VDS-3"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® Devo SHPD SAE 15W-40 CI-4",
+       "facts": [
+        [
+         "Product Series",
+         "Devo"
+        ],
+        [
+         "Product Type",
+         "Premium Mineral Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 15W-40"
+        ],
+        [
+         "API Service Category",
+         "API CI-4/SL"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E7"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® Devo SHPD SAE 15W-40 CI-4 is a super high-performance diesel engine oil formulated with selected hydrocracked mineral base stocks and a modern additive system to deliver dependable powertrain protection and lubrication performance across demanding on-highway and off-highway applications. Its robust formulation provides dependable wear control, thermal-oxidative stability, sludge reduction and soot-handling capabilities, while high TBN reserves neutralize acid combustion by-products and minimize corrosive wear. Optimized additives provide effective aeration and foam control, while safeguarding against non-ferrous metal corrosion, oxidative thickening and viscosity loss caused by severe mechanical shear, ensuring consistent lubrication performance throughout the whole drain interval."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Particularly designed for older-generation and high-mileage naturally aspirated, turbocharged and intercooled diesel engines meeting emission standards up to Euro IV, including pickups, trucks, buses, tractors and construction equipment operating under heavy loads and elevated ambient temperature, where SAE 15W-40 and API CI-4 or compatible earlier API categories are specified."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CI-4/SL",
+          "ACEA E7",
+          "Caterpillar ECF-2",
+          "Cummins CES 20076",
+          "Cummins CES 20077",
+          "Cummins CES 20078",
+          "Detroit Diesel DFS 93K215",
+          "JASO DH-1",
+          "Mack EO-N",
+          "MB 228.3",
+          "MTU Type 2",
+          "Renault RLD-2",
+          "Volvo VDS-3"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® Devo SHPD SAE 20W-50 CI-4",
+       "facts": [
+        [
+         "Product Series",
+         "Devo"
+        ],
+        [
+         "Product Type",
+         "Premium Mineral Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 20W-50"
+        ],
+        [
+         "API Service Category",
+         "API CI-4/SL"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E7"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® Devo SHPD SAE 20W-50 CI-4 is a super high-performance diesel engine oil formulated with selected hydrocracked mineral base stocks and a robust additive system, particularly suited for older-generation and high-mileage diesel heavy-duty engines. Its higher viscosity characteristics provide enhanced oil film strength, helping maintain oil pressure and reduce oil consumption in engines with increased component clearances. Fortified with specialized detergent-dispersant chemistry, it effectively controls soot accumulation, sludge and deposits, while high TBN reserves neutralize acid combustion by-products. Its shear-stable, low-volatility formulation provides dependable protection against bore polishing, abrasive wear, pitting, scuffing, aeration and foaming under sustained heavy loads and elevated operating temperatures."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Particularly designed for older-generation and high-mileage naturally aspirated, turbocharged and intercooled diesel engines meeting emission standards up to Euro IV, including pickups, trucks, buses, tractors and construction equipment operating under heavy loads and elevated ambient temperature, where SAE 20W-50 and API CI-4 or compatible earlier API categories are specified."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CI-4/SL",
+          "ACEA E7",
+          "Caterpillar ECF-2",
+          "Cummins CES 20076",
+          "Cummins CES 20077",
+          "JASO DH-1",
+          "Mack EO-N",
+          "MB 228.3",
+          "MTU Type 2",
+          "Renault RLD-2",
+          "Volvo VDS-3"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® Devo ALL FLEET SAE 15W-40 CG-4",
+       "facts": [
+        [
+         "Product Series",
+         "Devo"
+        ],
+        [
+         "Product Type",
+         "Mineral Blend Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 15W-40"
+        ],
+        [
+         "API Service Category",
+         "API CF/CF-4/CG-4/SJ"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E2"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® Devo ALL FLEET SAE 15W-40 CG-4 is formulated with carefully chosen mineral base stocks and a balanced additive package to provide reliable protection in conventional heavy-duty engines. Its effective detergent-dispersant chemistry controls soot accumulation, deposits and sludge formation, while outstanding TBN reserves neutralize acidic combustion by-products. Its robust formulation provides dependable protection against abrasive wear, scoring, scuffing, pitting, corrosion, and foam formation, ensuring consistent lubrication performance even under long drain interval conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Designed for mixed commercial fleets and older-generation diesel engines without advanced emission control systems, including trucks, buses, tractors, construction equipment and industrial diesel engines requiring API CF-4, CG-4 or compatible earlier API categories, as well as gasoline engines specifying API SJ standard."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CF/CF-4/CG-4/SJ",
+          "ACEA E2",
+          "Allison C-4",
+          "Caterpillar TO-2",
+          "Mack EO-M",
+          "MAN 271",
+          "MB 228.1",
+          "MTU Type 1",
+          "Volvo VDS"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® Devo ALL FLEET SAE 20W-50 CG-4",
+       "facts": [
+        [
+         "Product Series",
+         "Devo"
+        ],
+        [
+         "Product Type",
+         "Mineral Blend Engine Oil"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 20W-50"
+        ],
+        [
+         "API Service Category",
+         "API CF/CF-4/CG-4/SJ"
+        ],
+        [
+         "ACEA Classification",
+         "ACEA E2"
+        ],
+        [
+         "Category",
+         "Commercial Vehicle Engine Oil (CVEO)"
+        ]
+       ],
+       "description": [
+        "PRINCE® Devo ALL FLEET SAE 20W-50 CG-4 is formulated with carefully chosen mineral base stocks and a balanced additive package to provide reliable protection in conventional heavy-duty engines. Its effective detergent-dispersant chemistry controls soot accumulation, deposits and sludge formation, while outstanding TBN reserves neutralize acidic combustion by-products. Its robust formulation provides dependable protection against abrasive wear, scoring, scuffing, pitting, corrosion, and foam formation, ensuring consistent lubrication performance even under long drain interval conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Designed for mixed commercial fleets and older-generation diesel engines without advanced emission control systems, including trucks, buses, tractors, construction equipment and industrial diesel engines requiring API CF-4, CG-4 or compatible earlier API categories, as well as gasoline engines specifying API SJ standard."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API CF/CF-4/CG-4/SJ",
+          "ACEA E2",
+          "Allison C-4",
+          "Caterpillar TO-2",
+          "MAN 271",
+          "MB 228.1",
+          "MTU Type 1",
+          "Volvo VDS"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "5L",
+         "7L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Automatic Transmission Fluids (ATF)",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® ATF 6 MERCON LV DEXRON VI",
+       "facts": [
+        [
+         "Product Type",
+         "ATF"
+        ],
+        [
+         "Base Type",
+         "100% Synthetic (Severely Hydroisomerized + PAO)"
+        ],
+        [
+         "Fluid Classification",
+         "Low-Viscosity Multi-Vehicle ATF"
+        ],
+        [
+         "Performance Specifications",
+         "Ford MERCON LV, GM DEXRON VI, JASO M315 1A-LV"
+        ],
+        [
+         "Transmission Compatibility",
+         "Compatible 5-, 6-, 7-, and 8-Speed Automatic Transmissions"
+        ],
+        [
+         "Category",
+         "Automatic Transmission Fluid (ATF)"
+        ]
+       ],
+       "description": [
+        "Versatility meets precision with PRINCE® ATF 6 MERCON LV DEXRON VI 100% synthetic automatic transmission fluid, a multi-vehicle, lowered-viscosity formulation developed around the demanding multi-speed automatic transmission performance requirements of GM DEXRON VI, Ford MERCON LV, and JASO M315 1A-LV. Expertly formulated with an advanced blend of severely hydroisomerized and polyalphaolefin (PAO) synthetic base stocks, its low-viscosity technology delivers optimized frictional characteristics, responsive hydraulic performance, and consistent, precise gear transitions. Exceptional thermal and oxidation stability, reinforced wear protection, improved anti-shudder properties and sustained viscosity integrity help preserve transmission efficiency and dependable performance across a broad range of operating conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for a broad range of passenger cars, SUVs, and light-duty commercial vehicles equipped with compatible conventional 5-, 6-, 7-, and 8-speed automatic transmission configurations. Particularly suited for applications requiring GM DEXRON VI, Ford MERCON LV, JASO M315 1A-LV, and other specified low-viscosity automatic transmission fluids by major manufacturers."
+        },
+        {
+         "label": "Key OEM Performance Specifications",
+         "items": [
+          "Ford MERCON LV",
+          "GM DEXRON VI",
+          "JASO M315 1A-LV"
+         ]
+        },
+        {
+         "label": "Recommended OEM Fluid Specifications",
+         "items": [
+          "Aisin Warner AW-1",
+          "ATF ETL 8072B",
+          "ATF L 12108",
+          "ATF M-1375.4",
+          "ATF M-1375.6",
+          "ATF 0T4",
+          "ATF 0WS",
+          "ATF JWS 3324",
+          "BMW ATF 3+",
+          "BMW ATF 6",
+          "Chrysler MS-10838",
+          "Fiat 9.5550-AV2",
+          "Fiat 9.55550-AV5",
+          "Fiat 9.55550-AV6",
+          "Fiat AS68RC",
+          "Fiat 68157995AA",
+          "Fiat 68157995AB",
+          "Ford XT-6-DSP/QSP (MERCON SP)",
+          "Ford WSS-M2C924-A",
+          "Ford WSS-M2C938-A",
+          "GM DEXRON HP",
+          "Honda ATF DW-1",
+          "Hyundai/Kia NWS 9638",
+          "Hyundai/Kia SPH-IV",
+          "Hyundai/Kia SP-IV",
+          "Hyundai/Kia SP-IV-M",
+          "Hyundai/Kia SP-IV-RR",
+          "Isuzu SCS Fluid",
+          "Isuzu WSI",
+          "Jaguar 02JDE 26444",
+          "Jaguar 8432",
+          "Jaguar JLM 20292",
+          "Jaguar JLM 21044",
+          "Land Rover AW-1",
+          "Land Rover LR0022460:LV",
+          "Land Rover LR023288",
+          "Land Rover LR023289",
+          "Maserati P/N 231603",
+          "Mazda ATF FZ",
+          "Mazda FW 6AX EL",
+          "MB 236.12",
+          "MB 236.14",
+          "MB 236.15",
+          "MB 236.41",
+          "Mitsubishi DiaQueen ATF J3",
+          "Mitsubishi DiaQueen ATF PA",
+          "Mitsubishi DiaQueen SP-IV",
+          "Nissan Matic S",
+          "Nissan Matic W",
+          "Porsche P/N 000 043 205 28",
+          "Porsche P/N 000 043 304 00",
+          "Porsche P/N 000 043 304 01",
+          "Porsche P/N 000 043 305 54",
+          "Porsche P/N 000 043 306 24",
+          "Porsche P/N 958 300 540 00",
+          "PSA P/N Z 000169756",
+          "Saab P/N 93 165147",
+          "SsangYong DSI M78 6-Speed",
+          "Toyota/Lexus ATF WS (JWS 3324)",
+          "Volvo AW-1",
+          "Volvo 31256774",
+          "Volvo 31256775",
+          "Volvo 31256776",
+          "Volvo 97342",
+          "VW/Audi G US 000 162",
+          "VW/Audi G 052 533",
+          "VW/Audi G 052 990 A2",
+          "VW/Audi G 055 005 A2",
+          "VW/Audi G 055 025 A2",
+          "VW/Audi G 055 162 A2",
+          "VW/Audi G 055 162 A6",
+          "VW/Audi G 055 540 A2",
+          "VW/Audi G 060 162 A2",
+          "VW/Audi G 060 162 A6",
+          "ZF LifeguardFluid 6",
+          "ZF LifeguardFluid 8"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® ATF LV MULTI-VEHICLE",
+       "facts": [
+        [
+         "Product Type",
+         "ATF"
+        ],
+        [
+         "Base Type",
+         "Fully Synthetic"
+        ],
+        [
+         "Fluid Classification",
+         "Low-Viscosity Multi-Vehicle ATF"
+        ],
+        [
+         "Performance Specifications",
+         "GM DEXRON VI, Ford MERCON LV, JASO M315 1A-LV"
+        ],
+        [
+         "Transmission Compatibility",
+         "Compatible 5-, 6-, 7-, and 8-Speed Automatic Transmissions"
+        ],
+        [
+         "Category",
+         "Automatic Transmission Fluid (ATF)"
+        ]
+       ],
+       "description": [
+        "Engineered to meet the evolving performance requirements of modern multi-speed automatic transmissions, PRINCE® ATF LV fully synthetic automatic transmission fluid combines advanced low-viscosity fluid technology with comprehensive protection for demanding transmission systems. Expertly formulated with severely hydroisomerized synthetic base stocks and a sophisticated additive system, it provides excellent low-temperature fluidity, efficient hydraulic pressure transmission, and reduced internal fluid resistance for optimized drivetrain operating efficiency. Its robust shear stability and detergent-dispersant chemistry help maintain consistent viscosity characteristics while minimizing harmful deposits and varnish within sensitive valve bodies and hydraulic control circuits. Carefully engineered frictional properties further support progressive clutch engagement, smooth power transfer, and reliable shift performance throughout varying driving conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for a broad range of passenger cars, SUVs, and light-duty commercial vehicles equipped with compatible conventional 5-, 6-, 7-, and 8-speed automatic transmission configurations. Particularly suited for modern multi-vehicle applications requiring low-viscosity, energy-conserving transmission fluids with stable frictional performance and optimized hydraulic response."
+        },
+        {
+         "label": "OEM Specifications & Recommendations",
+         "items": [
+          "Aisin Warner AW-1",
+          "ATF ETL 8072B",
+          "ATF L 12108",
+          "ATF M-1375.4",
+          "ATF M-1375.6",
+          "ATF 0T4",
+          "ATF 0WS",
+          "ATF JWS 3324",
+          "BMW ATF 3+",
+          "BMW ATF 6",
+          "Chrysler MS-10838",
+          "Fiat 9.5550-AV2",
+          "Fiat 9.55550-AV5",
+          "Fiat 9.55550-AV6",
+          "Fiat AS68RC",
+          "Fiat 68157995AA",
+          "Fiat 68157995AB",
+          "Ford XT-6-DSP/QSP (MERCON SP)",
+          "Ford XT-10-QLV/QLVC (MERCON LV)",
+          "Ford WSS-M2C924-A",
+          "Ford WSS-M2C938-A",
+          "GM DEXRON HP",
+          "GM DEXRON VI",
+          "Honda ATF DW-1",
+          "Hyundai/Kia NWS 9638",
+          "Hyundai/Kia SPH-IV",
+          "Hyundai/Kia SP-IV",
+          "Hyundai/Kia SP-IV-M",
+          "Hyundai/Kia SP-IV-RR",
+          "Isuzu SCS Fluid",
+          "Isuzu WSI",
+          "Jaguar 02JDE 26444",
+          "Jaguar 8432",
+          "Jaguar JLM 20292",
+          "Jaguar JLM 21044",
+          "JASO M315 1A-LV",
+          "Land Rover AW-1",
+          "Land Rover LR0022460:LV",
+          "Land Rover LR023288",
+          "Land Rover LR023289",
+          "Maserati P/N 231603",
+          "Mazda ATF FZ",
+          "Mazda FW 6AX EL",
+          "MB 236.12",
+          "MB 236.14",
+          "MB 236.15",
+          "MB 236.41",
+          "Mitsubishi DiaQueen ATF J3",
+          "Mitsubishi DiaQueen ATF PA",
+          "Mitsubishi DiaQueen SP-IV",
+          "Nissan Matic S",
+          "Nissan Matic W",
+          "Porsche P/N 000 043 205 28",
+          "Porsche P/N 000 043 304 00",
+          "Porsche P/N 000 043 304 01",
+          "Porsche P/N 000 043 305 54",
+          "Porsche P/N 000 043 306 24",
+          "Porsche P/N 958 300 540 00",
+          "PSA P/N Z 000169756",
+          "Saab P/N 93 165147",
+          "SsangYong DSI M78 6-Speed",
+          "Toyota/Lexus ATF WS (JWS 3324)",
+          "Volvo AW-1",
+          "Volvo 31256774",
+          "Volvo 31256775",
+          "Volvo 31256776",
+          "Volvo 97342",
+          "VW/Audi G US 000 162",
+          "VW/Audi G 052 533",
+          "VW/Audi G 052 990 A2",
+          "VW/Audi G 055 005 A2",
+          "VW/Audi G 055 025 A2",
+          "VW/Audi G 055 162 A2",
+          "VW/Audi G 055 162 A6",
+          "VW/Audi G 055 540 A2",
+          "VW/Audi G 060 162 A2",
+          "VW/Audi G 060 162 A6",
+          "ZF LifeguardFluid 6",
+          "ZF LifeguardFluid 8"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® ATF SV MULTI-VEHICLE",
+       "facts": [
+        [
+         "Product Type",
+         "ATF"
+        ],
+        [
+         "Base Type",
+         "Synthetic Blend Formulation"
+        ],
+        [
+         "Fluid Classification",
+         "Standard-Viscosity Multi-Vehicle ATF"
+        ],
+        [
+         "Performance Specifications",
+         "GM DEXRON III-H, Ford MERCON V"
+        ],
+        [
+         "Transmission Compatibility",
+         "Conventional 3-, 4-, and 5-Speed Automatic Transmissions"
+        ],
+        [
+         "Category",
+         "Automatic Transmission Fluid (ATF)"
+        ]
+       ],
+       "description": [
+        "PRINCE® ATF SV is a high-viscosity, multi-vehicle transmission fluid formulated for reliable performance and dependable protection across conventional automatic transmission systems. Designed with a carefully balanced additive technology, its standard-viscosity characteristics provide robust lubricating film strength, consistent hydraulic pressure control, and effective protection against friction-related wear and scuffing. Modern friction-modifying chemistry promotes smooth gear engagement and stable torque converter clutch operation, while excellent thermal and oxidation stability helps minimize fluid degradation and additive depletion under prolonged service interval conditions. Enhanced detergent-dispersant properties further control deposit and varnish formation, supporting cleaner valve bodies, reliable shift solenoid operation, and sustained transmission efficiency and performance."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "For a wide range of applications in passenger cars, SUVs, and commercial vehicles equipped with conventional 3-speed and 4-speed automatic transmissions, as well as selected modern 5-speed automatic transmissions requiring standard-viscosity; high-viscosity fluid properties. Suitable for compatible older-generation automatic transmission systems requiring stable frictional characteristics, outstanding hydraulic performance, and effective wear and sludge protection."
+        },
+        {
+         "label": "OEM Specifications & Recommendations",
+         "items": [
+          "Allison C-4",
+          "Allison TES-389",
+          "ATF ETL 7045E",
+          "ATF LA 2634",
+          "ATF LT 71141",
+          "ATF JWS 3309",
+          "ATF JWS 3317",
+          "BMW ETL 8072B",
+          "BMW ATF 4",
+          "Daihatsu AMMIX ATF D3-SP",
+          "Ford XT-2-QDX (MERCON)",
+          "Ford XT-2-QSM (SYN)",
+          "Ford XT-5-DM/QM (MERCON V)",
+          "Ford XT-9-QMM5 (FRN5)",
+          "GM DEXRON II-D",
+          "GM DEXRON II-E",
+          "GM DEXRON III-G",
+          "GM DEXRON III-H",
+          "GM 9986195",
+          "Honda ATF Z-1",
+          "Hyundai/Kia ATF Red-1K",
+          "Hyundai/Kia SP-II",
+          "Hyundai/Kia SP-III",
+          "Isuzu Genuine ATF",
+          "Isuzu BESCO ATF-III",
+          "Jeep ATF+3",
+          "Jaguar JLM 20238",
+          "JASO M315 1A",
+          "MAN 339 L1",
+          "MAN 339 L2",
+          "MAN 339 V1",
+          "MAN 339 Z1",
+          "Mazda M-III",
+          "Mazda M-V",
+          "MB 236.5",
+          "MB 236.6",
+          "MB 236.7",
+          "MB 236.9",
+          "MB 236.10",
+          "MB 236.11",
+          "Mitsubishi SP-II",
+          "Mitsubishi SP-III",
+          "Nissan Matic D",
+          "Nissan Matic J",
+          "Nissan Matic K",
+          "Porsche P/N 000 043 204 41",
+          "Porsche P/N 000 043 205 09",
+          "Porsche P/N 000 043 305 43",
+          "Porsche P/N 999 917 547 00 (A2)",
+          "PSA AL4 PR 9736.22",
+          "Renault Matic D2",
+          "Renault Matic J6",
+          "Subaru ATF-HP",
+          "Subaru 5-AT",
+          "Suzuki ATF 2384K",
+          "Suzuki JWS 3314",
+          "Suzuki JWS 3317",
+          "Toyota/Lexus ATF T-II",
+          "Toyota/Lexus ATF T-III",
+          "Toyota/Lexus ATF T-IV (JWS 3309)",
+          "Volvo 1161521",
+          "Volvo 1161540",
+          "Volvo 1161640",
+          "VW/Audi G 052 025 A2",
+          "VW/Audi G 052 055",
+          "VW/Audi G 052 162 A1",
+          "VW/Audi G 052 162 A2",
+          "VW/Audi G 052 162 A6",
+          "ZF 4HP",
+          "ZF 5HP",
+          "ZF LifeguardFluid 5"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® ATF 3H",
+       "facts": [
+        [
+         "Product Type",
+         "ATF"
+        ],
+        [
+         "Base Type",
+         "Synthetic Blend Formulation"
+        ],
+        [
+         "Fluid Classification",
+         "Standard-Viscosity ATF"
+        ],
+        [
+         "Performance Specifications",
+         "GM DEXRON III-H, Ford MERCON"
+        ],
+        [
+         "Transmission Compatibility",
+         "Conventional 3-, 4-, and Selected 5-Speed Automatic Transmissions"
+        ],
+        [
+         "Category",
+         "Automatic Transmission Fluid (ATF)"
+        ]
+       ],
+       "description": [
+        "PRINCE® ATF 3H is a premium-quality transmission fluid formulated with carefully chosen base stocks and advanced additive technology to deliver reliable lubrication and protection for a wide range of conventional automatic transmission systems in passenger vehicles, vans, trucks, buses, tractors, mining and construction machinery. Its carefully balanced frictional characteristics promote smooth gear engagement and consistent hydraulic operation, while effective anti-wear additives help safeguard transmission gears, bearings, and clutch components against premature wear and scoring. Optimized shear and thermal-oxidative stability, combined with reliable foam suppression, helps maintain fluid performance and consistent transmission operation under varying driving conditions and temperatures."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Formulated for passenger cars, SUVs, commercial trucks, and selected commercial transmission systems requiring DEXRON III-H or compatible earlier-generation ATF specifications. Primarily intended for conventional 3-speed and 4-speed automatic transmissions, as well as applicable power steering and hydraulic systems where the specified fluid requirements are met."
+        },
+        {
+         "label": "Key OEM Performance Specification",
+         "items": [
+          "GM DEXRON III-H"
+         ]
+        },
+        {
+         "label": "Recommended OEM Fluid Specifications",
+         "items": [
+          "Allison C-4",
+          "Allison TES-389",
+          "Caterpillar TO-2",
+          "Ford ESP-M2C138-CJ",
+          "Ford ESP-M2C166-H",
+          "Ford XT-2-QDX (MERCON)",
+          "GM DEXRON II-D",
+          "GM DEXRON II-E",
+          "GM DEXRON III-G",
+          "MAN 339 L1",
+          "MAN 339 L2",
+          "MAN 339 V1",
+          "MAN 339 Z1",
+          "MB 236.5",
+          "MB 236.6",
+          "MB 236.7",
+          "Voith H55.6335XX",
+          "Volvo 97340",
+          "Volvo 97341"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® ATF HD PRO FLEET",
+       "facts": [
+        [
+         "Product Type",
+         "ATF"
+        ],
+        [
+         "Base Type",
+         "Fully Synthetic"
+        ],
+        [
+         "Fluid Classification",
+         "Standard-Viscosity ATF"
+        ],
+        [
+         "Performance Specifications",
+         "Allison TES 668"
+        ],
+        [
+         "Transmission Compatibility",
+         "Compatible 4-, 5-, 6-, and 7-Speed Automatic Transmissions"
+        ],
+        [
+         "Category",
+         "Automatic Transmission Fluid (ATF)"
+        ]
+       ],
+       "description": [
+        "PRINCE® ATF HD PRO FLEET is an advanced fully synthetic heavy-duty automatic transmission fluid developed to address the stringent performance requirements of modern commercial vehicle transmissions operating under prolonged oil drain intervals. Its cutting-edge friction modifier technology promotes consistent clutch engagement and smooth power transmission, while superior thermal and oxidation stability minimizes fluid degradation under sustained heavy loads. Enhanced shear stability, anti-wear protection, corrosion and foam control ensure dependable hydraulic performance and prolonged transmission service life."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Key OEM Performance Specification",
+         "items": [
+          "Allison TES 668"
+         ]
+        },
+        {
+         "label": "Recommended OEM Fluid Specifications",
+         "items": [
+          "Allison TES 468",
+          "Allison TES 389",
+          "Allison TES 295",
+          "Ford XT-5-DM/QM (MERCON V)",
+          "GM DEXRON III-H",
+          "GM DEXRON III-G",
+          "GM DEXRON II-E",
+          "GM DEXRON II-D",
+          "MB 236.91",
+          "MB 236.92",
+          "Volvo 97340",
+          "Volvo 97341",
+          "ZF TE-ML 14A"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "18L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® ATF HD",
+       "facts": [
+        [
+         "Product Type",
+         "ATF"
+        ],
+        [
+         "Base Type",
+         "Synthetic Blend Formulation"
+        ],
+        [
+         "Fluid Classification",
+         "Standard-Viscosity ATF"
+        ],
+        [
+         "Performance Specifications",
+         "Allison TES 389"
+        ],
+        [
+         "Transmission Compatibility",
+         "Conventional 4-, 5-, and Selected 6-Speed Automatic Transmissions"
+        ],
+        [
+         "Category",
+         "Automatic Transmission Fluid (ATF)"
+        ]
+       ],
+       "description": [
+        "PRINCE® ATF HD is a heavy-duty automatic transmission fluid formulated with carefully chosen hydrocracked base stocks and a balanced additive system to deliver reliable lubrication and hydraulic performance in conventional commercial vehicle transmissions. Its optimized frictional characteristics ensure consistent clutch engagement and smooth gear transitions, while effective anti-wear, oxidation resistance, corrosion and foam control safeguard transmission components throughout recommended service intervals."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Key OEM Performance Specification",
+         "items": [
+          "Allison TES 389"
+         ]
+        },
+        {
+         "label": "Recommended OEM Fluid Specifications",
+         "items": [
+          "Allison C-4",
+          "Caterpillar TO-2",
+          "Ford XT-2-QDX (MERCON)",
+          "GM DEXRON III-H",
+          "GM DEXRON III-G",
+          "GM DEXRON II-E",
+          "GM DEXRON II-D",
+          "MAN 339 Type L1",
+          "MAN 339 Type V1",
+          "MAN 339 Type Z1",
+          "MB 236.1",
+          "MB 236.9",
+          "Voith H55.6335.xx",
+          "Volvo 97340",
+          "Volvo 97341",
+          "ZF TE-ML 02F",
+          "ZF TE-ML 03D",
+          "ZF TE-ML 04D",
+          "ZF TE-ML 09",
+          "ZF TE-ML 11B",
+          "ZF TE-ML 17C"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "18L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Manual Transmission Oils",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-4 SAE 80W-90",
+       "facts": [
+        [
+         "Product Type",
+         "MTF"
+        ],
+        [
+         "Base Type",
+         "Mineral Blend"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 80W-90"
+        ],
+        [
+         "Fluid Classification",
+         "Commercial Vehicle Manual Transmission Fluid"
+        ],
+        [
+         "API Service Category",
+         "GL-4"
+        ],
+        [
+         "Category",
+         "Manual Transmission Fluid (MTF)"
+        ]
+       ],
+       "description": [
+        "PRINCE® SUPER-SHIFT GL-4 SAE 80W-90 is a high-performance mineral blend gear oil formulated with premium-quality base oils and extreme-pressure (EP) additive chemistry to provide dependable protection against gear wear, scuffing and pitting. Its balanced formulation promotes smooth synchronizer operation, thermal stability and effective protection against rust, corrosion and foaming under demanding operating conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for synchronized and non-synchronized manual transmissions, transaxles and moderately loaded gear assemblies in passenger cars, commercial vehicles, agricultural tractors and construction equipment requiring SAE 80W-90 API GL-4 specified gear oil."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API GL-4",
+          "MAN 341 Type E2",
+          "ZF TE-ML 08"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "18L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-4 SAE 85W-90",
+       "facts": [
+        [
+         "Product Type",
+         "MTF"
+        ],
+        [
+         "Base Type",
+         "Mineral Blend"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 85W-90"
+        ],
+        [
+         "Fluid Classification",
+         "Commercial Vehicle Manual Transmission Fluid"
+        ],
+        [
+         "API Service Category",
+         "GL-4"
+        ],
+        [
+         "Category",
+         "Manual Transmission Fluid (MTF)"
+        ]
+       ],
+       "description": [
+        "PRINCE® SUPER-SHIFT GL-4 SAE 85W-90 is a mineral blend gear oil formulated with carefully chosen base stocks and robust extreme-pressure (EP) additive chemistry to protect transmission gears and bearings against abrasive wear, scoring and surface fatigue. Its stable lubricating film provides reliable load-carrying capability, complemented by effective oxidation resistance, corrosion protection and foam control."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Suitable for conventional manual transmissions, auxiliary drives, transfer cases and moderately loaded gear assemblies in trucks, tractors, and other heavy-duty equipment requiring SAE 85W-90 API GL-4 specified gear oil."
+        },
+        {
+         "label": "Industry Standards & Specifications",
+         "items": [
+          "API GL-4"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "18L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-4 SAE 90",
+       "facts": [
+        [
+         "Product Type",
+         "MTF"
+        ],
+        [
+         "Base Type",
+         "Hydrocracked (HC) Base Stocks"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 90"
+        ],
+        [
+         "Fluid Classification",
+         "Commercial Vehicle Manual Transmission Fluid"
+        ],
+        [
+         "API Service Category",
+         "GL-4"
+        ],
+        [
+         "Category",
+         "Manual Transmission Fluid (MTF)"
+        ]
+       ],
+       "description": [
+        "PRINCE® SUPER-SHIFT GL-4 SAE 90 is a multi-use monograde gear oil developed with hydrocracked base stocks to provide shear-stable, reliable lubrication and load-bearing protection in conventional transmission and drivetrain assemblies. Its effective extreme-pressure (EP) and anti-wear chemistry maintains lubricating film integrity under sustained loads, while protecting metallic components against corrosion, oxidation, micropitting and premature wear."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Suitable for a broad spectrum of older-generation manual transmissions, auxiliary gearboxes, final drives and moderately loaded differentials in commercial vehicles, tractors, construction machinery and industrial equipment requiring SAE 90 API GL-4 specified gear oil."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API GL-4",
+          "MAN 341 Type E1",
+          "MAN 341 Type Z1",
+          "MB 235.1",
+          "ZF TE-ML 02A",
+          "ZF TE-ML 16A",
+          "ZF TE-ML 17A",
+          "ZF TE-ML 19A"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "18L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Differential & Hypoid Gear Oils",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-4/GL-5 SAE 75W-90",
+       "facts": [
+        [
+         "Product Type",
+         "Gear Oil"
+        ],
+        [
+         "Base Type",
+         "Fully Synthetic"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 75W-90"
+        ],
+        [
+         "Fluid Classification",
+         "Multi-Application Gear Oil"
+        ],
+        [
+         "API Service Category",
+         "API GL-4/GL-5/MT-1"
+        ],
+        [
+         "Category",
+         "Axle & Differential Gear Oil"
+        ]
+       ],
+       "description": [
+        "PRINCE® SUPER-SHIFT GL-4/GL-5 SAE 75W-90 is a specially formulated fully synthetic, high-performance gear oil fortified with advanced extreme-pressure (EP) additives and carefully balanced frictional technology to satisfy both API GL-4 and API GL-5 lubrication requirements. Its optimized additive chemistry combines synchronizer-compatible protection for specified manual transmissions with the high load-carrying capacity required by heavily-loaded hypoid gears, differentials and axles. Exceptional resistance to scuffing, wear, micropitting, thermal oxidation, and mechanical shearing helps preserve transmission integrity and lubricant stability under severe operating conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for passenger cars, SUVs, light commercial vehicles, and heavy-duty trucks equipped with hypoid differentials, drive axles, transfer cases, final drives, and synchronized or unsynchronized manual transmissions. Suitable for heavily-loaded gear assemblies requiring SAE 75W-90 API GL-5 fluid specification and compatible manual gearboxes specifying API GL-4, or MT-1 performance, subject to manufacturer requirements."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API GL-4",
+          "API GL-5",
+          "API MT-1",
+          "BMW OSP",
+          "BMW SAF-XO",
+          "Mack GO-J",
+          "MAN 341 E3",
+          "MAN 341 GA1",
+          "MAN 341 Z2",
+          "MAN 342 M3",
+          "MAN 342 S1",
+          "MB 235.8",
+          "MB 235.11",
+          "MB 235.21",
+          "MB 235.72",
+          "MIL-PRF-2105E",
+          "SAE J2360",
+          "Scania STO 1:0",
+          "Scania STO 2:0 A FS",
+          "Volvo 97312",
+          "ZF TE-ML 02B",
+          "ZF TE-ML 05A",
+          "ZF TE-ML 12L",
+          "ZF TE-ML 12N",
+          "ZF TE-ML 16F",
+          "ZF TE-ML 19C",
+          "ZF TE-ML 21B"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-5 SAE 75W-90",
+       "facts": [
+        [
+         "Product Type",
+         "Gear Oil"
+        ],
+        [
+         "Base Type",
+         "Fully Synthetic"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 75W-90"
+        ],
+        [
+         "Fluid Classification",
+         "Hypoid Gear Oil"
+        ],
+        [
+         "API Service Category",
+         "GL-5/MT-1"
+        ],
+        [
+         "Category",
+         "Axle & Differential Gear Oil"
+        ]
+       ],
+       "description": [
+        "PRINCE® SUPER-SHIFT GL-5 SAE 75W-90 is a universal, fully synthetic, high-performance hypoid gear oil formulated with advanced extreme-pressure (EP) additive technology for heavily loaded axle and differential assemblies. Its excellent high load-carrying capacity and uncompromising lubricating film provide exceptional protection against gear tooth scuffing, micropitting, and adhesive wear under severe contact pressures and shock loading. Outstanding thermal and oxidation stability, combined with excellent shear resistance and anti-foaming capacity, helps preserve lubricant integrity and drivetrain component lasting durability under sustained high-temperature operation."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for passenger cars, SUVs, light commercial vehicles, heavy-duty trucks, and off-highway equipment equipped with hypoid differentials, drive axles, final drives, and other heavily loaded gear assemblies requiring SAE 75W-90 API GL-5 fluid specification."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API GL-5",
+          "API MT-1",
+          "BMW OSP",
+          "BMW SAF-XO",
+          "Detroit Diesel DFS 93K219.01",
+          "DTFR 12B140",
+          "Iveco 18-1805 Extended Drain",
+          "Mack GO-J",
+          "MAN 342 M3",
+          "MAN 342 S1",
+          "MB 235.8",
+          "MB 235.9",
+          "MB 235.21",
+          "MIL-PRF-2105E",
+          "SAE J2360",
+          "Scania STO 1:0",
+          "Scania STO 1:1 G",
+          "Scania STO 2:0 A FS",
+          "Volvo 97312",
+          "ZF TE-ML 05A",
+          "ZF TE-ML 12L",
+          "ZF TE-ML 12N",
+          "ZF TE-ML 16F",
+          "ZF TE-ML 19C",
+          "ZF TE-ML 21A"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-5 SAE 80W-90",
+       "facts": [
+        [
+         "Product Type",
+         "Gear Oil"
+        ],
+        [
+         "Base Type",
+         "Hydrocracked (HC) Base Stocks"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 80W-90"
+        ],
+        [
+         "Fluid Classification",
+         "Hypoid Gear Oil"
+        ],
+        [
+         "API Service Category",
+         "GL-5/MT-1"
+        ],
+        [
+         "Category",
+         "Axle & Differential Gear Oil"
+        ]
+       ],
+       "description": [
+        "Built to withstand relentless mechanical stress, PRINCE® SUPER-SHIFT GL-5 SAE 80W-90 is a premium extreme-pressure hypoid gear lubricant formulated with carefully selected, highly refined hydrocracked (HC) base stocks and an advanced extreme-pressure (EP) additive system. Its robust lubricating film provides dependable protection against gear tooth scuffing, pitting, and wear under high contact pressures and shock loading. Excellent thermal and oxidation stability, combined with effective corrosion protection and resistance to foaming, helps maintain lubricant integrity and reliable drivetrain performance throughout demanding operating conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Formulated for passenger cars, SUVs, pickup trucks, heavy-duty trucks, buses, tractors, and construction equipment equipped with hypoid differentials, drive axles, final drives, and heavily loaded bevel or spiral-bevel gear assemblies requiring SAE 80W-90 API GL-5 gear fluid."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API GL-5",
+          "API MT-1",
+          "DAF API GL-5",
+          "DTFR 12B100",
+          "Mack GO-G",
+          "MAN 342 M1",
+          "MAN 342 M2",
+          "MB 235.0",
+          "MIL-L-2105D",
+          "NATO O-226",
+          "SAE J2360",
+          "Scania STO 1:0",
+          "Volvo 1273.10",
+          "Volvo 97310",
+          "ZF TE-ML 02B",
+          "ZF TE-ML 05A",
+          "ZF TE-ML 07A",
+          "ZF TE-ML 16C",
+          "ZF TE-ML 16D",
+          "ZF TE-ML 17B",
+          "ZF TE-ML 19B",
+          "ZF TE-ML 21A"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-5 +LSD SAE 85W-90",
+       "facts": [
+        [
+         "Product Type",
+         "Gear Oil"
+        ],
+        [
+         "Base Type",
+         "Hydrocracked (HC) Base Stocks"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 85W-90"
+        ],
+        [
+         "Fluid Classification",
+         "Limited Slip Hypoid Gear Oil"
+        ],
+        [
+         "API Service Category",
+         "GL-5/GL-5 +LS"
+        ],
+        [
+         "Category",
+         "Axle & Differential Gear Oil"
+        ]
+       ],
+       "description": [
+        "Designed for superior traction control and unparalleled differential and hypoid drive axle protection, PRINCE® SUPER-SHIFT GL-5 +LSD SAE 85W-90 is a premium limited-slip hypoid gear oil developed to deliver smooth, progressive clutch engagement and exceptional durability under demanding operating conditions. Its carefully optimized frictional characteristics effectively minimize differential chatter, shudder, and stick-slip behaviour, ensuring refined operation in clutch-type limited-slip differentials. A robust lubricating film provides outstanding resistance to gear tooth scuffing, pitting, and component wear under tough loads and shock loading, while excellent thermal stability and oxidation resistance help preserve consistent lubrication performance and gear system durability. Particularly suited to a broad range of Toyota and other compatible vehicle applications requiring SAE 85W-90 LSD gear oil."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for passenger cars, SUVs, pickup trucks, heavy-duty trucks, tractors, and off-highway equipment equipped with clutch-type limited-slip differentials, multi-plate self-locking differentials, hypoid drive axles, and final drives requiring SAE 85W-90 API GL-5 fluid specification with limited-slip characteristics. Suitable for selected Toyota pickup trucks and 4WD vehicles, as well as compatible conventional open differentials, where the manufacturer specifies, or permits this gear oil type."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API GL-5",
+          "API GL-5 +LS",
+          "MIL-L-2105D",
+          "Toyota Limited Slip Differential Gear Oil SAE 85W-90",
+          "Volvo 97310",
+          "ZF TE-ML 05C",
+          "ZF TE-ML 08",
+          "ZF TE-ML 16E",
+          "ZF TE-ML 21C"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-5 SAE 85W-90",
+       "facts": [
+        [
+         "Product Type",
+         "Gear Oil"
+        ],
+        [
+         "Base Type",
+         "Hydrocracked (HC) Base Stocks"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 85W-90"
+        ],
+        [
+         "Fluid Classification",
+         "Hypoid Gear Oil"
+        ],
+        [
+         "API Service Category",
+         "GL-5"
+        ],
+        [
+         "Category",
+         "Axle & Differential Gear Oil"
+        ]
+       ],
+       "description": [
+        "Built for enduring strength under demanding drivetrain conditions, PRINCE® SUPER-SHIFT GL-5 SAE 85W-90 is a premium extreme-pressure hypoid gear oil formulated with selected, highly refined hydrocracked (HC) base stocks to deliver maximized protection in heavily-loaded axle and differential gear systems. Its robust lubricating film withstands intense gear tooth contact pressures and shock loading, providing optimal resistance to scuffing, micropitting, and premature wear. Optimized thermal and oxidation stability, combined with effective corrosion protection and resistance to foaming, helps preserve lubricant integrity and consistent drivetrain performance under sustained high-temperature and severe-duty operating conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for passenger cars, SUVs, pickup trucks, heavy-duty trucks, buses and construction equipment equipped with hypoid differentials, drive axles, final drives, and heavily loaded bevel or spiral-bevel gear assemblies requiring SAE 85W-90 API GL-5 gear oil."
+        },
+        {
+         "label": "Industry Standards, Specifications, & Recommendations",
+         "items": [
+          "API GL-5",
+          "MAN 342 M1",
+          "MB 235.0",
+          "ZF TE-ML 16C",
+          "ZF TE-ML 17B",
+          "ZF TE-ML 19B",
+          "ZF TE-ML 21A"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L",
+         "4L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-5 SAE 85W-140",
+       "facts": [
+        [
+         "Product Type",
+         "Gear Oil"
+        ],
+        [
+         "Base Type",
+         "Hydrocracked (HC) Base Stocks"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 85W-140"
+        ],
+        [
+         "Fluid Classification",
+         "Hypoid Gear Oil"
+        ],
+        [
+         "API Service Category",
+         "GL-5"
+        ],
+        [
+         "Category",
+         "Axle & Differential Gear Oil"
+        ]
+       ],
+       "description": [
+        "PRINCE® SUPER-SHIFT GL-5 SAE 85W-140 is a heavy-duty mineral gear oil formulated with high-quality base stocks and robust extreme-pressure (EP) additive chemistry to protect heavily loaded hypoid gears against scuffing, scoring and surface fatigue. Its high-viscosity formulation maintains strong lubricating film integrity under severe mechanical loads and elevated operating temperatures, complemented by effective oxidation resistance, corrosion protection and foam control."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Designed for heavily loaded hypoid differentials, drive axles and final drives in commercial trucks, buses, agricultural machinery, construction equipment and off-highway vehicles requiring SAE 85W-140 API GL-5 gear oil."
+        },
+        {
+         "label": "Industry Standards & Specifications",
+         "items": [
+          "API GL-5",
+          "MIL-L-2105D"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "18L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® SUPER-SHIFT GL-5 SAE 140",
+       "facts": [
+        [
+         "Product Type",
+         "Gear Oil"
+        ],
+        [
+         "Base Type",
+         "Hydrocracked (HC) Base Stocks"
+        ],
+        [
+         "Viscosity Grade",
+         "SAE 140"
+        ],
+        [
+         "Fluid Classification",
+         "Hypoid Gear Oil"
+        ],
+        [
+         "API Service Category",
+         "GL-5"
+        ],
+        [
+         "Category",
+         "Axle & Differential Gear Oil"
+        ]
+       ],
+       "description": [
+        "PRINCE® SUPER-SHIFT GL-5 SAE 140 is a heavy-duty monograde mineral gear oil formulated with high-viscosity base stocks and advanced extreme-pressure additive chemistry to deliver reliable load-carrying protection under severe operating conditions. Its robust lubricating film safeguards hypoid gears and bearings against adhesive wear, scoring and shock loading, while effective oxidation and corrosion inhibitors promote prolonged component service life."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Particularly suited for conventional hypoid differentials, heavy-duty drive axles and final drives in older-generation, hardworking commercial vehicles, agricultural machinery, mining and construction equipment requiring SAE 140 gear oil of this specification."
+        },
+        {
+         "label": "Industry Standards & Specifications",
+         "items": [
+          "API GL-5",
+          "MIL-L-2105D"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "18L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Hydraulic & Power Steering Fluids",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® POWER STEERING FLUID",
+       "facts": [
+        [
+         "Product Series",
+         "POWER STEERING FLUID"
+        ],
+        [
+         "Product Type",
+         "Premium Mineral Hydraulic Fluid"
+        ],
+        [
+         "Category",
+         "Multi-Vehicle Power Steering Fluid"
+        ]
+       ],
+       "description": [
+        "PRINCE® POWER STEERING FLUID is a multi-vehicle, high-performance hydraulic fluid formulated with highly refined base stocks and a specialized additive system to deliver smooth, responsive power steering operation and dependable hydraulic pressure transmission. Fortified with outstanding anti-wear, anti-foam and friction-control additives, it helps minimise steering pump squeal, whining and chatter while reducing friction, wear and noise. Its excellent oxidation stability, deposit-control properties and corrosion protection help prevent sludge and varnish buildup, reduce the risk of hydraulic passage clogging, and protect pumps, valves and steering gear components for long-lasting performance and reliability."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for conventional hydraulic power steering systems requiring GM DEXRON II, GM DEXRON III or Ford MERCON-type automatic transmission fluids, including compatible passenger cars, SUVs, pickup trucks, vans and commercial vehicles from a broad range of American, European, Chinese, Japanese, and Korean manufacturers. Well suited for hydraulic steering pumps, rack-and-pinion steering assemblies, recirculating ball steering gears and associated hydraulic circuits where ATF-type power steering fluids are specified. However, it is not recommended for Honda/Acura systems requiring dedicated Honda Power Steering Fluid without ATF standards, as well as CHF 11S and CHF 202-type central hydraulic systems or other applications requiring highly-specialized hydraulic lubricants."
+        },
+        {
+         "label": "Recommended OEM Fluid Specifications",
+         "items": [
+          "Ford ESP-M2C138-CJ",
+          "Ford ESP-M2C166-H",
+          "Ford MERCON",
+          "GM DEXRON II-D",
+          "GM DEXRON II-E",
+          "GM DEXRON III-G",
+          "GM DEXRON III-H"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® POWER STEERING FLUID WITH STOP LEAK",
+       "facts": [
+        [
+         "Product Series",
+         "POWER STEERING FLUID"
+        ],
+        [
+         "Product Type",
+         "Premium Mineral Hydraulic Fluid"
+        ],
+        [
+         "Category",
+         "Multi-Vehicle Power Steering Fluid"
+        ]
+       ],
+       "description": [
+        "PRINCE® POWER STEERING FLUID WITH STOP LEAK is a high-performance hydraulic fluid formulated with the combination of highly refined base stocks, specially chosen anti-wear additives and specialized seal-conditioning agents to help restore ageing elastomeric seals and minimize minor fluid leakage caused by seal shrinkage and hardening. Its improved friction-control, antioxidants and anti-foam chemistry helps reduce steering pump squeal, whining, chatter and vibration while maintaining smooth hydraulic pressure transmission and responsive steering performance."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Ideally suitable for conventional hydraulic power steering systems requiring GM DEXRON II, GM DEXRON III or Ford MERCON-type automatic transmission fluids, particularly in older and high-mileage vehicles experiencing minor fluid seepage caused by ageing, hardened or shrunken seals. Suitable for compatible passenger cars, SUVs, pickup trucks, vans and commercial vehicles, helping reduce minor seal related leakage, steering pump noise and rough steering operation."
+        },
+        {
+         "label": "Recommended OEM Fluid Specifications",
+         "items": [
+          "Ford ESP-M2C138-CJ",
+          "Ford ESP-M2C166-H",
+          "Ford MERCON",
+          "GM DEXRON II-D",
+          "GM DEXRON II-E",
+          "GM DEXRON III-G",
+          "GM DEXRON III-H"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "1L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Brake & Clutch Fluids",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® BRAKE & CLUTCH FLUID DOT 5.1",
+       "facts": [
+        [
+         "Product Series",
+         "BRAKE & CLUTCH FLUID DOT 5.1"
+        ],
+        [
+         "Product Type",
+         "Non-Silicone Brake Fluid"
+        ],
+        [
+         "Industry Performance Standards",
+         "FMVSS 116 DOT 5.1, ISO 4925 Class 5-1, SAE J1704"
+        ],
+        [
+         "Category",
+         "Automotive Brake & Clutch Fluid"
+        ]
+       ],
+       "description": [
+        "PRINCE® BRAKE & CLUTCH FLUID DOT 5.1 is a state-of-the-art, high-performance brake fluid formulated with glycol ethers and borate esters and exceptional additive technology to offer superior thermal stability, oxidation resistance, precise hydraulic pressure transmission and reliable braking performance under demanding operating conditions. Its optimized low-temperature viscosity characteristics ensure rapid hydraulic response and accurate pressure modulation in advanced anti-lock braking systems (ABS), electronic stability control (ESC/ESP) and traction control systems. Featuring a Dry Equilibrium Reflux Boiling Point (ERBP) exceeding 260°C and a Wet ERBP exceeding 175°C, it provides excellent resistance to vapour lock, while advanced corrosion inhibitors protect critical hydraulic components and compatible elastomeric seals against corrosion and fluid degradation."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Specifically designed for high-performance and modern hydraulic disc and drum braking systems, including Anti-lock Braking Systems (ABS), Electronic Brakeforce Distribution (EBD), Electronic Stability Control (ESC/ESP), Traction Control Systems (TCS/ASR) and compatible hydraulic clutch actuation systems of the latest generation. Suitable for passenger cars, SUVs, pickup trucks, light and heavy commercial vehicles requiring DOT 5.1 or compatible glycol-based DOT 4 brake fluids, subject to manufacturer recommendations. However, this fluid is not suitable for systems requiring silicone-based DOT 5 or mineral-based hydraulic fluids."
+        },
+        {
+         "label": "Industry Standards & Specifications",
+         "items": [
+          "FMVSS 116 DOT 5.1",
+          "ISO 4925 Class 5.1",
+          "SAE J1703",
+          "SAE J1704"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "0.5L",
+         "1L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® BRAKE & CLUTCH FLUID DOT 4",
+       "facts": [
+        [
+         "Product Series",
+         "BRAKE & CLUTCH FLUID DOT 4"
+        ],
+        [
+         "Product Type",
+         "Non-Silicone Brake Fluid"
+        ],
+        [
+         "Industry Performance Standards",
+         "FMVSS 116 DOT 4, ISO 4925 Class 4, SAE J1704"
+        ],
+        [
+         "Category",
+         "Automotive Brake & Clutch Fluid"
+        ]
+       ],
+       "description": [
+        "PRINCE® BRAKE & CLUTCH FLUID DOT 4 is a high-performance brake fluid formulated with glycol ethers and borate esters to deliver excellent thermal stability, consistent hydraulic pressure transmission and reliable braking performance under demanding operating conditions. Its enhanced viscosity characteristics support responsive brake actuation and effective hydraulic pressure modulation in modern braking systems and compatible Anti-lock Braking Systems (ABS), while advanced corrosion inhibitors protect master cylinders, callipers, hydraulic valves and elastomeric seals. Featuring a Dry Equilibrium Reflux Boiling Point (ERBP) exceeding 240°C and a Wet ERBP exceeding 160°C, it helps minimise vapour lock and retain uncompromising braking efficiency during repeated braking cycles."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Designed for conventional hydraulic disc and drum braking systems, including compatible Anti-lock Braking Systems (ABS), Electronic Brakeforce Distribution (EBD) and compatible hydraulic clutch actuation systems. Suitable for passenger cars, SUVs, pickup trucks, vans and light and heavy commercial vehicles, and motorcycles requiring DOT 4 or compatible glycol-based DOT 3 brake fluids. However, this fluid is not suitable for systems requiring silicone-based DOT 5 or mineral-based hydraulic fluids."
+        },
+        {
+         "label": "Industry Standards & Specifications",
+         "items": [
+          "FMVSS 116 DOT 4",
+          "ISO 4925 Class 4",
+          "SAE J1703",
+          "SAE J1704"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "0.5L",
+         "1L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® BRAKE & CLUTCH FLUID DOT 3",
+       "facts": [
+        [
+         "Product Series",
+         "BRAKE & CLUTCH FLUID DOT 3"
+        ],
+        [
+         "Product Type",
+         "Non-Silicone Brake Fluid"
+        ],
+        [
+         "Industry Performance Standards",
+         "FMVSS 116 DOT 3, ISO 4925 Class 3, SAE J1703"
+        ],
+        [
+         "Category",
+         "Automotive Brake & Clutch Fluid"
+        ]
+       ],
+       "description": [
+        "PRINCE® BRAKE & CLUTCH FLUID DOT 3 is a premium-quality glycol ether based brake fluid formulated to deliver reliable braking performance, smooth hydraulic pressure transmission and consistent clutch operation. Its balanced viscosity characteristics and anti-corrosion and anti-residue additives help protect critical hydraulic components, minimize fluid degradation and maintain dependable system performance. The excellent foam depression agents shield against foam formation and air entrainment to support stable hydraulic pressure transmission and consistent brake pedal response."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Intended Applications",
+         "text": "Developed for conventional hydraulic disc and drum braking systems and hydraulic clutch actuation systems across generations. Suitable for use in passenger cars, SUVs, pickup trucks, vans, light and heavy commercial vehicles where DOT 3 brake fluid is specified by the manufacturer."
+        },
+        {
+         "label": "Industry Standards & Specifications",
+         "items": [
+          "FMVSS 116 DOT 3",
+          "ISO 4925 Class 3",
+          "SAE J1703"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "0.5L",
+         "1L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Antifreeze & Coolants",
+   "series": [
+    {
+     "title": "",
+     "products": [
+      {
+       "name": "PRINCE® 50/50 ANTIFREEZE/COOLANT HD ELC −37°C",
+       "facts": [
+        [
+         "Product Series",
+         "50/50 ANTIFREEZE/COOLANT HD"
+        ],
+        [
+         "Product Type",
+         "Ethylene Glycol-Based Coolant"
+        ],
+        [
+         "Technology",
+         "Nitrite-free Organic Acid Technology (OAT)"
+        ],
+        [
+         "Visual Appearance",
+         "Red"
+        ],
+        [
+         "Key Performance Standards",
+         "ASTM D3306, ASTM D4985, ASTM D6210, ASTM D7583"
+        ],
+        [
+         "Category",
+         "Heavy-Duty Antifreeze & Coolant"
+        ]
+       ],
+       "description": [
+        "PRINCE® 50/50 ANTIFREEZE/COOLANT HD ELC −37°C is a premium extended-life heavy-duty antifreeze coolant formulated with high-purity monoethylene glycol, demineralized water and advanced nitrite-free organic acid inhibitor technology. Its long-lasting carboxylate-based corrosion inhibitor system is designed to provide exceptional protection against wet cylinder liner cavitation, pitting corrosion, aluminium erosion and electrochemical degradation, while minimizing mineral scale and deposit formation to maintain optimum heat transfer efficiency. The ready-to-use 50/50 formulation provides freeze protection down to −37°C, with a targeted extended service life of up to 6 years, 1,000,000 km or 12,000 operating hours, whichever occurs first, under properly maintained cooling system conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Industry Standards",
+         "items": [
+          "ASTM D3306",
+          "ASTM D4985",
+          "ASTM D6210",
+          "ASTM D7583"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "4L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® 50/50 ANTIFREEZE/COOLANT HD ELC NOAT −37°C",
+       "facts": [
+        [
+         "Product Series",
+         "50/50 ANTIFREEZE/COOLANT HD"
+        ],
+        [
+         "Product Type",
+         "Ethylene Glycol-Based Coolant"
+        ],
+        [
+         "Technology",
+         "Nitrited Organic Acid Technology (NOAT)"
+        ],
+        [
+         "Visual Appearance",
+         "Yellow"
+        ],
+        [
+         "Key Performance Standards",
+         "ASTM D3306, ASTM D4985, ASTM D6210, ASTM D7583"
+        ],
+        [
+         "Category",
+         "Heavy-Duty Antifreeze & Coolant"
+        ]
+       ],
+       "description": [
+        "PRINCE® 50/50 ANTIFREEZE/COOLANT HD ELC NOAT −37°C is a cutting-edge, high-performance extended-life heavy-duty coolant combining advanced organic acid technology and fortified with nitrite-molybdate corrosion inhibitors to deliver reinforced protection under the most severe diesel engine operating conditions. Its specialized dual-inhibitor system provides enhanced resistance against cavitation-induced cylinder liner erosion, pitting, localized corrosion and coolant degradation under sustained thermal and mechanical stress. Premixed with demineralized water at a 50/50 concentration, it provides freeze protection down to −37°C, with a targeted extended service life of up to 6 years, 1,000,000 km or 12,000 operating hours, whichever occurs first, under properly maintained cooling system conditions."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Industry Standards",
+         "items": [
+          "ASTM D3306",
+          "ASTM D4985",
+          "ASTM D6210",
+          "ASTM D7583"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "4L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      },
+      {
+       "name": "PRINCE® 50/50 ANTIFREEZE/COOLANT HD −37°C",
+       "facts": [
+        [
+         "Product Series",
+         "50/50 ANTIFREEZE/COOLANT HD"
+        ],
+        [
+         "Product Type",
+         "Ethylene Glycol-Based Coolant"
+        ],
+        [
+         "Technology",
+         "Fully Formulated IAT, SCA Pre-Charged"
+        ],
+        [
+         "Visual Appearance",
+         "Green"
+        ],
+        [
+         "Key Performance Standards",
+         "ASTM D3306, ASTM D4985, ASTM D6210, ASTM D7583"
+        ],
+        [
+         "Category",
+         "Heavy-Duty Antifreeze & Coolant"
+        ]
+       ],
+       "description": [
+        "PRINCE® 50/50 ANTIFREEZE/COOLANT HD −37°C is a fully formulated heavy-duty engine coolant incorporating a stabilized low-silicate corrosion inhibitor system pre-charged with supplemental coolant additives (SCAs) to provide instant protection against wet cylinder liner cavitation, pitting corrosion and electrochemical deterioration. Its balanced inorganic inhibitor chemistry safeguards ferrous and non-ferrous cooling system components against rust, scale formation and corrosive degradation, while maintaining efficient heat transfer under demanding operating conditions. The ready-to-use formulation provides freeze protection down to −37°C, with a targeted service life of up to 3 years or 400,000 km, whichever occurs first, subject to periodic monitoring and maintenance of SCA concentration."
+       ],
+       "notices": [],
+       "sections": [
+        {
+         "label": "Industry Standards",
+         "items": [
+          "ASTM D3306",
+          "ASTM D4985",
+          "ASTM D6210",
+          "ASTM D7583"
+         ]
+        }
+       ],
+       "packaging": {
+        "sizes": [
+         "4L",
+         "20L"
+        ],
+        "note": "as applicable"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

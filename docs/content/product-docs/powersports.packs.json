@@ -1,0 +1,23 @@
+{
+ "maxx-gold-4t-5w-40": ["maxx-gold-4t-1l-5w-40"],
+ "maxx-gold-4t-10w-40": ["maxx-gold-4t-1l-10w-40"],
+ "maxx-gold-4t-10w-50": ["maxx-gold-4t-1l-10w-50"],
+ "maxx-gold-4t-15w-50": ["maxx-gold-4t-1l-15w-50"],
+ "maxx-gold-4t-10w-60": ["maxx-gold-4t-1l-10w-60"],
+ "maxx-ultra-4t-10w-30": ["maxx-ultra-4t-1l-10w-30"],
+ "maxx-ultra-4t-10w-40": ["maxx-ultra-4t-1l-10w-40"],
+ "maxx-ultra-4t-15w-50": ["maxx-ultra-4t-1l-15w-50"],
+ "maxx-launch-4t-15w-40": ["maxx-launch-4t-1l-15w-40"],
+ "maxx-launch-4t-20w-40": ["maxx-launch-4t-1l-20w-40"],
+ "maxx-launch-4t-20w-50": ["maxx-launch-4t-1l-20w-50"],
+ "maxx-gold-scooter-4t-5w-30-mb": ["maxx-scooter-gold-1l-5w-30"],
+ "maxx-gold-scooter-4t-5w-40-mb": ["maxx-scooter-gold-1l-5w-40"],
+ "maxx-ultra-scooter-4t-10w-30-mb": ["maxx-scooter-ultra-1l-10w-30"],
+ "maxx-ultra-scooter-4t-10w-40-mb": ["maxx-scooter-ultra-1l-10w-40"],
+ "maxx-shift-gl-5-75w-90-4t": ["maxx-gearoil-1l-75w-90"],
+ "maxx-shift-gl-5-80w-90-4t": ["maxx-gearoil-1l-80w-90"],
+ "maxx-shift-gl-4-10w-30": ["maxx-gearoil-1l-10w-30"],
+ "fork-oil-5w-light": ["forkoil-light-1l-5w"],
+ "fork-oil-10w-moderate": ["forkoil-moderate-1l-10w"],
+ "brake-and-clutch-fluid-dot-4": ["dot4-1l"]
+}
